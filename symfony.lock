@@ -23,6 +23,9 @@
     "doctrine/common": {
         "version": "2.13.3"
     },
+    "doctrine/data-fixtures": {
+        "version": "1.4.4"
+    },
     "doctrine/dbal": {
         "version": "2.10.4"
     },
@@ -43,6 +46,9 @@
     },
     "doctrine/doctrine-cache-bundle": {
         "version": "1.4.0"
+    },
+    "doctrine/doctrine-fixtures-bundle": {
+        "version": "v2.4.1"
     },
     "doctrine/doctrine-migrations-bundle": {
         "version": "2.2",
@@ -84,6 +90,9 @@
     "egulias/email-validator": {
         "version": "2.1.22"
     },
+    "elasticsearch/elasticsearch": {
+        "version": "v6.7.2"
+    },
     "enhavo/app-bundle": {
         "version": "0.9",
         "recipe": {
@@ -103,8 +112,71 @@
             "tsconfig.json"
         ]
     },
+    "enhavo/article-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/block-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/comment-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/content-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/dashboard-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/doctrine-extension-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/form-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/media-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/metadata": {
+        "version": "v0.9.2"
+    },
+    "enhavo/navigation-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/newsletter-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/page-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/redirect-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/routing-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/search-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/sidebar-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/slider-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/taxonomy-bundle": {
+        "version": "v0.9.2"
+    },
+    "enhavo/template-bundle": {
+        "version": "v0.9.2"
+    },
     "enhavo/type": {
         "version": "v0.9.2"
+    },
+    "enhavo/user-bundle": {
+        "version": "v0.9.2"
+    },
+    "ezyang/htmlpurifier": {
+        "version": "v4.13.0"
     },
     "friendsofsymfony/jsrouting-bundle": {
         "version": "2.3",
@@ -130,8 +202,29 @@
             "config/packages/fos_rest.yaml"
         ]
     },
+    "friendsofsymfony/user-bundle": {
+        "version": "v2.1.2"
+    },
     "gedmo/doctrine-extensions": {
         "version": "v3.0.0"
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.5.5"
+    },
+    "guzzlehttp/promises": {
+        "version": "1.4.0"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.7.0"
+    },
+    "guzzlehttp/ringphp": {
+        "version": "1.1.1"
+    },
+    "guzzlehttp/streams": {
+        "version": "3.0.0"
+    },
+    "imagine/imagine": {
+        "version": "1.2.3"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
@@ -225,6 +318,18 @@
     "psr/simple-cache": {
         "version": "1.0.1"
     },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
+    },
+    "react/promise": {
+        "version": "v2.8.0"
+    },
+    "ruflin/elastica": {
+        "version": "6.1.1"
+    },
+    "spatie/image-optimizer": {
+        "version": "1.2.1"
+    },
     "stof/doctrine-extensions-bundle": {
         "version": "1.2",
         "recipe": {
@@ -245,6 +350,12 @@
     },
     "sylius/resource-bundle": {
         "version": "v1.6.4"
+    },
+    "symfony-cmf/routing": {
+        "version": "2.3.3"
+    },
+    "symfony-cmf/routing-bundle": {
+        "version": "2.4.0"
     },
     "symfony/asset": {
         "version": "v4.4.15"
@@ -355,6 +466,9 @@
     "symfony/intl": {
         "version": "v4.4.15"
     },
+    "symfony/lock": {
+        "version": "v4.4.15"
+    },
     "symfony/mime": {
         "version": "v4.4.15"
     },
@@ -402,6 +516,9 @@
     },
     "symfony/polyfill-php80": {
         "version": "v1.18.1"
+    },
+    "symfony/process": {
+        "version": "v4.4.15"
     },
     "symfony/property-access": {
         "version": "v4.4.15"

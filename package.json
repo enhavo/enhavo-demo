@@ -1,16 +1,30 @@
 {
-    "devDependencies": {
-        "@symfony/webpack-encore": "^0.30.0",
-        "core-js": "^3.0.0",
-        "regenerator-runtime": "^0.13.2",
-        "webpack-notifier": "^1.6.0"
-    },
-    "license": "UNLICENSED",
-    "private": true,
+    "license": "MIT",
     "scripts": {
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
-    }
+    },
+    "dependencies": {
+        "@enhavo/app": "^0.9",
+        "@enhavo/article": "^0.9",
+        "@enhavo/block": "^0.9",
+        "@enhavo/calendar": "^0.9",
+        "@enhavo/core": "^0.9",
+        "@enhavo/dashboard": "^0.9",
+        "@enhavo/dependency-injection": "^0.9",
+        "@enhavo/font": "^0.9",
+        "@enhavo/form": "^0.9",
+        "@enhavo/media": "^0.9",
+        "@enhavo/newsletter": "^0.9",
+        "@enhavo/shop": "^0.9",
+        "@enhavo/slider": "^0.9",
+        "@enhavo/theme": "^0.9",
+        "@enhavo/translation": "^0.9",
+        "@enhavo/user": "^0.9",
+        "source-sans-pro": "^2.45.0",
+        "typeface-cormorant-garamond": "^0.0.72"
+    },
+    "devDependencies": {}
 }

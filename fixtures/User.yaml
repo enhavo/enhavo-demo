@@ -1,0 +1,5 @@
+-
+  email: admin@enhavo.com
+  password: admin
+  roles:
+    - ROLE_SUPER_ADMIN
