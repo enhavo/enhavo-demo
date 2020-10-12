@@ -7,9 +7,9 @@
  * @author Gerhard Seidel <gseidel.message@googlemail.com>
  */
 
-namespace App\Fixtures\Fixtures;
+namespace App\DataFixtures\ORM;
 
-use App\Fixtures\AbstractFixture;
+use App\DataFixtures\AbstractFixture;
 use Enhavo\Bundle\PageBundle\Entity\Page;
 
 class PageFixture extends AbstractFixture

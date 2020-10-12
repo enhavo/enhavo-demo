@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Fixtures\Fixtures;
+namespace App\DataFixtures\ORM;
 
-use App\Fixtures\AbstractFixture;
+use App\DataFixtures\AbstractFixture;
 use Enhavo\Bundle\SidebarBundle\Entity\Sidebar;
 
 class SidebarFixture extends AbstractFixture

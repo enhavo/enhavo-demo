@@ -7,9 +7,9 @@
  * @author Gerhard Seidel <gseidel.message@googlemail.com>
  */
 
-namespace App\Fixtures\Fixtures;
+namespace App\DataFixtures\ORM;
 
-use App\Fixtures\AbstractFixture;
+use App\DataFixtures\AbstractFixture;
 use Enhavo\Bundle\SliderBundle\Entity\Slide;
 use Enhavo\Bundle\SliderBundle\Entity\Slider;
 

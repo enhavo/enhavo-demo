@@ -829,9 +829,9 @@
     to-fast-properties "^2.0.0"
 
 "@enhavo/app@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/app/-/app-0.9.2.tgz#ef7959e76d63e93314d4fff662efc0212e4ee468"
-  integrity sha512-CbJ8qq7w3+/T72dqVkO5tV6pw/loBZa/2bhszEpSw0ngXl12vxn+psMGhWinYtKQssrROUoJKg5dE9Z5bnRWsw==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/app/-/app-0.9.3.tgz#8409b751c8de94e54027fcbaf40a3687516b152b"
+  integrity sha512-bRHH6n4nJPy8IRmj9BLny1ioG00Jzsnp0iz8l/9ySoy0+g3VyIWuF6MhWE3u6yYa/nBwUYMeEiaa4Sf8TGl9hA==
   dependencies:
     "@enhavo/core" "^0.9"
     "@enhavo/dependency-injection" "^0.9"
@@ -855,27 +855,27 @@
     vuejs-datepicker "^1.6.2"
 
 "@enhavo/article@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/article/-/article-0.9.2.tgz#507b7395d0289e762b1234ca970670c4675bfdbb"
-  integrity sha512-fGFp/spduGp2Iot4zAnZ8mvFPzYDd+5ZtarPQxsjPF2IDXQZHP37FL96nG+tOPZ5nA3TizUYqZYI5/KVdGjl5A==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/article/-/article-0.9.3.tgz#0a34c0b7946d1af2e689ad8529ad863191a1deac"
+  integrity sha512-D8uAY3k42DASV8dqJdCsaOpWXuTJghrEIP4sirrczNB7Ot/UxmG/Tk7IKz+ZQczmYdFOEQy5ktZ4VXxOig0/UQ==
   dependencies:
     bootstrap "^4.3.1"
     jquery "~3.4.1"
     slick-carousel "^1.8.1"
 
 "@enhavo/block@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/block/-/block-0.9.2.tgz#3f1b7aec41c10415898544c9ca2020f5d17eea31"
-  integrity sha512-fGcvi+UQHh05vtfM5kjvc7vEO1BabDiD3uPWwvm04PgFiO941YElG8b78mSSChZ/+kBWkuMV5r4zmPYBrIsMGg==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/block/-/block-0.9.3.tgz#1edcb1e303dbb7dab2c03f477bd7bf877e5dd8f1"
+  integrity sha512-uw2kIQXKNAxlXHuI8hbPvNujgw1VnYNldRb7dj/xcKZ90h2vJSoLx5v6WL4Ctj2hKBHdpC2YwvkiKcWJHyy+vA==
   dependencies:
     bootstrap "^4.3.1"
     jquery "~3.4.1"
     slick-carousel "^1.8.1"
 
 "@enhavo/calendar@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/calendar/-/calendar-0.9.2.tgz#4b4712db1227dc3a9797334ae209dad2fb1c093c"
-  integrity sha512-GD0aGPlu2ICSGTtGl3B0T8YReQaQgKqP0SPCkjBIDiwxp0OxeK52pi6bV+fvdKXEkZUBZmBSYjZ2vDPJT/5BGQ==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/calendar/-/calendar-0.9.3.tgz#a35846c6c63686f952a527e8e98a851f283102fd"
+  integrity sha512-twnhHNAx622OuI28pnRXzZxDBZ5ZHwi3u69qTw8umX7jse3r9WTfADY8Q31Yt7npUt6kp/uq0rPM5yrKy7DAOg==
   dependencies:
     "@fullcalendar/core" "^4.2.0"
     "@fullcalendar/daygrid" "^4.2.0"
@@ -885,9 +885,9 @@
     jquery "~3.4.1"
 
 "@enhavo/core@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/core/-/core-0.9.2.tgz#521cab61574093f654d35c5e05fc320e27ac0be1"
-  integrity sha512-GiXvnnhLuBiP8noc/EyOiOf8vTFqOgH5Vr5SFp9Q+iTZ0IYXGnQ1NBNnv0bD8FravyrE+vFytpFHEk1f+vxssw==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/core/-/core-0.9.3.tgz#4b1cde209c1cf2810706187b0b01b667f4db4fbd"
+  integrity sha512-lw3vetqr0XoNuWmWEbC7LoYmxBaHJkjU9EXeqCGh3mn1DO9/uRDNWvf7cfub4L+A6g1vghFCxBTOrTHbqWj3zw==
   dependencies:
     "@symfony/webpack-encore" "0.30.2"
     copy-webpack-plugin "^4.5.2"
@@ -901,9 +901,9 @@
     yaml "^1.10.0"
 
 "@enhavo/dashboard@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/dashboard/-/dashboard-0.9.2.tgz#d27f6e068e71bd353302c8207dd007bd273a80ba"
-  integrity sha512-k4Bz+SL8baWLYXkXA9BWdSvUnny/LRvAG3k6dtdUKA8BJtn5uZ2Bzl7bf9PvCI4NclrLvLQs3DITEMJcgAII+Q==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/dashboard/-/dashboard-0.9.3.tgz#69f993feee65897e5d1b1883bd8736d58fb40cc9"
+  integrity sha512-xRhkF2515uB/eVnNTNJUbAQ3kIjp/ok/N2VwYQGOjs6TL4cP0pVkgGLaxjmsuFA7vqNWGXgZcZ5ooumtdwwSgg==
   dependencies:
     "@enhavo/app" "^0.9"
     chart.js "^2.4.0"
@@ -911,9 +911,9 @@
     lodash "^4.17.11"
 
 "@enhavo/dependency-injection@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/dependency-injection/-/dependency-injection-0.9.2.tgz#520ecf003dde9bfbfaea71b8cf12ab4743e55170"
-  integrity sha512-7GKHqxoy0lyoFeZrkNG5FcXiHU4Y7iO2XaozsEzV0/+t8fd8wYN4ZTbAMob9zjXAaI+FqSFO2hQxeAYzkvPdog==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/dependency-injection/-/dependency-injection-0.9.3.tgz#a0451dde8f32a4307d2614864392adec84fbf900"
+  integrity sha512-LcrHe6Xrbdp5xjGXtMG5y6I3bajBctyHatOgvJsyjFWHK6TedfJa3xc8yKxSRRcJThfNFWMNhMSZZumWGL4gag==
   dependencies:
     glob "^7.1.6"
     loader-utils "^2.0.0"
@@ -921,14 +921,14 @@
     yaml "^1.10.0"
 
 "@enhavo/font@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/font/-/font-0.9.2.tgz#775b20708b3d241c78b19e62ea1e3844dccde692"
-  integrity sha512-7/2GICckITz5SPRAETHwEi3LNFSVVjzX3RB3TPO6Kc1hK0RTT6F/WgpQ+KDlylvyafTOvnFexhSKruTLmadg5w==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/font/-/font-0.9.3.tgz#af11e549dbd73d90797c4688597290aff3abff83"
+  integrity sha512-i8gcN0NFo5IRYFIHakpg6xC+Cw48IBHOv2SlZnuIXxheyoJ5l1pRVIBb/8wEaXP/+4v4ulR5GnIN8t6PM+KGzw==
 
 "@enhavo/form@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/form/-/form-0.9.2.tgz#5831c042ffa23fb87301db1ca43d6e9f175980ff"
-  integrity sha512-9ZNtvbLr0UOrGPWam8BoxDHiNR1syYIym5hUq4h99BTjx64dWb54ZLjS9zK2l5lxjRekNYcMoESmlWHs3sd5JA==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/form/-/form-0.9.3.tgz#009ae100c47704220c1b2dcae49449284c00093c"
+  integrity sha512-Dn55SOEcLnkZhiWOyv8TTVhnAbPkkwvyc0UjPgzyfOJPKaDsxs4VNwLk/ZRoTK7S6IqOtvsEluDHH3Fs6L+rkA==
   dependencies:
     "@enhavo/app" "^0.9"
     copy-webpack-plugin "^4.5.2"
@@ -942,9 +942,9 @@
     tinymce "~5.3.1"
 
 "@enhavo/media@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/media/-/media-0.9.2.tgz#0edca969d45fc88009a80038e24df425f4976833"
-  integrity sha512-4JqHI1GuYPVfkkflGhzR/sulpegZH4sfH09PDEuBC68JeTi484WqNYndCC8FjS9J98+gMqCHnLEwrme/D//OKA==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/media/-/media-0.9.3.tgz#85c76be37c855b186cdee3b6f3b866a99d9c4bc9"
+  integrity sha512-gtXKosDjyR82xrza4cg4sxeGrvbbc9McBOZqJZpkeEHKmDDquJ2Le5h4ILw6aLJpibU3tYMKb9iuz/p/eHlRKw==
   dependencies:
     "@enhavo/app" "^0.9"
     blueimp-file-upload "^9.22.1"
@@ -954,49 +954,49 @@
     sortablejs "^1.10.2"
 
 "@enhavo/newsletter@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/newsletter/-/newsletter-0.9.2.tgz#302c64ccad0612bb3cf335c699c7e287b61f3e2b"
-  integrity sha512-cR21yf4rAE/tACLlgX4XO2JkE7Abt1nog5eJrKoQi4kT7L/FbCWWGWEYXDoxgZ1pIPEewF8X9NrytX+sWGniwg==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/newsletter/-/newsletter-0.9.3.tgz#834a1a960cb2ae510ad3fe51e1e070ea6baa46b7"
+  integrity sha512-Oh/UsTirsel1p65pL+/BUCn6AgGM6sQEKA7c8Me2rbeCJ9Ryxn2awsQ5k2CztUUxzfQLzepz+KnkAzkFXAI3PQ==
   dependencies:
     "@enhavo/app" "^0.9"
 
 "@enhavo/shop@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/shop/-/shop-0.9.2.tgz#a1ec02e443e327a97cd3f20c7c4654c63dc7c1b0"
-  integrity sha512-rDMIdHooPYQlbITaL1m/rTF5wntQv1W9YqS3nqdRQFTlDykswc6s1BprW4awTFlTuemlllJGWt/QA99QhJlqcA==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/shop/-/shop-0.9.3.tgz#36b3530d39681290592a51181a4cd8e9d12ff996"
+  integrity sha512-YVPaG5Oj6mteljrUsbX5umFDRHeSENS6R+9zokTFMxgXJjw2Hr5zSmb1wzb6s1yb9K7mbIB5eeZRjwGTOCwvSg==
   dependencies:
     jquery "~3.4.1"
 
 "@enhavo/slider@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/slider/-/slider-0.9.2.tgz#a01a736e30b2957eda658709803df886255ba337"
-  integrity sha512-wLlGAuBdEpr+SKyY3HgQA4FWAQoom2RtdpDEaHinz6fp1YUOUP8iECavgiUrYdfTQljG759YxCAO95Ivkab3VA==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/slider/-/slider-0.9.3.tgz#a684ec919480d155eb1c3d9f7b3190c0b51f5f84"
+  integrity sha512-Iqq/LBSi4g6TqHEpxcFZb2VZ+QMrVzsxQ006n3er8LO3gjWJUbbugnbA5DPP7Q3YTgHefTuDaIH5auBHmtccpA==
   dependencies:
     bootstrap "^4.3.1"
     jquery "~3.4.1"
     slick-carousel "^1.8.1"
 
 "@enhavo/theme@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/theme/-/theme-0.9.2.tgz#b3d0be914261830cf067efbeb44471236bcd43a1"
-  integrity sha512-rKyUaqyKZ36TflZGL7/DjqLvAwjDRSE1L9D1TWfPkffaAF1ot9c3XnhM4ujbGE6rEsVOzERcKa0UKd49htp+uw==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/theme/-/theme-0.9.3.tgz#e40e952e68576ffc1f7c9c9d8021add7314875cc"
+  integrity sha512-m9atyxcXV2WpSLmClRHSroQlNH/BJ2CFbSVZIrVmKowzwZ/7tWLX/jVEd9AsCiAWW0L+Sa2qMSGVvBMzYV5mgw==
   dependencies:
     "@enhavo/app" "^0.9"
     bootstrap "^4.3.1"
 
 "@enhavo/translation@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/translation/-/translation-0.9.2.tgz#c281cd5dd0598b6c075ca9d058b87a22c3688d34"
-  integrity sha512-acCqSM9CeypVvCF0kG7LN+Kg1Seu5iPMBX/cHlFx6iWA6XaDwaYzd7NA1xAgSivuNbqBVAX7J6fLgP6NNUbkcQ==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/translation/-/translation-0.9.3.tgz#0511076e6a40150b94b1582cd84cab2e6f5ecbe4"
+  integrity sha512-mVsJHR/GcWF4flrvG3X4L7pZKarySMACSZkj3jXXhwnD1ll6JW1BxxE15/av2cVD0ibaKlTpWj6Av+0aJxBZFg==
   dependencies:
     "@enhavo/app" "^0.9"
     "@enhavo/form" "^0.9"
     jquery "~3.4.1"
 
 "@enhavo/user@^0.9":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@enhavo/user/-/user-0.9.2.tgz#6eb5984e99c8032bbe7724cc9cc66eb5ed103c46"
-  integrity sha512-eK/jCyTKkTsg62FRHwBqZdD+eCa/uqJLWRnFwL4AgB+i+idqMYK5/AxesijuZNodpbspS7wYAIjcoKKrzo/prA==
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@enhavo/user/-/user-0.9.3.tgz#c4d20c835eae9d86a6d2c0efd3f6541346ef7199"
+  integrity sha512-+YJ7HK+VYk21Ig/34wQNDSC1svsa5qxd1eQTEHgmAQlHQ/Sm87V9LrbxIZDSSzhSXssUE8z+L8X3BDZix6RK5g==
   dependencies:
     "@enhavo/app" "^0.9"
 
@@ -2020,9 +2020,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001135:
-  version "1.0.30001147"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001147.tgz#84d27e5b691a8da66e16887b34c78dacf3935f00"
-  integrity sha512-CPyN875geYk46eIqPl5jlmotCr5YZC2KxIVfb4z0FrNfLxPM+MyodWD2irJGDG8vUUE1fmg3De9vt8uaC6Nf6w==
+  version "1.0.30001148"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001148.tgz#dc97c7ed918ab33bf8706ddd5e387287e015d637"
+  integrity sha512-E66qcd0KMKZHNJQt9hiLZGE3J4zuTqE1OnU53miEVtylFbwOEmeA5OsRu90noZful+XGSQOni1aT2tiqu/9yYw==
 
 caseless@~0.12.0:
   version "0.12.0"

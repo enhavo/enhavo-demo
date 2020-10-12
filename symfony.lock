@@ -573,9 +573,6 @@
     "symfony/service-contracts": {
         "version": "v2.2.0"
     },
-    "symfony/stopwatch": {
-        "version": "v4.4.15"
-    },
     "symfony/swiftmailer-bundle": {
         "version": "2.5",
         "recipe": {

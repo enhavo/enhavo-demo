@@ -7,12 +7,10 @@
  * @author Gerhard Seidel <gseidel.message@googlemail.com>
  */
 
-namespace App\Fixtures\Fixtures;
+namespace App\DataFixtures\ORM;
 
 use Enhavo\Bundle\ArticleBundle\Entity\Article;
-use Enhavo\Bundle\CommentBundle\Entity\Comment;
-use Enhavo\Bundle\CommentBundle\Entity\Thread;
-use App\Fixtures\AbstractFixture;
+use App\DataFixtures\AbstractFixture;
 use Enhavo\Bundle\TaxonomyBundle\Entity\Taxonomy;
 use Enhavo\Bundle\TaxonomyBundle\Entity\Term;
 

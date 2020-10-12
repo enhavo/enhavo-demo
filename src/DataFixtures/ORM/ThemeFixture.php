@@ -6,9 +6,9 @@
  * @author gseidel
  */
 
-namespace App\Fixtures\Fixtures;
+namespace App\DataFixtures\ORM;
 
-use App\Fixtures\AbstractFixture;
+use App\DataFixtures\AbstractFixture;
 use Enhavo\Bundle\UserBundle\Entity\User;
 
 class ThemeFixture extends AbstractFixture

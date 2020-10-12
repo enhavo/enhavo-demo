@@ -6,12 +6,11 @@
  * @author gseidel
  */
 
-namespace App\Fixtures;
+namespace App\DataFixtures;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Enhavo\Bundle\BlockBundle\Entity\Node;
 use Enhavo\Bundle\BlockBundle\Factory\BlockFactory;
 use Enhavo\Bundle\BlockBundle\Factory\NodeFactory;
 use Enhavo\Bundle\BlockBundle\Model\Block\PictureBlock;
@@ -19,7 +18,6 @@ use Enhavo\Bundle\BlockBundle\Model\Block\TextBlock;
 use Enhavo\Bundle\BlockBundle\Model\Block\TextPictureBlock;
 use Enhavo\Bundle\BlockBundle\Model\BlockInterface;
 use Enhavo\Bundle\BlockBundle\Model\NodeInterface;
-use Enhavo\Bundle\RoutingBundle\Entity\Route;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
@@ -54,7 +52,7 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
      */
     public function loadData($name) {
 
-        $file = sprintf('%s/../Resources/fixtures/%s.yaml', __DIR__ , $name);
+        $file = sprintf('%s/../../fixtures/%s.yaml', __DIR__ , $name);
 
         if(!file_exists($file)) {
             throw new \Exception(sprintf('fixtures file "%s" not found for name "%s"', $file, $name));

@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Fixtures\Fixtures;
+namespace App\DataFixtures\ORM;
 
 use Enhavo\Bundle\CommentBundle\Exception\NotFoundException;
-use App\Fixtures\AbstractFixture;
+use App\DataFixtures\AbstractFixture;
 use Enhavo\Bundle\NavigationBundle\Factory\NodeFactory;
-use Enhavo\Bundle\NavigationBundle\Resolver\NodeResolver;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
 class NavigationFixture extends AbstractFixture
