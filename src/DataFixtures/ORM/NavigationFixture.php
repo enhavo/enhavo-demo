@@ -2,9 +2,12 @@
 
 namespace App\DataFixtures\ORM;
 
-use Enhavo\Bundle\CommentBundle\Exception\NotFoundException;
 use App\DataFixtures\AbstractFixture;
-use Enhavo\Bundle\NavigationBundle\Factory\NodeFactory;
+use Enhavo\Bundle\BlockBundle\Model\NodeInterface;
+use Enhavo\Bundle\CommentBundle\Exception\NotFoundException;
+use Enhavo\Bundle\NavigationBundle\Model\SubjectInterface;
+use Enhavo\Bundle\NavigationBundle\NavItem\NavItem;
+use Enhavo\Bundle\NavigationBundle\NavItem\NavItemManager;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
 class NavigationFixture extends AbstractFixture
@@ -57,19 +60,19 @@ class NavigationFixture extends AbstractFixture
 
     /**
      * @param array $item
-     * @return \Enhavo\Bundle\NavigationBundle\Model\NodeInterface|null
+     * @return SubjectInterface|null
      */
     function createNode(array $item)
     {
         $type = $item['type'];
         unset($item['type']);
 
-        /** @var NodeResolver */
-        $resolver = $this->container->get('enhavo_navigation.resolver.node_resolver');
+        /** @var NavItemManager */
+        $itemManager = $this->container->get('Enhavo\Bundle\NavigationBundle\NavItem\NavItemManager');
+        /** @var SubjectInterface $node */
         $node = null;
         try {
-            /** @var NodeFactory $factory */
-            $factory = $resolver->resolveFactory($type);
+            $factory = $itemManager->getFactory($type);
             $node = $factory->createNew();
         } catch (\Exception $ex) {
             print_r($ex->getMessage());echo PHP_EOL;die;

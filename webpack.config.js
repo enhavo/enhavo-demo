@@ -4,19 +4,26 @@ const AppThemePackage = require('@enhavo/app/Encore/AppThemePackage');
 const FormPackage = require('@enhavo/form/Encore/FormPackage');
 
 EnhavoEncore.add(
-  'enhavo',
-  [new AppPackage(), new FormPackage()],
-  Encore => {},
-  config => {}
+    'enhavo',
+    [
+        new AppPackage(),
+        new FormPackage(),
+    ],
+    config => {}
 );
 
 EnhavoEncore.add(
-  'theme',
-  [new AppThemePackage()],
-  Encore => {
-    Encore.addEntry('base', './assets/theme/base.js');
-  },
-  config => {}
+    'theme',
+    [ new AppThemePackage() ],
+    Encore => {
+        Encore
+            .addEntry('base', './assets/theme/base')
+            .copyFiles({
+                from: './assets/theme/images',
+                to: 'images/[path][name].[ext]'
+            })
+    },
+    config => {}
 );
 
 module.exports = EnhavoEncore.export();

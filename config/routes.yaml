@@ -1,3 +1,4 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+#app_admin:
+#    resource: ./routes/admin/
+#    type: directory
+#    prefix: /admin

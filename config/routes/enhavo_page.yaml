@@ -1,0 +1,3 @@
+enhavo_page_admin:
+    resource: "@EnhavoPageBundle/Resources/config/routes/admin/*"
+    prefix: /admin
