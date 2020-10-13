@@ -4,4 +4,3 @@ enhavo_app:
             from: '%env(resolve:MAILER_FROM)%'
             name: '%env(resolve:MAILER_NAME)%'
             to: '%env(resolve:MAILER_TO)%'
-    menu:

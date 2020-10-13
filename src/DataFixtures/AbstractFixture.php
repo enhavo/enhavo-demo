@@ -8,9 +8,10 @@
 
 namespace App\DataFixtures;
 
+use DateTime;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 use Enhavo\Bundle\BlockBundle\Factory\BlockFactory;
 use Enhavo\Bundle\BlockBundle\Factory\NodeFactory;
 use Enhavo\Bundle\BlockBundle\Model\Block\PictureBlock;
@@ -18,9 +19,11 @@ use Enhavo\Bundle\BlockBundle\Model\Block\TextBlock;
 use Enhavo\Bundle\BlockBundle\Model\Block\TextPictureBlock;
 use Enhavo\Bundle\BlockBundle\Model\BlockInterface;
 use Enhavo\Bundle\BlockBundle\Model\NodeInterface;
+use Enhavo\Bundle\MediaBundle\Model\FileInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
+use Symfony\Component\Translation\Translator;
 use Symfony\Component\Yaml\Yaml;
 
 abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterface, ContainerAwareInterface
@@ -82,12 +85,13 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
      * Save file and return its model.
      *
      * @param $path
-     * @return \Enhavo\Bundle\MediaBundle\Model\FileInterface
+     * @return FileInterface
      * @throws \Exception
      */
     protected function createImage($path)
     {
-        $path = sprintf('%s/../Resources/images/%s', __DIR__, $path);
+        $rootDir = $this->container->getParameter('kernel.root_dir');
+        $path = sprintf('%s/../fixtures/images/%s', $rootDir, $path);
         $file = $this->container->get('enhavo_media.factory.file')->createFromPath($path);
         $this->container->get('enhavo_media.media.media_manager')->saveFile($file);
 
@@ -98,18 +102,18 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
      * Return DateTime object
      *
      * @param $value
-     * @return \DateTime
+     * @return DateTime
      */
     public function createDateTime($value)
     {
         $date = null;
 
         if(is_string($value)) {
-            $date = new \DateTime($value);
+            $date = new DateTime($value);
         }
 
         if(is_int($value)) {
-            $date = new \DateTime();
+            $date = new DateTime();
             $date->setTimestamp($value);
         }
 
@@ -262,7 +266,7 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
 
     protected function createRoute($url, $content)
     {
-        $route = $this->container->get('enhavo_demo.factory.route')->createNew();
+        $route = $this->container->get('enhavo_routing.factory.route')->createNew();
         $route->setName(preg_replace('/ */', '', strtolower($content->getTitle())));
         $route->setStaticPrefix($url);
         $route->setContent($content);

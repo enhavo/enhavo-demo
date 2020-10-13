@@ -828,14 +828,13 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@enhavo/app@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/app/-/app-0.9.3.tgz#8409b751c8de94e54027fcbaf40a3687516b152b"
-  integrity sha512-bRHH6n4nJPy8IRmj9BLny1ioG00Jzsnp0iz8l/9ySoy0+g3VyIWuF6MhWE3u6yYa/nBwUYMeEiaa4Sf8TGl9hA==
+"@enhavo/app@https://github.com/enhavo/app-assets.git", "@enhavo/app@https://github.com/enhavo/app-assets.git#master":
+  version "0.8.0"
+  uid ae0c17a3602ecdce5ea7ea710b740a3f481b6523
+  resolved "https://github.com/enhavo/app-assets.git#ae0c17a3602ecdce5ea7ea710b740a3f481b6523"
   dependencies:
-    "@enhavo/core" "^0.9"
-    "@enhavo/dependency-injection" "^0.9"
-    "@enhavo/font" "^0.9"
+    "@enhavo/core" "https://github.com/enhavo/core-assets.git"
+    "@enhavo/font" "https://github.com/enhavo/font-assets.git"
     "@ibm/plex" "^1.2.3"
     ansi-to-html "^0.6.11"
     async "^2.6.2"
@@ -854,28 +853,25 @@
     vuedraggable "^2.20.0"
     vuejs-datepicker "^1.6.2"
 
-"@enhavo/article@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/article/-/article-0.9.3.tgz#0a34c0b7946d1af2e689ad8529ad863191a1deac"
-  integrity sha512-D8uAY3k42DASV8dqJdCsaOpWXuTJghrEIP4sirrczNB7Ot/UxmG/Tk7IKz+ZQczmYdFOEQy5ktZ4VXxOig0/UQ==
+"@enhavo/article@https://github.com/enhavo/article-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/article-assets.git#fa8ee78635fad20abb60b381728784795e1701f8"
   dependencies:
     bootstrap "^4.3.1"
     jquery "~3.4.1"
     slick-carousel "^1.8.1"
 
-"@enhavo/block@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/block/-/block-0.9.3.tgz#1edcb1e303dbb7dab2c03f477bd7bf877e5dd8f1"
-  integrity sha512-uw2kIQXKNAxlXHuI8hbPvNujgw1VnYNldRb7dj/xcKZ90h2vJSoLx5v6WL4Ctj2hKBHdpC2YwvkiKcWJHyy+vA==
+"@enhavo/block@https://github.com/enhavo/block-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/block-assets.git#307dffe0cfe828a5abcfce9560acb9142b81a496"
   dependencies:
     bootstrap "^4.3.1"
     jquery "~3.4.1"
     slick-carousel "^1.8.1"
 
-"@enhavo/calendar@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/calendar/-/calendar-0.9.3.tgz#a35846c6c63686f952a527e8e98a851f283102fd"
-  integrity sha512-twnhHNAx622OuI28pnRXzZxDBZ5ZHwi3u69qTw8umX7jse3r9WTfADY8Q31Yt7npUt6kp/uq0rPM5yrKy7DAOg==
+"@enhavo/calendar@https://github.com/enhavo/calendar-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/calendar-assets.git#a2bb1762b78bf1f6ab698a6cc846cf1bcce3579a"
   dependencies:
     "@fullcalendar/core" "^4.2.0"
     "@fullcalendar/daygrid" "^4.2.0"
@@ -884,10 +880,9 @@
     bootstrap "^4.3.1"
     jquery "~3.4.1"
 
-"@enhavo/core@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/core/-/core-0.9.3.tgz#4b1cde209c1cf2810706187b0b01b667f4db4fbd"
-  integrity sha512-lw3vetqr0XoNuWmWEbC7LoYmxBaHJkjU9EXeqCGh3mn1DO9/uRDNWvf7cfub4L+A6g1vghFCxBTOrTHbqWj3zw==
+"@enhavo/core@https://github.com/enhavo/core-assets.git", "@enhavo/core@https://github.com/enhavo/core-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/core-assets.git#c47497174048b995a89b140b567a5ace128d39b8"
   dependencies:
     "@symfony/webpack-encore" "0.30.2"
     copy-webpack-plugin "^4.5.2"
@@ -900,37 +895,33 @@
     vue-template-compiler "^2.5.22"
     yaml "^1.10.0"
 
-"@enhavo/dashboard@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/dashboard/-/dashboard-0.9.3.tgz#69f993feee65897e5d1b1883bd8736d58fb40cc9"
-  integrity sha512-xRhkF2515uB/eVnNTNJUbAQ3kIjp/ok/N2VwYQGOjs6TL4cP0pVkgGLaxjmsuFA7vqNWGXgZcZ5ooumtdwwSgg==
+"@enhavo/dashboard@https://github.com/enhavo/dashboard-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/dashboard-assets.git#c01c2e100adaf6cc692f982652caf75fb4002b36"
   dependencies:
-    "@enhavo/app" "^0.9"
+    "@enhavo/app" "https://github.com/enhavo/app-assets.git"
     chart.js "^2.4.0"
     jquery "~3.4.1"
     lodash "^4.17.11"
 
-"@enhavo/dependency-injection@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/dependency-injection/-/dependency-injection-0.9.3.tgz#a0451dde8f32a4307d2614864392adec84fbf900"
-  integrity sha512-LcrHe6Xrbdp5xjGXtMG5y6I3bajBctyHatOgvJsyjFWHK6TedfJa3xc8yKxSRRcJThfNFWMNhMSZZumWGL4gag==
+"@enhavo/dependency-injection@https://github.com/enhavo/dependency-injection.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/dependency-injection.git#deeddeccca84261eb0918b531da551f54a7e5eab"
   dependencies:
     glob "^7.1.6"
     loader-utils "^2.0.0"
     sha1 "^1.1.1"
     yaml "^1.10.0"
 
-"@enhavo/font@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/font/-/font-0.9.3.tgz#af11e549dbd73d90797c4688597290aff3abff83"
-  integrity sha512-i8gcN0NFo5IRYFIHakpg6xC+Cw48IBHOv2SlZnuIXxheyoJ5l1pRVIBb/8wEaXP/+4v4ulR5GnIN8t6PM+KGzw==
+"@enhavo/font@https://github.com/enhavo/font-assets.git", "@enhavo/font@https://github.com/enhavo/font-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/font-assets.git#3fcf83ed9d10530d80afd98a7148db38cedb618c"
 
-"@enhavo/form@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/form/-/form-0.9.3.tgz#009ae100c47704220c1b2dcae49449284c00093c"
-  integrity sha512-Dn55SOEcLnkZhiWOyv8TTVhnAbPkkwvyc0UjPgzyfOJPKaDsxs4VNwLk/ZRoTK7S6IqOtvsEluDHH3Fs6L+rkA==
+"@enhavo/form@https://github.com/enhavo/form-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/form-assets.git#0ff6d63c24ac0c7c701e3441063f6d2dda3a824f"
   dependencies:
-    "@enhavo/app" "^0.9"
+    "@enhavo/app" "https://github.com/enhavo/app-assets.git"
     copy-webpack-plugin "^4.5.2"
     icheck "~1.0.2"
     jquery "~3.4.1"
@@ -941,64 +932,43 @@
     sortablejs "^1.10.2"
     tinymce "~5.3.1"
 
-"@enhavo/media@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/media/-/media-0.9.3.tgz#85c76be37c855b186cdee3b6f3b866a99d9c4bc9"
-  integrity sha512-gtXKosDjyR82xrza4cg4sxeGrvbbc9McBOZqJZpkeEHKmDDquJ2Le5h4ILw6aLJpibU3tYMKb9iuz/p/eHlRKw==
+"@enhavo/media@https://github.com/enhavo/media-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/media-assets.git#743bfeaa6fdb26e5223f0e043be55a9bd4bf3d11"
   dependencies:
-    "@enhavo/app" "^0.9"
+    "@enhavo/app" "https://github.com/enhavo/app-assets.git"
     blueimp-file-upload "^9.22.1"
     cropperjs "~1.2.2"
     jquery "~3.4.1"
     lodash "^4.17.11"
     sortablejs "^1.10.2"
 
-"@enhavo/newsletter@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/newsletter/-/newsletter-0.9.3.tgz#834a1a960cb2ae510ad3fe51e1e070ea6baa46b7"
-  integrity sha512-Oh/UsTirsel1p65pL+/BUCn6AgGM6sQEKA7c8Me2rbeCJ9Ryxn2awsQ5k2CztUUxzfQLzepz+KnkAzkFXAI3PQ==
+"@enhavo/newsletter@https://github.com/enhavo/newsletter-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/newsletter-assets.git#fa658ecdced1c2cde89cfc376a4239f301824d84"
   dependencies:
-    "@enhavo/app" "^0.9"
+    "@enhavo/app" "https://github.com/enhavo/app-assets.git"
 
-"@enhavo/shop@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/shop/-/shop-0.9.3.tgz#36b3530d39681290592a51181a4cd8e9d12ff996"
-  integrity sha512-YVPaG5Oj6mteljrUsbX5umFDRHeSENS6R+9zokTFMxgXJjw2Hr5zSmb1wzb6s1yb9K7mbIB5eeZRjwGTOCwvSg==
-  dependencies:
-    jquery "~3.4.1"
-
-"@enhavo/slider@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/slider/-/slider-0.9.3.tgz#a684ec919480d155eb1c3d9f7b3190c0b51f5f84"
-  integrity sha512-Iqq/LBSi4g6TqHEpxcFZb2VZ+QMrVzsxQ006n3er8LO3gjWJUbbugnbA5DPP7Q3YTgHefTuDaIH5auBHmtccpA==
+"@enhavo/slider@https://github.com/enhavo/slider-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/slider-assets.git#f0463c8314544bf8ed24dcead774bb86d41f0e66"
   dependencies:
     bootstrap "^4.3.1"
     jquery "~3.4.1"
     slick-carousel "^1.8.1"
 
-"@enhavo/theme@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/theme/-/theme-0.9.3.tgz#e40e952e68576ffc1f7c9c9d8021add7314875cc"
-  integrity sha512-m9atyxcXV2WpSLmClRHSroQlNH/BJ2CFbSVZIrVmKowzwZ/7tWLX/jVEd9AsCiAWW0L+Sa2qMSGVvBMzYV5mgw==
+"@enhavo/theme@https://github.com/enhavo/theme-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/theme-assets.git#90d5e87e3448d2b5d608f18f994551de0bf1ae36"
   dependencies:
-    "@enhavo/app" "^0.9"
+    "@enhavo/app" "https://github.com/enhavo/app-assets.git"
     bootstrap "^4.3.1"
 
-"@enhavo/translation@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/translation/-/translation-0.9.3.tgz#0511076e6a40150b94b1582cd84cab2e6f5ecbe4"
-  integrity sha512-mVsJHR/GcWF4flrvG3X4L7pZKarySMACSZkj3jXXhwnD1ll6JW1BxxE15/av2cVD0ibaKlTpWj6Av+0aJxBZFg==
+"@enhavo/user@https://github.com/enhavo/user-assets.git#master":
+  version "0.8.0"
+  resolved "https://github.com/enhavo/user-assets.git#179a86c4cdc1ad77ad126db31c0c56a5117652b8"
   dependencies:
-    "@enhavo/app" "^0.9"
-    "@enhavo/form" "^0.9"
-    jquery "~3.4.1"
-
-"@enhavo/user@^0.9":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@enhavo/user/-/user-0.9.3.tgz#c4d20c835eae9d86a6d2c0efd3f6541346ef7199"
-  integrity sha512-+YJ7HK+VYk21Ig/34wQNDSC1svsa5qxd1eQTEHgmAQlHQ/Sm87V9LrbxIZDSSzhSXssUE8z+L8X3BDZix6RK5g==
-  dependencies:
-    "@enhavo/app" "^0.9"
+    "@enhavo/app" "https://github.com/enhavo/app-assets.git"
 
 "@fullcalendar/core@^4.2.0":
   version "4.4.2"

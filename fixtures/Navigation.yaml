@@ -12,10 +12,6 @@
             link: articles
         -
             type: page
-            label: Calendar
-            link: calendar
-        -
-            type: page
             label: Slider
             link: slider
         -

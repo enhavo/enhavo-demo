@@ -1,0 +1,13 @@
+@import '../../theme/styles/includes/vars';
+@import '../../theme/styles/includes/reset';
+@import '~compass-mixins/lib/compass';
+@import '~compass-mixins/lib/animate';
+@import '../../theme/styles/includes/blueprints';
+@import '../../theme/styles/includes/fonts';
+@import '../../theme/styles/includes/editor-styles';
+html {font-size:$fontSize;}
+body {font-family:$fontFamily;font-size:1rem;line-height:$lineHeight;padding:10px!important;}
+p {margin-bottom:1em;
+  &:last-child {margin-bottom:0;}
+}
+ul,ol {@extend %list;}
