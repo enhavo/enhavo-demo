@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: demo
+   web:
+     depends_on:
+       - db
+     image: enhavo/enhavo-demo:latest
+     ports:
+       - "8080:80"
+     environment:
+       DATABASE_URL: mysql://root:root@db:3306/demo?serverVersion=5.7
