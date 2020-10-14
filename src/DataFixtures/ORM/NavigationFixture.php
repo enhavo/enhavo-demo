@@ -108,7 +108,7 @@ class NavigationFixture extends AbstractFixture
             /** @var NodeInterface $node */
             $node = $this->container->get('enhavo_navigation.factory.node')->createNew();
             $node->setLabel($item['label']);
-            $node->setName(md5($type.$item['label']));
+            $node->setName($type);
             $node->setSubject($subject);
         }
 

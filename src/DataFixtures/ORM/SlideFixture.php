@@ -38,10 +38,11 @@ class SlideFixture extends AbstractFixture
         }
 
         $repository = $this->manager->getRepository('EnhavoSliderBundle:Slider');
+        /** @var Slider $slider */
         $slider = $repository->findOneBy(['title' => 'default']);
 
         if(empty($slider)) {
-            $slider = new Slider();
+            $slider = $this->container->get('enhavo_slider.factory.slider')->createNew();
             $slider->setCode('default');
             $slider->setTitle('default');
             $this->manager->persist($slider);
