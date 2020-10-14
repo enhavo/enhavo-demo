@@ -2397,12 +2397,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoSliderBundle.git",
-                "reference": "0ecf533f64bb995f62242dfec082f94bfd25109c"
+                "reference": "a1b40566ac7d2cc25ffaf10bcf29d597882344b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoSliderBundle/zipball/0ecf533f64bb995f62242dfec082f94bfd25109c",
-                "reference": "0ecf533f64bb995f62242dfec082f94bfd25109c",
+                "url": "https://api.github.com/repos/enhavo/EnhavoSliderBundle/zipball/a1b40566ac7d2cc25ffaf10bcf29d597882344b2",
+                "reference": "a1b40566ac7d2cc25ffaf10bcf29d597882344b2",
                 "shasum": ""
             },
             "require": {
@@ -2435,7 +2435,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-09-01T13:10:25+00:00"
+            "time": "2020-10-14T07:04:05+00:00"
         },
         {
             "name": "enhavo/taxonomy-bundle",
