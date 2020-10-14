@@ -89,7 +89,7 @@ export default class Theme implements InitializerInterface
     private initNavigation(element: HTMLElement)
     {
         $(element).find('[data-show-menu]').on('click', function() {
-            $('[data-menu-items]').toggle();
+            $(this).parent().toggleClass('menu-open');
             $(this).toggleClass('active');
         });
     };
