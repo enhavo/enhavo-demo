@@ -26,13 +26,13 @@ Create a `.env.local`  file and add following line with your database credential
 DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7
 ```
 
-If you your database not exists yat you can create it by following command
+If your database doesn't exist yet, you can create it by following command
 
 ```
 $ bin/console doctrine:database:create
 ```
 
-Then execute following commands to make get ready
+Then execute this commands to get ready
 
 ```
 $ yarn routes:dump
@@ -42,8 +42,10 @@ $ bin/console doctrine:fixtures:load
 $ bin/console enhavo:init
 ```
 
+Now you can start the server
+
 ```
 $ bin/console server:run
 ```
 
-You should see a result that the server started already. Use the link to see if it works
+You should see a result that the server started already. Use the link to see if it works!
