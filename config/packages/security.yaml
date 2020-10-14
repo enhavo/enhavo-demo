@@ -8,53 +8,53 @@ security:
 
     firewalls:
         dev:
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
         admin:
-            pattern:  ^/admin/.*
+            pattern: ^/admin/.*
             context: user
             form_login:
-                provider:       fos_userbundle
-                login_path:     /admin/login
-                use_forward:    false
-                check_path:     /admin/login/check
-                failure_path:   /admin/login
+                provider: fos_userbundle
+                login_path: /admin/login
+                use_forward: false
+                check_path: /admin/login/check
+                failure_path: /admin/login
                 default_target_path: /admin
             logout:
-                path:   /admin/logout
+                path: /admin/logout
                 target: /admin/login
-            anonymous:  true
+            anonymous: true
 
         user:
             pattern: ^/user/.*
             context: user
             form_login:
-                provider:       fos_userbundle
-                login_path:     /user/login
-                use_forward:    false
-                check_path:     /user/login/check
-                failure_path:   /user/login
+                provider: fos_userbundle
+                login_path: /user/login
+                use_forward: false
+                check_path: /user/login/check
+                failure_path: /user/login
                 default_target_path: /user/profile
             logout:
-                path:   /user/logout
+                path: /user/logout
                 target: /user/login
-            anonymous:  true
+            anonymous: true
 
         main:
             pattern: .*
             context: user
             form_login:
-                provider:       fos_userbundle
-                login_path:     /user/login
-                use_forward:    false
-                check_path:     /user/login/check
-                failure_path:   /user/login
+                provider: fos_userbundle
+                login_path: /user/login
+                use_forward: false
+                check_path: /user/login/check
+                failure_path: /user/login
                 default_target_path: /user/profile
             logout:
-                path:   /user/logout
+                path: /user/logout
                 target: /
-            anonymous:  true
+            anonymous: true
 
     access_control:
         - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
