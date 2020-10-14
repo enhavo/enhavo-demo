@@ -28,3 +28,7 @@ public/build/enhavo/*
 public/build/theme/*
 public/js/fos_routes.js
 ###< enhavo/app-bundle ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
