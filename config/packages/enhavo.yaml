@@ -10,20 +10,20 @@ enhavo_app:
             type: page
         slider:
             type: slider
-        newsletter:
-            type: newsletter
-        calendar:
-            type: calendar
-        shop:
-            type: shop
+#        newsletter:
+#            type: newsletter
+#        calendar:
+#            type: calendar
+#        shop:
+#            type: shop
         navigation:
             type: navigation
-        redirect:
-            type: redirect
+#        redirect:
+#            type: redirect
         media_library:
             type: media_library
-        sidebar:
-            type: sidebar
+#        sidebar:
+#            type: sidebar
 #        template:
 #            type: template
 #        theme:

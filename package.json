@@ -6,7 +6,7 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress",
-        "di": "node ./assets/node_modules/@enhavo/dependency-injection/bin/dependency-injection.js \"./assets/services/enhavo/*\""
+        "di": "di \"./assets/services/enhavo/*\""
     },
     "dependencies": {
         "@enhavo/app": "https://github.com/enhavo/app-assets.git#master",

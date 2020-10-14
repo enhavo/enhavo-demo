@@ -18,10 +18,7 @@ EnhavoEncore.add(
     Encore => {
         Encore
             .addEntry('base', './assets/theme/base')
-            .copyFiles({
-                from: './assets/theme/images',
-                to: 'images/[path][name].[ext]'
-            })
+
     },
     config => {}
 );

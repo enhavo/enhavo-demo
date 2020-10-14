@@ -3,10 +3,10 @@
 namespace App\DataFixtures\ORM;
 
 use App\DataFixtures\AbstractFixture;
-use Enhavo\Bundle\BlockBundle\Model\NodeInterface;
 use Enhavo\Bundle\CommentBundle\Exception\NotFoundException;
+use Enhavo\Bundle\NavigationBundle\Entity\Navigation;
+use Enhavo\Bundle\NavigationBundle\Model\NodeInterface;
 use Enhavo\Bundle\NavigationBundle\Model\SubjectInterface;
-use Enhavo\Bundle\NavigationBundle\NavItem\NavItem;
 use Enhavo\Bundle\NavigationBundle\NavItem\NavItemManager;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
@@ -34,6 +34,10 @@ class NavigationFixture extends AbstractFixture
         return $navigation;
     }
 
+    /**
+     * @param Navigation|NodeInterface $resource
+     * @param $content
+     */
     function addNodes($resource, $content)
     {
         foreach ($content as $item) {
@@ -60,7 +64,7 @@ class NavigationFixture extends AbstractFixture
 
     /**
      * @param array $item
-     * @return SubjectInterface|null
+     * @return NodeInterface|null
      */
     function createNode(array $item)
     {
@@ -69,42 +73,46 @@ class NavigationFixture extends AbstractFixture
 
         /** @var NavItemManager */
         $itemManager = $this->container->get('Enhavo\Bundle\NavigationBundle\NavItem\NavItemManager');
-        /** @var SubjectInterface $node */
+        /** @var SubjectInterface $subject */
+        $subject = null;
         $node = null;
+
         try {
             $factory = $itemManager->getFactory($type);
-            $node = $factory->createNew();
+            $subject = $factory->createNew();
         } catch (\Exception $ex) {
             print_r($ex->getMessage());echo PHP_EOL;die;
         }
 
-        if ($node) {
-
+        if ($subject) {
             if ($type == 'page' && isset($item['link'])) {
                 $page = $this->getPage($item['link']);
                 if (!$page) {
                     throw new NotFoundException('Page with name"' . $item['link'] . '" was not found"');
                 }
-                $node->setContent($page);
+                $subject->setContent($page);
             }
-            $config = ['target' => 'self'];
-            if (isset($item['target'])) {
-                $config['target'] = $item['target'];
-            }
-            $node->setConfiguration($config);
 
             $accessor = $this->propertyAccessor;
             foreach ($item as $k => $v) {
-                if ($accessor->isWritable($node, $k)) {
-                    $accessor->setValue($node, $k, $v);
+                if ($accessor->isWritable($subject, $k)) {
+                    $accessor->setValue($subject, $k, $v);
                 }
 
-                $content = $node->getContent();
+                $content = $subject->getContent();
                 if ($accessor->isWritable($content, $k)) {
                     $accessor->setValue($content, $k, $v);
                 }
             }
+
+            /** @var NodeInterface $node */
+            $node = $this->container->get('enhavo_navigation.factory.node')->createNew();
+            $node->setLabel($item['label']);
+            $node->setName(md5($type.$item['label']));
+            $node->setSubject($subject);
         }
+
+
 
         return $node;
     }
