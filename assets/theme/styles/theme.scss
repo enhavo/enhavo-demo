@@ -22,7 +22,7 @@ main { padding-top:0;}
 .block {padding:40px 0;}
 
 [class*="col-"] { padding: 0 $columnSpacing;}
-.container { max-width:$containerWidth;margin:0 auto;}
+.container { max-width:$containerWidth;margin:0 auto;padding:0 15px;}
 .hint { margin:$columnSpacing*2 auto;padding:$columnSpacing*2;border:1px solid $black; text-align:center;max-width:750px;
   .hint-title { font-weight:$bold; margin-bottom:15px;}
   >div { font-size:$fontSize2; line-height:$lineHeight;
@@ -87,6 +87,21 @@ main { padding-top:0;}
 }
 
 @media all and (max-width:767px) {
+  main {
+    >section {
+      &:first-child {
+        .container {
+          &:first-child {
+            .block {
+              &:first-child {
+                &:not(hero) {padding-top:80px;}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   footer { padding:25px 0 45px 0;
     .logo { margin-bottom:25px;}
     ul { line-height:$lineHeight*1.2;}
@@ -94,12 +109,15 @@ main { padding-top:0;}
   }
   .block {padding-bottom: 2em;}
   .main-menu {position:fixed; width:100%; top:0; left:0; z-index:10; background:#FFF; padding:0;box-shadow: inset 0 -1px 0 lighten($black, 80%); display:block;
+    &.menu-open {
+      .menu-items {display:block;}
+    }
     ul {
       &:last-of-type { padding-right:0;}
     }
     .menu-btn { display:block;}
     .logo { font-size:$fontSize4; float:none; margin-left:15px; padding:14px 0; display:inline-block;}
-    .menu-items { display:block;border-top:1px solid lighten($black, 80%); display:none; padding:0;
+    .menu-items { display:none;border-top:1px solid lighten($black, 80%); display:none; padding:0;
       li { display:block;
         a { padding:14px 30px; display:block;}
         +li { margin-left:0; border-top:1px solid lighten($black, 80%);}
