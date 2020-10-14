@@ -1,5 +1,8 @@
+@import "~slick-carousel/slick/slick.css";
+
 .block-gallery {
   img {width:100%}
+  .slider {max-width: 650px}
 }
 
 @media all and (max-width:767px) {

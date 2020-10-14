@@ -1,5 +1,7 @@
+@include grid(12, $columnSpacing);
+
 header { position:relative; z-index:11;}
-html, body {overflow-x:hidden;}
+html, body {overflow-x:hidden}
 html { font-size:$baseFontSize;}
 body { color:$black; font-family:$fontFamily; line-height:$lineHeight;}
 footer { border-top:1px solid $black; margin-top:3%; padding-top:3%; padding-bottom:10%; font-size:$fontSize1;
@@ -17,8 +19,10 @@ footer { border-top:1px solid $black; margin-top:3%; padding-top:3%; padding-bot
 main { padding-top:0;}
 .select {@extend %select;}
 .btn { @extend %btn;}
+.block {padding:40px 0;}
+
 [class*="col-"] { padding: 0 $columnSpacing;}
-.container { max-width:$containerWidth;}
+.container { max-width:$containerWidth;margin:0 auto;}
 .hint { margin:$columnSpacing*2 auto;padding:$columnSpacing*2;border:1px solid $black; text-align:center;max-width:750px;
   .hint-title { font-weight:$bold; margin-bottom:15px;}
   >div { font-size:$fontSize2; line-height:$lineHeight;

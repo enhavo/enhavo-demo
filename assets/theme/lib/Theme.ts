@@ -1,4 +1,5 @@
 import * as $ from "jquery";
+import 'slick-carousel';
 import InitializerInterface from "@enhavo/app/InitializerInterface";
 
 export default class Theme implements InitializerInterface
@@ -12,7 +13,21 @@ export default class Theme implements InitializerInterface
             this.toggleSidebar(element);
             this.inspectShopImage(element);
             this.handleShopGallery(element);
+            this.initGallery(element);
         })
+    }
+
+    private initGallery (element: HTMLElement)
+    {
+        $('[data-slider]').slick({
+            autoplay: true,
+            arrows: false,
+            speed: 800,
+            autoplaySpeed: 10000,
+            fade:true,
+            adaptiveHeight: true,
+            dots: true
+        });
     }
 
     private handleShopGallery (element: HTMLElement)
