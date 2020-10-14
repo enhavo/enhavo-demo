@@ -1707,12 +1707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoBlockBundle.git",
-                "reference": "6d810cb236a57c3cef89b4b58209003e3d32e014"
+                "reference": "45ed19d1320ac6e12d411c88438df2091c947e7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoBlockBundle/zipball/6d810cb236a57c3cef89b4b58209003e3d32e014",
-                "reference": "6d810cb236a57c3cef89b4b58209003e3d32e014",
+                "url": "https://api.github.com/repos/enhavo/EnhavoBlockBundle/zipball/45ed19d1320ac6e12d411c88438df2091c947e7f",
+                "reference": "45ed19d1320ac6e12d411c88438df2091c947e7f",
                 "shasum": ""
             },
             "require": {
@@ -1746,7 +1746,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-10-13T08:35:06+00:00"
+            "time": "2020-10-13T11:27:37+00:00"
         },
         {
             "name": "enhavo/comment-bundle",
@@ -2068,12 +2068,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoNavigationBundle.git",
-                "reference": "0a6a26ef5c7508361c1d52bc75d734fea7d3e1ec"
+                "reference": "9da2489a6eb3827561816b2b0be8abd7c05207ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoNavigationBundle/zipball/0a6a26ef5c7508361c1d52bc75d734fea7d3e1ec",
-                "reference": "0a6a26ef5c7508361c1d52bc75d734fea7d3e1ec",
+                "url": "https://api.github.com/repos/enhavo/EnhavoNavigationBundle/zipball/9da2489a6eb3827561816b2b0be8abd7c05207ec",
+                "reference": "9da2489a6eb3827561816b2b0be8abd7c05207ec",
                 "shasum": ""
             },
             "require": {
@@ -2106,7 +2106,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-09-22T16:10:57+00:00"
+            "time": "2020-10-13T11:27:37+00:00"
         },
         {
             "name": "enhavo/newsletter-bundle",

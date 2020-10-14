@@ -90,8 +90,9 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
      */
     protected function createImage($path)
     {
-        $rootDir = $this->container->getParameter('kernel.root_dir');
-        $path = sprintf('%s/../fixtures/images/%s', $rootDir, $path);
+        $rootDir = $this->container->getParameter('kernel.project_dir');
+        $path = sprintf('%s/fixtures/images/%s', $rootDir, $path);
+
         $file = $this->container->get('enhavo_media.factory.file')->createFromPath($path);
         $this->container->get('enhavo_media.media.media_manager')->saveFile($file);
 
@@ -248,8 +249,6 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
             case('text_picture'):
                 /** @var $blockType TextPictureBlock */
                 $blockType->setFile($this->createImage($fields['file']));
-                $blockType->setTitle($fields['title']);
-                $blockType->setCaption($fields['caption']);
                 $blockType->setFloat($fields['float']);
                 $blockType->setTitle($fields['title']);
                 $blockType->setText($fields['text']);
