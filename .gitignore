@@ -1,5 +1,6 @@
 
 ###> symfony/framework-bundle ###
+/.idea
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -11,7 +12,13 @@
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
-/public/build/
+/public/build/*
+!public/build/.gitkeep
+/public/videos
+/public/js
+/public/css
+/build/
+
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
