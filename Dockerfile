@@ -24,7 +24,8 @@ COPY yarn.lock yarn.lock
 COPY docker/my_init.d/03_env.bash /etc/my_init.d/03_env.bash
 COPY docker/my_init.d/04_init.bash /etc/my_init.d/04_init.bash
 
-RUN chmod 744 /etc/my_init.d/03_env.bash && \
+RUN apt-get install -y wait-for-it && \
+    chmod 744 /etc/my_init.d/03_env.bash && \
 	chmod 744 /etc/my_init.d/04_init.bash && \
     composer install && \
 	yarn install && \
