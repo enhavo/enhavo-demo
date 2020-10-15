@@ -49,3 +49,32 @@ $ bin/console server:run
 ```
 
 You should see a result that the server started already. Use the link to see if it works!
+
+Use docker
+----------
+
+If you want to start the demo with docker you can use the `docker-compose.yml` file
+
+```yaml
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: demo
+   web:
+     depends_on:
+       - db
+     image: enhavo/enhavo-demo:latest
+     ports:
+       - "8080:80"
+     environment:
+       DATABASE_URL: mysql://root:root@db:3306/demo?serverVersion=5.7
+
+```
+
+
+
+
