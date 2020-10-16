@@ -1,0 +1,12 @@
+<div class="block-article-teaser">
+    <div class="title">Highlight</div>
+    <article>
+        <div class="article-thumb"><img src="{{ media_url(block.article.picture) }}"></div>
+        <div class="article-content">
+            <div class="article-date">{{ block.article.publicationDate|date('d.m.y') }}</div>
+            <div class="article-title">{{ block.article.title }}</div>
+            <div class="article-teaser">{{ block.article.teaser|raw }}</div>
+            <a href="{{ router(block.article) }}" class="btn">Read more</a>
+        </div>
+    </article>
+</div>
