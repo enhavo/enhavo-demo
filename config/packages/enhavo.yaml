@@ -4,18 +4,14 @@ enhavo_app:
             type: dashboard
         user:
             type: user
-        article:
-            type: article
-        page:
-            type: page
-        slider:
-            type: slider
-        newsletter:
-            type: newsletter
         navigation:
             type: navigation
-        media_library:
-            type: media_library
+        page:
+            type: page
+        article:
+            type: article
+        slider:
+            type: slider
 
 enhavo_block:
     blocks:
@@ -47,13 +43,5 @@ enhavo_block:
             type: template
         resource:
             type: resource
-#        contact:
-#            type: contact
-#        calendar:
-#            type: calendar
         slider:
             type: slider
-#        newsletter_subscribe:
-#            type: newsletter_subscribe
-        comment:
-            type: comment

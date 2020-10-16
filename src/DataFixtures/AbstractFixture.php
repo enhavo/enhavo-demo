@@ -12,8 +12,11 @@ use DateTime;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
+use Enhavo\Bundle\ArticleBundle\Entity\ArticleTeaserBlock;
+use Enhavo\Bundle\ArticleBundle\Repository\ArticleRepository;
 use Enhavo\Bundle\BlockBundle\Factory\BlockFactory;
 use Enhavo\Bundle\BlockBundle\Factory\NodeFactory;
+use Enhavo\Bundle\BlockBundle\Model\Block\BlockquoteBlock;
 use Enhavo\Bundle\BlockBundle\Model\Block\PictureBlock;
 use Enhavo\Bundle\BlockBundle\Model\Block\TextBlock;
 use Enhavo\Bundle\BlockBundle\Model\Block\TextPictureBlock;
@@ -240,6 +243,11 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
                 $blockType->setText($fields['text']);
                 $blockType->setTitle($fields['title']);
                 break;
+            case('blockquote'):
+                /** @var $blockType BlockquoteBlock */
+                $blockType->setText($fields['text']);
+                $blockType->setAuthor($fields['author']);
+                break;
             case('picture'):
                 /** @var $blockType PictureBlock */
                 $blockType->setFile($this->createImage($fields['file']));
@@ -252,6 +260,13 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
                 $blockType->setFloat($fields['float']);
                 $blockType->setTitle($fields['title']);
                 $blockType->setText($fields['text']);
+                break;
+            case('article_teaser'):
+                /** @var $blockType ArticleTeaserBlock */
+                /** @var ArticleRepository $articleRepository */
+                $articleRepository = $this->container->get('enhavo_article.repository.article');
+                $article = $articleRepository->findBySlug($fields['article']);
+                $blockType->setArticle($article[0]);
                 break;
             case('sidebar_column'):
                 $code = $fields['code'];
