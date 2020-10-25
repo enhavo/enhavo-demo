@@ -7,4 +7,5 @@ if [ -f $FILE ]; then
 fi
 
 echo "Expose env vars to $FILE"
-echo "DATABASE_URL=$DATABASE_URL" >> /var/www/current/.env.local
+echo "DATABASE_URL=$DATABASE_URL" >> $FILE
+echo "APP_ENV=$APP_ENV" >> $FILE
