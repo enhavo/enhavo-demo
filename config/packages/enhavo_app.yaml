@@ -4,3 +4,17 @@ enhavo_app:
             from: '%env(resolve:MAILER_FROM)%'
             name: '%env(resolve:MAILER_NAME)%'
             to: '%env(resolve:MAILER_TO)%'
+
+    menu:
+        dashboard:
+            type: dashboard
+        user:
+            type: user
+        navigation:
+            type: navigation
+        page:
+            type: page
+        article:
+            type: article
+        slider:
+            type: slider

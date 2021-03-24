@@ -19,3 +19,26 @@ services:
             - '%enhavo_navigation.nav_items%'
         calls:
             - ['setContainer', ['@service_container']]
+
+
+    Enhavo\Bundle\UserBundle\User\UserManager:
+        public: true
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@Enhavo\Bundle\AppBundle\Mailer\MailerManager'
+            - '@enhavo_user.repository.user'
+            - '@Enhavo\Bundle\UserBundle\Mapper\UserMapper'
+            - '@enhavo_app.util.secure_url_token_generator'
+            - '@translator'
+            - '@form.factory'
+            - '@security.encoder_factory.generic'
+            - '@router'
+            - '@event_dispatcher'
+            - '@security.token_storage'
+            - '@request_stack'
+            - '@security.authentication.session_strategy.main'
+            - '@security.user_checker.main'
+            - ~
+            - '%enhavo_user.config%'
+            - '%enhavo_user.mail%'
+            - '%enhavo_user.parameters%'

@@ -1,5 +1,7 @@
 {
     "type": "project",
+    "name":  "enhavo demo",
+    "description": "The enhavo project demo",
     "license": "proprietary",
     "require": {
         "php": ">=7.2",
@@ -19,6 +21,7 @@
         "enhavo/media-bundle": "dev-master",
         "enhavo/navigation-bundle": "dev-master",
         "enhavo/newsletter-bundle": "dev-master",
+        "enhavo/cleverreach": "dev-master",
         "enhavo/page-bundle": "dev-master",
         "enhavo/search-bundle": "dev-master",
         "enhavo/redirect-bundle": "dev-master",
