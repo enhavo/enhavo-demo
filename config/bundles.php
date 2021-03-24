@@ -37,7 +37,6 @@ return [
     Enhavo\Bundle\RedirectBundle\EnhavoRedirectBundle::class => ['all' => true],
     Enhavo\Bundle\SidebarBundle\EnhavoSidebarBundle::class => ['all' => true],
     Enhavo\Bundle\SliderBundle\EnhavoSliderBundle::class => ['all' => true],
-    FOS\UserBundle\FOSUserBundle::class => ['all' => true],
     Enhavo\Bundle\UserBundle\EnhavoUserBundle::class => ['all' => true],
     Enhavo\Bundle\SearchBundle\EnhavoSearchBundle::class => ['all' => true],
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['all' => true],

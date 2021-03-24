@@ -9,7 +9,7 @@
 namespace App\DataFixtures\ORM;
 
 use App\DataFixtures\AbstractFixture;
-use Enhavo\Bundle\UserBundle\Entity\User;
+use Enhavo\Bundle\UserBundle\Model\User;
 
 class UserFixture extends AbstractFixture
 {
@@ -19,6 +19,7 @@ class UserFixture extends AbstractFixture
     function create($args)
     {
         $user = new User(); // todo use factory
+        $user->setEnabled(true);
         $user->setEmail($args['email']);
         $user->setUsername($args['email']);
         $user->setPlainPassword($args['password']);
@@ -29,7 +30,7 @@ class UserFixture extends AbstractFixture
             }
         }
 
-        $this->container->get('fos_user.user_manager')->updateUser($user, false);
+        $this->container->get('Enhavo\Bundle\UserBundle\User\UserManager')->update($user, true, false);
 
         return $user;
     }
