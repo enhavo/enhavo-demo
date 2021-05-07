@@ -1,0 +1,24 @@
+[class^="block-"] {margin-bottom:60px;
+  &:last-child {margin-bottom:0;}
+}
+
+@media all and (max-width:767px) {
+  [class^="block-"] {margin-bottom:35px;
+    &:last-child {margin-bottom:0;}
+  }
+}
+
+
+@import '../block/article-stream';
+@import '../block/article-teaser';
+@import '../block/blockquote';
+@import '../block/calendar';
+@import '../block/contact';
+@import '../block/gallery';
+@import '../block/header';
+@import '../block/newsletter';
+@import '../block/picture';
+@import '../block/slider';
+@import '../block/text';
+@import '../block/text-picture';
+@import '../block/video';

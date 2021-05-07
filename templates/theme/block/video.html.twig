@@ -1,0 +1,8 @@
+<div class="block-video">
+    {% if block.title %}
+        {{ block.title|html_sanitize }}
+    {% endif %}
+    <div class="video-container">
+        <iframe src="{{ block.url|youtube_url }}"></iframe>
+    </div>
+</div>

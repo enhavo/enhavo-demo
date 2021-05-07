@@ -1,132 +1,24 @@
 import * as $ from "jquery";
 import 'slick-carousel';
 import InitializerInterface from "@enhavo/app/InitializerInterface";
+import Application from './inc/Application';
+import LazyLoading from './inc/LazyLoading';
+import Slider from './inc/Slider';
 
 export default class Theme implements InitializerInterface
 {
     public init(element: HTMLElement)
     {
+        let app = new Application();
         $(() => {
-            this.initNavigation(element);
-            this.showDiffBillAddressForm(element);
+            app.init();
+            LazyLoading.initLazyLoadBackgroundImagesIO($('[data-lazy-load-background-src]'));
+            LazyLoading.initLazyLoadImagesIO($('[data-lazy-load-img-src]'));
             this.handleLoadingCursor(element);
-            this.toggleSidebar(element);
-            this.inspectShopImage(element);
-            this.handleShopGallery(element);
-            this.initGallery(element);
+            $('[data-block="slider"]').each(function() {
+                Slider.initSlickSlider($(this));
+            });
         })
-    }
-
-    private initGallery (element: HTMLElement)
-    {
-        $('[data-slider]').slick({
-            autoplay: true,
-            arrows: false,
-            speed: 800,
-            autoplaySpeed: 10000,
-            fade:true,
-            adaptiveHeight: true,
-            dots: true
-        });
-    }
-
-    private handleShopGallery (element: HTMLElement)
-    {
-        $(element).find('[data-image]').on('click', function() {
-            let imgSrc = $(this).attr('src');
-            let fullImgSrc = $(this).data('full-image');
-
-            $(this).parent().parent().parent('[data-shop-gallery]').find('[data-image-zoom]').attr('src', imgSrc)
-            $(this).parent().parent().parent('[data-shop-gallery]').find('[data-image-zoom]').attr('data-image-zoom', fullImgSrc)
-        });
-    };
-
-    private inspectShopImage (element: HTMLElement)
-    {
-        $(element).find('[data-image-zoom]').on('click', function() {
-            let imgSrc = $(this).attr('data-image-zoom');
-            $('[data-product-zoom]').fadeIn();
-            $('[data-product-zoom]').find('[data-image-zoomed]').attr('src', imgSrc);
-        });
-
-
-        $(element).find('[data-product-zoom]').on('mousemove', function(event) {
-
-            let windowWidth = window.innerWidth;
-            let windowHeight = window.innerHeight;
-
-            let imgWidth = $(this).find('[data-image-zoomed]').innerWidth();
-            let imgHeight = $(this).find('[data-image-zoomed]').innerHeight();
-
-            let cursorX = event.pageX / windowWidth;
-            let cursorY = event.pageY / windowHeight;
-
-            let imageWindowDiffWidth = (imgWidth - windowWidth)
-            let imageWindowDiffHeight = (imgHeight - windowHeight)
-
-            let ImgPositionX = cursorX * imageWindowDiffWidth;
-            let ImgPositionY = cursorY * imageWindowDiffHeight;
-
-            // bild, das höher und breiter als das Fenster ist
-            if(imgHeight > windowHeight && imgWidth > windowWidth) {
-                $(this).find('[data-image-zoomed]').css({'left':-ImgPositionX, 'top': -ImgPositionY, 'transform':'none'});
-            };
-            // bild, das nicht höher als das Fenster ist, aber breiter
-            if(imgHeight < windowHeight && imgWidth > windowWidth) {
-                $(this).find('[data-image-zoomed]').css({'left':-ImgPositionX, 'top':'50%', 'transform':'translateY(-50%)'});
-            };
-            // bild, das nicht breiter als das Fenster ist, aber höher
-            if(imgHeight > windowHeight && imgWidth < windowWidth) {
-                $(this).find('[data-image-zoomed]').css({'left':'50%', 'transform':'translateX(-50%)', 'top': -ImgPositionY});
-            };
-        });
-
-        $(element).find('[data-product-zoom]').on('click', function() {
-            $(this).fadeOut();
-        });
-    };
-
-    private initNavigation(element: HTMLElement)
-    {
-        $(element).find('[data-show-menu]').on('click', function() {
-            $(this).parent().toggleClass('menu-open');
-            $(this).toggleClass('active');
-        });
-    };
-
-    private toggleSidebar(element: HTMLElement)
-    {
-        let showCart = false;
-        let sidebar = $('[data-cart-sidebar]');
-        let sidebarContent = $('[data-cart-sidebar] *');
-        let body = $('body');
-
-        $(element).find('[data-show-cart]').on('click', function(e) {
-            e.preventDefault();
-            if(showCart == false) {
-                body.addClass('sidebar-visible');
-                setTimeout(function() {
-                    showCart = true;
-                },50);
-            }
-        });
-        $(element).on('click', function(e) {
-            if(showCart == true) {
-                let target = $(e.target);
-                if(!target.is(sidebar) && !target.is(sidebarContent)) {
-                    body.removeClass('sidebar-visible');
-                    showCart = false;
-                }
-            }
-        });
-    };
-
-    private showDiffBillAddressForm(element: HTMLElement)
-    {
-
-        $(element).find('[data-billaddress-checkbox]').on('change', function() {
-            $(this).parent().parent().find('fieldset').fadeToggle();
-        });
     }
 
     private handleLoadingCursor(element: HTMLElement)
@@ -162,6 +54,4 @@ export default class Theme implements InitializerInterface
             $('[data-loading-spinner]').fadeOut();
         });
     };
-
-
 }

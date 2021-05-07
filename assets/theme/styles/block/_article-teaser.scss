@@ -1,0 +1,24 @@
+.block-article-teaser {
+  .flex {display:flex;
+    .article-image {width:39%;
+      img {width:100%;}
+    }
+    .article-content {width:61%;padding-left:35px;
+      .btn {margin-top:40px;}
+      .date {font-size:$fontSize1;}
+      .headline {font-weight:700;margin-bottom:20px;}
+      .teaser {font-size:$fontSize2;}
+    }
+  }
+}
+
+@media all and (max-width:767px) {
+  .block-article-teaser {
+    .flex {display:block;
+      .article-image {width:auto;margin-bottom:15px;}
+      .article-content {padding-left:0;width:auto;
+        .btn {margin-top:20px;}
+      }
+    }
+  }
+}
