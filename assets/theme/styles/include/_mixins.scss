@@ -1,0 +1,37 @@
+@mixin screenMaxWidth($width) {
+  @media screen and (max-width:$width) {
+    @content;
+  }
+}
+
+@mixin screenMinWidth($width) {
+  @media screen and (min-width:$width) {
+    @content;
+  }
+}
+
+@mixin absFull() {position:absolute;top:0;left:0;width:100%;height:100%;}
+@mixin absCentered() {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
+@mixin absCenteredHorizontal() {position:absolute;left:50%;transform:translateX(-50%);}
+@mixin absCenteredVertical() {position:absolute;top:50%;transform:translateY(-50%);}
+
+@mixin flexColumn() {display: flex;flex-direction:column;}
+@mixin flexRow() {display: flex;flex-direction:row;}
+@mixin defaultSliderNav() {@extend %absCenteredVertical;width:55px;height:55px;cursor:pointer;@include transition(all 200ms);opacity:0;display:flex;align-items: center;justify-content: center;
+  &.next {right:10px;}
+  &.prev {left:10px;}
+  img {width:25px;}
+  .slick-disabled {opacity:0;}
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+@mixin box($width,$height:$width) {
+  width:$width;
+  height:$height;
+}

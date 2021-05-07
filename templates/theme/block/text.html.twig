@@ -1,0 +1,8 @@
+<div class="block-text">
+    {% if block.title %}
+        {{ block.title|headline('title') }}
+    {% endif %}
+    {% if block.text %}
+        <p>{{ block.text|html_sanitize }}</p>
+    {% endif %}
+</div>

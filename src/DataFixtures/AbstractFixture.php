@@ -8,6 +8,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Block\HeaderBlock;
 use DateTime;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -267,6 +268,13 @@ abstract class AbstractFixture implements FixtureInterface, OrderedFixtureInterf
                 $articleRepository = $this->container->get('enhavo_article.repository.article');
                 $article = $articleRepository->findBySlug($fields['article']);
                 $blockType->setArticle($article[0]);
+                break;
+            case('header'):
+                /** @var $blockType HeaderBlock */
+                $blockType->setPicture($this->createImage($fields['picture']));
+                $blockType->setHeadline($fields['headline']);
+                $blockType->setSubheadline($fields['subheadline']);
+                $blockType->setCta($fields['cta']);
                 break;
             case('sidebar_column'):
                 $code = $fields['code'];

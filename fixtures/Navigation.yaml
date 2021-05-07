@@ -22,14 +22,12 @@
             type: page
             label: About
             link: about
-#        -
-#            type: submenu
-#            content:
-#                -
-#                    type: link
-#                    label: Product 1
-#                    link: /products/product1
-#                -
-#                    type: link
-#                    label: Product 2
-#                    link: /products/product2
+-
+    name: Footer
+    code: footer
+    content:
+        -
+            type: link
+            label: Imprint
+            link: 'https://www.xq-web.de/impressum'
+            target: '_blank'

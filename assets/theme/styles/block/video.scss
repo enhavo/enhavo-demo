@@ -1,5 +1,5 @@
 .block-video {
-	.video-container {width:100%;max-width: 650px;padding-bottom: 27.25%;position:relative;height:0;
-		iframe {position:absolute;left:0;top:0;width:100%;height:100%;}
+	.video-container {width:100%;padding-bottom:56.25%;position:relative;
+		iframe {@include absFull;}
 	}
 }
