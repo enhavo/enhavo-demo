@@ -1,7 +1,7 @@
 const EnhavoEncore = require('@enhavo/core/EnhavoEncore');
-const AppPackage = require('@enhavo/app/Encore/AppPackage');
-const AppThemePackage = require('@enhavo/app/Encore/AppThemePackage');
-const FormPackage = require('@enhavo/form/Encore/FormPackage');
+const AppPackage = require('@enhavo/app/encore/AppPackage');
+const AppThemePackage = require('@enhavo/app/encore/AppThemePackage');
+const FormPackage = require('@enhavo/form/encore/FormPackage');
 
 EnhavoEncore.add(
     'enhavo',

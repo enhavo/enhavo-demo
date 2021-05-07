@@ -1,0 +1,21 @@
+
+<div class="block-gallery" data-block="gallery">
+    {% if block.title %}
+       {{ block.title|html_sanitize }}
+    {% endif %}
+    {% if block.text %}
+        {{ block.text|html_sanitize }}
+    {% endif %}
+    {% if block.files|length > 0 %}
+        {% import "theme/macros.html.twig" as macros %}
+        <ul class="items">
+            {% for file in block.files %}
+                <li class="item">
+                    <div class="img-container">
+                        {{ macros.imageLazyLoadDefault(file, 'block_gallery') }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>

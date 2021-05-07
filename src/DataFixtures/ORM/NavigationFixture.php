@@ -99,9 +99,11 @@ class NavigationFixture extends AbstractFixture
                     $accessor->setValue($subject, $k, $v);
                 }
 
-                $content = $subject->getContent();
-                if ($accessor->isWritable($content, $k)) {
-                    $accessor->setValue($content, $k, $v);
+                if(method_exists($subject, 'getContent')) {
+                    $content = $subject->getContent();
+                    if ($accessor->isWritable($content, $k)) {
+                        $accessor->setValue($content, $k, $v);
+                    }
                 }
             }
 

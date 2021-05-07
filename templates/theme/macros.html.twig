@@ -1,0 +1,37 @@
+{% macro picture(picture, defaultsize, sources, attr) %}
+    {% if picture %}
+        {% set src = media_url(picture,defaultsize) %}
+        <picture>
+            {% for source in sources %}
+                <source media="{{ source.media }}" srcset="{{ media_url(picture,source.size_name) }}"{% if source.type is defined %} type="{{ source.type }}"{% endif %}>
+            {% endfor %}
+            <img src="{{ src }}"{% if picture.parameters.alt is defined and picture.parameters.alt %} alt="{{ picture.parameters.alt }}"{% elseif media_parameter(picture, 'caption') %} alt="{{  media_parameter(picture, 'caption') }}" {% elseif media_parameter(picture, 'title') %} alt="{{  media_parameter(picture, 'title') }}"{% else %} alt=""{% endif %} {% if picture.parameters.title is defined and picture.parameters.title %} title="{{ picture.parameters.title }}"{% endif %}{% if attr %} {{ attr|raw }}{% endif %} />
+        </picture>
+    {% endif %}
+{% endmacro %}
+
+{% macro pictureLazyLoadDefault(picture, defaultsize, sources, attr) %}
+    {% if picture %}
+        {% set src = media_url(picture,defaultsize) %}
+        <picture>
+            {% for source in sources %}
+                <source media="{{ source.media }}" srcset="" data-srcset="{{ media_url(picture,source.size_name) }}"{% if source.type is defined %} type="{{ source.type }}"{% endif %}>
+            {% endfor %}
+            <img src="{{ asset('build/theme/images/placeholder.png') }}" data-lazy-load-img-src="{{ src }}"{% if picture.parameters.alt is defined and picture.parameters.alt %} alt="{{ picture.parameters.alt }}"{% elseif media_parameter(picture, 'caption') %} alt="{{  media_parameter(picture, 'caption') }}" {% elseif media_parameter(picture, 'title') %} alt="{{  media_parameter(picture, 'title') }}"{% else %} alt=""{% endif %} {% if picture.parameters.title is defined and picture.parameters.title %} title="{{ picture.parameters.title }}"{% endif %}{% if attr %} {{ attr|raw }}{% endif %} />
+        </picture>
+    {% endif %}
+{% endmacro %}
+
+{% macro image(picture, size, attr) %}
+    {% if picture %}
+        {% set src = media_url(picture,size) %}
+        <img src="{{ src }}"{% if picture.parameters.alt is defined and picture.parameters.alt %} alt="{{ picture.parameters.alt }}"{% elseif picture.parameters.caption is defined and picture.parameters.caption %} alt="{{ picture.parameters.caption }}"{% endif %}{% if picture.parameters.title is defined and picture.parameters.title %} title="{{ picture.parameters.title }}"{% endif %}{% if attr %} {{ attr|raw }}{% endif %} />
+    {% endif %}
+{% endmacro %}
+
+{% macro imageLazyLoadDefault(picture, size, attr) %}
+    {% if picture %}
+        {% set src = media_url(picture,size) %}
+        <img src="{{ asset('build/theme/images/placeholder.png') }}" data-lazy-load-img-src="{{ src }}" {% if picture.parameters.alt is defined and picture.parameters.alt %} alt="{{ picture.parameters.alt }}"{% elseif picture.parameters.alt is defined and picture.parameters.alt %} alt="{{ picture.parameters.alt }}"{% endif %}{% if picture.parameters.title is defined and picture.parameters.title %} title="{{ picture.parameters.title }}"{% endif %}{% if attr %} {{ attr|raw }}{% endif %} />
+    {% endif %}
+{% endmacro %}

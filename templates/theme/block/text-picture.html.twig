@@ -1,0 +1,27 @@
+{% import _self as element %}
+{% import "theme/macros.html.twig" as macros %}
+
+{% macro text(block) %}
+    <div class="text-container">
+        {% if block.title %}
+            {{ block.title|headline('title') }}
+        {% endif %}
+        {{ block.text|html_sanitize }}
+    </div>
+{% endmacro %}
+
+{% macro picture(block) %}
+    <div class="picture-container">
+        <figure>
+            {{ macros.imageLazyLoadDefault(block.file, 'block_text_picture') }}
+            {% if block.caption %}
+                <figcaption>{{ block.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    </div>
+{% endmacro %}
+
+<div class="block-text-picture layout-{{ block.layout }}{% if block.float %} text-float{% endif %}{% if block.textLeft %} text-picture{% else %} picture-text{% endif %}">
+    {{ element.picture(block) }}
+    {{ element.text(block) }}
+</div>

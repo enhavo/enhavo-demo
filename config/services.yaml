@@ -42,3 +42,9 @@ services:
             - '%enhavo_user.config%'
             - '%enhavo_user.mail%'
             - '%enhavo_user.parameters%'
+
+    App\Twig\GeneralFunctions:
+        calls:
+          - ['setContainer', ['@service_container']]
+        tags:
+          - { name: twig.extension }
