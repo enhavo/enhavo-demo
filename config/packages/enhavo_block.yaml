@@ -11,8 +11,8 @@ enhavo_block:
           - layout
     picture:
       type: picture
-    gallery:
-      type: gallery
+#    gallery:
+#      type: gallery
     text:
       type: text
     text_picture:

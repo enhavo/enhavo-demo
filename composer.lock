@@ -1682,15 +1682,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoAppBundle.git",
-                "reference": "8771fd14a97ab34feee97b0ce02ee8d466f96989"
+                "reference": "8a286855786306566be7caa8f84ad5eeb3b24fe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoAppBundle/zipball/8771fd14a97ab34feee97b0ce02ee8d466f96989",
-                "reference": "8771fd14a97ab34feee97b0ce02ee8d466f96989",
+                "url": "https://api.github.com/repos/enhavo/EnhavoAppBundle/zipball/8a286855786306566be7caa8f84ad5eeb3b24fe7",
+                "reference": "8a286855786306566be7caa8f84ad5eeb3b24fe7",
                 "shasum": ""
             },
             "require": {
+                "doctrine/orm": "^2.7",
                 "enhavo/type": "dev-master",
                 "ext-ctype": "*",
                 "ext-json": "*",
@@ -1708,11 +1709,11 @@
                 "symfony/orm-pack": "^1.0",
                 "symfony/security-bundle": "^4.4",
                 "symfony/serializer-pack": "^1.0",
-                "symfony/swiftmailer-bundle": "^3.1",
+                "symfony/swiftmailer-bundle": "^3.5",
                 "symfony/translation": "^4.4",
                 "symfony/twig-bundle": "^4.4",
                 "symfony/validator": "^4.4",
-                "symfony/webpack-encore-bundle": "^1.1",
+                "symfony/webpack-encore-bundle": "^1.5",
                 "symfony/yaml": "^4.4",
                 "twig/extensions": "^1.3"
             },
@@ -1740,7 +1741,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-02-13T03:49:57+00:00"
+            "time": "2021-05-05T11:21:35+00:00"
         },
         {
             "name": "enhavo/article-bundle",
@@ -1748,12 +1749,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoArticleBundle.git",
-                "reference": "4a39c3d1aee86c2b0d6be9873f207aa47b9bd857"
+                "reference": "c58bde09da977e56062064c44c2507034023c3ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoArticleBundle/zipball/4a39c3d1aee86c2b0d6be9873f207aa47b9bd857",
-                "reference": "4a39c3d1aee86c2b0d6be9873f207aa47b9bd857",
+                "url": "https://api.github.com/repos/enhavo/EnhavoArticleBundle/zipball/c58bde09da977e56062064c44c2507034023c3ee",
+                "reference": "c58bde09da977e56062064c44c2507034023c3ee",
                 "shasum": ""
             },
             "require": {
@@ -1794,7 +1795,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-02-04T04:34:09+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/block-bundle",
@@ -1802,12 +1803,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoBlockBundle.git",
-                "reference": "933820f3d844cf8a947ab2325aa6058016d3e265"
+                "reference": "fc2ab883e13e5c9786272ac80f7fbd67ec2a7bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoBlockBundle/zipball/933820f3d844cf8a947ab2325aa6058016d3e265",
-                "reference": "933820f3d844cf8a947ab2325aa6058016d3e265",
+                "url": "https://api.github.com/repos/enhavo/EnhavoBlockBundle/zipball/fc2ab883e13e5c9786272ac80f7fbd67ec2a7bf8",
+                "reference": "fc2ab883e13e5c9786272ac80f7fbd67ec2a7bf8",
                 "shasum": ""
             },
             "require": {
@@ -1841,7 +1842,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-03-04T05:23:35+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/cleverreach",
@@ -1849,17 +1850,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/cleverreach.git",
-                "reference": "ea1a2450e60ce35b394a7adabfde94e2e7d79d08"
+                "reference": "a22268103e4e428814ab2c443f5656ed04a71cdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/cleverreach/zipball/ea1a2450e60ce35b394a7adabfde94e2e7d79d08",
-                "reference": "ea1a2450e60ce35b394a7adabfde94e2e7d79d08",
+                "url": "https://api.github.com/repos/enhavo/cleverreach/zipball/a22268103e4e428814ab2c443f5656ed04a71cdb",
+                "reference": "a22268103e4e428814ab2c443f5656ed04a71cdb",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/guzzle": "^6.3",
+                "guzzlehttp/guzzle": "^6.5",
                 "psr/log": "^1.1"
             },
             "require-dev": {
@@ -1890,7 +1891,7 @@
                 "newsletter",
                 "rest-api"
             ],
-            "time": "2020-10-12T08:41:27+00:00"
+            "time": "2021-05-03T05:36:57+00:00"
         },
         {
             "name": "enhavo/comment-bundle",
@@ -1898,12 +1899,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoCommentBundle.git",
-                "reference": "3a59bcf8ab1176ad0684733dd3d64a41df12cd55"
+                "reference": "3819ece25457f25ca33b11ec11e1bd5419dea018"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoCommentBundle/zipball/3a59bcf8ab1176ad0684733dd3d64a41df12cd55",
-                "reference": "3a59bcf8ab1176ad0684733dd3d64a41df12cd55",
+                "url": "https://api.github.com/repos/enhavo/EnhavoCommentBundle/zipball/3819ece25457f25ca33b11ec11e1bd5419dea018",
+                "reference": "3819ece25457f25ca33b11ec11e1bd5419dea018",
                 "shasum": ""
             },
             "require": {
@@ -1936,7 +1937,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-09-01T13:10:25+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/content-bundle",
@@ -1944,12 +1945,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoContentBundle.git",
-                "reference": "2fb8bf16af49aeae8f72d9ff49212b6e0fbaeb86"
+                "reference": "2548d2e22e1ece6fce37c2fb37d9518f02a04529"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoContentBundle/zipball/2fb8bf16af49aeae8f72d9ff49212b6e0fbaeb86",
-                "reference": "2fb8bf16af49aeae8f72d9ff49212b6e0fbaeb86",
+                "url": "https://api.github.com/repos/enhavo/EnhavoContentBundle/zipball/2548d2e22e1ece6fce37c2fb37d9518f02a04529",
+                "reference": "2548d2e22e1ece6fce37c2fb37d9518f02a04529",
                 "shasum": ""
             },
             "require": {
@@ -1980,7 +1981,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-02-04T04:34:09+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/dashboard-bundle",
@@ -1988,12 +1989,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoDashboardBundle.git",
-                "reference": "4e9f6275f7abc31e3ce9cdf3d4a4ed10e9469a79"
+                "reference": "8f33b1bfb483337caa988767d080cd0fe51c5fc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoDashboardBundle/zipball/4e9f6275f7abc31e3ce9cdf3d4a4ed10e9469a79",
-                "reference": "4e9f6275f7abc31e3ce9cdf3d4a4ed10e9469a79",
+                "url": "https://api.github.com/repos/enhavo/EnhavoDashboardBundle/zipball/8f33b1bfb483337caa988767d080cd0fe51c5fc0",
+                "reference": "8f33b1bfb483337caa988767d080cd0fe51c5fc0",
                 "shasum": ""
             },
             "require": {
@@ -2024,7 +2025,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-08-24T14:29:30+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/doctrine-extension-bundle",
@@ -2076,12 +2077,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoFormBundle.git",
-                "reference": "ab613c374ce38cc09fddc347bd070380d7111ae7"
+                "reference": "443490b01ae7548deaf9088eae3b7664471cb1ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoFormBundle/zipball/ab613c374ce38cc09fddc347bd070380d7111ae7",
-                "reference": "ab613c374ce38cc09fddc347bd070380d7111ae7",
+                "url": "https://api.github.com/repos/enhavo/EnhavoFormBundle/zipball/443490b01ae7548deaf9088eae3b7664471cb1ca",
+                "reference": "443490b01ae7548deaf9088eae3b7664471cb1ca",
                 "shasum": ""
             },
             "require": {
@@ -2113,7 +2114,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-03-12T12:50:49+00:00"
+            "time": "2021-05-03T05:37:49+00:00"
         },
         {
             "name": "enhavo/media-bundle",
@@ -2121,12 +2122,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoMediaBundle.git",
-                "reference": "a0387d726d4eda13c0ceef6ca7609e05268b5960"
+                "reference": "881426ffb01e929b8c358739b16671bdd950ddbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoMediaBundle/zipball/a0387d726d4eda13c0ceef6ca7609e05268b5960",
-                "reference": "a0387d726d4eda13c0ceef6ca7609e05268b5960",
+                "url": "https://api.github.com/repos/enhavo/EnhavoMediaBundle/zipball/881426ffb01e929b8c358739b16671bdd950ddbd",
+                "reference": "881426ffb01e929b8c358739b16671bdd950ddbd",
                 "shasum": ""
             },
             "require": {
@@ -2161,7 +2162,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-02-26T00:44:10+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/metadata",
@@ -2212,12 +2213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoNavigationBundle.git",
-                "reference": "539de7055045dc29d818a3eb383c3a4b40832716"
+                "reference": "8dea34fc00f940b21d94f44d28d8658fdf0fff6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoNavigationBundle/zipball/539de7055045dc29d818a3eb383c3a4b40832716",
-                "reference": "539de7055045dc29d818a3eb383c3a4b40832716",
+                "url": "https://api.github.com/repos/enhavo/EnhavoNavigationBundle/zipball/8dea34fc00f940b21d94f44d28d8658fdf0fff6a",
+                "reference": "8dea34fc00f940b21d94f44d28d8658fdf0fff6a",
                 "shasum": ""
             },
             "require": {
@@ -2250,7 +2251,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-02-04T03:17:54+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/newsletter-bundle",
@@ -2258,12 +2259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoNewsletterBundle.git",
-                "reference": "c0ffd15d9aa9e7f587ec8595dd95a5e2412657a6"
+                "reference": "df431e82e03419e20b70f4d596485164004bc95a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoNewsletterBundle/zipball/c0ffd15d9aa9e7f587ec8595dd95a5e2412657a6",
-                "reference": "c0ffd15d9aa9e7f587ec8595dd95a5e2412657a6",
+                "url": "https://api.github.com/repos/enhavo/EnhavoNewsletterBundle/zipball/df431e82e03419e20b70f4d596485164004bc95a",
+                "reference": "df431e82e03419e20b70f4d596485164004bc95a",
                 "shasum": ""
             },
             "require": {
@@ -2299,7 +2300,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-01-31T08:01:11+00:00"
+            "time": "2021-05-03T05:36:57+00:00"
         },
         {
             "name": "enhavo/page-bundle",
@@ -2307,12 +2308,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoPageBundle.git",
-                "reference": "047e0eefa28b7225519e8fcb38b32ca0cac422b6"
+                "reference": "ad488b5cc909a4874e929c61ce6939cd14103455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoPageBundle/zipball/047e0eefa28b7225519e8fcb38b32ca0cac422b6",
-                "reference": "047e0eefa28b7225519e8fcb38b32ca0cac422b6",
+                "url": "https://api.github.com/repos/enhavo/EnhavoPageBundle/zipball/ad488b5cc909a4874e929c61ce6939cd14103455",
+                "reference": "ad488b5cc909a4874e929c61ce6939cd14103455",
                 "shasum": ""
             },
             "require": {
@@ -2348,7 +2349,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-02-04T04:34:09+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/redirect-bundle",
@@ -2356,12 +2357,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoRedirectBundle.git",
-                "reference": "5ac5e2b6ee45cb2ed0c1f98e8e75eac653ddd18b"
+                "reference": "5563a29c55c8db710dd5fa7346eb0f9c7c917b3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoRedirectBundle/zipball/5ac5e2b6ee45cb2ed0c1f98e8e75eac653ddd18b",
-                "reference": "5ac5e2b6ee45cb2ed0c1f98e8e75eac653ddd18b",
+                "url": "https://api.github.com/repos/enhavo/EnhavoRedirectBundle/zipball/5563a29c55c8db710dd5fa7346eb0f9c7c917b3e",
+                "reference": "5563a29c55c8db710dd5fa7346eb0f9c7c917b3e",
                 "shasum": ""
             },
             "require": {
@@ -2394,7 +2395,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-09-01T13:10:25+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/routing-bundle",
@@ -2402,12 +2403,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoRoutingBundle.git",
-                "reference": "48a61a70ed7b9b49e3daff9f3bc5d8a36d8d5622"
+                "reference": "20e07cf568a8c9e5ec4f6ecbf4c4ae43bbcd2c61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoRoutingBundle/zipball/48a61a70ed7b9b49e3daff9f3bc5d8a36d8d5622",
-                "reference": "48a61a70ed7b9b49e3daff9f3bc5d8a36d8d5622",
+                "url": "https://api.github.com/repos/enhavo/EnhavoRoutingBundle/zipball/20e07cf568a8c9e5ec4f6ecbf4c4ae43bbcd2c61",
+                "reference": "20e07cf568a8c9e5ec4f6ecbf4c4ae43bbcd2c61",
                 "shasum": ""
             },
             "require": {
@@ -2441,7 +2442,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-01-30T06:52:19+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/search-bundle",
@@ -2449,12 +2450,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoSearchBundle.git",
-                "reference": "9a404e1012b500c30e725b181b0621a6b63fdc4a"
+                "reference": "39b9f7b492b3dac9fb1b442a26390059f24e50b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoSearchBundle/zipball/9a404e1012b500c30e725b181b0621a6b63fdc4a",
-                "reference": "9a404e1012b500c30e725b181b0621a6b63fdc4a",
+                "url": "https://api.github.com/repos/enhavo/EnhavoSearchBundle/zipball/39b9f7b492b3dac9fb1b442a26390059f24e50b0",
+                "reference": "39b9f7b492b3dac9fb1b442a26390059f24e50b0",
                 "shasum": ""
             },
             "require": {
@@ -2488,7 +2489,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-10-01T13:08:07+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/sidebar-bundle",
@@ -2496,12 +2497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoSidebarBundle.git",
-                "reference": "ba4cbf060988b9c957febb57153af6446cda65d4"
+                "reference": "f950458103e8f63faeb63e41ecfcf8c6b4c464a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoSidebarBundle/zipball/ba4cbf060988b9c957febb57153af6446cda65d4",
-                "reference": "ba4cbf060988b9c957febb57153af6446cda65d4",
+                "url": "https://api.github.com/repos/enhavo/EnhavoSidebarBundle/zipball/f950458103e8f63faeb63e41ecfcf8c6b4c464a9",
+                "reference": "f950458103e8f63faeb63e41ecfcf8c6b4c464a9",
                 "shasum": ""
             },
             "require": {
@@ -2534,7 +2535,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-09-01T13:10:25+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/slider-bundle",
@@ -2542,12 +2543,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoSliderBundle.git",
-                "reference": "7ea10a859c1a9a5c683a11c535b4169d4c562552"
+                "reference": "2e81678b8c409ace8b211517416b449cf1628d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoSliderBundle/zipball/7ea10a859c1a9a5c683a11c535b4169d4c562552",
-                "reference": "7ea10a859c1a9a5c683a11c535b4169d4c562552",
+                "url": "https://api.github.com/repos/enhavo/EnhavoSliderBundle/zipball/2e81678b8c409ace8b211517416b449cf1628d75",
+                "reference": "2e81678b8c409ace8b211517416b449cf1628d75",
                 "shasum": ""
             },
             "require": {
@@ -2580,7 +2581,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-10-15T13:52:08+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/taxonomy-bundle",
@@ -2588,12 +2589,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoTaxonomyBundle.git",
-                "reference": "eccaee43a61e8422229e26d3934a45b74f5f1d53"
+                "reference": "004355014f0aaf5bcbcad4a3b854128ea54a9766"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoTaxonomyBundle/zipball/eccaee43a61e8422229e26d3934a45b74f5f1d53",
-                "reference": "eccaee43a61e8422229e26d3934a45b74f5f1d53",
+                "url": "https://api.github.com/repos/enhavo/EnhavoTaxonomyBundle/zipball/004355014f0aaf5bcbcad4a3b854128ea54a9766",
+                "reference": "004355014f0aaf5bcbcad4a3b854128ea54a9766",
                 "shasum": ""
             },
             "require": {
@@ -2625,7 +2626,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-01-11T21:10:33+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/template-bundle",
@@ -2633,12 +2634,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoTemplateBundle.git",
-                "reference": "ef79e7db4c484352d184c72fd0c3b83c6f34649b"
+                "reference": "786ce10472a6233bf76b6e57cd88972ef5afe0ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoTemplateBundle/zipball/ef79e7db4c484352d184c72fd0c3b83c6f34649b",
-                "reference": "ef79e7db4c484352d184c72fd0c3b83c6f34649b",
+                "url": "https://api.github.com/repos/enhavo/EnhavoTemplateBundle/zipball/786ce10472a6233bf76b6e57cd88972ef5afe0ec",
+                "reference": "786ce10472a6233bf76b6e57cd88972ef5afe0ec",
                 "shasum": ""
             },
             "require": {
@@ -2671,7 +2672,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2020-10-01T13:07:26+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "enhavo/type",
@@ -2723,19 +2724,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/enhavo/EnhavoUserBundle.git",
-                "reference": "47d9a85f6eb9f39cbef26be51b2110a41c5550e8"
+                "reference": "d320ae4274bdeb3583125dddd23b491424eff2d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enhavo/EnhavoUserBundle/zipball/47d9a85f6eb9f39cbef26be51b2110a41c5550e8",
-                "reference": "47d9a85f6eb9f39cbef26be51b2110a41c5550e8",
+                "url": "https://api.github.com/repos/enhavo/EnhavoUserBundle/zipball/d320ae4274bdeb3583125dddd23b491424eff2d8",
+                "reference": "d320ae4274bdeb3583125dddd23b491424eff2d8",
                 "shasum": ""
             },
             "require": {
                 "enhavo/app-bundle": "dev-master",
                 "enhavo/form-bundle": "dev-master",
                 "php": "^7.2",
-                "symfony/security-bundle": "^4.4"
+                "symfony/security-bundle": "^4.4",
+                "symfony/security-guard": "^4.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.4"
@@ -2761,7 +2763,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2021-01-31T08:01:11+00:00"
+            "time": "2021-04-26T04:23:49+00:00"
         },
         {
             "name": "ezimuel/guzzlestreams",
@@ -4097,6 +4099,7 @@
                 "domain parsing",
                 "icann"
             ],
+            "abandoned": true,
             "time": "2021-03-06T11:52:47+00:00"
         },
         {
@@ -4225,6 +4228,7 @@
                 "uri",
                 "url"
             ],
+            "abandoned": true,
             "time": "2018-03-14T16:44:57+00:00"
         },
         {
@@ -4365,6 +4369,7 @@
                 "ws",
                 "wss"
             ],
+            "abandoned": true,
             "time": "2018-11-26T08:09:30+00:00"
         },
         {
