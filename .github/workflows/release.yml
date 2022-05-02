@@ -12,12 +12,11 @@ jobs:
             - name: login
               uses: docker/login-action@v1
               with:
-                  registry: docker.enhavo.com
-                  username: ${{ secrets.DOCKER_ENHAVO_USER }}
-                  password: ${{ secrets.DOCKER_ENHAVO_PASSWORD }}
+                  username: ${{ secrets.DOCKER_HUB_USER }}
+                  password: ${{ secrets.DOCKER_HUB_PASSWORD }}
             - name: build and push image
               uses: docker/build-push-action@v2
               with:
                   push: true
                   tags: |
-                      docker.enhavo.com/enhavo/demo:latest
+                      enhavo/enhavo-demo:latest
