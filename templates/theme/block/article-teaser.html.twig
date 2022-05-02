@@ -4,9 +4,9 @@
     <div class="flex">
         <div class="article-image">{{ macros.imageLazyLoadDefault(block.article.picture, 'block_article_teaser') }}</div>
         <div class="article-content">
-            <div class="date">{{ block.article.publicationDate|date('d.m.y') }}</div>
-            <div class="headline">{{ block.article.title|raw }}</div>
-            <div class="teaser">{{ block.article.teaser|raw }}</div>
+            <div class="article-date">{{ block.article.publicationDate|date('d.m.y') }}</div>
+            <div class="article-title">{{ block.article.title }}</div>
+            <div class="article-teaser">{{ block.article.teaser|html_sanitize }}</div>
             <a href="{{ router(block.article) }}" class="btn">Read more</a>
         </div>
     </div>
