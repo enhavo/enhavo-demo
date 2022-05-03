@@ -1,4 +1,4 @@
-FROM enhavo/enhavo-app:7.4-apache-0.2
+FROM enhavo/enhavo-app:7.4-apache-0.3
 
 WORKDIR /var/www/current
 
