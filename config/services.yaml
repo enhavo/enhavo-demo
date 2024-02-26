@@ -1,19 +1,36 @@
-# This file is the entry point to configure your own services.
-# Files in the packages/ subdirectory configure your dependencies.
+imports:
+    - { resource: services/*.yaml }
 
-# Put parameters here that don't need to change on each machine where the app is deployed
-# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: 'en'
+    env(META_BRAND_NAME): 'Acme'
+    meta_brand_name: '%env(META_BRAND_NAME)%'
+    locale: 'de'
+    app_locales:
+        - de
 
 services:
-    # default configuration for services in *this* file
     _defaults:
-        autowire: false      # Automatically injects dependencies in your services.
-        autoconfigure: false # Automatically registers your services as commands, event subscribers, etc.
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        bind:
+            $brandName: '%meta_brand_name%'
+    #            $locales: '%app_locales%'
+    #            $defaultLocale: '%locale%'
 
-    App\Twig\GeneralFunctions:
-        calls:
-          - ['setContainer', ['@service_container']]
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migration,Tests,Kernel.php}'
+
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
+
+    App\Twig\:
+        resource: '../src/Twig'
+        tags: ['twig.extension']
+
+    App\Component\:
+        resource: '../src/Component'
         tags:
-          - { name: twig.extension }
+            - { name: twig.component, key: '' }
+

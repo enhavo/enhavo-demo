@@ -1,0 +1,8 @@
+enhavo_api:
+    documentation:
+        section:
+            default:
+                info:
+                    title: Frontend API
+                    description: Frontend API
+                    version: v1

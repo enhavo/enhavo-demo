@@ -1,0 +1,9 @@
+<title>{% block page_title %}{{ page_title }}{% endblock %}</title>
+{% block canonical %}{% if canonical %}<link rel="canonical" href="{{ canonical }}" />{% endif %}{% endblock %}
+<meta name="robots" content="{% block robots %}{{ meta_robots }}{% endblock %}" />
+<meta name="description" content="{% block meta_description %}{{ meta_description }}{% endblock %}" />
+<meta name="og:url" content="{% block og_url %}{{ og_url??app.request.pathInfo }}{% endblock %}" />
+<meta name="og:title" content="{% block og_title %}{{ og_title }}{% endblock %}" />
+<meta name="og:description" content="{{ og_description }}" />
+{% block og_image %}{% if og_image %}<meta name="og:image" content="{{ media_url(og_image) }}" />{% endif %}{% endblock %}
+<meta name="generator" content="enhavo">

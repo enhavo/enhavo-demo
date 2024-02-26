@@ -1,7 +1,5 @@
 {% extends template('theme/base.html.twig') %}
 
 {% block main %}
-    <div class="view-page">
-        {{ block_render(resource.content) }}
-    </div>
+    {{ block_render(resource.content, resource) }}
 {% endblock %}

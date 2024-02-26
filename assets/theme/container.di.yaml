@@ -1,0 +1,25 @@
+imports:
+    - path: '@enhavo/app/services/theme/*'
+
+compiler_pass:
+    stimulus_controller:
+        path: '@enhavo/app/compiler-pass/stimulus-controller-register.js'
+        dir: './controllers'
+        priority: 110
+    vue_factory:
+        path: '@enhavo/app/compiler-pass/vue-factory.js'
+        priority: 150
+    vue_components:
+        path: '@enhavo/app/compiler-pass/vue-components.js'
+        dir: './components'
+        chunkName: 'vue'
+        priority: 140
+
+services:
+    manager/SampleManager:
+        from: './manager/SampleManager'
+        import: SampleManager
+        arguments:
+            - '@enhavo/app/routing/Router'
+        tags:
+            - { name: vue.service, service: 'sampleManager', reactive: true }

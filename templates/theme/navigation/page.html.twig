@@ -1,7 +1,0 @@
-{% if node.subject.content is not null %}
-<a class="{% if navigation_node_is_active(node) %}active{% endif %}"
-   target="_self"
-   href="{{ router(node.subject.content) }}">
-    {{ node.label|default(node.subject.content.title) }}
-</a>
-{% endif %}

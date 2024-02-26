@@ -1,0 +1,5 @@
+{% if node.subject %}
+    <a class="{% if node.active %} active{% endif %}" href="{{ node.subject.url }}">
+        {{ node.label??node.subject.title }}
+    </a>
+{% endif %}

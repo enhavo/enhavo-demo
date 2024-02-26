@@ -1,7 +1,0 @@
-imports:
-    -
-        path: '@enhavo/form/services/*'
-entrypoints:
-    'enhavo/form/editor':
-        path: '../../enhavo/entrypoint/editor'
-        build: enhavo

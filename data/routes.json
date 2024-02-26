@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "enhavo_media_file_show": {
+      "path": "expr:url('/file/show/{id}')"
+    },
+    "enhavo_media_file_format": {
+      "path": "expr:url('/file/format/{id}/{format}')"
+    }
+  }
+}

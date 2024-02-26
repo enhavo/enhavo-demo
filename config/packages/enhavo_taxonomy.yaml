@@ -1,0 +1,11 @@
+#enhavo_taxonomy:
+#    resources:
+#        term:
+#            classes:
+#                model: App\Entity\Term
+#                repository: App\Repository\TermRepository
+#                factory: App\Factory\TermFactory
+#
+#    taxonomies:
+#        app.role:
+#            label: Role

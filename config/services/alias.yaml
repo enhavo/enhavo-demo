@@ -1,0 +1,3 @@
+services:
+    Enhavo\Bundle\AppBundle\Util\TokenGeneratorInterface:
+        alias: enhavo_app.util.secure_url_token_generator

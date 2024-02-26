@@ -2,6 +2,6 @@ enhavo_user_admin:
     resource: "@EnhavoUserBundle/Resources/config/routes/admin/*"
     prefix: /admin
 
-enhavo_user_user:
-    resource: "@EnhavoUserBundle/Resources/config/routes/user/*"
-    prefix: /user
+#enhavo_user_user:
+#    resource: "@EnhavoUserBundle/Resources/config/routes/user/*"
+#    prefix: /user
