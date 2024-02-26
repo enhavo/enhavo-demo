@@ -1,0 +1,9 @@
+{% if node.subject is not null and node.subject.page %}
+    <a href="{{ router(node.subject.page) }}">{{ node.label??node.subject.page.title }}</a>
+{% else %}
+    {{ node.label }}
+{% endif %}
+
+{% for child in node.children %}
+    {{ navigation_node_render(child, "main_submenu") }}
+{% endfor %}

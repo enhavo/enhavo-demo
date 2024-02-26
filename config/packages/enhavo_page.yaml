@@ -1,0 +1,11 @@
+imports:
+#    - { resource: '@EnhavoPageBundle/Resources/config/app/search.yaml' }
+#    - { resource: '@EnhavoPageBundle/Resources/config/app/translation.yaml' }
+
+# in case you overwrote Enhavo Page, you might wanna use the entity per default and also add fields to Page FormType
+#enhavo_page:
+#    resources:
+#        page:
+#            classes:
+#                form: App\Form\Type\PageType
+#                model: App\Entity\Page

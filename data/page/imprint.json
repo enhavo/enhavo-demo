@@ -1,0 +1,24 @@
+{
+  "resource": {
+    "id": 1,
+    "title": "Home",
+    "metaDescription": "Lorem ipsum",
+    "pageTitle": "Home",
+    "noIndex": false,
+    "noFollow": false,
+    "openGraphImage": null,
+    "openGraphTitle": null,
+    "openGraphDescription": null,
+    "canonicalUrl": null,
+    "content": {
+      "name": null,
+      "type": "root",
+      "template": null,
+      "children": [
+
+      ],
+      "data": []
+    },
+    "url": "expr:url('/imprint')"
+  }
+}

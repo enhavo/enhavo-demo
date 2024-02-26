@@ -1,0 +1,14 @@
+page:
+    path: /
+    defaults:
+        _endpoint:
+            type: template
+            load:
+                - navigation.json
+                - routes.json
+                - page/homepage.json
+            template: 'theme/resource/page/show.html.twig'
+            variants:
+                page=imprint:
+                    load:
+                        - page/imprint.json

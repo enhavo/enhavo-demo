@@ -1,4 +1,11 @@
-#app_admin:
-#    resource: ./routes/admin/
-#    type: directory
-#    prefix: /admin
+app_admin:
+    resource: "routes/admin/*.yaml"
+    prefix: /admin
+
+app:
+    resource: ../src/Controller
+    type: annotation
+
+endpoint:
+    resource: ../src/Endpoint
+    type: endpoint

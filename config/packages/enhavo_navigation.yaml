@@ -1,0 +1,11 @@
+enhavo_navigation:
+    render:
+        sets:
+            main:
+                submenu: 'theme/navigation/main/submenu.html.twig'
+                page: 'theme/navigation/main/page.html.twig'
+            main_submenu:
+                page: 'theme/navigation/main_submenu/page.html.twig'
+            footer:
+                submenu: 'theme/navigation/footer/submenu.html.twig'
+                page: 'theme/navigation/footer/page.html.twig'

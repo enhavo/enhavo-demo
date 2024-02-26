@@ -1,0 +1,10 @@
+Enhavo\Bundle\UserBundle\Model\User:
+    properties:
+        plainPassword:
+            - NotBlank: ~
+            - NotCompromisedPassword:
+                  groups: [Default, update]
+            - Rollerworks\Component\PasswordStrength\Validator\Constraints\PasswordStrength:
+                  groups: [Default, update]
+                  minStrength: 4
+                  minLength: 10

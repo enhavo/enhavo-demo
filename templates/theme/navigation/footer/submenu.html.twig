@@ -1,0 +1,4 @@
+{{ node.label }}
+{% for child in node.children %}
+    {{ navigation_node_render(child, "footer") }}
+{% endfor %}

@@ -1,0 +1,5 @@
+{% if node.subject.content %}
+    <li class="{% if navigation_node_is_active(node) %} active{% endif %}">
+        <a href="{{ router(node.subject.content) }}">{{ node.label??node.subject.content.title }}</a>
+    </li>
+{% endif %}

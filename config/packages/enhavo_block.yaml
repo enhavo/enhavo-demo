@@ -1,18 +1,13 @@
+imports:
+#    - { resource: '@EnhavoBlockBundle/Resources/config/app/search.yaml' }
+#    - { resource: '@EnhavoBlockBundle/Resources/config/app/translation.yaml' }
+
 enhavo_block:
   blocks:
-    header:
-      type: base
-      model: App\Entity\Block\HeaderBlock
-      label: Header
-      form: App\Form\Type\Block\HeaderBlockType
-      template: 'theme/block/header.html.twig'
-      factory: App\Factory\Block\HeaderBlockFactory
-      groups:
-          - layout
     picture:
       type: picture
-#    gallery:
-#      type: gallery
+    gallery:
+      type: gallery
     text:
       type: text
     text_picture:
@@ -23,12 +18,7 @@ enhavo_block:
       type: video
     one_column:
       type: one_column
-      label: Content
-    article_list:
-      type: article_list
-    article_teaser:
-      type: article_teaser
-    resource:
-      type: resource
-    slider:
-      type: slider
+    two_column:
+      type: two_column
+    three_column:
+      type: three_column

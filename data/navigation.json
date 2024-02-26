@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "main": {
+      "id": 1,
+      "nodes": [
+        {
+          "id": 1,
+          "name": "page",
+          "children": [],
+          "subject": {
+            "id": 4,
+            "title": "Home",
+            "url": "expr:ref('page/homepage.json', 'resource.url')"
+          },
+          "label": "Home",
+          "active": false,
+          "template": "/theme/navigation/page.html.twig"
+        }
+      ]
+    },
+    "footer": {
+      "id": 2,
+      "nodes": [
+        {
+          "id": 7,
+          "name": "submenu",
+          "children": [
+            {
+              "id": 8,
+              "name": "page",
+              "children": [],
+              "subject": {
+                "id": 4,
+                "title": "Home",
+                "url": "expr:ref('page/homepage.json', 'resource.url')"
+              },
+              "label": "Home",
+              "active": false,
+              "template": "/theme/navigation/page.html.twig"
+            },
+            {
+              "id": 9,
+              "name": "page",
+              "children": [],
+              "subject": {
+                "id": 8,
+                "title": "Imprint",
+                "url": "expr:ref('page/imprint.json', 'resource.url')"
+              },
+              "label": "",
+              "active": false,
+              "template": "/theme/navigation/page.html.twig"
+            }
+          ],
+          "subject": {
+            "id": 1
+          },
+          "label": "",
+          "active": false,
+          "template": "/theme/navigation/submenu.html.twig"
+        }
+      ]
+    }
+  }
+}

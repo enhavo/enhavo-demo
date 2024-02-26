@@ -1,31 +1,30 @@
 {
-    "license": "MIT",
+    "dependencies": {
+        "@enhavo/api": "https://github.com/enhavo/api-assets.git#master",
+        "@enhavo/app": "https://github.com/enhavo/app-assets.git#master",
+        "@enhavo/core": "https://github.com/enhavo/core-assets.git#master",
+        "@enhavo/dashboard": "https://github.com/enhavo/dashboard-assets.git#master",
+        "@enhavo/dependency-injection": "https://github.com/enhavo/dependency-injection.git#master",
+        "@enhavo/form": "https://github.com/enhavo/form-assets.git#master",
+        "@enhavo/media": "https://github.com/enhavo/media-assets.git#master",
+        "@enhavo/user": "https://github.com/enhavo/user-assets.git#master",
+        "@enhavo/vue-form": "https://github.com/enhavo/vue-form-assets.git#master",
+        "jquery": "^3.6.0",
+        "vue-router": "^4.1.5"
+    },
+    "devDependencies": {
+        "ts-loader": "^9.0.0"
+    },
+    "license": "proprietary",
+    "private": true,
     "scripts": {
-        "routes:dump": "bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json",
-        "dev-server": "encore dev-server",
-        "dev": "encore dev",
+        "dev": "encore dev --progress",
         "watch": "encore dev --watch",
         "build": "encore production --progress",
+        "routes:dump": "bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json",
         "di": "di \"./assets/services/enhavo/*\""
     },
-    "dependencies": {
-        "@enhavo/app": "^0.10",
-        "@enhavo/article": "^0.10",
-        "@enhavo/block": "^0.10",
-        "@enhavo/calendar": "^0.10",
-        "@enhavo/core": "^0.10",
-        "@enhavo/dashboard": "^0.10",
-        "@enhavo/dependency-injection": "^0.10",
-        "@enhavo/form": "^0.10",
-        "@enhavo/media": "^0.10",
-        "@enhavo/newsletter": "^0.10",
-        "@enhavo/slider": "^0.10",
-        "@enhavo/theme": "^0.10",
-        "@enhavo/user": "^0.10",
-        "reset-css": "^5.0.1",
-        "slick-carousel": "^1.8.1",
-        "source-sans-pro": "^2.45.0",
-        "typeface-cormorant-garamond": "^0.0.72"
-    },
-    "devDependencies": {}
+    "browserslist": [
+        "last 2 versions"
+    ]
 }

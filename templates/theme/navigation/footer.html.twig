@@ -1,0 +1,5 @@
+{% if navigation is defined and navigation.footer %}
+    {% for node in navigation.footer.nodes %}
+        {{ navigation_node_render(node, "footer") }}
+    {% endfor %}
+{% endif %}

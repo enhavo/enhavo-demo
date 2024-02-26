@@ -1,0 +1,4 @@
+services:
+    App\EventListener\UrlRewriteEventListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, priority: 100 }
