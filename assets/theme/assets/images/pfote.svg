@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.949" height="35.594" viewBox="0 0 33.949 35.594">
+  <g id="pfote" transform="translate(-1067.497 -7470.613)">
+    <g id="Gruppe_3238" data-name="Gruppe 3238" transform="translate(1074.909 7487.775)">
+      <path id="Pfad_25518" data-name="Pfad 25518" d="M-14352.437,22257.541s-9.379,4.963-9.3,10.619,4.987,12.223,9.3,3.777S-14352.437,22257.541-14352.437,22257.541Z" transform="translate(14361.74 -22257.541)" fill="#fff"/>
+      <path id="Pfad_25519" data-name="Pfad 25519" d="M-14359.824,22257.541s9.379,4.963,9.3,10.619-4.988,12.223-9.3,3.777S-14359.824,22257.541-14359.824,22257.541Z" transform="translate(14369.061 -22257.541)" fill="#fff"/>
+    </g>
+    <g id="Gruppe_3239" data-name="Gruppe 3239" transform="translate(1067.497 7470.613)">
+      <ellipse id="Ellipse_78" data-name="Ellipse 78" cx="3.925" cy="7.508" rx="3.925" ry="7.508" transform="translate(6.818 1.092) rotate(-8)" fill="#fff"/>
+      <ellipse id="Ellipse_79" data-name="Ellipse 79" cx="3.413" cy="5.46" rx="3.413" ry="5.46" transform="matrix(0.899, -0.438, 0.438, 0.899, 0, 14.285)" fill="#fff"/>
+    </g>
+    <g id="Gruppe_3240" data-name="Gruppe 3240" transform="translate(1084.765 7470.613)">
+      <ellipse id="Ellipse_78-2" data-name="Ellipse 78" cx="3.925" cy="7.508" rx="3.925" ry="7.508" transform="translate(7.773 15.962) rotate(-172)" fill="#fff"/>
+      <ellipse id="Ellipse_79-2" data-name="Ellipse 79" cx="3.413" cy="5.46" rx="3.413" ry="5.46" transform="matrix(-0.899, -0.438, 0.438, -0.899, 11.894, 24.101)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

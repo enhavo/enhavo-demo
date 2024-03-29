@@ -1,0 +1,184 @@
+{
+  "navigation": [
+    {
+      "label": "BLOG",
+      "link": "/",
+      "tooltip": {
+        "vlog1": "blog1",
+        "vlog2": "blog1",
+        "vlog3": "blog1",
+        "vlog4": "blog1"
+      }
+    },
+    {
+      "label": "TEAM",
+      "link": "/team"
+    },
+    {
+      "label": "JOBS",
+      "link": "/jobs"
+    },
+    {
+      "label": "KONTAKT",
+      "link": "/kontakt"
+    }
+  ],
+      "number": "+49 (0) 89 1234 5678 90",
+      "image_1": "/build/theme/images/logo.svg",
+      "image_2": "/build/theme/images/pfote.svg",
+
+  "content": [
+    {
+      "image": "/build/theme/images/headerbild.png",
+      "overline": "WILLKOMMEN BEI JOHN MÜLLER",
+      "headline": "IHREM ZUVERLÄSSIGEN PARTNER FÜR GLÜCKLICHE HUNDE!",
+      "content": "Hallo, ich bin John, Ihr passionierter Hundebegeisterter und leidenschaftlicher Gassigeher. Obwohl ich selbst keine geeignete Wohnsituation für einen eigenen Hund habe, möchte ich meine Liebe und Sorgfalt gerne mit Ihren vierbeinigen Freunden teilen. Wenn Sie auf der Suche nach jemandem sind, der sich liebevoll um Ihren pelzigen Begleiter kümmert, sind Sie hier genau richtig!",
+      "button": "KONTAKT AUFNEHMEN",
+      "link": "",
+      "target": "",
+      "image_2": "/build/theme/images/pfad 25512.svg",
+      "template": "/theme/block/hero.html.twig"
+    },
+    {
+      "about": [
+        {
+          "class": "class-1",
+          "image": "/build/theme/images/hund1.png",
+          "headline": "ZEITERSPARNIS UND GLÜCK FÜR IHREN HUND:",
+          "content": "Das moderne Leben kann hektisch sein, und manchmal bleibt nicht genug Zeit, um Ihrem Hund die Aufmerksamkeit und Bewegung zu bieten, die er verdient. Durch meine Dienstleistungen als erfahrener Gassigeher können Sie sicher sein, dass Ihr Hund regelmäßige Spaziergänge und eine Extraportion Zuneigung erhält. Ein glücklicher Hund bedeutet auch ein glücklicher Besitzer!"
+
+        },
+        {
+          "class": "class-2",
+          "image": "/build/theme/images/hund2.png",
+          "headline": "FLEXIBLE BETREUUNG NACH IHREN BEDÜRFNISSEN:",
+          "content": "Ob Sie lange Arbeitstage haben oder einfach mal eine Auszeit benötigen - ich biete flexible Betreuungszeiten an. Von kurzen Gassirunden bis hin zu halbtägiger Betreuung ist alles möglich. Sie entscheiden, was am besten zu Ihrem Zeitplan und den Bedürfnissen Ihres Hundes passt."
+
+        },
+        {
+          "class": "class-3",
+          "image": "/build/theme/images/hund3.png",
+          "headline": "VERTRAUENSWÜRDIGE SORGE DURCH ERFAHRENE HÄNDE:",
+          "content": "Ihre Hunde sind Familienmitglieder, und ich behandele sie auch so. Mit meiner Erfahrung im Umgang mit verschiedenen Hunderassen und -temperamenten können Sie sich darauf verlassen, dass Ihr Liebling in sicheren Händen ist. Ich sorge nicht nur für Bewegung, sondern auch für liebevolle Aufmerksamkeit und sorgfältige Pflege."
+
+        }
+      ],
+      "header": "WARUM EIN GASSIGEHER?",
+      "template":"/theme/block/about.html.twig"
+  },
+  {
+    "template": "/theme/block/form.html.twig",
+    "form_text": "Sie möchten, dass Ihr Hund von einer erfahrenen Hand und einem liebevollen Herzen betreut wird? Kontaktieren Sie mich einfach über das unten stehende Formular, und lassen Sie uns gemeinsam dafür sorgen, dass Ihr Hund die besten Spaziergänge seines Lebens hat!",
+    "form": {
+      "name": {
+        "type": "text",
+        "label": "ANREDE",
+        "placeholder": "AUSWÄHLEN",
+        "is_required": false
+      },
+      "email": {
+        "type": "email",
+        "label": "VORNAME",
+        "placeholder": "VORNAME",
+        "is_required": true
+      },
+      "subject": {
+        "type": "text",
+        "label": "NACHNAME",
+        "placeholder": "ILLENBERGER",
+        "is_required": false
+      },
+      "message": {
+        "type": "textarea",
+        "label": "NACHRICHT",
+        "placeholder": "HALLO, ICH HABE EINE FRAGE.",
+        "is_required": false
+      },
+      "checks": {
+        "type":"checkbox",
+        "label":"Hiermit erkläre ich, dass ich die AGB aufmerksam gelesen habe und dass ich. Meine Einwilligung zur Verarbeitung meiner persönlichen Daten gemäß geltender Datenschutzverordung gebe.",
+        "placeholder": null,
+        "is_required": null
+      }
+    },
+
+    "button": "HEIR STEHT EIN CTA"
+  },
+  {
+    "gallery":
+    [
+      "/build/theme/images/first_pic.png",
+      "/build/theme/images/second_pic.png",
+      "/build/theme/images/third_pic.png",
+      "/build/theme/images/forth_pic.png" ,
+      "/build/theme/images/fifth_pic.png",
+      "/build/theme/images/sixth_pic.png"
+    ],
+    "template": "/theme/block/gallery.html.twig"
+  },
+    {
+      "template": "/theme/block/comments.html.twig",
+      "svg_1": "/build/theme/images/qoutes.svg",
+      "headline": "Seitdem John sich um unseren Labrador kümmert, hat sich das Energieniveau und die Lebensfreude unseres Hundes deutlich verbessert. Wir schätzen die Flexibilität und vor allem die Liebe, die er unserem pelzigen Familienmitglied entgegenbringt.",
+      "content": "Familie Müller",
+      "svg_2": "/build/theme/images/qoutes.svg"
+    },
+    {
+      "template": "/theme/block/comments.html.twig",
+      "svg_1": "/build/theme/images/2ndqoutes.svg",
+      "headline": "In stressigen Zeiten war John eine echte Lebensretterin für uns und unseren Vierbeiner. Seine Zuverlässigkeit und die spürbare Hingabe zu den Tieren machen ihn zu unserem ersten Ansprechpartner für Hundebetreuung.",
+      "content": null,
+      "svg_2": "/build/theme/images/3rdqoutes.svg"
+    },
+  { "about": [
+      {
+        "image": "/build/theme/images/card1.png",
+        "headline": "DIE SPRACHE DER RUTENWEDLER: WAS UNS DER SCHWANZ UNSERES HUNDES VERRÄT",
+        "content": "Ein Blick auf die feine Kunst der Kommunikation zwischen Hunden und Menschen - insbesondere durch die subtile Sprache der Schwänze. In meinem neuesten Blogartikel erkunden wir, was die verschiedenen Schwanzbewegungen bedeuten können und wie wir dadurch das emotionale Wohlbefinden unserer pelzigen Begleiter besser verstehen können. Von fröhlichem Wedeln bis zur aufrechten Haltung - lassen Sie uns gemeinsam die faszinierende Welt der hündischen Ausdrucksweise erkunden!",
+        "button": "mehr lesen"
+      },
+      {
+        "image": "/build/theme/images/card2.png",
+        "headline": "SPIEGELNEURONEN IM SPIEL: WARUM WIR UNS IN UNSEREN HUNDEN WIEDERERKENNEN",
+        "content": "In diesem Artikel werfen wir einen Blick auf die erstaunliche Verbindung zwischen Mensch und Hund, die durch Spiegelneuronen geprägt ist. Entdecken Sie, wie die Emotionen und Verhaltensweisen Ihres Hundes oft ein Spiegelbild Ihrer eigenen sein können. Von Freude und Enthusiasmus bis hin zu Empathie - tauchen Sie ein in die wunderbare Welt der spiegelnden Bindung zwischen Ihnen und Ihrem besten Freund auf vier Pfoten.",
+        "button": "mehr lesen"
+      },
+      {
+        "image": "/build/theme/images/card3.png",
+        "headline": "DIE KUNST DER GELASSENHEIT: WAS WIR VON HUNDEN ÜBER ENTSCHLEUNIGUNG LERNEN KÖNNEN",
+        "content": "Unsere hektische Welt könnte eine Seite aus dem Buch der Hunde über Gelassenheit nehmen. In diesem Blogartikel erkunden wir, wie Hunde uns mit ihrer natürlichen Fähigkeit zur Entschleunigung inspirieren können. Von entspannten Spaziergängen bis hin zu ruhigen Augenblicken des Innehaltens - lassen Sie uns gemeinsam die Lehren der Gelassenheit von unseren treuen Gefährten lernen und in unseren eigenen Alltag integrieren.",
+        "button": "mehr lesen"
+      }
+    ],
+    "header": null,
+    "template":"/theme/block/about.html.twig"
+  },
+    {
+      "headline": "IM TEAM FÜR DAS WOHLBEFINDEN IHRER VIERBEINER:",
+      "content": "Neben mir stehen Ihnen auch meine ebenso hundebegeisterten Partner zur Verfügung, um sicherzustellen, dass Ihr pelziger Freund die bestmögliche Betreuung und Liebe erhält.“",
+      "team":
+      [
+        {
+          "image": "/build/theme/images/team1.png",
+          "name": "JOHN MÜLLER",
+          "number": "+49 (0) 89 1234 5678 90 ",
+          "emails": "hello@vonhundeundmenschen.com"
+        },
+        {
+          "image": "/build/theme/images/team2.png",
+          "name": "ANKE MÜLLER",
+          "number": "+49 (0) 89 1234 5678 90 ",
+          "emails": "hello@vonhundeundmenschen.com"
+        },
+        {
+          "image": "/build/theme/images/team3.png",
+          "name": "JACK BLOCK",
+          "number": "+49 (0) 89 1234 5678 90 ",
+          "emails": "hello@vonhundeundmenschen.com"
+        }
+      ],
+      "template": "/theme/block/team.html.twig"
+    }
+  ]
+
+}

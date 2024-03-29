@@ -1,0 +1,174 @@
+
+body{
+  background: white;
+  margin: 0;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(6,8.33%) ;
+  grid-gap: 51px;
+  margin: 0 auto;
+}
+header{
+  padding: 20px 40px;
+  background: #171717;
+  align-items: center;
+}
+
+header img{
+  grid-column: span 1;
+}
+header .paw-logo{
+  margin-left: 95%;
+}
+
+
+/* Base styles for the navbar */
+header nav {
+  grid-column: 5 / span 6;
+}
+
+header nav .number{
+   grid-column: 4 / span 6;
+   justify-self: end;
+ }
+
+
+/* Style for the logo text */
+.text-logo {
+  color: #FFFFFF;
+ width: 207px;
+/* Adjust font size */
+}
+
+/* Style for the image */
+.paw-logo {
+  width: 30px; /* Adjust width as needed */
+  height: auto;
+  max-width: 100%/* Maintain aspect ratio */
+}
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 18px; /* Adjust font size */
+  text-transform: uppercase;
+  transition: 0.6s;
+  margin-left: 10px;
+}
+
+/* Style for the number */
+header nav span {
+ margin-left: 50%;
+  justify-self: end;
+  color: #FFFFFF;
+  font-size: 20px; /* Adjust font size */
+}
+
+.tool-tip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  padding: 5px;
+  z-index: 1;
+  transition: opacity 0.3s;
+  text-align: left;
+  font: italic normal normal 18px/19px Open Sans;
+  letter-spacing: 0.45px;
+  opacity: 1;
+  position: absolute;
+  top: 100%; /* Position tooltip below the link */
+  left: 0;
+  width: 100%; /* Full width of parent li */
+  margin-top: 5px; /* Add space between link and tooltip */
+}
+
+.tooltip:hover .tool-tip-text {
+  visibility: visible;
+  opacity: 1;
+  width:100%;
+  margin-top: -0.5%;
+  display: flex;justify-content: left;align-items: center;flex-direction: column;
+}
+@media screen and (max-width: 1854px) {
+  header nav {
+    grid-column: 4 / span 5;
+  }
+}
+@media screen and (max-width: 1590px) {
+  header nav {
+    grid-column: 4 / span 6;
+  }
+  header nav span {
+    margin-left: 30%;
+  }
+}
+@media screen and (max-width: 1220px) {
+  header nav span {
+    margin-left: 20%;
+  }
+}
+
+
+@media screen and (max-width: 1107px) {
+  header nav span {
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 1017px) {
+  header nav span {
+    margin-left: 5%;
+    font-size: 16px;
+  }
+  a{
+    font-size: 16px;
+  }
+}
+/* Add hamburger menu styles */
+.hamburger {
+  display: none; /* Hide by default on larger screens */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+  grid-column: 6; /* Adjust position */
+}
+
+/* Media query to display hamburger menu on smaller screens */
+@media screen and (max-width: 1017px) {
+  .hamburger {
+    display: block; /* Show on smaller screens */
+    margin-left: 200%;
+
+  }
+}
+  @media screen and (max-width: 715px) {
+    .hamburger {
+      display: block; /* Show on smaller screens */
+      margin-left: 70%;
+    }
+
+  /* Hide the navigation menu by default */
+  header nav {
+    display: none;
+  }
+
+  /* Adjust grid column for logo on smaller screens */
+  header .text-logo {
+    grid-column: span 1;
+  }
+  .hamburger{
+    grid-column: span 4;
+  }
+}
+
+/* Show navigation menu when hamburger menu is clicked */
+@media screen and (max-width: 1017px) {
+  header nav {
+    display: none;
+    grid-column:span 6; /* Adjust position */
+  }
+  .hamburger.active + nav {
+    display: block;
+  }
+}

@@ -17,7 +17,7 @@ EnhavoEncore.add(
     [ new AppThemePackage() ],
     Encore => {
         Encore
-            .addEntry('base', './assets/theme/base')
+            .addEntry('base', './assets/theme/entrypoints/base')
 
     },
     config => {}

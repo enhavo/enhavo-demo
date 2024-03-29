@@ -1,0 +1,197 @@
+.contact_style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+  margin-left: 56%;
+  flex-direction: column;
+
+}
+input,textarea{
+  background: darkgray;
+  padding: 1rem;
+}
+.form_text{
+  width: 992px;
+  height: 62px;
+  font: normal normal bold 16px/20px Open Sans; text-align: left;
+  color: #171717; opacity: 1;
+  display: flex;justify-content: center;align-items: center;
+}
+.form{
+  margin-top: 20px;
+  display: flex;justify-content: center;align-items: center;flex-direction: column;
+}
+.form_name{
+  display: flex;flex-direction: column;
+  label{
+    margin-top: 2%;
+    width: 75px;
+    height: 24px;
+    text-align: left;
+    font: normal normal bold 18px/19px Open Sans;
+    letter-spacing: 0.45px;
+    color: #171717;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  input{
+    width: 993px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #171717;
+    opacity: 1;
+  }
+}
+.form_email{
+  display: flex;flex-direction: column;
+  label{
+    margin-top: 2%;
+    width: 95px;
+    height: 24px;
+    text-align: left;
+    font: normal normal bold 18px/19px Open Sans;
+    letter-spacing: 0.45px;
+    color: #171717;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  input{
+    width: 993px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DB5245;
+    opacity: 1;
+  }
+}
+.form_input {
+  display: flex;flex-direction: column;
+  label{
+
+    margin-top: 2%;
+    width: 109px;
+    height: 24px;
+    text-align: left;
+    font: normal normal bold 18px/19px Open Sans;
+    letter-spacing: 0.45px;
+    color: #171717;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  input{
+    width: 993px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #171717;
+    opacity: 1;
+  }
+}
+.form_message{
+  display: flex;flex-direction: column;
+  label{
+    margin-top: 2%;
+    width: 109px;
+    height: 24px;
+    text-align: left;
+    font: normal normal bold 18px/19px Open Sans;
+    letter-spacing: 0.45px;
+    color: #171717;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  textarea{
+    width: 993px;
+    height: 111px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #171717;
+    opacity: 1;
+  }
+}
+.radio_btn{
+  width: 897px;
+  height: 14px;
+  text-align: left;
+  font: normal normal normal 10px/26px Open Sans;
+  letter-spacing: 0.1px;
+  color: #000000;
+  opacity: 1;
+}
+.form_button{
+  margin-top: 2%;
+  width: 993px;
+  height: 51px;
+  border: 2px solid #171717;
+  border-radius: 100px;
+  opacity: 1;
+  display: flex;justify-content: center;align-items: center;
+}
+.required{
+  width: 152px;
+  text-align: left;
+  font: normal normal normal 10px/26px Source Serif Pro;
+  letter-spacing: 0.1px;
+  color: #DB5245;
+  opacity: 1;
+}
+/* Add styles to placeholders */
+.contact_style textarea::placeholder {
+  color: #171717;
+  font: normal normal bold 18px/19px Open Sans;
+  /* Example color */
+}
+
+/* Optionally, you can style the placeholders differently for specific inputs */
+.contact_style #name::placeholder {
+  color: #CBCBCB;
+}
+
+.contact_style #email::placeholder {
+  color: #CBCBCB;
+}
+
+.contact_style #subject::placeholder {
+  color: #171717;
+  font: normal normal bold 18px/19px Open Sans;
+}
+.form_checkbox{
+  margin-right: 5%;
+  margin-top: 2%;
+
+  label{
+    text-align: left;
+    font: normal normal normal 10px/26px Open Sans;
+    letter-spacing: 0.1px;
+    color: #000000;
+    opacity: 1;
+  }
+  input{
+    //background: none;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #171717;
+    opacity: 1;
+    width: 12px;height: 12px;
+  }
+}
+@media screen and (max-width: 2217px) {
+    .contact_style{
+      margin-left: 50px;
+    }
+  .form_checkbox{
+    input{
+      width: 12px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #171717;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 1299px) {
+  .contact_style{
+    margin-left: 650px;
+  }
+}
+@media screen and (max-width: 1095px) {
+  .contact_style{
+    margin-left: 850px;
+  }
+}
