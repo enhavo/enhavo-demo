@@ -1,0 +1,18 @@
+
+
+<div class="block_comments">
+    {% set isSecondSet = item.svg_1 starts with '/build/theme/images/2ndqoutes.svg' %}
+        <div class="comments_section {% if isSecondSet %}second-comments{% endif %}">
+            <div class="comments_wrapper">
+                <img src="{{ item.svg_1 }}" alt="comments-image" class="svg_image" >
+            </div>
+             <div class="comments_headline">{{ item.headline }}</div>
+             <div class="comments_content">{{ item.content }}</div>
+            {% set isSecondSet = item.svg_2 starts with '/build/theme/images/3rdqoutes.svg' %}
+           <div class="comments_section2 {% if isSecondSet %}second-comments2{% endif %}">
+                <div class="comments_wrapper2">
+                    <img src="{{ item.svg_2 }}" alt="2nd-comments-img" class="svg_image2" >
+                </div>
+           </div>
+        </div>
+</div>

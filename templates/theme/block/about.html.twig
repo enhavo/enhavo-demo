@@ -1,0 +1,27 @@
+<div class="about_container">
+    <div class="about_header">{{ item.header }}</div>
+        {% for section in item.about %}
+            {% set isFirstSet = not (section.image starts with '/build/theme/images/card') %}
+            <div class="about_headline {% if isFirstSet %}about_first-set{% endif %} {% if not isFirstSet %}about_second-set{% endif %}">
+                <div class="about_img-wrapper">
+                    <img src="{{ section.image }}" alt="about_image" class="about_images ">
+                </div>
+                {% set isFirstSet = not (section.content starts with 'Ein Blick' or
+                    section.content starts with 'In diesem' or
+                    section.content starts with 'Unsere hektische') %}
+                {% set isFirstSet = not (section.headline starts with 'DIE SPRACHE' or
+                    section.headline starts with 'SPIEGELNEURONEN IM SPIEL:' or
+                    section.headline starts with 'DIE KUNST DER GELASSENHEIT:') %}
+
+                    <div class="{% if isFirstSet %}first-headline{% endif %} {% if not isFirstSet %}second-headline{% endif %}">{{ section.headline }}</div>
+
+
+                    <div class="{% if isFirstSet %}first-content{% endif %}{% if not isFirstSet %}second-content{% endif %}">{{ section.content }}</div>
+
+
+                    {% if section.button is defined %}
+                        <div class="about_button">{{ section.button }}</div>
+                    {% endif %}
+            </div>
+        {% endfor %}
+</div>

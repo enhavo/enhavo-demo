@@ -7,8 +7,17 @@ page:
                 - navigation.json
                 - routes.json
                 - page/homepage.json
-            template: 'theme/resource/page/show.html.twig'
+            template: 'theme/resource/page/home.html.twig'
             variants:
                 page=imprint:
                     load:
                         - page/imprint.json
+
+page_home:
+    path: /home
+    defaults:
+        _endpoint:
+            type: template
+            template: 'theme/resource/page/home.html.twig'
+            load:
+            - home.json

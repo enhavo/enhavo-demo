@@ -1,39 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-
-    {% block meta %}{% endblock %}
-
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('base', null, 'theme') }}
-    {% endblock %}
-
-    {% block javascripts %}
-        {{ encore_entry_script_tags('base', null, 'theme') }}
-    {% endblock %}
-
-    <script id="routes" type="application/json">{{ routes|json_encode|raw }}</script>
-</head>
-<body>
 {% block body %}
     {% block header %}
         <header>
             {% include 'theme/navigation/main.html.twig' %}
+            {% include 'theme/navigation/about.html.twig' %}
         </header>
     {% endblock %}
-    <main>
-        <div class="block-main">
-            {% block main %}{% endblock %}
-        </div>
-    </main>
-    {% block footer %}
-        <footer>
-            {% include 'theme/navigation/footer.html.twig' %}
-        </footer>
-    {% endblock %}
-{% endblock %}
-
-</body>
-</html>
+<main>
