@@ -54,9 +54,6 @@
     letter-spacing: 0.38px;
     color: #000000;
     text-transform: uppercase;
-    //width: 100%;
-    //grid-column-start: 3;
-
   }
 
   .hero_title {
@@ -75,10 +72,8 @@
     line-height: 26px;
     letter-spacing: 0.18px;
     color: #000000;
-    //margin-left: 53%;
     width: 89%;
     margin-top: 20px;
-    grid-column: 4 / span 6;
   }
 
 
@@ -97,20 +92,19 @@
   margin-top:20px;
   grid-column: span 3; /* Spanning 3 columns */
 }
-@media screen and (max-width: 1017px) {
-  .hero_img,.gradient{
+@media screen and (max-width: 990px) {
+  .hero_img {
     display: none;
   }
-  .gradient{
-    grid-column: 3 /span 2;
+  .gradient {
+    display: none;
   }
-  .texts_container{
-    max-width: 734px;
-    left: 26%;
-    margin-top: 80px;
-    position: relative;
-
-
+  .texts_container {
+    background: yellow;
+    position: absolute;
+  }
+  .hero_content {
+    grid-column: span 3;
   }
 }
 //@media screen and (max-width: 1705px){

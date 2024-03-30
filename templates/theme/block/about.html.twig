@@ -12,12 +12,10 @@
                 {% set isFirstSet = not (section.headline starts with 'DIE SPRACHE' or
                     section.headline starts with 'SPIEGELNEURONEN IM SPIEL:' or
                     section.headline starts with 'DIE KUNST DER GELASSENHEIT:') %}
-
-                    <div class="{% if isFirstSet %}first-headline{% endif %} {% if not isFirstSet %}second-headline{% endif %}">{{ section.headline }}</div>
-
-
-                    <div class="{% if isFirstSet %}first-content{% endif %}{% if not isFirstSet %}second-content{% endif %}">{{ section.content }}</div>
-
+{#                    <div class="about_text">#}
+                        <div class="{% if isFirstSet %}first-headline{% endif %} {% if not isFirstSet %}second-headline{% endif %}">{{ section.headline }}</div>
+                        <div class="{% if isFirstSet %}first-content{% endif %}{% if not isFirstSet %}second-content{% endif %}">{{ section.content }}</div>
+{#                    </div>#}
 
                     {% if section.button is defined %}
                         <div class="about_button">{{ section.button }}</div>
