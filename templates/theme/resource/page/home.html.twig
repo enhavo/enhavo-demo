@@ -5,50 +5,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <style>
-        .footer{
-            grid-column: 2 / span 5;
-            grid-row: 5;
-        }
-        .footer_logo{
-            display: flex;flex-direction: column;
-            margin-top: 30px;
-        }
-        .logo{
-            width: 211px;
-            height: 33px;
-            margin-left: 202px;
-            text-align: left;
-            font: normal normal bold 24px/32px Open Sans;
-            letter-spacing: 0px;
-            color: #FFFFFF;
-            text-transform: uppercase;
-        }
-        .copyright{
-            width: 102px;
-            height: 24px;
-            padding: 25px 25px 25px 0;
-            margin-left: 202px;
-            text-align: left;
-            font: normal normal normal 18px/19px Open Sans;
-            letter-spacing: 0.45px;
-            color: #FFFFFF;
-            text-transform: uppercase;
-            opacity: 1;
-        }
-        .footer_right{
-
-            color: white;
-            display: inline-flex;justify-content: end;align-items: end;
-            gap:50px;
-            margin-left: 1237px;
-            padding: 25px;
-            text-transform: uppercase;
-            font: normal normal normal 18px/19px Open Sans;
-            letter-spacing: 0.45px;
-            transform: translateX(50%);
-        }
-    </style>
 </head>
 <body>
 <header class="grid">
@@ -82,19 +38,21 @@
             {% endfor %}
 </main>
 {#        </div>#}
-<div class="grid">
-    <div class="footer">
-        <div class="footer_logo">
-            <div class="logo">logo</div>
-            <div class="copyright">copyright</div>
-        </div>
-        <div class="footer_right">
-            <div>datenschutz</div>
-            <div>impressum</div>
-            <div>agb</div>
+<footer class="grid">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer_logo">
+                <div class="logo">logo</div>
+                <div class="copyright">copyright</div>
+            </div>
+            <div class="footer_right">
+                <span>datenschutz</span>
+                <span>impressum</span>
+                <span>agb</span>
+            </div>
         </div>
     </div>
-</div>
+</footer>
 {#</div>#}
 {{ encore_entry_script_tags('base', null, 'theme') }}
 </body>
