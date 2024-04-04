@@ -23,23 +23,24 @@
 {#        {% endfor %}#}
 {#</div>#}
 <div class="block-about">
-<div class="container">
-    <div class="block-container">
-    <div class="about_header">{{ item.header }}</div>
-    <div class="block-content">
-    {% for item in item.about %}
-        <div class="image-content">
-            <div class="images">
-                    <img src="{{ item.image }}" alt="dogs" class="{% if item.classImage is defined %}{{ item.classImage }}{% endif %}">
-                <div class="{% if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>
-                <div class="{% if item.classContent is defined %}{{ item.classContent }}{% endif %}">{{ item.content }}</div>
-                {% if item.button is defined %}
-            </div>
-            <div class="{%  if item.classButton is defined %}{{ item.classButton }}{% endif %}{{ item.button }}"></div>
-            {% endif %}
-        </div>
+    <div class="container">
+        <div class="block-container">
+            <div class="about_header">{{ item.header }}</div>
+                <div class="block-content">
+                    {% for item in item.about %}
+                        <div class="image-content">
+                            <div class="images">
+                                    <img src="{{ item.image }}" alt="dogs" class="{% if item.classImage is defined %}{{ item.classImage }}{% endif %}">
+                                <div class="{% if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>
+                                <div class="{% if item.classContent is defined %}{{ item.classContent }}{% endif %}">{{ item.content }}</div>
+                                {% if item.button is defined %}
+                                    <div class="{% if item.classButton is defined %}{{ item.classButton }}{% endif %}"{{ item.button }}></div>
+                                {% endif %}
+                            </div>
 
-    {% endfor %}
-</div></div>
-</div>
+                        </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
