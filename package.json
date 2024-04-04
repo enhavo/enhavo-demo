@@ -1,14 +1,14 @@
 {
     "dependencies": {
-        "@enhavo/api": "https://github.com/enhavo/api-assets.git#master",
-        "@enhavo/app": "https://github.com/enhavo/app-assets.git#master",
-        "@enhavo/core": "https://github.com/enhavo/core-assets.git#master",
-        "@enhavo/dashboard": "https://github.com/enhavo/dashboard-assets.git#master",
-        "@enhavo/dependency-injection": "https://github.com/enhavo/dependency-injection.git#master",
-        "@enhavo/form": "https://github.com/enhavo/form-assets.git#master",
-        "@enhavo/media": "https://github.com/enhavo/media-assets.git#master",
-        "@enhavo/user": "https://github.com/enhavo/user-assets.git#master",
-        "@enhavo/vue-form": "https://github.com/enhavo/vue-form-assets.git#master",
+        "@enhavo/api": "^0.14",
+        "@enhavo/app": "^0.14",
+        "@enhavo/core": "^0.14",
+        "@enhavo/dashboard": "^0.14",
+        "@enhavo/dependency-injection": "^0.14",
+        "@enhavo/form": "^0.14",
+        "@enhavo/media": "^0.14",
+        "@enhavo/user": "^0.14",
+        "@enhavo/vue-form": "^0.14",
         "jquery": "^3.6.0",
         "vue-router": "^4.1.5"
     },
