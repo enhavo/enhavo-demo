@@ -1,20 +1,20 @@
 
 
 <div class="block_comments">
-    {% set isSecondSet = item.svg_1 starts with '/build/theme/images/2ndqoutes.svg' %}
-        <div class="comments_section {% if isSecondSet %}second-comments{% endif %}">
+    <div class="comments-container">
+        <div class="container-content">
             <div class="comments_wrapper">
-                <img src="{{ item.svg_1 }}" alt="comments-image" class="svg_image" >
+                <img src="{{ item.image1 }}" alt="comments-image" class="{%if item.classImage1 is defined %}{{ item.classImage1 }}{% endif %}">
             </div>
             <div class="comments_content">
-             <div class="comments_headline">{{ item.headline }}</div>
-             <div class="comments_subcontent">{{ item.content }}</div>
+             <div class="{%if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>
+             <div class="comments_sub-content">{{ item.content }}</div>
             </div>
-            {% set isSecondSet = item.svg_2 starts with '/build/theme/images/3rdqoutes.svg' %}
-           <div class="comments_section2 {% if isSecondSet %}second-comments2{% endif %}">
+           <div class="comments_section2 ">
                 <div class="comments_wrapper2">
-                    <img src="{{ item.svg_2 }}" alt="2nd-comments-img" class="svg_image2" >
+                    <img src="{{ item.image2 }}" alt="2nd-comments-img" class="{%if item.classImage2 is defined %}{{ item.classImage2 }}{% endif %}" >
                 </div>
            </div>
         </div>
+    </div>
 </div>

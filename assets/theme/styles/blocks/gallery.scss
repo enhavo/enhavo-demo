@@ -1,50 +1,57 @@
-.gallery_container {
-  margin-top: -2%;
-  display: grid;
-  grid-template-columns: 210px 210px 210px 210px 210px 210px ;
-  justify-content: center;
-  align-items: center;
+.block-gallery {
+  max-width: 1390px;
+  width: 80%;
+  margin: 0 auto ;
 
 }
 
-.gallery_img {
-  width: 60%; /* Make sure the images fill their container */
-  max-width: 100vh;
-
-  /*display: block;;*/
-
-}
-.gallery:nth-child(1) .gallery_img {
-  grid-column-start: 1;
-  grid-column-end: 2;
+.container {
+  grid-column: span 6;
 }
 
-.gallery:nth-child(2) .gallery_img {
-  grid-column-start: 3;
-  grid-column-end: 4;
+.gallery {
+  img{
+    width: 472px;
+  }
 }
-
-.gallery:nth-child(3) .gallery_img {
-  grid-column-start: 5;
-  grid-column-end: 6;
+.gallery-content{
+  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
+  align-items: center;justify-content: center;
 }
-
-.gallery:nth-child(4) .gallery_img {
-  grid-column-start: 1;
-  grid-column-end: 2;
+.first-3{
+  display: flex;
+  grid-column: span 6;
 }
-
-.gallery:nth-child(5) .gallery_img {
-  grid-column-start: 3;
-  grid-column-end: 4;
+.img-1,.img-2,.img-3,.img-4,.img-5,.img-6{
+  margin-left: 50px;
 }
-
-.gallery:nth-child(6) .gallery_img {
-  grid-column-start: 5;
-  grid-column-end: 6;
+.second-3{
+  display: flex;
+  grid-column: span 6;
+}
+.img-1{
+  width: 472px;
+  height: 357px;
+}.img-2{
+   width: 472px;
+   height: 628px;
+}.img-3{
+    width: 472px;
+    height: 357px;
+}.img-4{
+     width: 472px;
+     height: 628px;
+    margin-top: -18%;
+}.img-5{
+      width: 472px;
+      height: 357px;
+}.img-6{
+       width: 472px;
+       height: 628px;
+       margin-top: -18%;
 }
 @media screen and (max-width: 2217px) {
-  .gallery_container{
+  .gallery_container {
     margin-left: 50px;
   }
   .gallery:nth-child(3) .gallery_img {
@@ -55,13 +62,15 @@
     margin-left: 50px;
   }
 }
+
 @media screen and (max-width: 1299px) {
-  .gallery_container{
+  .gallery_container {
     margin-left: 650px;
   }
 }
+
 @media screen and (max-width: 1095px) {
-  .gallery_container{
+  .gallery_container {
     margin-left: 850px;
   }
 }

@@ -1,20 +1,21 @@
 
-.container{
-  margin: 55px 0;
-}
 .block_hero {
   max-width: 1390px;
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(6, 210px); /* Change the columns to fractions */
-  grid-gap: 51px;
-  margin: 0 auto ;
+  width: 100%;
+  margin: 0 auto;
   align-items: center;
-  justify-content: center;
+
 }
-.hero_content{
-   grid-column: span 6;
-   display: grid;
+.container{
+   margin: 55px 0;
+   max-width: 1390px;
+   width: 100%;;
+ }
+.grid-container{
+  display: grid;
+  max-width: 1390px;
+  grid-template-columns: repeat(6, 210px);
+  grid-gap: 51px;
 
  }
 .image_container{
@@ -26,25 +27,23 @@
 }
 
 .hero_img {
-  max-width: 100%;
+  max-width: 1390px;
   grid-column: 1 / span 3;
   grid-row: 1;
-  position: absolute;
   z-index: -1;
+  background-size: cover;
 }
 .gradient {
   z-index: -1;
   border: 1px solid red;
   grid-row-start: 1;
-  grid-column: 2 / span 2;
-  /* margin-top: 202px; */
-  max-width: 100%;
+  grid-column: 3 / span 2;
+  max-width: 1390px;
+
 }
 .texts_container{
-  max-width: 734px;
-  position: absolute;
-  left:55%;
-  margin-top: 170px;
+  grid-row: 1;
+  grid-column: 4 / span 3;
 
 }
   .hero_text {
@@ -54,6 +53,7 @@
     letter-spacing: 0.38px;
     color: #000000;
     text-transform: uppercase;
+    margin-top: 168px;
   }
 
   .hero_title {
@@ -101,10 +101,7 @@
   }
   .texts_container {
     background: yellow;
-    position: absolute;
-  }
-  .hero_content {
-    grid-column: span 3;
+    grid-column: 1 / span 6;
   }
 }
 //@media screen and (max-width: 1705px){
