@@ -47,7 +47,8 @@
           "headline": "ZEITERSPARNIS UND GLÜCK FÜR IHREN HUND:",
           "classHeadline": "headline",
           "content": "Das moderne Leben kann hektisch sein, und manchmal bleibt nicht genug Zeit, um Ihrem Hund die Aufmerksamkeit und Bewegung zu bieten, die er verdient. Durch meine Dienstleistungen als erfahrener Gassigeher können Sie sicher sein, dass Ihr Hund regelmäßige Spaziergänge und eine Extraportion Zuneigung erhält. Ein glücklicher Hund bedeutet auch ein glücklicher Besitzer!",
-          "classContent": "content"
+          "classContent": "content",
+          "button": null
         },
 
         {
@@ -56,7 +57,8 @@
           "headline": "FLEXIBLE BETREUUNG NACH IHREN BEDÜRFNISSEN:",
           "classHeadline": "headline_2",
           "content": "Ob Sie lange Arbeitstage haben oder einfach mal eine Auszeit benötigen - ich biete flexible Betreuungszeiten an. Von kurzen Gassirunden bis hin zu halbtägiger Betreuung ist alles möglich. Sie entscheiden, was am besten zu Ihrem Zeitplan und den Bedürfnissen Ihres Hundes passt.",
-          "classContent": "content_3"
+          "classContent": "content_3",
+          "button": null
         },
 
         {
@@ -65,7 +67,8 @@
           "headline": "VERTRAUENSWÜRDIGE SORGE DURCH ERFAHRENE HÄNDE:",
           "classHeadline": "headline_3",
           "content": "Ihre Hunde sind Familienmitglieder, und ich behandele sie auch so. Mit meiner Erfahrung im Umgang mit verschiedenen Hunderassen und -temperamenten können Sie sich darauf verlassen, dass Ihr Liebling in sicheren Händen ist. Ich sorge nicht nur für Bewegung, sondern auch für liebevolle Aufmerksamkeit und sorgfältige Pflege.",
-          "classContent": "content_3"
+          "classContent": "content_3",
+          "button": null
         }
       ],
       "header": "WARUM EIN GASSIGEHER?",
