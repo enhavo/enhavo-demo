@@ -141,6 +141,7 @@
   { "about": [
       {
         "image": "/build/theme/images/card1.png",
+        "classImage": "image4",
         "headline": "DIE SPRACHE DER RUTENWEDLER: WAS UNS DER SCHWANZ UNSERES HUNDES VERRÄT",
         "classHeadline": "headline3",
         "content": "Ein Blick auf die feine Kunst der Kommunikation zwischen Hunden und Menschen - insbesondere durch die subtile Sprache der Schwänze. In meinem neuesten Blogartikel erkunden wir, was die verschiedenen Schwanzbewegungen bedeuten können und wie wir dadurch das emotionale Wohlbefinden unserer pelzigen Begleiter besser verstehen können. Von fröhlichem Wedeln bis zur aufrechten Haltung - lassen Sie uns gemeinsam die faszinierende Welt der hündischen Ausdrucksweise erkunden!",
@@ -156,7 +157,7 @@
         "content": "In diesem Artikel werfen wir einen Blick auf die erstaunliche Verbindung zwischen Mensch und Hund, die durch Spiegelneuronen geprägt ist. Entdecken Sie, wie die Emotionen und Verhaltensweisen Ihres Hundes oft ein Spiegelbild Ihrer eigenen sein können. Von Freude und Enthusiasmus bis hin zu Empathie - tauchen Sie ein in die wunderbare Welt der spiegelnden Bindung zwischen Ihnen und Ihrem besten Freund auf vier Pfoten.",
         "classContent": "content_5",
         "button": "mehr lesen",
-        "classButton": "button"
+        "classButton": "about-button-2"
       },
       {
         "image": "/build/theme/images/card3.png",
@@ -166,7 +167,7 @@
         "content": "Unsere hektische Welt könnte eine Seite aus dem Buch der Hunde über Gelassenheit nehmen. In diesem Blogartikel erkunden wir, wie Hunde uns mit ihrer natürlichen Fähigkeit zur Entschleunigung inspirieren können. Von entspannten Spaziergängen bis hin zu ruhigen Augenblicken des Innehaltens - lassen Sie uns gemeinsam die Lehren der Gelassenheit von unseren treuen Gefährten lernen und in unseren eigenen Alltag integrieren.",
         "classContent": "content_6",
         "button": "mehr lesen",
-        "classButton": "button"
+        "classButton": "about-button-3"
       }
     ],
     "header": null,

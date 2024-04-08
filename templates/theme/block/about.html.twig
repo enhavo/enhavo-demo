@@ -1,45 +1,20 @@
-{#<div class="about_container">#}
-{#    <div class="about_header">{{ item.header }}</div>#}
-{#        {% for section in item.about %}#}
-{#            {% set isFirstSet = not (section.image starts with '/build/theme/images/card') %}#}
-{#            <div class=" {% if isFirstSet %}about_first-set{% endif %} {% if not isFirstSet %}about_second-set{% endif %}">#}
-{#                <div class="about_img-wrapper">#}
-{#                    <img src="{{ section.image }}" alt="about_image" class="about_images ">#}
-{#                </div>#}
-{#                {% set isFirstSet = not (section.content starts with 'Ein Blick' or#}
-{#                    section.content starts with 'In diesem' or#}
-{#                    section.content starts with 'Unsere hektische') %}#}
-{#                {% set isFirstSet = not (section.headline starts with 'DIE SPRACHE' or#}
-{#                    section.headline starts with 'SPIEGELNEURONEN IM SPIEL:' or#}
-{#                    section.headline starts with 'DIE KUNST DER GELASSENHEIT:') %}#}
-{#                    <div class="about_text">#}
-{#                <div class="{% if isFirstSet %}first-headline{% endif %} {% if not isFirstSet %}second-headline{% endif %}">{{ section.headline }}</div>#}
-{#                <div class="{% if isFirstSet %}first-content{% endif %}{% if not isFirstSet %}second-content{% endif %}">{{ section.content }}</div>#}
-{#                    </div>#}
-{#                {% if section.button is defined %}#}
-{#                    <div class="about_button">{{ section.button }}</div>#}
-{#                {% endif %}#}
-{#            </div>#}
-{#        {% endfor %}#}
-{#</div>#}
-<div class="block-about">
-<div class="container">
-    <div class="block-container">
-    <div class="about_header">{{ item.header }}</div>
-    <div class="block-content">
-    {% for item in item.about %}
-        <div class="image-content">
-            <div class="images">
-                    <img src="{{ item.image }}" alt="dogs" class="{% if item.classImage is defined %}{{ item.classImage }}{% endif %}">
-                <div class="{% if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>
-                <div class="{% if item.classContent is defined %}{{ item.classContent }}{% endif %}">{{ item.content }}</div>
-                {% if item.button is defined %}
-            </div>
-            <div class="{%  if item.classButton is defined %}{{ item.classButton }}{% endif %}{{ item.button }}"></div>
-            {% endif %}
-        </div>
 
-    {% endfor %}
-</div></div>
-</div>
+<div class="block-about">
+    <div class="container">
+        <div class="block-container">
+            <div class="about_header">{{ item.header }}</div>
+
+                {% for item in item.about %}
+                <div class="block-image">
+                    <img src="{{ item.image }}" alt="dogs" class="{% if item.classImage is defined %}{{ item.classImage }}{% endif %}">
+                    <div class="{% if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>
+                    <div class="{% if item.classContent is defined %}{{ item.classContent }}{% endif %}">{{ item.content }}</div>
+                    {% if item.button is defined %}
+                    <div class="{%  if item.classButton is defined %}{{ item.classButton }}{% endif %}">{{ item.button }}</div>
+                    {% endif %}
+
+            </div>
+                {% endfor %}
+        </div>
+    </div>
 </div>

@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ encore_entry_link_tags('base', null, 'theme') }}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,26 +9,29 @@
 </head>
 <body>
 <header class="grid">
-    <img src="{{ image_2 }}" alt="nav_img" class="paw-logo"/>
-    <img src="{{ image_1 }}" alt="nav_img" class="text-logo"/>
-    <button class="hamburger">&#9776;</button>
-        <nav>
-{#            <ul>#}
-                {% for item in navigation %}
-{#                    <li class="tooltip">#}
+    <div class="container">
+        <div class="head-content">
+            <div class="header-img">
+                <img src="{{ image_2 }}" alt="nav_img" class="paw-logo" >
+                <img src="{{ image_1 }}" alt="nav_img" class="text-logo" >
+                <button class="hamburger">&#9776;</button>
+            </div>
+                <nav>
+                    {% for item in navigation %}
                             <a href="{{ item.link }}">{{ item.label }}</a>
-                        {% if item.tooltip is defined %}
+                            {% if item.tooltip is defined %}
                             <div class="tool-tip-text">
-                                {% for key, value in item.tooltip %}
-                                    {{ value }}<br>
-                                {% endfor %}
+                            {% for key, value in item.tooltip %}
+                                {{ value }}<br>
+                            {% endfor %}
                             </div>
                         {% endif %}
-{#                    </li>#}
-                {% endfor %}
+                    {% endfor %}
+                </nav>
                 <span>{{ number }}</span>
-{#            </ul>#}
-    </nav>
+
+        </div>
+    </div>
 </header>
     {#FOOTER#}
 {#        <div id="content">#}
