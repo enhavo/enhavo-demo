@@ -1,17 +1,16 @@
 
 <div class="block-team">
     <div class="container">
-        <div class="team_text">
+        <div class="text_container">
+            <div class="team-text">
     <div class="team_headline">{{ item.headline }}</div>
     <div class="{{ item.classContent }}">{{ item.content }}</div>
-    <div class="team_container">
+            </div>
         {% for section in item.team %}
             <div class="team_column">
-                <div class="team_wrapper">
                 <img src="{{ section.image }}" alt="team_image" class="{{ section.classImage }}">
-                </div>
                 <div class="team_header">
-                    <div class="name">{{ section.name }}</div>
+                    <div class="names">{{ section.name }}</div>
                     <div class="team_contact">
                         <div>{{ section.number }}</div>
                         <div>{{ section.emails }}</div>
@@ -19,6 +18,5 @@
                 </div>
             </div>
         {% endfor %}
-    </div>
 </div>
 </div></div>
