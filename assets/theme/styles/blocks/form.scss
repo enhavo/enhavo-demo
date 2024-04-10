@@ -5,13 +5,10 @@
 }
 .form-content {
   max-width: 1390px;
-  width: 80%;
   display: grid;
-  grid-template-columns: repeat(6, 210px); /* Change the columns to fractions */
+  grid-template-columns: repeat(6, 1fr); /* Change the columns to fractions */
   grid-gap: 51px;
   margin: 0 auto ;
-  align-items: center;
-  justify-content: center;
 }
 .container{
 
@@ -21,8 +18,6 @@ input,textarea{
   padding: 1rem;
 }
 .form_text{
-  width: 992px;
-  height: 62px;
   font: normal normal bold 16px/20px Open Sans; text-align: left;
   color: #171717; opacity: 1;
   display: flex;justify-content: center;align-items: center;
@@ -30,14 +25,9 @@ input,textarea{
 }
 .form{
   grid-column: 2 / span 4;
-  display: flex;justify-content: center;align-items: center;flex-direction: column;
 }
 .form_name{
-  display: flex;flex-direction: column;
   label{
-    margin-top: 2%;
-    width: 75px;
-    height: 24px;
     text-align: left;
     font: normal normal bold 18px/19px Open Sans;
     letter-spacing: 0.45px;
@@ -54,11 +44,8 @@ input,textarea{
   }
 }
 .form_email{
-  display: flex;flex-direction: column;
+  margin-top: 2%;
   label{
-    margin-top: 2%;
-    width: 95px;
-    height: 24px;
     text-align: left;
     font: normal normal bold 18px/19px Open Sans;
     letter-spacing: 0.45px;
@@ -75,12 +62,8 @@ input,textarea{
   }
 }
 .form_input {
-  display: flex;flex-direction: column;
+  margin-top: 2%;
   label{
-
-    margin-top: 2%;
-    width: 109px;
-    height: 24px;
     text-align: left;
     font: normal normal bold 18px/19px Open Sans;
     letter-spacing: 0.45px;
@@ -97,11 +80,8 @@ input,textarea{
   }
 }
 .form_message{
-  display: flex;flex-direction: column;
+  margin-top: 2%;
   label{
-    margin-top: 2%;
-    width: 109px;
-    height: 24px;
     text-align: left;
     font: normal normal bold 18px/19px Open Sans;
     letter-spacing: 0.45px;
@@ -182,26 +162,32 @@ input,textarea{
     width: 12px;height: 12px;
   }
 }
-@media screen and (max-width: 2217px) {
-    .contact_style{
-      margin-left: 50px;
-    }
-  .form_checkbox{
-    input{
-      width: 12px;
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      border: 1px solid #171717;
-      opacity: 1;
-    }
-  }
+
+
+.form-content > input,textarea{
+  grid-column: 2 / span 6;
+  border: 2px solid green;
 }
-@media screen and (max-width: 1299px) {
-  .contact_style{
-    margin-left: 650px;
-  }
-}
-@media screen and (max-width: 1095px) {
-  .contact_style{
-    margin-left: 850px;
-  }
-}
+//@media screen and (max-width: 2217px) {
+//    .contact_style{
+//      margin-left: 50px;
+//    }
+//  .form_checkbox{
+//    input{
+//      width: 12px;
+//      background: #FFFFFF 0% 0% no-repeat padding-box;
+//      border: 1px solid #171717;
+//      opacity: 1;
+//    }
+//  }
+//}
+//@media screen and (max-width: 1299px) {
+//  .contact_style{
+//    margin-left: 650px;
+//  }
+//}
+//@media screen and (max-width: 1095px) {
+//  .contact_style{
+//    margin-left: 850px;
+//  }
+//}

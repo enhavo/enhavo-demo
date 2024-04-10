@@ -15,8 +15,9 @@
   }
 }
 .gallery-content{
+  max-width: 1390px;
   display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
-  align-items: center;justify-content: center;
+  margin: 0 auto;
 }
 .first-3{
   display: flex;
