@@ -1,24 +1,23 @@
-{#<div class="block-gallery">#}
-{#<div class="container">#}
-{#    {% for image in item.gallery %}#}
-{#        <div class="gallery">#}
-{#                <img src="{{ image }}" alt="Gallery Image" class="gallery_img">#}
-{#        </div>#}
-{#    {% endfor %}#}
-{#</div>#}
-{#</div>#}
 <div class="block-gallery">
     <div class="container">
             <div class="gallery-content">
-                <div class="first-3">
-                    <img src="{{ item.image_1 }}" alt="Gallery Image" class="img-1">
-                    <img src="{{ item.image_2 }}" alt="Gallery Image" class="img-2">
-                    <img src="{{ item.image_3 }}" alt="Gallery Image" class="img-3">
+                <div class="item_1">
+                    <img src="{{ item.image_1 }}" alt="Gallery Image" class="gallery_img _h">
                 </div>
-                <div class="second-3">
-                    <img src="{{ item.image_4 }}" alt="Gallery Image" class="img-4">
-                    <img src="{{ item.image_5 }}" alt="Gallery Image" class="img-5">
-                    <img src="{{ item.image_6 }}" alt="Gallery Image" class="img-6">
+                <div class="item_2">
+                    <img src="{{ item.image_2 }}" alt="Gallery Image" class="gallery_img _v">
+                </div>
+                <div class="item_3">
+                    <img src="{{ item.image_3 }}" alt="Gallery Image" class="gallery_img _h">
+                </div>
+                <div class="item_4">
+                    <img src="{{ item.image_4 }}" alt="Gallery Image" class="gallery_img _v">
+                </div>
+                <div class="item_5">
+                    <img src="{{ item.image_6}}" alt="Gallery Image" class="gallery_img _h">
+                </div>
+                <div class="item_6">
+                    <img src="{{  item.image_5}}" alt="Gallery Image" class="gallery_img _v">
                 </div>
             </div>
     </div>

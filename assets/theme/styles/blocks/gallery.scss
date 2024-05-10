@@ -1,77 +1,64 @@
 .block-gallery {
-  max-width: 1390px;
-  width: 80%;
-  margin: 0 auto ;
-
+  margin: 90px 0 50px;
 }
-
-.container {
-  grid-column: span 6;
-}
-
-.gallery {
-  img{
-    width: 472px;
-  }
-}
-.gallery-content{
-  max-width: 1390px;
-  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
+.gallery-content {
+  display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 51px;
   margin: 0 auto;
+  max-width: 1390px;
 }
-.first-3{
-  display: flex;
-  grid-column: span 6;
+.item_2, .item_4,.item_5 {
+  grid-row: span 2;
 }
-.img-1,.img-2,.img-3,.img-4,.img-5,.img-6{
-  margin-left: 50px;
+.item_1, .item_3,.item_6 {
+  grid-row: span 1;
 }
-.second-3{
-  display: flex;
-  grid-column: span 6;
+.gallery_img {
+  width: 100%;height: auto;
+  object-fit: cover;vertical-align: top;
 }
-.img-1{
-  width: 472px;
-  height: 357px;
-}.img-2{
-   width: 472px;
-   height: 628px;
-}.img-3{
-    width: 472px;
-    height: 357px;
-}.img-4{
-     width: 472px;
-     height: 628px;
-    margin-top: -18%;
-}.img-5{
-      width: 472px;
-      height: 357px;
-}.img-6{
-       width: 472px;
-       height: 628px;
-       margin-top: -18%;
+.gallery_img_h {
+  width: 100%;height: auto;
+  object-fit: cover;vertical-align: top;
 }
-@media screen and (max-width: 2217px) {
-  .gallery_container {
-    margin-left: 50px;
-  }
-  .gallery:nth-child(3) .gallery_img {
-    margin-left: 50px;
-    height: 357px;
-  }
-  .gallery:nth-child(6) .gallery_img {
-    margin-left: 50px;
-  }
+@media screen and (max-width: 1664px) {
+.gallery-content{
+  display:grid;grid-template-columns: repeat(2, 1fr);grid-gap: 51px;
+}
+.gallery_img{
+  height: 100%;
+}
+.item_2{
+  grid-row: span 2;
+  grid-column: span 1;
+}
+.item_4{
+
+  grid-column: span 1;
+}
+.item_6{
+  grid-column: 2 / span 1;
+  grid-row: 3;
 }
 
-@media screen and (max-width: 1299px) {
-  .gallery_container {
-    margin-left: 650px;
-  }
+.item_1{
+  grid-row: span 1;
+  grid-column: span 1;
 }
+.item_3{
 
-@media screen and (max-width: 1095px) {
-  .gallery_container {
-    margin-left: 850px;
-  }
+  grid-column: span 1;
+}
+.item_5 {
+  grid-column: span 1;
+}
+}
+@media screen and (max-width: 965px) {
+.item_2, .item_4,.item_6 {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+.item_1, .item_3,.item_5 {
+  grid-row: span 1;
+  grid-column: span 3;
+}
 }

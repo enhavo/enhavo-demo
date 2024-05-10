@@ -3,4 +3,73 @@
 {#{% block main %}#}
 {#    {{ block_render(resource.content, resource) }}#}
 {#{% endblock %}#}
-hfhfe
+<html>
+<head>
+    <meta charset="UTF-8">
+    {#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    {{ encore_entry_link_tags('base', null, 'theme') }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="nav" data-controller="sub-menu">
+        <div class="container">
+            <div class="navbar-container">
+                <div class="header-img">
+                    {#data-sub-menu-target="hiddenContent"   if you put this on the first image it will hidden your image#}
+                    <img src="{{ image2 }}" alt="nav_img" class="paw-logo">
+                    <img src="{{ image_1 }}" alt="nav_img" class="text-logo">
+                </div>
+                <nav class="navigation1">
+                    {% for item in navigation %}
+                        <div class="nav-item">
+                            <a href="{{ item.link }}"
+                               {% if loop.first %}data-action="click->sub-menu#greet"{% endif %}
+                               class="{{ item.classLabel }}">{{ item.label }}</a>
+                        </div>
+                        {% if item.sub_menu is defined %}
+                            <div class="menu">
+                                <ul class="sub-menu-ul">
+                                    <li class="sub-menu-list"><a href="/show" class="list-font">{{ item.sub_menu.vlog1 }}</a></li>
+                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog2 }}</a></li>
+                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog3 }}</a></li>
+                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog4 }}</a></li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </nav>
+                <div class="header-info">
+                    <span class="number">{{ number }}</span>
+                </div>
+                <button class="hamburger" data-action="click->sub-menu#button">&#9776;</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    {%for item in content %}
+    {{ include(item.template) }}
+    {% endfor %}
+</main>
+<footer class="footer-block">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer_logo">
+                <div class="logo">logo</div>
+                <div class="copyright">copyright</div>
+            </div>
+            <div class="footer_right">
+                <span class="footer-info">datenschutz</span>
+                <span class="footer-info">impressum</span>
+                <span class="footer-info">agb</span>
+            </div>
+        </div>
+    </div>
+</footer>
+{{ encore_entry_script_tags('base', null, 'theme') }}
+</body>
+</html>
