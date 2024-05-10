@@ -16,10 +16,4 @@ compiler_pass:
         priority: 140
 
 services:
-    manager/SampleManager:
-        from: './manager/SampleManager'
-        import: SampleManager
-        arguments:
-            - '@enhavo/app/routing/Router'
-        tags:
-            - { name: vue.service, service: 'sampleManager', reactive: true }
+

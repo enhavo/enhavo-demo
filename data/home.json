@@ -2,25 +2,29 @@
   "navigation": [
     {
       "label": "BLOG",
-      "link": "/",
-      "tooltip": {
-        "vlog1": "blog1",
-        "vlog2": "blog1",
-        "vlog3": "blog1",
-        "vlog4": "blog1"
+      "classLabel": "first-label2",
+      "link": "#",
+      "sub_menu": {
+        "vlog1":"Blogartikel 01",
+        "vlog2": "Blogartikel 2",
+        "vlog3": "Blogartikel 3",
+        "vlog4": "Blogartikel 4"
       }
     },
     {
       "label": "TEAM",
-      "link": "/team"
+      "link": "#",
+      "classLabel": "first-label"
     },
     {
       "label": "JOBS",
-      "link": "/jobs"
+      "link": "#",
+      "classLabel": "first-label"
     },
     {
       "label": "KONTAKT",
-      "link": "/kontakt"
+      "link": "#",
+      "classLabel": "first-label"
     }
   ],
       "number": "+49 (0) 89 1234 5678 90",
@@ -72,6 +76,7 @@
         }
       ],
       "header": "WARUM EIN GASSIGEHER?",
+      "second_header":null,
       "template":"/theme/block/about.html.twig"
   },
     {
@@ -89,7 +94,7 @@
     "form_text": "Sie möchten, dass Ihr Hund von einer erfahrenen Hand und einem liebevollen Herzen betreut wird? Kontaktieren Sie mich einfach über das unten stehende Formular, und lassen Sie uns gemeinsam dafür sorgen, dass Ihr Hund die besten Spaziergänge seines Lebens hat!",
     "form": {
       "name": {
-        "type": "text",
+        "type": "select",
         "label": "ANREDE",
         "placeholder": "AUSWÄHLEN",
         "is_required": false
@@ -112,7 +117,7 @@
         "placeholder": "HALLO, ICH HABE EINE FRAGE.",
         "is_required": false
       },
-      "checks": {
+      "checkbox": {
         "type":"checkbox",
         "label":"Hiermit erkläre ich, dass ich die AGB aufmerksam gelesen habe und dass ich. Meine Einwilligung zur Verarbeitung meiner persönlichen Daten gemäß geltender Datenschutzverordung gebe.",
         "placeholder": null,
@@ -174,6 +179,7 @@
       }
     ],
     "header": null,
+    "second_header":null,
     "template":"/theme/block/about.html.twig"
   },
     {

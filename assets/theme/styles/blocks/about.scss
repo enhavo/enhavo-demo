@@ -1,129 +1,113 @@
 .block-about{
-  max-width: 1390px;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 90px 0 50px ;
 }
 .block-container{
   display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
-  max-width: 1390px;
-
-}
-.container{
-  margin: 55px 0;
-  max-width: 1390px;width: 100%;
+  max-width: 1390px;margin-inline:auto;
 }
 .block-image{
   grid-column: span 2;
-  border: 2px solid red;
   max-width: 1390px;
-}
-.block-container > .about_header {
-text-align: center;
-font: normal normal bold 50px / 64px Open Sans;
-letter-spacing: 0px;
-color: #171717;
-text-transform: uppercase;
-opacity: 1;
-grid-column: 2 / span 5;
-}
-
-.image-content{
-//display: flex;
+  height: auto;
+  display: flex;flex-direction: column;
 }
 .images{
-display: grid;
+  display: flex;justify-content: center;align-items: center;
 }
-
-.image_1{
-margin-left: 126px;
-  grid-column: 1 / span 1;
+.headings{
+   display: flex;justify-content: center;align-items: center;
+ }
+.block-container > .about_header{
+  text-align: center; text-transform: uppercase;
+  font: normal normal bold 50px / 64px Open Sans;
+  letter-spacing: 0px;
+  color: #171717; opacity: 1;
+  grid-column: 2 / span 4;
 }
-.image_2{
-margin-left: 137px;
-grid-column: 1 / span 1;
-}
-.image_3{
-margin-left: 109px;
-grid-column: 1 / span 2
-}
-.image4{
-  width: 100%;
-}
-.image5{
-  width: 100%;
-}
-.image6{
-  width: 100%;
-}
-.headline,.headline_2,.headline_3,.headline3,.headline4,.headline5{
-text-align: center;
-font: normal normal bold 24px/32px Open Sans;
-letter-spacing: 0px;
-color: #171717;
-text-transform: uppercase;
-opacity: 1;
-margin-top: 20px;
-}
-.headline_2{
-grid-column: 1 / span 2;
-margin-left: 47px;
-}
-.headline_3{
-grid-column: 1 / span 2;
-//margin-left: 65px;
-
-}
-.headline3,.headline4,.headline5{
-text-align: left;
-}
-.headline3{
-}
-.headline4{
-
-}
-.headline5{
-
-}
-.content,.content_2,.content_3,.content_4,.content_5,.content_6{
-  text-align: center;
-  font: normal normal normal 18px / 26px Open Sans;
+.head{
+  text-align: left;
+  font: normal normal normal 18px/26px Open Sans;
   letter-spacing: 0.18px;
   color: #000000;
   opacity: 1;
+}
+.image4,.image5,.image6{
+  width: 100%;
+}
+.headline{
+  text-align: center; text-transform: uppercase;
+  font: normal normal bold 24px/32px Open Sans; letter-spacing: 0px;
+  color: #171717; opacity: 1;
+}
+.headline_2,.headline_3,.headline3,.headline4,.headline5{
+  text-align: center; text-transform: uppercase;
+  font: normal normal bold 24px/32px Open Sans; letter-spacing: 0px;
+  color: #171717; opacity: 1;
+}
+.headline_2{
+  grid-column: 1 / span 2;
+}
+.headline_3{
+  grid-column: 1 / span 2;
+}
+.headline3,.headline4,.headline5{
+  text-align: left;
+}
+.headline5{
+  width: 110%;
+}
+.contents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content,.content_2,.content_3,.content_4,.content_5,.content_6{
+  text-align: center;
+  font: normal normal normal 18px / 26px Open Sans; letter-spacing: 0.18px;
+  color: #000000;opacity: 1;
   margin-top: 20px;
 }
-
-.content_2{
-margin-left: 52px;
-}
-.content_3{
-margin-left: 20px;
-}
-.content_4{
-  margin-top: 50px;
-}
-.content_5{
-  margin-top: 53px;
-}
-.content_6{
-}
 .content_4,.content_5,.content_6{
-text-align: left;
+  text-align: left;
 }
 .about-button,.about-button-2,.about-button-3{
-//width: 470px;
-//height: 51px;
-border: 2px solid #171717;
-border-radius: 100px;
-opacity: 1;
-justify-content: center;
-align-items: center;
-margin-top: 60px;
-text-transform: uppercase;
-color: #171717;
-display: flex;
-font: normal normal normal bold 18px/26px Open Sans;
+  display: flex;justify-content: center;align-items: center;
+  padding: 1rem;margin-top: 20px;
+  height: 51px;
+  border: 2px solid #171717; border-radius: 100px;
+  color: #171717;  opacity: 1;
+  font: normal normal normal bold 18px/26px Open Sans; text-transform: uppercase;
 }
-.about-button-2,.about-button-3{
-margin-top: 85px;
+.about_button{
+  height: auto;
+  margin-top: auto;
+}
+@media screen and (max-width: 1024px) {
+.block-image{
+  grid-column: span 3;
+}
+}
+@media screen and (max-width: 768px) {
+.block-image {
+  grid-column: 1 / span 6;
+}
+}
+@media screen and (max-width: 625px) {
+.block-container > .about_header {
+  grid-column: span 6;
+}
+}
+@media screen and (max-width: 350px) {
+.block-container > .about_header {
+  grid-column: 1 / span 6;
+  font: normal normal bold 35px / 64px Open Sans;
+}
+.block-image {
+  grid-column: 1 / span 6;
+}
+.about-button, .about-button-2, .about-button-3 {
+  margin-top: 0;
+}
 }

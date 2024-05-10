@@ -21,3 +21,17 @@ page_home:
             template: 'theme/resource/page/home.html.twig'
             load:
             - home.json
+page_page:
+    path: /show
+    defaults:
+        _endpoint:
+            type: template
+            load:
+                - navigation.json
+                - show.json
+                - page/homepage.json
+            template: 'theme/resource/page/show.html.twig'
+            variants:
+                page=imprint:
+                    load:
+                        - page/imprint.json
