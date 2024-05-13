@@ -1,0 +1,19 @@
+
+<div class="block_hero">
+    <div class="hero-container">
+        <div class="container">
+            <div class="grid-container">
+                <img src="{{ item.image }}" alt="hero" class="hero_img">
+                <img src="{{ item.image_2 }}" alt="hero" class="gradient">
+                <div class="texts_container">
+                    <div class="hero_text">{{ item.overline }}</div>
+                    <div class="hero_title">{{ item.headline }}</div>
+                    <div class="hero_subtitle">{{ item.content }}</div>
+                    {% if item.button is defined  %}
+                    <div class="button_1">{{ item.button }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

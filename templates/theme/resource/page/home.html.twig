@@ -1,12 +1,7 @@
-{#{% extends template('theme/base.html.twig') %}#}
-
-{#{% block main %}#}
-{#    {{ block_render(resource.content, resource) }}#}
-{#{% endblock %}#}
 <html>
 <head>
     <meta charset="UTF-8">
-    {#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     {{ encore_entry_link_tags('base', null, 'theme') }}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +15,7 @@
             <div class="navbar-container">
                 <div class="header-img">
                     {#data-sub-menu-target="hiddenContent"   if you put this on the first image it will hidden your image#}
-                    <img src="{{ image2 }}" alt="nav_img" class="paw-logo">
+                    <img src="{{ image_2 }}" alt="nav_img" class="paw-logo">
                     <img src="{{ image_1 }}" alt="nav_img" class="text-logo">
                 </div>
                 <nav class="navigation1">
@@ -31,14 +26,14 @@
                                class="{{ item.classLabel }}">{{ item.label }}</a>
                         </div>
                         {% if item.sub_menu is defined %}
-                            <div class="menu">
-                                <ul class="sub-menu-ul">
-                                    <li class="sub-menu-list"><a href="/show" class="list-font">{{ item.sub_menu.vlog1 }}</a></li>
-                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog2 }}</a></li>
-                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog3 }}</a></li>
-                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog4 }}</a></li>
-                                </ul>
-                            </div>
+                                    <div class="menu">
+                            <ul class="sub-menu-ul">
+                                <li class="sub-menu-list"><a href="/show" class="list-font">{{ item.sub_menu.vlog1 }}</a></li>
+                                <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog2 }}</a></li>
+                                <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog3 }}</a></li>
+                                <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog4 }}</a></li>
+                            </ul>
+                                    </div>
                         {% endif %}
                     {% endfor %}
                 </nav>
@@ -51,10 +46,11 @@
     </div>
 </header>
 <main>
-    {%for item in content %}
+{% for item in content %}
     {{ include(item.template) }}
-    {% endfor %}
+{% endfor %}
 </main>
+{#FOOTER#}
 <footer class="footer-block">
     <div class="container">
         <div class="footer-content">

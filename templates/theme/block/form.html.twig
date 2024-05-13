@@ -1,0 +1,40 @@
+<div class="block-form">
+    <div class="container">
+        <div class="form-content" data-controller="form">
+            <div class="form_text">{{ item.form_text }}</div>
+                <div class="form">
+                    <div class="form-row">
+                        <div class="row">
+                            <label for="name">{{ item.form.name.label }}</label>
+                            <select id="name" name="name">
+                                <option value="" disabled selected hidden>AUSWÄHLEN</option>
+                                <option value="">AUSWÄHLEN</option>
+                                <option value="">AUSWÄHLEN</option>
+                            </select>
+                            <div>{{ item.form.name.is_required ? 'Required' : '' }}</div>
+                        </div>
+                        <div class="row">
+                            <label for="email">{{ item.form.email.label }} </label>
+                            <input type="{{ item.form.email.type }}" name="email" id="email" placeholder="{{ item.form.email.placeholder }}">
+                            <div class="required">{{ item.form.email.is_required ? 'Dieses Feld muss ausgefüllt sein.' : 'Dieses Feld muss ausgefüllt sein.' }}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="subject">{{ item.form.subject.label }}</label>
+                        <input type="{{ item.form.subject.type }}" name="subject" id="subject" placeholder="ILLENBERGER">
+                        <div>{{ item.form.subject.is_required ? 'Required' : '' }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="message">{{ item.form.message.label }}</label>
+                        <textarea name="message" id="message" placeholder="HALLO, ICH HABE EINE FRAGE."></textarea>
+                        <div>{{ item.form.message.is_required ? 'Required' : '' }}</div>
+                    </div>
+                    <div class="form_checkbox">
+                        <input type="{{ item.form.checkbox.type }}" name="subject" id="checkbox">
+                        <label for="checkbox">{{ item.form.checkbox.label }}</label>
+                    </div>
+                    <div class="form_button">{{ item.button }}</div>
+                </div>
+        </div>
+    </div>
+</div>

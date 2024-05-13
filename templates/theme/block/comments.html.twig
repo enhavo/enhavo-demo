@@ -1,0 +1,14 @@
+
+
+<div class="block_comments">
+    <div class="comments-container">
+        <div class="container">
+            <div class="container-content">
+                <img src="{{ item.image1 }}" alt="comments-image" class="{%if item.classImage1 is defined %}{{ item.classImage1 }}{% endif %}">
+                <div class="{%if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>
+                <div class="comments_sub-content">{{ item.content }}</div>
+                <img src="{{ item.image2 }}" alt="2nd-comments-img" class="{%if item.classImage2 is defined %}{{ item.classImage2 }}{% endif %}" >
+            </div>
+        </div>
+    </div>
+</div>

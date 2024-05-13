@@ -1,0 +1,91 @@
+{
+  "navigation": [
+    {
+      "label": "BLOG",
+      "classLabel": "first-label2",
+      "link": "#",
+      "sub_menu": {
+        "vlog1": "Blogartikel 01",
+        "vlog2": "Blogartikel 2",
+        "vlog3": "Blogartikel 3",
+        "vlog4": "Blogartikel 4"
+      }
+    },
+    {
+      "label": "TEAM",
+      "link": "#",
+      "classLabel": "first-label"
+    },
+    {
+      "label": "JOBS",
+      "link": "#",
+      "classLabel": "first-label"
+    },
+    {
+      "label": "KONTAKT",
+      "link": "#",
+      "classLabel": "first-label"
+    }
+  ],
+  "number": "+49 (0) 89 1234 5678 90",
+  "image_1": "/build/theme/images/logo.svg",
+  "image2": "/build/theme/images/pfote.svg",
+
+  "content": [
+    {
+      "image": "/build/theme/images/dog-second-page.png",
+      "overline": "BLOGEINTRAG",
+      "headline": "DIE KUNST DER GELASSENHEIT: WAS WIR VON HUNDEN ÜBER ENTSCHLEUNIGUNG LERNEN KÖNNEN",
+      "content": "in unserer hektischen Welt, in der Termine, Verpflichtungen und technologischer Fortschritt den Ton angeben, können wir oft vergessen, wie wichtig es ist, einmal einen Gang zurückzuschalten und das Leben in seiner Einfachheit zu genießen. Hierbei können uns unsere treuen Vierbeiner, die Hunde, mit ihrer natürlichen Fähigkeit zur Gelassenheit inspirieren. In diesem Artikel möchte ich mit Ihnen die Kunst der Gelassenheit, die wir von Hunden lernen können, erkunden.",
+      "image_2": "/build/theme/images/pfad 25512.svg",
+      "template": "/theme/block/hero.html.twig"
+    },
+    {
+      "paragraph1": "Hunde sind wahre Meister der Entschleunigung. Beobachten Sie sie bei einem gemütlichen Spaziergang oder wenn sie sich genüsslich in der Sonne räkeln - sie leben im Moment und nehmen das Leben so, wie es kommt. Diese Fähigkeit, im Hier und Jetzt zu sein, ohne sich von Sorgen um die Zukunft oder Gedanken an die Vergangenheit belasten zu lassen, ist eine wertvolle Lektion für uns Menschen.",
+      "paragraph2": "In stressigen Zeiten können wir viel von der Ruhe und Gelassenheit unserer Hunde lernen. Die Momente der Stille, wenn sie sich einfach nur anlehnen und uns mit ihren treuen Augen ansehen, erinnern uns daran, dass es okay ist, innezuhalten und den Augenblick zu schätzen. Es ist, als würden sie uns sagen: „Entschleunige, atme tief durch und genieße den Moment.“ ",
+      "paragraph3": "Ein weiterer Aspekt der Gelassenheit, den Hunde perfektioniert haben, ist die Fähigkeit, sich über die kleinen Dinge im Leben zu freuen. Ob es nun ein interessanter Geruch, ein frisches Stück Gras oder das Quietschen eines Spielzeugs ist - Hunde finden Freude in den simpelsten Vergnügen. Dies erinnert uns daran, dass wahres Glück oft in den kleinen, unscheinbaren Momenten des Lebens liegt.",
+      "paragraph4": "Lassen Sie uns also von unseren Hunden lernen und die Kunst der Gelassenheit in unseren eigenen Alltag integrieren. Egal, ob es ein entspannter Spaziergang im Park ist oder einfach nur das Sitzen auf der Veranda und das Beobachten des Sonnenuntergangs - nehmen Sie sich Zeit, um die Welt um Sie herum bewusst wahrzunehmen und die Gelassenheit Ihrer Vierbeiner zu teilen.",
+      "paragraph5": "In der Hoffnung, dass dieser Artikel Sie dazu inspiriert, sich von der Gelassenheit der Hunde leiten zu lassen und das Leben in all seiner Schönheit zu genießen.",
+      "template": "/theme/block/second-hero.html.twig"
+    },
+    {
+      "about": [
+        {
+          "image": "/build/theme/images/card1.png",
+          "classImage": "image4",
+          "headline": "DIE SPRACHE DER RUTENWEDLER: WAS UNS DER SCHWANZ UNSERES HUNDES VERRÄT",
+          "classHeadline": "headline3",
+          "content": "Ein Blick auf die feine Kunst der Kommunikation zwischen Hunden und Menschen - insbesondere durch die subtile Sprache der Schwänze. In meinem neuesten Blogartikel erkunden wir, was die verschiedenen Schwanzbewegungen bedeuten können und wie wir dadurch das emotionale Wohlbefinden unserer pelzigen Begleiter besser verstehen können. Von fröhlichem Wedeln bis zur aufrechten Haltung - lassen Sie uns gemeinsam die faszinierende Welt der hündischen Ausdrucksweise erkunden!",
+          "classContent": "content_4",
+          "button": "mehr lesen",
+          "classButton": "about-button"
+        },
+        {
+          "image": "/build/theme/images/card2.png",
+          "classImage": "image5",
+          "headline": "SPIEGELNEURONEN IM SPIEL: WARUM WIR UNS IN UNSEREN HUNDEN WIEDERERKENNEN",
+          "classHeadline": "headline4",
+          "content": "In diesem Artikel werfen wir einen Blick auf die erstaunliche Verbindung zwischen Mensch und Hund, die durch Spiegelneuronen geprägt ist. Entdecken Sie, wie die Emotionen und Verhaltensweisen Ihres Hundes oft ein Spiegelbild Ihrer eigenen sein können. Von Freude und Enthusiasmus bis hin zu Empathie - tauchen Sie ein in die wunderbare Welt der spiegelnden Bindung zwischen Ihnen und Ihrem besten Freund auf vier Pfoten.",
+          "classContent": "content_5",
+          "button": "mehr lesen",
+          "classButton": "about-button-2"
+        },
+        {
+          "image": "/build/theme/images/card3.png",
+          "classImage": "image6",
+          "headline": "DIE KUNST DER GELASSENHEIT: WAS WIR VON HUNDEN ÜBER ENTSCHLEUNIGUNG LERNEN KÖNNEN",
+          "classHeadline": "headline5",
+          "content": "Unsere hektische Welt könnte eine Seite aus dem Buch der Hunde über Gelassenheit nehmen. In diesem Blogartikel erkunden wir, wie Hunde uns mit ihrer natürlichen Fähigkeit zur Entschleunigung inspirieren können. Von entspannten Spaziergängen bis hin zu ruhigen Augenblicken des Innehaltens - lassen Sie uns gemeinsam die Lehren der Gelassenheit von unseren treuen Gefährten lernen und in unseren eigenen Alltag integrieren.",
+          "classContent": "content_6",
+          "button": "mehr lesen",
+          "classButton": "about-button-3"
+        }
+      ],
+      "header": null,
+      "second_header":"DAS KÖNNTE SIE AUCH INTERESSIEREN",
+      "classHeader": "header1",
+      "template": "/theme/block/about.html.twig"
+    }
+  ]
+
+}

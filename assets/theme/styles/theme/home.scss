@@ -1,0 +1,298 @@
+
+body{
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #171717; /* Background color for the header */
+}
+
+/* Navbar Styles */
+.nav {
+  position: relative; /* Adjusted from fixed */
+  background-color: transparent; /* Transparent background */
+}
+.block-paragraph{
+  width: 100%;
+  align-items: center;
+  margin:90px 0 50px;
+}
+.paragraph-grid{
+  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
+  max-width: 1390px;
+  margin-inline: auto;
+}
+.paragraph-container{
+  grid-column: 2 / span 4;
+}
+.paragraph{
+  text-align: left;
+  font: normal normal normal 18px/26px Open Sans;
+  letter-spacing: 0.18px;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+.header1{
+  text-align: center;
+  font: normal normal bold 24px/32px Open Sans;
+  letter-spacing: 0px;
+  color: #171717;
+  text-transform: uppercase;
+  opacity: 1;
+  grid-column: span 6;
+}
+.navbar-container {
+  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
+  align-items: center;
+  padding: 1rem;
+  margin-inline: auto;
+  max-width: 1390px;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1390px;
+}
+
+.header-img {
+  grid-column: 1 / span 2;
+  display: flex;align-items: center;
+}
+
+.header-img img {
+  height: auto;
+}
+
+.navigation1 {
+  grid-column: 3 / span 2; /* Spanning 3 columns */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  position: relative;
+}
+.nav-item a {
+  color: white;
+}
+
+.navigation1 a {
+  text-align: left;
+  font: normal normal normal 18px/19px Open Sans;
+  letter-spacing: 0.45px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  text-decoration: none;
+  margin-left: 45px;
+}
+
+.navigation1 a:hover {
+  color: #ffcc00; /* Hover color */
+}
+
+.header-info {
+  grid-column: 5 / span 2; /* Spanning 1 column */
+  display: flex;justify-content:end;align-items: center;
+}
+
+.number {
+  margin-right: 0.5rem;
+  text-align: right;
+  font: normal normal normal 20px/32px Open Sans;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+.menu {
+  color: #fff;
+  padding: 5px;
+  z-index: 1;
+  transition: opacity 0.3s;
+  text-align: left;
+  font: italic normal normal 18px/19px Open Sans;
+  letter-spacing: 0.45px;
+  opacity: 1;
+  position: absolute;
+  top: 89%;
+  left: 0;
+  width: 100%;
+  margin-top: 5px;
+}
+.first-label2{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+//here i just use the max-height to 0 so in default this in hide
+.sub-menu-ul {
+  max-height: 0;
+  overflow: hidden;
+  margin-left: 39.5%;
+}
+.sub-menu-list{
+  padding: 10px;
+  margin-left: 20px;
+}
+.list-font{
+  text-align: left;
+  text-transform: capitalize !important;
+  font: italic normal normal 18px/19px Open Sans !important;
+  letter-spacing: 0.45px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+//then i use 100% so when clicked it will take the 100% in width the "open" i use in stimulus
+.sub-menu-ul.open {
+  display: block;
+  max-height: 100%;
+}
+@media screen and (max-width: 1169px) {
+  .header-info{
+    display: none;
+  }
+}
+/* Responsive Styles */
+@media (max-width: 701px) {
+  .header-info {
+    display: none; /* Hide header info on smaller screens */
+  }
+  .sub-menu-ul{
+    max-height: 0;
+    overflow: hidden;
+  }
+  .sub-menu-ul.open{
+    max-height: 100%;
+    display: block;
+    background-color: #171717;
+  }
+  .navigation1{
+    max-height: 0;
+    overflow: hidden;
+  }
+  .navigation1.blow {
+    grid-column: span 6; /* Spanning 3 columns */
+    justify-content: space-evenly;
+    display: block;
+    max-height: 100%;
+  }
+  .nav-item {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid gray;
+    padding: 2rem;
+    width: 100%;
+    transition: max-height 0.3s ease-in-out; /* Added transition */
+  }
+  .navigation1 a {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .hamburger {
+    display: block;
+    grid-row: 1; grid-column: 6
+  }
+  .menu{
+    width: unset;
+    position: relative;
+    margin-left: -100px;
+  }
+  .sub-menu-list {
+    padding: 20px;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 360px) and (min-width: 15px){
+  .header-img{
+    display: none;
+  }
+  .hamburger{
+    grid-column: 5;
+  }
+}
+@media screen and (max-width: 1460px) {
+  .container {
+    margin-left: 78px;
+    margin-right: 78px;
+    width: unset;
+  }
+}
+@media screen and (max-width: 765px) {
+  .container{
+    margin-left: 25px;margin-right: 25px;
+  }
+}
+.footer-block{
+  background: #171717;
+  margin-top: 130px;
+}
+.footer-content{
+  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
+  margin: 0 auto;
+  max-width: 1390px;
+}
+.footer_logo{
+  grid-column: 1 / span 1;
+}
+.logo{
+  text-align: left;
+  font: normal normal bold 24px/32px Open Sans;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-top: 45px;
+}
+.copyright{
+  padding: 25px 25px 25px 0;
+  text-align: left;
+  font: normal normal normal 18px/19px Open Sans;
+  letter-spacing: 0.45px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.footer_right{
+  color: white;
+  display: flex;justify-content: center;align-items: end;
+  text-transform: uppercase;
+  font: normal normal normal 18px / 19px Open Sans;
+  letter-spacing: 0.45px;
+  grid-column: 5 / span 2;
+}
+.footer-info{
+  grid-column: 5 / span 2;grid-row: 1;
+  justify-self: end;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 25px 25px 25px 0;
+}
+@media screen and (max-width: 896px) {
+  .footer_right{
+    grid-column: 4 / span 2;
+  }
+}
+@media screen and (max-width: 590px) {
+  .footer-content{
+    grid-gap: 0;
+  }
+  .footer_right{
+    align-items: flex-start;
+    display: flex;flex-direction: column;
+    grid-column: 1 / span 2;gap: 0;
+    justify-content: flex-start;justify-items: flex-start;
+  }
+}
