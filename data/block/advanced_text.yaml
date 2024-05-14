@@ -1,0 +1,19 @@
+{
+    "name": "advanced_text",
+    "type": "block",
+    "template": "theme/block/advanced-text.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "text": "big",
+            "columns": null,
+            "overline": "Test",
+            "headline": "Test",
+            "copy": "<p>test</p>",
+            "id": 1
+        }
+    }
+}

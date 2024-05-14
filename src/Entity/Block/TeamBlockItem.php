@@ -27,7 +27,6 @@ class TeamBlockItem
     #[ORM\JoinColumn(onDelete: 'SET NULL')]
     #[ORM\OrderBy([
     ])]
-    #[Groups(['endpoint.block'])]
     private ?TeamBlock $teamBlock = null;
 
     #[ORM\Column(
