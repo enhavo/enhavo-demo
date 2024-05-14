@@ -1,0 +1,6 @@
+enhavo_app:
+  vue:
+    route_providers:
+      admin:
+        type: routing
+        groups: ['admin']

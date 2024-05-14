@@ -1,0 +1,18 @@
+type: Collection
+allow_setter: false
+type_options:
+    constructor: ArrayCollection
+    use:
+        - Doctrine\Common\Collections\Collection
+        - Doctrine\Common\Collections\ArrayCollection
+    remover: removeElement
+relation:
+    type: OneToMany
+    order_by:
+        position: asc
+form:
+    use:
+        - Enhavo\Bundle\FormBundle\Form\Type\ListType
+    class: ListType
+    options:
+        sortable: 'true'

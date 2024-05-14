@@ -13,5 +13,11 @@ enhavo_app:
             type: page
         navigation:
             type: navigation
+        team_member:
+            type: base
+            label: Team
+            icon: people
+            route: app_team_member_index
+
 #        backup:
 #            type: backup

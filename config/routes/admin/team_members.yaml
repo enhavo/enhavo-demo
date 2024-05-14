@@ -1,0 +1,114 @@
+app_team_member_index:
+  options:
+    expose: true
+  path: /app/team_member/index
+  methods: [GET]
+  defaults:
+    _controller: app.controller.team_member::listAction
+    _sylius:
+      viewer:
+
+app_team_member_create:
+  options:
+    expose: true
+  path: /app/team_member/create
+  methods: [GET,POST]
+  defaults:
+    _controller: app.controller.team_member::createAction
+    _sylius:
+      redirect: app_team_member_update
+      viewer:
+        type: create
+        actions:
+          preview:
+            type: preview
+            route: app_team_member_preview
+
+app_team_member_update:
+  options:
+    expose: true
+  path: /app/team_member/update/{id}
+  methods: [GET,POST]
+  defaults:
+    _controller: app.controller.team_member::updateAction
+    _sylius:
+      viewer:
+        actions:
+          preview:
+            type: preview
+            route: app_team_member_preview
+
+app_team_member_data:
+  options:
+    expose: true
+  path: /app/team_member/table
+  methods: [GET,POST]
+  defaults:
+    _controller: app.controller.team_member::listDataAction
+    _sylius:
+      sorting:
+        position: asc
+      sortable: true
+      criteria: ~
+      viewer:
+        sortable: true
+        children_property: ~
+        parent_property: ~
+        position_property: position
+        columns:
+          firstName:
+            property: firstName
+            width: 6
+            label: first name
+            type: property
+          lastName:
+            property: lastName
+            width: 6
+            label: last name
+            type: property
+
+app_team_member_delete:
+  options:
+    expose: true
+  path: /app/team_member/delete/{id}
+  methods: [POST]
+  defaults:
+    _controller: app.controller.team_member::deleteAction
+
+app_team_member_batch:
+  options:
+    expose: true
+  path: /app/team_member/batch
+  methods: [POST]
+  defaults:
+    _controller: app.controller.team_member::batchAction
+    _sylius:
+      paginate: false
+      criteria:
+        id: $ids
+      batches:
+        delete:
+          type: delete
+
+app_team_member_preview:
+  options:
+    expose: true
+  path: /app/team_member/preview
+  methods: [GET]
+  defaults:
+    _controller: app.controller.team_member::previewAction
+    _sylius:
+      viewer:
+
+app_team_member_resource_preview:
+  options:
+    expose: true
+  path: /app/team_member/resource/preview
+  methods: [POST]
+  defaults:
+    _controller: app.controller.team_member::previewResourceAction
+    _sylius:
+      viewer:
+        strategy_options:
+          service: app.controller.team_member::showResourceAction
+

@@ -1,0 +1,36 @@
+Block/TeamBlock:
+    label: 'Team'
+    groups: [ layout ]
+    block_type: true
+
+    properties:
+        overline:
+            template: text
+        headline:
+            template: headline
+        items:
+            template: items
+            type_options:
+                singular: item
+                entry_class: TeamBlockItem
+            relation:
+                target_entity: TeamBlockItem::class
+                mapped_by: teamBlock
+            form:
+                options:
+                    entry_type: TeamBlockItemType::class
+
+    classes:
+        Block/TeamBlockItem:
+            properties:
+                id:
+                    template: primary-key
+                teamBlock:
+                    type: TeamBlock
+                    nullable: true
+                    relation:
+                        type: ManyToOne
+                        target_entity: TeamBlock::class
+                        inversed_by: items
+                position:
+                    template: PositionType

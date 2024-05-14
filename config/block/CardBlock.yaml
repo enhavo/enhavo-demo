@@ -1,0 +1,22 @@
+Block/CardBlock:
+    label: 'Card'
+    groups: [ layout ]
+    block_type: true
+    use:
+        - App\Entity\Block\Traits\CtaTrait
+    traits:
+        - CtaTrait
+
+    properties:
+        gradient:
+            template: expanded-choice
+        layouts:
+            template: expanded-choice
+        media:
+            template: file
+        overline:
+            template: text
+        headline:
+            template: headline
+        copy:
+            template: wysiwyg
