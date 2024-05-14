@@ -1,0 +1,40 @@
+{
+    "name": "team",
+    "type": "block",
+    "template": "theme/block/team.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "overline": "Test",
+            "headline": "Test",
+            "items": [
+                {
+                    "id": 7,
+                    "position": 1,
+                    "teamMember": {
+                        "picture": {
+                            "id": 1,
+                            "mimeType": "image/jpeg",
+                            "extension": "jpg",
+                            "filename": "Bradford_CBodyguard_01-Geisel_152683.jpg",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            },
+                            "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                        },
+                        "position": null,
+                        "firstName": "Jonas",
+                        "lastName": "Hoffmann",
+                        "email": "jonas.luc.hoffmann@icloud.com",
+                        "phone": "016097036709"
+                    }
+                }
+            ],
+            "id": 4
+        }
+    }
+}

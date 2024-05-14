@@ -6,6 +6,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 use Enhavo\Bundle\MediaBundle\Model\FileInterface;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity()]
 #[ORM\Table(name: 'app_team_member')]
@@ -26,36 +27,42 @@ class TeamMember implements ResourceInterface
     #[ORM\JoinColumn(onDelete: 'SET NULL')]
     #[ORM\OrderBy([
     ])]
+    #[Groups(['endpoint.block'])]
     private ?FileInterface $picture = null;
 
     #[ORM\Column(
         type: Types::INTEGER,
         nullable: true,
     )]
+    #[Groups(['endpoint.block'])]
     private ?int $position = null;
 
     #[ORM\Column(
         type: Types::STRING,
         nullable: true,
     )]
+    #[Groups(['endpoint.block'])]
     private ?string $firstName = null;
 
     #[ORM\Column(
         type: Types::STRING,
         nullable: true,
     )]
+    #[Groups(['endpoint.block'])]
     private ?string $lastName = null;
 
     #[ORM\Column(
         type: Types::STRING,
         nullable: true,
     )]
+    #[Groups(['endpoint.block'])]
     private ?string $email = null;
 
     #[ORM\Column(
         type: Types::STRING,
         nullable: true,
     )]
+    #[Groups(['endpoint.block'])]
     private ?string $phone = null;
 
     public function getId(): ?int
