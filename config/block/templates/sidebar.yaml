@@ -1,0 +1,12 @@
+type: string
+nullable: true
+default: SidebarAwareInterface::SIDEBAR_OFF
+type_options:
+    use:
+        - App\Model\SidebarAwareInterface
+form:
+    options:
+        expanded: "true"
+    use:
+        - App\Form\Type\Block\Core\SidebarType
+    class: SidebarType

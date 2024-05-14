@@ -1,0 +1,30 @@
+{
+    "name": "card",
+    "type": "block",
+    "template": "theme/block/card.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "gradient": "yes",
+            "layouts": "text-media",
+            "media": {
+                "id": 2,
+                "mimeType": "image/jpeg",
+                "extension": "jpg",
+                "filename": "Bradford_CBodyguard_01-Geisel_152683.jpg",
+                "parameters": {
+                    "alt": null,
+                    "title": null
+                },
+                "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+            },
+            "overline": "Test",
+            "headline": "Test",
+            "copy": "<p>test</p>",
+            "id": 2
+        }
+    }
+}

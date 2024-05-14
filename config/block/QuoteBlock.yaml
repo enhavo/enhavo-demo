@@ -1,0 +1,10 @@
+Block/QuoteBlock:
+    label: 'Quote'
+    groups: [ layout ]
+    block_type: true
+
+    properties:
+        alignment:
+            template: expanded-choice
+        text:
+            template: wysiwyg

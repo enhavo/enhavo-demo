@@ -1,0 +1,6 @@
+type: int
+orm_type: integer
+orm_primary_key: true
+orm_generated_value_type: AUTO
+nullable: true
+allow_setter: false

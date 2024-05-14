@@ -1,0 +1,51 @@
+Block/ContentFlexBlock:
+    label: 'Content Flex'
+    groups: [ layout ]
+    block_type: true
+
+    properties:
+        layout:
+            template: expanded-choice
+        alignment:
+            template: expanded-choice
+        headline:
+            template: headline
+        items:
+            template: items
+            type_options:
+                singular: item
+                entry_class: ContentFlexBlockItem
+            relation:
+                target_entity: ContentFlexBlockItem::class
+                mapped_by: contentFlexBlock
+            form:
+                options:
+                    entry_type: ContentFlexBlockItemType::class
+
+    classes:
+        Block/ContentFlexBlockItem:
+            use:
+                - App\Entity\Block\Traits\CtaTrait
+            traits:
+                - CtaTrait
+
+            properties:
+                id:
+                    template: primary-key
+                contentFlexBlock:
+                    type: ContentFlexBlock
+                    nullable: true
+                    relation:
+                        type: ManyToOne
+                        target_entity: ContentFlexBlock::class
+                        inversed_by: items
+                position:
+                    template: PositionType
+                media:
+                    template: picture
+                overline:
+                    template: text
+                headline:
+                    template: headline
+                copy:
+                    template: wysiwyg

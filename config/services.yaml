@@ -34,3 +34,7 @@ services:
         tags:
             - { name: twig.component, key: '' }
 
+    App\Block\:
+        resource: '../src/Block'
+        tags: [ 'enhavo_block.block' ]
+

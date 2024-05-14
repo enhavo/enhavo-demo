@@ -4,21 +4,32 @@ imports:
 
 enhavo_block:
   blocks:
-    picture:
-      type: picture
+#    picture:
+#      type: picture
     gallery:
       type: gallery
-    text:
-      type: text
-    text_picture:
-      type: text_picture
-    blockquote:
-      type: blockquote
-    video:
-      type: video
-    one_column:
-      type: one_column
-    two_column:
-      type: two_column
-    three_column:
-      type: three_column
+#    text:
+#      type: text
+#    text_picture:
+#      type: text_picture
+#    blockquote:
+#      type: blockquote
+#    video:
+#      type: video
+#    one_column:
+#      type: one_column
+#    two_column:
+#      type: two_column
+#    three_column:
+#      type: three_column
+    card:
+      type: card
+    content_flex:
+      type: content_flex
+    team:
+      type: team
+    advanced_text:
+      type: advanced_text
+    quote:
+      type: quote
+

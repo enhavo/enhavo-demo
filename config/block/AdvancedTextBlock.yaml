@@ -1,0 +1,20 @@
+Block/AdvancedTextBlock:
+    label: 'Advanced text'
+    groups: [ layout ]
+    block_type: true
+    use:
+        - App\Entity\Block\Traits\CtaTrait
+    traits:
+        - CtaTrait
+
+    properties:
+        text:
+            template: expanded-choice
+        columns:
+            template: expanded-choice
+        overline:
+            template: text
+        headline:
+            template: headline
+        copy:
+            template: wysiwyg
