@@ -19,31 +19,31 @@
         <div class="container">
             <div class="navbar-container">
                 <div class="header-img">
-                    {#data-sub-menu-target="hiddenContent"   if you put this on the first image it will hidden your image#}
-                    <img src="{{ image2 }}" alt="nav_img" class="paw-logo">
-                    <img src="{{ image_1 }}" alt="nav_img" class="text-logo">
+                    <img src="" alt="nav_img" class="paw-logo">
+                    <img src="" alt="nav_img" class="text-logo">
                 </div>
                 <nav class="navigation1">
-                    {% for item in navigation %}
-                        <div class="nav-item">
-                            <a href="{{ item.link }}"
-                               {% if loop.first %}data-action="click->sub-menu#greet"{% endif %}
-                               class="{{ item.classLabel }}">{{ item.label }}</a>
-                        </div>
-                        {% if item.sub_menu is defined %}
-                            <div class="menu">
-                                <ul class="sub-menu-ul">
-                                    <li class="sub-menu-list"><a href="/show" class="list-font">{{ item.sub_menu.vlog1 }}</a></li>
-                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog2 }}</a></li>
-                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog3 }}</a></li>
-                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog4 }}</a></li>
-                                </ul>
-                            </div>
-                        {% endif %}
+                    {% for node in navigation.main.nodes %}
+                        {{ navigation_node_render(node, 'main') }}
                     {% endfor %}
+{#                    {% for item in navigation %}#}
+{#                        <div class="nav-item">#}
+{#                            <a href="{{ item.link }}" {% if loop.first %}data-action="click->sub-menu#greet"{% endif %} class="{{ item.classLabel }}">{{ item.label }}</a>#}
+{#                        </div>#}
+{#                        {% if item.sub_menu is defined %}#}
+{#                            <div class="menu">#}
+{#                                <ul class="sub-menu-ul">#}
+{#                                    <li class="sub-menu-list"><a href="/show" class="list-font">{{ item.sub_menu.vlog1 }}</a></li>#}
+{#                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog2 }}</a></li>#}
+{#                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog3 }}</a></li>#}
+{#                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog4 }}</a></li>#}
+{#                                </ul>#}
+{#                            </div>#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
                 </nav>
                 <div class="header-info">
-                    <span class="number">{{ number }}</span>
+{#                    <span class="number">{{ number }}</span>#}
                 </div>
                 <button class="hamburger" data-action="click->sub-menu#button">&#9776;</button>
             </div>
@@ -51,9 +51,7 @@
     </div>
 </header>
 <main>
-    {%for item in content %}
-    {{ include(item.template) }}
-    {% endfor %}
+    {{ block_render(resource.content) }}
 </main>
 <footer class="footer-block">
     <div class="container">

@@ -1,2 +1,30 @@
-{# Template for container block card_block #}
-{{ dump(block) }}
+{{ block.overline }}
+{{ block.copy }}
+
+
+{#<div class="block-about">#}
+{#    <div class="container">#}
+{#        <div class="block-container">#}
+{#            <div class="{% if item.classHeader is defined %}{{ item.classHeader }}{% endif %}">{% if item.second_header is defined %}{{ item.second_header }}{% endif %}</div>#}
+{#            <div class="about_header">{{ item.header }}</div>#}
+{#            {% for item in item.about %}#}
+{#                <div class="block-image">#}
+{#                    <div class="images">#}
+{#                        <img src="{{ item.image }}" alt="dogs" class="{% if item.classImage is defined %}{{ item.classImage }}{% endif %}">#}
+{#                    </div>#}
+{#                    <div class="headings">#}
+{#                        <div class="{% if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>#}
+{#                    </div>#}
+{#                    <div class="contents">#}
+{#                        <div class="{% if item.classContent is defined %}{{ item.classContent }}{% endif %}">{{ item.content }}</div>#}
+{#                    </div>#}
+{#                    <div class="about_button">#}
+{#                        {% if item.button is defined %}#}
+{#                            <div class="{%  if item.classButton is defined %}{{ item.classButton }}{% endif %}">{{ item.button }}</div>#}
+{#                        {% endif %}#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}

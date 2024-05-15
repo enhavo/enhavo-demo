@@ -15,8 +15,7 @@
       "type": "root",
       "template": null,
       "children": [
-        "expr:load('block/text-block.json')",
-        "expr:load('block/text-block.json')"
+        "expr:load('block/card.json')"
       ],
       "data": []
     },

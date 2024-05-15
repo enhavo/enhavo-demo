@@ -1,0 +1,73 @@
+{
+    "name": "content_flex",
+    "type": "block",
+    "template": "theme/block/content-flex.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "layout": "cards",
+            "alignment": "center",
+            "headline": "Test",
+            "items": [
+                {
+                    "id": 4,
+                    "position": 1,
+                    "media": {
+                        "id": 3,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                    },
+                    "overline": "Test",
+                    "headline": "Test",
+                    "copy": "<p>test</p>"
+                },
+                {
+                    "id": 5,
+                    "position": 1,
+                    "media": {
+                        "id": 3,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                    },
+                    "overline": "Test",
+                    "headline": "Test",
+                    "copy": "<p>test</p>"
+                },
+                {
+                    "id": 6,
+                    "position": 1,
+                    "media": {
+                        "id": 3,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                    },
+                    "overline": "Test",
+                    "headline": "Test",
+                    "copy": "<p>test</p>"
+                }
+            ],
+            "id": 3
+        }
+    }
+}

@@ -8,12 +8,15 @@
     ],
     "data": {
         "block": {
+            "id": 1,
             "text": "big",
             "columns": null,
             "overline": "Test",
             "headline": "Test",
             "copy": "<p>test</p>",
-            "id": 1
+            "ctaTitle": "Title",
+            "ctaLink": "http://google.com",
+            "ctaTarget": "_blank"
         }
     }
 }

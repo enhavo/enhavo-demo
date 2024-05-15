@@ -7,31 +7,13 @@ page:
                 - navigation.json
                 - routes.json
                 - page/homepage.json
-            template: 'theme/resource/page/home.html.twig'
-            variants:
-                page=imprint:
-                    load:
-                        - page/imprint.json
-
-page_home:
-    path: /home
-    defaults:
-        _endpoint:
-            type: template
-            template: 'theme/resource/page/home.html.twig'
-            load:
-            - home.json
-page_page:
-    path: /show
-    defaults:
-        _endpoint:
-            type: template
-            load:
-                - navigation.json
-                - show.json
-                - page/homepage.json
             template: 'theme/resource/page/show.html.twig'
             variants:
-                page=imprint:
-                    load:
-                        - page/imprint.json
+                block=advanced_text:
+                    recursive: true
+                    depth: 3
+                    data:
+                        resource:
+                            content:
+                                children:
+                                    - "expr:load('block/advanced_text.json')"
