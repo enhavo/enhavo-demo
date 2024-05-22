@@ -6,15 +6,45 @@
   display: grid;grid-template-columns: repeat(6, 1fr); /* Change the columns to fractions */grid-gap: 51px;
   margin: 0 auto ;
 }
-.form_text{
+.form-text-container{
   grid-column: 2 / span 4;
   font: normal normal bold 16px/20px Open Sans;
   letter-spacing: 0px;
   color: #171717; opacity: 1;
 }
+.form-text-headline{
+  margin-top: 5px;
+  color: #171717;
+  font-family: "Open Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 128% */
+  text-transform: uppercase;
+}
+.form_text-overline{
+  color: #171717;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px; /* 126.667% */
+  letter-spacing: 0.375px;
+  text-transform: uppercase;
+}
+.form-text-copy{
+  margin-top: 30px;
+  color: #171717;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+}
 .form{
   grid-column: 2 / span 6;
 }
+
 label{
   text-align: left;text-transform: uppercase;
   font: normal normal bold 18px/19px Open Sans;
@@ -30,6 +60,9 @@ label{
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #171717;opacity: 1;
   padding: 1rem;
+}
+input[type="email"]{
+  border: 1px solid #DB5245;
 }
 textarea::placeholder,
 #subject::placeholder {
@@ -76,7 +109,7 @@ label[for='checkbox']{
 }
 .form_checkbox{
   margin-right: 5%;
-  margin-top: 2%;
+  margin-top: 27px;
 input{
   background: #FFFFFF 0% 0% no-repeat padding-box; opacity: 1;
   border: 1px solid #171717;

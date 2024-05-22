@@ -10,7 +10,9 @@
         "block": {
             "alignment": "right",
             "text": "<p>Test</p>",
-            "id": 1
+            "id": 1,
+            "headline": "Seitdem John sich um unseren Labrador kümmert, hat sich das Energieniveau und die Lebensfreude unseres Hundes deutlich verbessert. Wir schätzen die Flexibilität und vor allem die Liebe, die er unserem pelzigen Familienmitglied entgegenbringt.",
+            "overline": "Familie Müller"
         }
     }
 }

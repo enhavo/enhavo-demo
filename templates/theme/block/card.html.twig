@@ -1,30 +1,39 @@
-{{ block.overline }}
-{{ block.copy }}
 
+<div class="block_hero">
+    <div class="hero-container">
+        <div class="container">
+            <div class="grid-container">
+                {% if block.layout == "media-text" %}
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="card-media-text">
+                    <div class="texts_container">
+                        <div class="card_overline">{{ block.overline }}</div>
+                        <div class="card_headline">{{ block.headline }}</div>
+                        <div class="card_copy">{{ block.copy }}</div>
+                        <button class="card_button_1">{{ block.ctaTitle }}</button>
+                    </div>
+                {% endif%}
 
-{#<div class="block-about">#}
-{#    <div class="container">#}
-{#        <div class="block-container">#}
-{#            <div class="{% if item.classHeader is defined %}{{ item.classHeader }}{% endif %}">{% if item.second_header is defined %}{{ item.second_header }}{% endif %}</div>#}
-{#            <div class="about_header">{{ item.header }}</div>#}
-{#            {% for item in item.about %}#}
-{#                <div class="block-image">#}
-{#                    <div class="images">#}
-{#                        <img src="{{ item.image }}" alt="dogs" class="{% if item.classImage is defined %}{{ item.classImage }}{% endif %}">#}
-{#                    </div>#}
-{#                    <div class="headings">#}
-{#                        <div class="{% if item.classHeadline is defined %}{{ item.classHeadline }}{% endif %}">{{ item.headline }}</div>#}
-{#                    </div>#}
-{#                    <div class="contents">#}
-{#                        <div class="{% if item.classContent is defined %}{{ item.classContent }}{% endif %}">{{ item.content }}</div>#}
-{#                    </div>#}
-{#                    <div class="about_button">#}
-{#                        {% if item.button is defined %}#}
-{#                            <div class="{%  if item.classButton is defined %}{{ item.classButton }}{% endif %}">{{ item.button }}</div>#}
-{#                        {% endif %}#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
+                {% if block.layout == "media-text-gradient" %}
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="card-media-text">
+                    <img src="{{ asset("/build/theme/images/Pfad 25512 copy.svg")}}" class="card-media-gradient">
+                    <div class="texts_container">
+                        <div class="card_overline">{{ block.overline }}</div>
+                        <div class="card_headline">{{ block.headline }}</div>
+                        <div class="card_copy">{{ block.copy }}</div>
+                        <div class="card_button_1">{{ block.ctaTitle }}</div>
+                    </div>
+                {% endif%}
+
+                {% if block.layout == "media-text-stacked" %}
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" {% if block.media.classFilename is defined %}class="{{ block.media.classFilename }}"{% endif %}>
+                    <div class="media-text-stacked-text-container">
+                        <div class="card_overline-stacked">{{ block.overline }}</div>
+                        <div class="card_headline">{{ block.headline }}</div>
+                        <div class="card_copy">{{ block.copy }}</div>
+                        <div class="card_button_1">{{ block.ctaTitle }}</div>
+                    </div>
+                {% endif%}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+{
+    "name": "card",
+    "type": "block",
+    "template": "theme/block/card.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "gradient": "yes",
+            "layout": "media-text-gradient",
+            "media": {
+                "id": 2,
+                "mimeType": "image/png",
+                "extension": "png",
+                "filename": "2.png",
+                "parameters": {
+                    "alt": null,
+                    "title": null
+                },
+                "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+            },
+            "overline": "Dies ist eine Overline",
+            "headline": "Dies ist eine Headline",
+            "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "ctaTitle": "Hier steht ein CTA",
+            "ctaLink": "http://goggle.com",
+            "ctaTarget": "_blank",
+            "id": 2
+        }
+    }
+}

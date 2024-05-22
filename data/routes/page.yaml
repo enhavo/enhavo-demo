@@ -16,4 +16,5 @@ page:
                         resource:
                             content:
                                 children:
-                                    - "expr:load('block/advanced_text.json')"
+                                    - "expr:load('block/advanced_text-headline-breaker.json')"
+

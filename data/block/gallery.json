@@ -1,0 +1,100 @@
+{
+    "name": "gallery",
+    "type": "block",
+    "template": "theme/block/gallery.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "layout": "gallery",
+            "items": [
+                {
+                    "id": 5,
+                    "media": {
+                        "id": 5,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "5.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                    }
+                },
+                {
+                    "id": 5,
+                    "media": {
+                        "id": 6,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "5.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                    }
+                },
+                {
+                    "id": 5,
+                    "media": {
+                        "id": 7,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "5.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                    }
+                },
+                {
+                    "id": 5,
+                    "media": {
+                        "id": 8,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "5.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                    }
+                },
+                {
+                    "id": 5,
+                    "media": {
+                        "id": 10,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "5.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                    }
+                },
+                {
+                    "id": 5,
+                    "media": {
+                        "id": 9,
+                        "mimeType": "image/png",
+                        "extension": "png",
+                        "filename": "5.png",
+                        "parameters": {
+                            "alt": null,
+                            "title": null
+                        },
+                        "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                    }
+                }
+            ]
+        }
+    }
+}

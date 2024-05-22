@@ -1,0 +1,19 @@
+{
+    "name": "nag-screen",
+    "type": "block",
+    "template": "theme/block/nag-screen.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "overline": "Dies ist eine Overline",
+            "headline": "Dies ist eine Headline",
+            "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "ctaTitle": "Hier steht ein CTA",
+            "ctaLink": "http:/google.com",
+            "ctaTarget": "_blank"
+        }
+    }
+}

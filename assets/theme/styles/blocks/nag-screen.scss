@@ -1,0 +1,87 @@
+.nag-screen-block{
+  margin: 90px 0 50px;
+}
+.nag-screen-grid{
+  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
+  margin: 0 auto;
+  max-width: 1390px;
+
+}
+.nag-screen-wrapper{
+  height: 545px;
+  background: rgba(54, 247, 234, 1);
+}
+.times{
+  grid-column: 6 / span 1;
+  font-size: 30px;
+}
+.nag-screen-container{
+  grid-column: 2 / span 4;
+  text-align: center;
+  justify-content: center;align-items: center;
+}
+.nag-screen-overline{
+  color: #171717;
+  text-align: center;
+
+  /* Overline */
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px; /* 126.667% */
+  letter-spacing: 0.375px;
+  text-transform: uppercase;
+}
+.nag-screen-headline{
+  margin-top: 10px;
+  color: #171717;
+  text-align: center;
+
+  /* Headline big */
+  font-family: "Open Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 128% */
+  text-transform: uppercase;
+}
+.nag-screen-copy{
+  margin-top: 25px;
+  color: #000;
+  text-align: center;
+
+  /* Copy */
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+  letter-spacing: 0.18px;
+}
+.nag-screen-btt{
+  margin-top: 35px;
+  grid-column: 3 / span 2;
+  display: flex; justify-content: center;
+  align-items: center;
+}
+.nag-screen-button{
+  display: flex;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  border: 2px solid #000;
+  width: 280px;
+  height: 51px;
+  color: #171717;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+
+}
