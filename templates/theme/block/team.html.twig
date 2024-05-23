@@ -1,21 +1,19 @@
-
 <div class="block-team">
     <div class="container">
         <div class="text_container">
-            <div class="team-text">
-                <div class="team_headline">{{ item.headline }}</div>
-                <div class="{{ item.classContent }}">{{ item.content }}</div>
-            </div>
-                {% for section in item.team %}
-                    <div class="team_column">
-                        <img src="{{ section.image }}" alt="team_image" class="{{ section.classImage }}">
-                        <div class="names">{{ section.name }}</div>
-                        <div class="contact">
-                            <div>{{ section.number }}</div>
-                            <div>{{ section.emails }}</div>
+                {% for block in block.items %}
+                    <div class="team-img {% if loop.index == 4 %} team-img-4{% endif %}">
+                        <img src="{{ media_url(block.teamMember.picture) }}" alt="{{ media_parameter(block.teamMember.picture, 'alt') }}">
+                        <div class="team-4">
+                            <div class="position">{{ block.position }}</div>
+                            <span class="team-name">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
+                            <div class="team-contact">
+                                <div>{{ block.teamMember.email }}</div>
+                                <div>{{ block.teamMember.phone }}</div>
+                            </div>
                         </div>
                     </div>
-            {% endfor %}
+                {% endfor %}
         </div>
     </div>
 </div>

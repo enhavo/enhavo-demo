@@ -1,19 +1,36 @@
-
+{% if block.layout == "hero-block" %}
 <div class="block_hero">
     <div class="hero-container">
         <div class="container">
             <div class="grid-container">
-                <img src="{{ item.image }}" alt="hero" class="hero_img">
-                <img src="{{ item.image_2 }}" alt="hero" class="gradient">
-                <div class="texts_container">
-                    <div class="hero_text">{{ item.overline }}</div>
-                    <div class="hero_title">{{ item.headline }}</div>
-                    <div class="hero_subtitle">{{ item.content }}</div>
-                    {% if item.button is defined  %}
-                    <div class="button_1">{{ item.button }}</div>
-                    {% endif %}
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="card-media-text">
+                <div class="hero-text-container">
+                    <div class="hero-overline">{{ block.overline }}</div>
+                    <div class="hero-headline">{{ block.headline }}</div>
+                    <div class="hero-copy">{{ block.copy }}</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{% endif %}
+{% if block.layout == "hero-block" %}
+    <div class="block_hero-2">
+        <div class="hero-black-background">
+            <div class="hero-block-grid">
+            <div class="hero-black-text-container">
+                <div class="hero-black-overline">{{ block.overline }}</div>
+                <div class="hero-black-headline">{{ block.headline }}</div>
+                <div class="hero-black-copy">{{ block.copy }}</div>
+                <div class="hero-black-button">{{ block.ctaTitle }}</div>
+            </div>
+        </div></div>
+        <div class="hero-block-container">
+            <div class="hero-block-grid">
+                <div class="hero-block-img">
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-block-media">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

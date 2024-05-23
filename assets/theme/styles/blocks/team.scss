@@ -6,51 +6,53 @@
   display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
   margin: 0 auto;
 }
-.team-text{
-  grid-column: 2 / span 4;
-  justify-self: center;
-}
-.team_headline{
+.team-img{
+  grid-column:span 2;
   text-align: center;
-  font: normal normal bold 24px / 32px Open Sans; text-transform: uppercase;
-  letter-spacing: 0px;
-  color: #171717;
-  opacity: 1;
 }
-.class_content{
+.team-4{
+  grid-column: 2 / span 2;
   margin-top: 20px;
+}
+.team-img-4{
+  grid-column: 2 / span 2;
+}
+.position{
+  margin-top: 20px;
+  color: #000;
   text-align: center;
-  font: normal normal normal 18px/26px Open Sans;
-  letter-spacing: 0.18px;
-  color: #000000;opacity: 1;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px; /* 126.667% */
+  letter-spacing: 0.375px;
+  text-transform: uppercase;
 }
-.team_column {
-  display: flex;justify-content: center;align-items: flex-start;flex-direction: column;
-  grid-column: span 2;
-}
-.team_header {
-  display: flex;justify-content: center;align-items: center;flex-direction: column;
-  margin-top: 10px;margin-left: 41px;
-}
-.names {
-  text-align: center;text-transform: uppercase;
-  font: normal normal bold 24px/32px Open Sans;
-  letter-spacing: 0px;
-  color: #171717;opacity: 1;
-  margin: 1rem 0 1rem 4rem;
-}
-.image1,.image2,.image3{
-  margin-left: 49px;
-}
-.contact{
+.team-name{
+  margin-top: 5px;
+  color: #171717;
   text-align: center;
-  font: normal normal normal 18px/26px Open Sans;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  text-transform: uppercase;
+}
+.team-contact{
+  margin-top: 15px;
+  color: #000;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
   letter-spacing: 0.18px;
-  color: #000000; opacity: 1;
   display: flex;justify-content: center;align-items: center;flex-direction: column;
 }
 @media screen and (max-width: 1024px){
-.team_column{
+.team-img{
   grid-column: span 3;
   display: flex;
   justify-content: center;

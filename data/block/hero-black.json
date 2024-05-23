@@ -1,0 +1,31 @@
+{
+    "name": "hero",
+    "type": "block",
+    "template": "theme/block/hero.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "layout": "hero-block",
+            "media": {
+                "id": 11,
+                "mimeType": "image/png",
+                "extension": "png",
+                "filename": "11.png",
+                "parameters": {
+                    "alt": null,
+                    "title": null
+                },
+                "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+            },
+            "overline": "Dies ist eine Overline",
+            "headline": "Dies ist eine Headline",
+            "copy": "orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+            "ctaTitle": "Hier steht ein CTA",
+            "ctaTarget": "_blank",
+            "ctaLink": "http:/google.com"
+        }
+    }
+}
