@@ -6,8 +6,6 @@ enhavo_block:
   blocks:
 #    picture:
 #      type: picture
-    gallery:
-      type: gallery
 #    text:
 #      type: text
 #    text_picture:
@@ -32,4 +30,11 @@ enhavo_block:
       type: advanced_text
     quote:
       type: quote
+    hero:
+      type: hero
+    swipe_teaser:
+      type: swipe_teaser
+    gallery_block:
+      type: gallery_block
+
 

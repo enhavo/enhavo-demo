@@ -14,3 +14,4 @@ form:
     options:
         translation_domain: "'EnhavoMediaBundle'"
         multiple: 'false'
+        upload: 'false'

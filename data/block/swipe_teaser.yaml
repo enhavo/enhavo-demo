@@ -1,0 +1,43 @@
+{
+  "name": "swipe_teaser",
+  "type": "block",
+  "template": "theme/block/swipe-teaser.html.twig",
+  "component": null,
+  "children": [
+
+  ],
+  "data": {
+    "block": {
+      "headline": "Test",
+      "titleAlignment": "right",
+      "color": "no-background",
+      "items": [
+        {
+          "id": 2,
+          "position": 1,
+          "picture": {
+            "id": 4,
+            "mimeType": "image/png",
+            "extension": "png",
+            "filename": "Bildschirmfoto 2024-05-22 um 14.03.11.png",
+            "parameters": {
+              "alt": null,
+              "title": null
+            },
+            "md5Checksum": "d17ca2195f7b5ef0061cd019ca79e239"
+          },
+          "overline": "Test",
+          "headline": "test",
+          "text": "<p>test</p>",
+          "label": "test",
+          "target": "_self",
+          "look": "outline",
+          "link": "test.com",
+          "size": "level-2",
+          "color": "black"
+        }
+      ],
+      "id": 2
+    }
+  }
+}

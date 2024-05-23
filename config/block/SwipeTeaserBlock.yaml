@@ -1,0 +1,59 @@
+# Block YAML Template
+Block/SwipeTeaserBlock:
+  label: 'Swipe Teaser'
+  groups: [ layout ]
+  block_type: true
+
+  properties:
+    headline:
+      template: headline
+    titleAlignment:
+      template: expanded-choice
+    color:
+      template: choice
+    items:
+      template: items
+      type_options:
+        singular: item
+        entry_class: SwipeTeaserBlockItem
+      relation:
+        target_entity: SwipeTeaserBlockItem::class
+        mapped_by: swipeTeaserBlock
+      form:
+        options:
+          entry_type: SwipeTeaserBlockItemType::class
+
+  classes:
+    Block/SwipeTeaserBlockItem:
+      properties:
+        id:
+          template: primary-key
+        swipeTeaserBlock:
+          type: SwipeTeaserBlock
+          nullable: true
+          relation:
+            type: ManyToOne
+            target_entity: SwipeTeaserBlock::class
+            inversed_by: items
+        position:
+          template: PositionType
+        picture:
+          template: picture
+        overline:
+          template: text
+        headline:
+          template: headline
+        text:
+          template: wysiwyg
+        label:
+          template: text
+        target:
+          template: expanded-choice
+        look:
+          template: expanded-choice
+        link:
+          template: text
+        size:
+          template: expanded-choice
+        color:
+          template: choice
