@@ -1,11 +1,29 @@
 .block-team {
   margin: 90px 0 50px;
-}
-.text_container{
+
+  .text_container{
   max-width: 1390px;
   display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
   margin: 0 auto;
-}
+  }
+  .team-img{
+  grid-column:span 2;
+  text-align: center;
+  }
+  .team-img-4{
+  grid-column: 2 / span 2;
+  }
+  .team-4{
+    grid-column: 2 / span 2;
+    margin-top: 20px;
+  }
+  .team-contact{
+  margin-top: 15px;
+  color: #000;
+  text-align: center;
+  font-family: "Open Sans";font-size: 18px;font-weight: 400;
+  line-height: 26px; /* 144.444% */letter-spacing: 0.18px;
+  }
 .team-img{
   grid-column:span 2;
   text-align: center;
@@ -50,60 +68,5 @@
   line-height: 26px; /* 144.444% */
   letter-spacing: 0.18px;
   display: flex;justify-content: center;align-items: center;flex-direction: column;
-}
-@media screen and (max-width: 1024px){
-.team-img{
-  grid-column: span 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.team-text{
-  grid-column: 1 / span 6;
-}
-.names{
-  margin: 1rem 0 1rem 5rem;
-}
-.contact{
-  margin-left: 0;
-}
-}
-@media screen and (max-width: 626px) {
-.team_column{
-  grid-column: 2 / span 4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.image1, .image2, .image3 {
-  margin-left: 0px;
-}
-.names{
-  margin: 1rem 0 1rem 2rem;
-}
-.contact{
-  margin-left: 20px;
-  font: normal normal normal 16px / 26px Open Sans;
-}
-}
-@media screen and (max-width: 425px) {
-.team-text {
-  grid-column: 1 / span 6;
-}
-}
-@media screen and (max-width: 375px) {
-.image1{
-  margin-left: 0;
-}
-.image2, .image3 {
-  margin-left: 0;
-}
-}
-@media screen and (max-width: 320px) {
-.image1,.image2,.image3{
-  margin-left: -25px;
-}
-.names{
-  margin-left: 0px;
-}
+  }
 }
