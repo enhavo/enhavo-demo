@@ -3,19 +3,19 @@
 {% if block.layout == "cards" %}
 <div class="block-content-flex">
     <div class="container">
-            <div class="block-container">
-                {% for block in block.items %}
-                    <div class="block-image">
-                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}">
-                        <div class="texts_container">
-                            <div class="content_flex-overline overline">{{ block.overline }}</div>
-                            <div class="headline">{{ block.headline }}</div>
-                            <div class="copy">{{ block.copy }}</div>
-                            <a class="card_button_1" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                        </div>
+        <div class="block-container">
+            {% for block in block.items %}
+                <div class="block-image">
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}">
+                    <div class="texts_container">
+                        <div class="content_flex-overline overline">{{ block.overline }}</div>
+                        <div class="headline">{{ block.headline }}</div>
+                        <div class="copy">{{ block.copy }}</div>
+                        <a class="card_button_1" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                     </div>
-                {% endfor %}
-            </div>
+                </div>
+            {% endfor %}
+        </div>
         {% endif %}
         {% if block.layout == "list" %}
             <div class="content_flex-container-grid">

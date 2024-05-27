@@ -48,7 +48,7 @@
     font-weight: 700;
     line-height: 20px; /* 125% */
   }
-}
+
 .form {
   grid-column: 2 / span 6;
 
@@ -146,12 +146,4 @@
     align-items: center;
     font: normal normal bold 18px/19px Open Sans;
   }
-}
-@media screen and (max-width: 1440px){
-.form_text{
-  grid-column: 1 / span 6;
-}
-.form{
-  grid-column: 1 / span 6;
-}
 }

@@ -7,6 +7,7 @@
         "@enhavo/dependency-injection": "^0.14",
         "@enhavo/form": "^0.14",
         "@enhavo/media": "^0.14",
+        "@enhavo/media-library": "^0.14",
         "@enhavo/user": "^0.14",
         "@enhavo/vue-form": "^0.14",
         "jquery": "^3.6.0",

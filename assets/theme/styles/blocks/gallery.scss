@@ -17,12 +17,12 @@
     vertical-align: top;
   }
 }
-//GALLERY-BLACK
 .black-gallery {
   margin: 90px 0 50px;
   background-color: #171717;
   opacity: 0.9;
   height: 1009px;
+
   .gallery-black-content-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -30,21 +30,26 @@
     margin: 0 auto;
     max-width: 1390px;
   }
-  .left{
+
+  .left {
     margin-top: 247px;
   }
+
   .gallery-black-text-container {
     grid-column: 2 / span 6;
     margin-top: 70px;
   }
+
   .gallery-black-button {
     display: flex;
     justify-content: flex-end;
   }
+
   .xbutton, .left {
     color: #FFFFFF;
     font-size: 30px;
   }
+
   .gallery-black-headline {
     color: #FFFFFF;
     font-family: "Open Sans";

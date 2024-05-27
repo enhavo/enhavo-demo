@@ -44,37 +44,3 @@
     grid-column: 6 / span 1;
   }
 }
-@media screen and (max-width: 1440px) {
-.quote-headline{
-  grid-column: span 6;
-  margin-top: 0px;
-}
-.quote-overline{
-  grid-column: 2 / span 4;
-  margin-top: 0px;
-}
-}
-@media screen and (max-width: 490px) {
-.quote-overline{
-  grid-column: 1 / span 6;
-}
-}
-@media screen and (max-width: 425px) {
-.quote-headline{
-  grid-column:1 / span 5;
-}
-.quote-overline {
-  grid-column: 1 / span 5;
-}
-}
-@media screen and (max-width: 375px) {
-.container-content {
-  grid-gap: 0;
-}
-.quote-headline {
-  grid-column: 1 / span 6;
-}
-.quote-overline {
-  margin-top: 30px;
-}
-}

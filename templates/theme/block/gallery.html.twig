@@ -7,27 +7,25 @@
                     <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery_img">
                 </div>
             {% endfor %}
-
         </div>
     </div>
 </div>
 {% endif %}
 {% if block.layout == "gallery-black" %}
-<div class="black-gallery">
-    <div class="container">
-        <div class="gallery-black-content-grid">
-            <button class="left">&#60;</button>
-            <div class="gallery-black-text-container">
-                <div class="gallery-black-button">
-                    <button class="xbutton">&times;</button>
+    <div class="black-gallery">
+        <div class="container">
+            <div class="gallery-black-content-grid">
+                <button class="left">&#60;</button>
+                <div class="gallery-black-text-container">
+                    <div class="gallery-black-button">
+                        <button class="xbutton">&times;</button>
+                    </div>
+                    <span class="gallery-black-headline">{{ block.headline }}</span>
+                    <span class="galley-black-text">{{ block.text }}</span>
+                    <div class="gallery-black-copy">{{ block.copy }}</div>
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
                 </div>
-                <span class="gallery-black-headline">{{ block.headline }}</span>
-                <span class="galley-black-text">{{ block.text }}</span>
-                <div class="gallery-black-copy">{{ block.copy }}</div>
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
             </div>
-            </div>
+         </div>
     </div>
-</div>
 {% endif %}
-

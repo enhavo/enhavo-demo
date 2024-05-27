@@ -1,0 +1,8 @@
+type: string
+nullable: true
+form:
+    use:
+        - Symfony\Component\Form\Extension\Core\Type\ChoiceType
+    class: ChoiceType
+    options:
+        choices: []

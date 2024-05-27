@@ -1,4 +1,4 @@
-{% if block.layout == "hero-block" %}
+{% if block.layout == "hero" %}
 <div class="block_hero">
     <div class="hero-container">
         <div class="container">
@@ -15,23 +15,16 @@
 </div>
 {% endif %}
 {% if block.layout == "hero-block" %}
-    <div class="block-hero-2">
+    <div class="block_hero-2">
         <div class="hero-black-background">
             <div class="hero-block-grid">
-                <div class="hero-black-text-container">
-                    <div class="hero-black-overline overline">{{ block.overline }}</div>
-                    <div class="hero-black-headline">{{ block.headline }}</div>
-                    <div class="hero-black-copy copy">{{ block.copy }}</div>
-                    <a class="card_button_1 hero-block-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
+            <div class="hero-black-text-container">
+                <div class="hero-black-overline overline">{{ block.overline }}</div>
+                <div class="hero-black-headline">{{ block.headline }}</div>
+                <div class="hero-black-copy copy">{{ block.copy }}</div>
+                <a class="card_button_1 hero-block-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
             </div>
         </div>
-        <div class="hero-block-container">
-            <div class="hero-block-grid">
-                <div class="hero-block-img">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-block-media">
-                </div>
-            </div>
         </div>
     </div>
 {% endif %}
