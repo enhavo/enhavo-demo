@@ -14,3 +14,4 @@ form:
         label: "'Picture'"
         help: "'Supported formats are jpeg, gif, png, webp'"
         multiple: 'false'
+        upload: 'false'

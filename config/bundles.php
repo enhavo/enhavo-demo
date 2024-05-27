@@ -35,4 +35,6 @@ return [
     Rollerworks\Bundle\PasswordStrengthBundle\RollerworksPasswordStrengthBundle::class => ['all' => true],
     Symfony\UX\TwigComponent\TwigComponentBundle::class => ['all' => true],
     Enhavo\Bundle\SettingBundle\EnhavoSettingBundle::class => ['all' => true],
+    Enhavo\Bundle\TaxonomyBundle\EnhavoTaxonomyBundle::class => ['all' => true],
+    Enhavo\Bundle\MediaLibraryBundle\EnhavoMediaLibraryBundle::class => ['all' => true],
 ];

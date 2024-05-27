@@ -18,6 +18,8 @@ enhavo_app:
             label: Team
             icon: people
             route: app_team_member_index
+        media_library:
+            type: media_library
 
 #        backup:
 #            type: backup

@@ -1,0 +1,41 @@
+enhavo_media_library:
+    content_type:
+        audio:
+            label: 'Audio'
+            icon: 'icon-file_audio'
+            mime_types:
+                - ^audio/.+
+        archive:
+            label: 'Archive'
+            icon: 'icon-archive'
+            mime_types:
+                - application/gzip
+                - application/zip
+                - application/x-tar
+                - application/x-gtar
+        document:
+            label: 'Document'
+            icon: 'icon-file_document'
+            mime_types:
+                - application/pdf
+                - application/postscript
+                - application/rtc
+                - application/rtf
+                - ^application/ms.+
+                - ^application/vnd.+
+        text:
+            label: 'Text'
+            icon: 'icon-file_text'
+            mime_types:
+                - ^text/.+
+        image:
+            label: 'Image'
+            icon: 'icon-image'
+            mime_types:
+                - ^image/.+
+        video:
+            label: 'Video'
+            icon: 'icon-file_video'
+            mime_types:
+                - ^video/.+
+

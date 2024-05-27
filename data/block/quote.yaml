@@ -1,0 +1,16 @@
+{
+    "name": "quote",
+    "type": "block",
+    "template": "theme/block/quote.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "alignment": "right",
+            "text": "<p>Test</p>",
+            "id": 1
+        }
+    }
+}

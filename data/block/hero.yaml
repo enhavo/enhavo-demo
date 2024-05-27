@@ -1,0 +1,55 @@
+{
+  "name": "hero",
+  "type": "block",
+  "template": "theme/block/hero.html.twig",
+  "component": null,
+  "children": [
+
+  ],
+  "data": {
+    "block": {
+      "size": "big",
+      "layout": "text-media",
+      "color": "black",
+      "layer1": {
+        "id": 4,
+        "mimeType": "image/png",
+        "extension": "png",
+        "filename": "Bildschirmfoto 2024-05-22 um 14.03.11.png",
+        "parameters": {
+          "alt": null,
+          "title": null
+        },
+        "md5Checksum": "d17ca2195f7b5ef0061cd019ca79e239"
+      },
+      "layer2": {
+        "id": 4,
+        "mimeType": "image/png",
+        "extension": "png",
+        "filename": "Bildschirmfoto 2024-05-22 um 14.03.11.png",
+        "parameters": {
+          "alt": null,
+          "title": null
+        },
+        "md5Checksum": "d17ca2195f7b5ef0061cd019ca79e239"
+      },
+      "overline": "Test",
+      "headline": "Test",
+      "subHeadline": "Test",
+      "text": "<p>test</p>",
+      "items": [
+        {
+          "id": 2,
+          "position": 1,
+          "label": "Test",
+          "target": "_blank",
+          "look": "full",
+          "link": "Test",
+          "size": "level-1",
+          "color": "grey"
+        }
+      ],
+      "id": 2
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "gallery_block",
+  "type": "block",
+  "template": "theme/block/gallery.html.twig",
+  "component": null,
+  "children": [
+
+  ],
+  "data": {
+    "block": {
+      "color": "no-background",
+      "headline": "TEst",
+      "titleAlignment": "right",
+      "layout": "rows",
+      "itemAlignment": "left",
+      "lightBox": "",
+      "text": "<p>test</p>",
+      "amountOfColumns": "2",
+      "items": [
+        {
+          "id": 1,
+          "position": 1,
+          "picture": {
+            "id": 4,
+            "mimeType": "image/png",
+            "extension": "png",
+            "filename": "Bildschirmfoto 2024-05-22 um 14.03.11.png",
+            "parameters": {
+              "alt": null,
+              "title": null
+            },
+            "md5Checksum": "d17ca2195f7b5ef0061cd019ca79e239"
+          },
+          "title": "Test",
+          "description": "test",
+          "target": "_blank",
+          "photographerName": "test",
+          "photographerLink": "test.com",
+          "licenseName": "test",
+          "licenseLink": "test"
+        }
+      ],
+      "id": 1
+    }
+  }
+}

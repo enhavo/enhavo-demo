@@ -1,0 +1,63 @@
+# Block YAML Template
+Block/HeroBlock:
+  label: 'Hero'
+  groups: [ layout ]
+  block_type: true
+
+  properties:
+    size:
+      template: expanded-choice
+    layout:
+      template: expanded-choice
+    color:
+      template: choice
+    layer1:
+      template: picture
+    layer2:
+      template: picture
+    overline:
+      template: text
+    headline:
+      template: headline
+    subHeadline:
+      template: text
+    text:
+      template: wysiwyg
+    items:
+      template: items
+      type_options:
+        singular: item
+        entry_class: HeroBlockItem
+      relation:
+        target_entity: HeroBlockItem::class
+        mapped_by: heroBlock
+      form:
+        options:
+          entry_type: HeroBlockItemType::class
+
+  classes:
+    Block/HeroBlockItem:
+      properties:
+        id:
+          template: primary-key
+        heroBlock:
+          type: HeroBlock
+          nullable: true
+          relation:
+            type: ManyToOne
+            target_entity: HeroBlock::class
+            inversed_by: items
+        position:
+          template: PositionType
+        label:
+          template: text
+        target:
+          template: expanded-choice
+        look:
+          template: expanded-choice
+        link:
+          template: text
+        size:
+          template: expanded-choice
+        color:
+          template: choice

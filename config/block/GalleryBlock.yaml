@@ -1,0 +1,64 @@
+Block/GalleryBlock:
+    label: 'Gallery'
+    groups: [ layout ]
+    block_type: true
+
+    properties:
+        color:
+            template: choice
+        headline:
+            template: headline
+        titleAlignment:
+            template: expanded-choice
+        layout:
+            template: expanded-choice
+        itemAlignment:
+            template: expanded-choice
+        lightBox:
+            template: expanded-choice
+        text:
+            template: wysiwyg
+        amountOfColumns:
+            template: expanded-choice
+        items:
+            template: items
+            type_options:
+                singular: item
+                entry_class: GalleryBlockItem
+            relation:
+                target_entity: GalleryBlockItem::class
+                mapped_by: galleryBlock
+            form:
+                options:
+                    entry_type: GalleryBlockItemType::class
+
+    classes:
+        Block/GalleryBlockItem:
+            properties:
+                id:
+                    template: primary-key
+                galleryBlock:
+                    type: GalleryBlock
+                    nullable: true
+                    relation:
+                        type: ManyToOne
+                        target_entity: GalleryBlock::class
+                        inversed_by: items
+                position:
+                    template: PositionType
+                picture:
+                    template: picture
+                title:
+                    template: text
+                description:
+                    template: text
+                target:
+                    template: expanded-choice
+                photographerName:
+                    template: text
+                photographerLink:
+                    template: choice
+                licenseName:
+                    template: text
+                licenseLink:
+                    template: text
