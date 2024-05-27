@@ -9,7 +9,7 @@
                 <div class="form">
                     <div class="form-row">
                         <div class="row">
-                            <label for="name">{{ block.form.name.label }}</label>
+                            <label for="name" class="form-label">{{ block.form.name.label }}</label>
                             <select id="name" name="name">
                                 <option value="" disabled selected hidden>AUSWÄHLEN</option>
                                 <option value="">AUSWÄHLEN</option>
@@ -18,18 +18,18 @@
                             <div>{{ block.form.name.is_required ? 'Required' : '' }}</div>
                         </div>
                         <div class="row">
-                            <label for="email">{{ block.form.email.label }} </label>
+                            <label for="email" class="form-label">{{ block.form.email.label }} </label>
                             <input type="{{ block.form.email.type }}" name="email" id="email" placeholder="{{ block.form.email.placeholder }}">
                             <div class="required">{{ block.form.email.is_required ? 'Dieses Feld muss ausgefüllt sein.' : 'Dieses Feld muss ausgefüllt sein.' }}</div>
                         </div>
                     </div>
                     <div class="row">
-                        <label for="subject">{{ block.form.subject.label }}</label>
+                        <label for="subject" class="form-label">{{ block.form.subject.label }}</label>
                         <input type="{{ block.form.subject.type }}" name="subject" id="subject" placeholder="ILLENBERGER">
                         <div>{{ block.form.subject.is_required ? 'Required' : '' }}</div>
                     </div>
                     <div class="row">
-                        <label for="message">{{ block.form.message.label }}</label>
+                        <label for="message" class="form-label">{{ block.form.message.label }}</label>
                         <textarea name="message" id="message" placeholder="HALLO, ICH HABE EINE FRAGE."></textarea>
                         <div>{{ block.form.message.is_required ? 'Required' : '' }}</div>
                     </div>

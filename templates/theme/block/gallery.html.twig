@@ -1,66 +1,33 @@
+{% if block.layout == "gallery" %}
 <div class="block-gallery">
     <div class="container">
         <div class="gallery-content">
-            {% if block.layout == "gallery" %}
             {% for block in block.items %}
                 <div class=" {% if loop.index == 2 or loop.index == 4 or loop.index == 5 %} item_2 {% endif %}">
                     <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery_img">
                 </div>
             {% endfor %}
-            {% endif %}
+
         </div>
     </div>
 </div>
-
+{% endif %}
+{% if block.layout == "gallery-black" %}
 <div class="black-gallery">
     <div class="container">
-        {% if block.layout == "gallery-black" %}
-            <div class="gallery-black-content-grid">
-                    <button class="left">&#60;</button>
-                <div class="gallery-black-text-container">
-                    <div class="gallery-black-button">
-                        <button class="xbutton">&times;</button>
-                    </div>
-                    <span class="gallery-black-headline">{{ block.headline }}</span>
-                    <span class="galley-black-text">{{ block.text }}</span>
-                    <div class="gallery-black-copy">{{ block.copy }}</div><img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
-
-
-
+        <div class="gallery-black-content-grid">
+            <button class="left">&#60;</button>
+            <div class="gallery-black-text-container">
+                <div class="gallery-black-button">
+                    <button class="xbutton">&times;</button>
                 </div>
-
-
-
-                </div>
-        {% endif %}
+                <span class="gallery-black-headline">{{ block.headline }}</span>
+                <span class="galley-black-text">{{ block.text }}</span>
+                <div class="gallery-black-copy">{{ block.copy }}</div>
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
+            </div>
+            </div>
     </div>
 </div>
-
-
-{#<div class="block-gallery" data-controller="carousel">#}
-{#    <div class="container">#}
-{#        <div class="carousel">#}
-{#            <div class="carousel-bg">#}
-{#                <button class="carousel_left" data-action="click->carousel#left">#}
-{#                    <img src="{{asset('/build/theme/images/left.png')}}" alt="left">#}
-{#                </button>#}
-{#                <div class="carousel-track" data-carousel-target="track">#}
-{#                    {% for block in block.items %}#}
-{#                        <div class="carousel-slide" data-carousel-target="slide">#}
-{#                            <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}">#}
-{#                        </div>#}
-{#                    {% endfor %}#}
-{#                </div>#}
-{#                <button class="carousel_right" data-action="click->carousel#right">#}
-{#                    <img src="{{asset('/build/theme/images/right.png')}}" alt="right">#}
-{#                </button>#}
-{#            </div>#}
-{#            <div class="carousel_nav" data-carousel-target="navButton">#}
-{#                <span class="carousel_button"></span>#}
-{#                <span class="carousel_button"></span>#}
-{#                <span class="carousel_button"></span>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
+{% endif %}
 

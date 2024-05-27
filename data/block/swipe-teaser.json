@@ -1,7 +1,7 @@
 {
-    "name": "hero",
+    "name": "swipe-teaser",
     "type": "block",
-    "template": "theme/block/teaser-swiper.html.twig",
+    "template": "theme/block/swipe-teaser.html.twig",
     "component": null,
     "children": [
 
