@@ -8,7 +8,7 @@
     ],
     "data": {
         "block": {
-            "layout": "hero-block",
+            "layout": "hero-black",
             "media": {
                 "id": 11,
                 "mimeType": "image/png",
