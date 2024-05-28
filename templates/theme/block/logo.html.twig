@@ -1,0 +1,12 @@
+<div class="logo-block">
+    <div class="container">
+        <div class="logo-grid">
+            <div class="logo-overline overline">{{ block.overline }}</div>
+            <div class="logo-container">
+                {% for block in block.items %}
+                <img src="{{ media_url(block.media)}}" alt="{{ media_parameter(block.media, 'alt')}}">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

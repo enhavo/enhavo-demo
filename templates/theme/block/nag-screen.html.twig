@@ -1,21 +1,17 @@
 <div class="nag-screen-block">
     <div class="container">
         <div class="nag-screen-wrapper">
-        <div class="nag-screen-grid">
+            <div class="nag-screen-grid">
                 <button class="times">&#215;</button>
                 <div class="nag-screen-container">
-                    <div class="nag-screen-overline">{{ block.overline }}</div>
+                    <div class="nag-screen-overline overline">{{ block.overline }}</div>
                     <div class="nag-screen-headline">{{ block.headline }}</div>
-                    <div class="nag-screen-copy">{{ block.copy }}</div>
+                    <div class=" nag-screen-copy copy">{{ block.copy }}</div>
                     <div class="nag-screen-btt">
-                        <button class="nag-screen-button">{{ block.ctaTitle }}</button>
+                        <a class="card_button_1"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
     </div>
 </div>

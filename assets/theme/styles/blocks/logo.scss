@@ -1,0 +1,22 @@
+.logo-block {
+  margin: 90px 0 50px;
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 51px;
+    margin: 0 auto;
+    max-width: 1390px;
+  }
+
+  .logo-overline {
+    grid-column: span 6;
+    color: #171717;
+    text-align: center;
+  }
+
+  .logo-container {
+    grid-column: span 6;
+    margin-top: 70px;
+  }
+}

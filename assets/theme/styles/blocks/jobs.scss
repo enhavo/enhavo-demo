@@ -1,0 +1,133 @@
+.jobs-block {
+  margin: 90px 0 50px;
+
+  .jobs-grid {
+    max-width: 1390px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Change the columns to fractions */
+    grid-gap: 51px;
+    margin: 0 auto;
+  }
+
+  .table {
+    grid-column: span 2;
+  }
+
+
+  .label {
+    border: 1px solid #171717;
+  }
+
+  .table-span {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 1rem;
+  }
+
+  .jobs-overline {
+    color: #171717;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px; /* 126.667% */
+    letter-spacing: 0.375px;
+    text-transform: uppercase;
+  }
+
+  .caret {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+
+  .hr-container {
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  .job-headline {
+    margin-top: 15px;
+    color: #171717;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px; /* 126.667% */
+    letter-spacing: 0.375px;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+
+  .job-form {
+    grid-column: 3 / span 4;
+
+
+    .job-row {
+      margin-bottom: 1rem;
+
+      .jobs-label {
+        color: #000;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19px; /* 126.667% */
+        letter-spacing: 0.375px;
+        text-transform: uppercase;
+        padding: 1rem;
+
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        border-bottom: 1px solid #171717 !important;
+        opacity: 1;
+        border: none;
+        padding: 1rem;
+      }
+
+      #email::placeholder, {
+        text-align: left;
+        font: normal normal bold 18px / 19px Open Sans;
+        letter-spacing: 0.45px;
+        color: #171717;
+        text-transform: uppercase;
+        opacity: 1;
+        transform: translateY(50%);
+      }
+
+      #text::placeholder, {
+        text-align: left;
+        font: normal normal bold 18px / 19px Open Sans;
+        letter-spacing: 0.45px;
+        color: #171717;
+        text-transform: uppercase;
+        opacity: 1;
+        transform: translateY(50%);
+      }
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-wrapper .static-text {
+      position: absolute;
+      right: 10px; /* Adjust as needed */
+      top: 80%;
+      transform: translateY(-65%);
+      pointer-events: none;
+      color: #000;
+      text-align: right;
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 144.444% */
+      letter-spacing: 0.18px;
+    }
+  }
+}

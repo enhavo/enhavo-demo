@@ -92,16 +92,13 @@ header {
   text-decoration: none;
   margin-left: 45px;
 }
-
 .navigation1 a:hover {
-  color: #ffcc00; /* Hover color */
+  color: #ffcc00;
 }
-
 .header-info {
   grid-column: 5 / span 2; /* Spanning 1 column */
   display: flex;justify-content:end;align-items: center;
 }
-
 .number {
   margin-right: 0.5rem;
   text-align: right;

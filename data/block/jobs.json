@@ -1,0 +1,50 @@
+{
+    "name": "jobs",
+    "type": "block",
+    "template": "theme/block/jobs.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "overline": "Alle anzeigen",
+            "form": {
+                "select": {
+                    "type": "select",
+                    "headline": "Dies ist eine Headline"
+                },
+                "text": {
+                    "type": "text",
+                    "label": "Vollzeit",
+                    "placeholder": "Hier steht eine headline",
+                    "text": "Dies ist ein CTA"
+                },
+                "email": {
+                    "type": "email",
+                    "label": "Vollzeit",
+                    "placeholder": "Hier steht eine headline",
+                    "text": "Dies ist ein CTA"
+                },
+                "text": {
+                    "type": "text",
+                    "label": "Vollzeit",
+                    "placeholder": "Hier steht eine headline",
+                    "text": "Dies ist ein CTA"
+                },
+                "text": {
+                    "type": "text",
+                    "label": "Vollzeit",
+                    "placeholder": "Hier steht eine headline",
+                    "text": "Dies ist ein CTA"
+                },
+                "text": {
+                    "type": "text",
+                    "label": "Vollzeit",
+                    "placeholder": "Hier steht eine headline",
+                    "text": "Dies ist ein CTA"
+                }
+            }
+        }
+    }
+}
