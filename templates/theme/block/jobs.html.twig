@@ -1,57 +1,39 @@
-<div class="jobs-block">
+<div class="jobs-block" data-controller="jobs">
     <div class="container">
-        <div class="jobs-grid">
+        <div class="jobs-grid" data-jobs-target="grid" >
             <div class="table">
-                <div class="label">
+                <div class="table-label">
                     <div class="table-span">
-                        <span class="jobs-overline">Alle anzeigen</span>
-                        <button class="caret">&#94;</button>
+                        <button class="job-headline jobs-overline" data-action="click->jobs#filterByJobType" data-job-type="" >Alle anzeigen</button>
+                        <div class="button-caret">
+                            <button class="caret-down" data-action="click->jobs#down" data-jobs-target="caretDown" >&or;</button>
+                            <button class="caret" data-action="click->jobs#caret" data-jobs-target="caret">&#94;</button>
+                        </div>
                     </div>
                     <div class="hr-container">
                         <hr>
                     </div>
-                    <div class="job-headline">vollzeit</div>
-                    <div class="job-headline">teilzeit</div>
-                    <div class="job-headline">praktikum</div>
+                    <div class="job-button">
+                        <button class="job-headline" data-action="click->jobs#filterByJobType" data-job-type="Vollzeit">vollzeit</button>
+                        <button class="job-headline" data-action="click->jobs#filterByJobType" data-job-type="Teilzeit">teilzeit</button>
+                        <button class="job-headline" data-action="click->jobs#filterByJobType" data-job-type="Praktikum">praktikum</button>
+                    </div>
                 </div>
             </div>
-            <div class="job-form">
-                <div class="job-row">
-                    <label for="text" class="jobs-label">{{ block.form.text.label }}</label>
-                    <div class="input-wrapper">
-                        <input type="{{ block.form.text.type }}" name="text" id="text" placeholder="{{ block.form.text.placeholder }}">
-                        <span class="static-text">{{block.form.text.text }}</span>
+            <div class="job-items">
+                {% for blocks in block.jobs %}
+                    <div class="job-item" data-job-item>
+                        <div class="job-row">
+                            <div class="job-type" data-job-type>{{ blocks.type }}</div>
+                            <div class="job-wrapper">
+                                <span class="job-title">{{ blocks.title }}</span>
+                                <span class="job-text">{{ blocks.ctaTitle }}</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="job-row">
-                        <label for="email" class="jobs-label">{{ block.form.email.label }}</label>
-                    <div class="input-wrapper">
-                        <input type="{{ block.form.email.type }}" name="email" id="email" placeholder="{{ block.form.email.placeholder }}" >
-                        <span class="static-text">{{ block.form.email.text }}</span>
-                    </div>
-                </div>
-                <div class="job-row">
-                    <label for="text" class="jobs-label">{{ block.form.text.label }}</label>
-                    <div class="input-wrapper">
-                        <input type="{{ block.form.text.type }}" name="text" id="text" placeholder="{{ block.form.text.placeholder }}">
-                        <span class="static-text">{{ block.form.text.text }}</span>
-                    </div>
-                </div>
-                <div class="job-row">
-                        <label for="email" class="jobs-label">{{ block.form.email.label }}</label>
-                    <div class="input-wrapper">
-                        <input type="{{ block.form.email.type }}" name="email" id="email" placeholder="{{ block.form.email.placeholder }}" >
-                        <span class="static-text">{{ block.form.email.text }}</span>
-                    </div>
-                </div>
-                <div class="job-row">
-                        <label for="email" class="jobs-label">{{ block.form.email.label }}</label>
-                    <div class="input-wrapper">
-                        <input type="{{ block.form.email.type }}" name="email" id="email" placeholder="{{ block.form.email.placeholder }}" >
-                        <span class="static-text">{{ block.form.email.text }}</span>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+</div>
 </div>

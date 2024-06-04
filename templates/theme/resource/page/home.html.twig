@@ -26,14 +26,14 @@
                                class="{{ item.classLabel }}">{{ item.label }}</a>
                         </div>
                         {% if item.sub_menu is defined %}
-                                    <div class="menu">
-                            <ul class="sub-menu-ul">
-                                <li class="sub-menu-list"><a href="/show" class="list-font">{{ item.sub_menu.vlog1 }}</a></li>
-                                <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog2 }}</a></li>
-                                <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog3 }}</a></li>
-                                <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog4 }}</a></li>
-                            </ul>
-                                    </div>
+                            <div class="menu">
+                                <ul class="sub-menu-ul">
+                                    <li class="sub-menu-list"><a href="/show" class="list-font">{{ item.sub_menu.vlog1 }}</a></li>
+                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog2 }}</a></li>
+                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog3 }}</a></li>
+                                    <li class="sub-menu-list"><a href="#" class="list-font">{{ item.sub_menu.vlog4 }}</a></li>
+                                </ul>
+                            </div>
                         {% endif %}
                     {% endfor %}
                 </nav>
