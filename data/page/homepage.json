@@ -26,7 +26,7 @@
         "expr:load('block/advanced_text-headline-breaker.json')",
         "expr:load('block/advanced_text-text-big.json')",
         "expr:load('block/advanced_text-text-one-column.json')",
-        "expr:load('block/advanced_text-text-two-column-wide.json')",
+        "expr:load('block/advanced_text-text-one-column-wide.json')",
         "expr:load('block/advanced_text-text-two-column.json')",
         "expr:load('block/quote.json')",
         "expr:load('block/form.json')",

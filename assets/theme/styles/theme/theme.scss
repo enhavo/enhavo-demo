@@ -1,0 +1,91 @@
+body{
+  padding-top: 123px;
+  background: white;
+  margin: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #171717;
+}
+.theme-overline{
+  color: $textColor2;
+  font-family: $fontFamily1;
+  font-size: $fontSizeOverline;
+  line-height: $lineHeightOverline;
+  letter-spacing: 0.375px;
+  text-transform: uppercase;
+}
+.theme-headline{
+  color: $textColor3;
+  font-family: $fontFamily1;
+  font-size: $fontSizeHeadline1;
+  line-height: $lineHeightHeadline1;
+  text-transform: uppercase;
+}
+.theme-copy{
+  color: $textColor2;
+  font-family: $fontFamily1;
+  font-size: $fontSizeCopy;
+  font-weight: $fontWeight;
+  line-height: $lineHeightCopy;
+  letter-spacing: 0.18px;
+}
+.theme-button{
+  color: $textColor3;
+  font-family: $fontFamily1;
+  font-size: $fontSizeCopy;
+  line-height: $lineHeightButton;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1320px;
+  width: 100%;
+}
+//.overline{
+//  color: #000;
+//  font-family: "Open Sans";font-size: 15px;font-style: normal;font-weight: 700;
+//  line-height: 19px; /* 126.667% */letter-spacing: 0.375px;
+//  text-transform: uppercase;
+//}
+//.headline{
+//  margin-top: 5px;
+//  color: #171717;
+//  font-family: "Open Sans";font-size: 24px;font-style: normal;font-weight: 700;
+//  line-height: 32px; /* 133.333% */
+//  text-transform: uppercase;
+//}
+//.copy{
+//  margin-top: 15px;
+//  color: #000;
+//  font-family: "Open Sans";font-size: 18px;font-style: normal;font-weight: 400;
+//  line-height: 26px; /* 144.444% */letter-spacing: 0.18px;
+//}
+.texts_container{
+  grid-row: 1;grid-column: 4 / span 3;
+}
+.card_button_1{
+  margin-top: 30px;padding: 15px 30px;
+  display: flex;justify-content: center;align-items: center;
+  gap: 10px;
+  border-radius: 40px;border: 2px solid #000;
+  width: 280px;height: 51px;
+  color: #171717;
+  font-family: "Open Sans";font-size: 18px;font-style: normal;font-weight: 700;
+  line-height: 19px; /* 105.556% */letter-spacing: 0.45px;
+  text-transform: uppercase;
+  grid-column: span 3;
+  cursor: pointer;
+  text-decoration: none;
+}
+.theme-container{
+  margin: 0 auto;
+  padding: 0 135px;
+  max-width: 1920px;
+  width: 100%;
+}

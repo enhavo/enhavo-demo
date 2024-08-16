@@ -1,68 +1,64 @@
-.advance-text-block {
-  margin: 90px 0 50px;
-
+.block-advance-text {
+  padding-top: 150px;
   .advanced-text-grid {
-    max-width: 1390px;
-    display: grid;
+    display: grid;flex-direction: column;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 51px;
-    margin: 0 auto;
-  }
-
-  .advanced-text-container {
-    display: flex;
-    flex-direction: column;
-    grid-column: 2 /span 4;
-  }
-  .advanced-text-big-headline{
-    color: #171717;
-    font-family: "Open Sans";
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 64px; /* 128% */
-    text-transform: uppercase;
-  }
-
-  .advanced-text-text-big {
-    display: flex;
-    flex-direction: column;
-    grid-column: 2 /span 4;
-
-    .advanced-text-big-copy {
-      margin-top: 20px;
-      color: #171717;
-      font-family: "Open Sans";
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 32px;
+    .advanced-text-headline-breaker{
+      grid-column: 2 / span 4;
+      .bold-headline{
+        font-size: 3.125rem;
+        line-height: 1.28em;
+      }
     }
-  }
-
-  .advanced-text-one-column {
-    grid-column: 1 /span 4;
-  }
-
-  .advanced-text-two-column-wide {
-    display: flex;
-    flex-direction: column;
-    grid-column: 2 /span 4;
-  }
-
-  .advanced-text-two-column {
-    display: flex;
-    flex-direction: column;
-    grid-column: 1 /span 3;
-  }
-    .column {
-      margin-top: 52px;
-      grid-column: 4 / span 3;
-
-    .two-button {
+    .advanced-text-text-big {
       display: flex;
-      justify-content: flex-end;
-      align-items: end;
+      flex-direction: column;
+      grid-column: 2 /span 4;
+      .bold-headline{
+        padding: 5px 0 20px 0;
+      }
+      .bold-copy {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+    .advanced-text-one-column {
+      grid-column: 1 /span 3;
+      .bold-headline{
+        padding: 5px 0 15px 0;
+      }
+    }
+    .advanced-text-one-column-wide {
+      display: flex;
+      flex-direction: column;
+      grid-column: 2 /span 4;
+      .bold-headline{
+        padding: 5px 0 15px 0;
+      }
+    }
+    .advanced-text-two-column {
+      grid-column: span 6;
+      .two-column-btn {
+        margin-left: auto
+      }
+      .theme-copies {
+        display: flex;
+        gap: 51px;
+      }
+    }
+    .advanced-text-button{
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      border: 2px solid #000;
+      width: 280px;
+      height: 51px;
+      grid-column: span 3;
+      cursor: pointer;
+      text-decoration: none;
     }
   }
 }

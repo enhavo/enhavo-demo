@@ -1,36 +1,17 @@
-{# Template for container block content_flex_block #}
-{#{{ dump(block) }}#}
-{% if block.layout == "cards" %}
 <div class="block-content-flex">
-    <div class="container">
-        <div class="block-container">
-            {% for block in block.items %}
-                <div class="block-image">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}">
+    <div class="theme-container">
+        <div class="block-{{ block.layout }}-grid">
+            {% for item in block.items %}
+                <div class="block-image {% if block.layout == 'list' %}content-list-img-wrapper{% else %}content-{{ block.layout }}-img-wrapper{% endif %}">
+                    <img src="{{ media_url(item.media) }}" alt="{{ media_parameter(item.media, 'alt') }}">
                     <div class="texts_container">
-                        <div class="content_flex-overline overline">{{ block.overline }}</div>
-                        <div class="headline">{{ block.headline }}</div>
-                        <div class="copy">{{ block.copy }}</div>
-                        <a class="card_button_1" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                        <div class="theme-overline content-flex-overline ">{{ item.overline }}</div>
+                        <div class="theme-headline">{{ item.headline }}</div>
+                        <div class="theme-copy">{{ item.copy }}</div>
+                        <a class="theme-button content-flex-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
                     </div>
                 </div>
             {% endfor %}
         </div>
-        {% endif %}
-        {% if block.layout == "list" %}
-            <div class="content_flex-container-grid">
-                {% for block in block.items %}
-                    <div class="content-flex-img-wrapper">
-                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" >
-                        <div class="content_flex-texts_container">
-                            <div class="overline">{{ block.overline }}</div>
-                            <div class="headline">{{ block.headline }}</div>
-                            <div class="copy">{{ block.copy }}</div>
-                            <a class="card_button_1"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
     </div>
 </div>

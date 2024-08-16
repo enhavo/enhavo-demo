@@ -1,163 +1,106 @@
-
-body{
-  background: white;
-  margin: 0;
-  padding: 0;
-}
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #171717; /* Background color for the header */
-}
-
-/* Navbar Styles */
 .nav {
-  position: relative; /* Adjusted from fixed */
-  background-color: transparent; /* Transparent background */
-}
-.block-paragraph{
-  width: 100%;
-  align-items: center;
-  margin:90px 0 50px;
-}
-.paragraph-grid{
-  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
-  max-width: 1390px;
-  margin-inline: auto;
-}
-.paragraph-container{
-  grid-column: 2 / span 4;
-}
-.paragraph{
-  text-align: left;
-  font: normal normal normal 18px/26px Open Sans;
-  letter-spacing: 0.18px;
-  color: #000000;
-  opacity: 1;
-  margin-bottom: 20px;
-}
-.header1{
-  text-align: center;
-  font: normal normal bold 24px/32px Open Sans;
-  letter-spacing: 0px;
-  color: #171717;
-  text-transform: uppercase;
-  opacity: 1;
-  grid-column: span 6;
-}
-.navbar-container {
-  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
-  align-items: center;
-  padding: 1rem;
-  margin-inline: auto;
-  max-width: 1390px;
-}
-.container{
-  margin: 0 auto;
-  max-width: 1390px;
-}
-
-.header-img {
-  grid-column: 1 / span 2;
-  display: flex;align-items: center;
-}
-
-.header-img img {
-  height: auto;
-}
-
-.navigation1 {
-  grid-column: 3 / span 2; /* Spanning 3 columns */
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.nav-item {
+  height: 123px;
   position: relative;
-}
-.nav-item a {
-  color: white;
-}
-
-.navigation1 a {
-  text-align: left;
-  font: normal normal normal 18px/19px Open Sans;
-  letter-spacing: 0.45px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  opacity: 1;
-  text-decoration: none;
-  margin-left: 45px;
-}
-.navigation1 a:hover {
-  color: #ffcc00;
-}
-.header-info {
-  grid-column: 5 / span 2; /* Spanning 1 column */
-  display: flex;justify-content:end;align-items: center;
-}
-.number {
-  margin-right: 0.5rem;
-  text-align: right;
-  font: normal normal normal 20px/32px Open Sans;
-  letter-spacing: 0px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  opacity: 1;
-}
-.hamburger {
-  display: none;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  font-size: 24px;
-}
-.menu {
-  color: #fff;
-  padding: 5px;
-  z-index: 1;
-  transition: opacity 0.3s;
-  text-align: left;
-  font: italic normal normal 18px/19px Open Sans;
-  letter-spacing: 0.45px;
-  opacity: 1;
-  position: absolute;
-  top: 89%;
-  left: 0;
-  width: 100%;
-  margin-top: 5px;
-}
-.first-label2{
-  display: block;
-  text-decoration: none;
-  color: #fff;
-}
-//here i just use the max-height to 0 so in default this in hide
-.sub-menu-ul {
-  max-height: 0;
-  overflow: hidden;
-  margin-left: 39.5%;
-}
-.sub-menu-list{
-  padding: 10px;
-  margin-left: 20px;
-}
-.list-font{
-  text-align: left;
-  text-transform: capitalize !important;
-  font: italic normal normal 18px/19px Open Sans !important;
-  letter-spacing: 0.45px;
-  color: #FFFFFF;
-  opacity: 1;
-}
-//then i use 100% so when clicked it will take the 100% in width the "open" i use in stimulus
-.sub-menu-ul.open {
-  display: block;
-  max-height: 100%;
+
+  .navbar-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 51px;
+    align-items: center;
+    padding: 2.71rem;
+
+    .header-img {
+      grid-column: 1 / span 2;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+
+    .navigation {
+      grid-column: 3 / span 2; /* Spanning 3 columns */
+      display: flex;
+      justify-content: space-evenly;
+
+      .nav-item {
+        position: relative;
+        a {
+          font: normal normal normal 18px/19px Open Sans;
+          letter-spacing: 0.45px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          opacity: 1;
+          text-decoration: none;
+          &:hover {
+            color: #ffcc00;
+          }
+        }
+        &:hover .sub-menu-ul {
+          opacity: 1;
+          overflow: unset;
+          transform: translateY(0);
+        }
+      }
+      .sub-menu-ul {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: calc(100% + .25rem);
+        opacity: 0;
+        transform: translateY(-10px);
+        overflow: hidden;
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+      }
+
+      .sub-menu-list {
+        padding: 10px;
+        margin-left: 20px;
+      }
+
+      .list-font {
+        text-align: left;
+        text-transform: capitalize !important;
+        font: italic normal normal 18px/19px Open Sans !important;
+        letter-spacing: 0.45px;
+        color: #FFFFFF;
+        opacity: 1;
+      }
+
+      //then i use 100% so when clicked it will take the 100% in width the "open" i use in stimulus
+      .sub-menu-ul.open {
+        display: block;
+        max-height: 100%;
+      }
+    }
+    .header-info {
+      grid-column: 5 / span 2;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      .number {
+        margin-right: 0.5rem;
+        text-align: right;
+        font: normal normal normal 20px/32px Open Sans;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        opacity: 1;
+      }
+    }
+    .hamburger {
+      display: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 24px;
+    }
+  }
 }
 @media screen and (max-width: 1169px) {
   .header-info{

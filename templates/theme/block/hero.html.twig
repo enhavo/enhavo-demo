@@ -1,37 +1,22 @@
-{% if block.layout == "hero" %}
 <div class="block_hero">
-    <div class="hero-container">
-        <div class="container">
-            <div class="hero-grid-container">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
-                <div class="hero-text-container">
-                    <div class="overline">{{ block.overline }}</div>
-                    <div class="hero-headline headline">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
+    <div class="theme-container">
+        <div class="{% if block.layout == 'hero-black' %}hero-container{% endif %}">
+            <div class="{{ block.layout }}-grid">
+                <div class="hero-image-wrapper">
+                    <img src="{% if block.layout == 'hero' %}{{ media_url(block.media) }}{% endif %}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
+                </div>
+                <div class="hero-text-container {% if block.layout == 'hero-black' %} hero-black-text-container {% endif %}">
+                    <div class="theme-overline hero-black-overline">{{ block.overline }}</div>
+                    <div class="hero-headline theme-headline hero-black-headline">{{ block.headline }}</div>
+                    <div class="theme-copy hero-black-copy">{{ block.copy }}</div>
+                    {% if block.ctaTitle and block.ctaLink is not null %}
+                    <a class="theme-button hero-black-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{% if block.layout == 'hero-black' %}{{ block.ctaTitle }}{% endif %}</a>
+                    {% endif %}
+                </div>
+                <div class="{% if block.layout == 'hero-black' %} hero-block-img {% endif %}">
+                    <img src="{% if block.layout == 'hero-black' %}{{ media_url(block.media) }} {% endif %}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-block-media">
                 </div>
             </div>
         </div>
     </div>
 </div>
-{% endif %}
-{% if block.layout == "hero-black" %}
-    <div class="block_hero-2">
-        <div class="hero-black-background">
-            <div class="hero-block-grid">
-                <div class="hero-black-text-container">
-                    <div class="hero-black-overline">{{ block.overline }}</div>
-                    <div class="hero-black-headline">{{ block.headline }}</div>
-                    <div class="hero-black-copy copy">{{ block.copy }}</div>
-                    <a class="card_button_1 hero-block-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-block-container">
-            <div class="hero-block-grid">
-                <div class="hero-block-img">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-block-media">
-                </div>
-            </div>
-        </div>
-    </div>
-{% endif %}

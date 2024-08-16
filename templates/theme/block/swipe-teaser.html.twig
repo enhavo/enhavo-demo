@@ -1,30 +1,30 @@
 <div class="block_swipe-teaser">
-    <div class="swipe-teaser-container">
+    <div class="swiper-theme-container">
         <div class="grid-gradient-container">
             <div class="teaser-wrapper">
-                <img src="{{ asset("/build/theme/images/headerbild copy.png")}}" class="teaser-swiper-media-gradient">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="teaser-swiper-media-gradient">
             </div>
             <div class="teaser-wrapper">
                 <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="teaser-swiper-media">
             </div>
             <div class="teaser-wrapper">
                 <div class="swiper-text-container">
-                    <div class="swiper-overline overline">{{ block.overline }}</div>
-                    <div class="headline">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
+                    <div class="swiper-overline theme-overline">{{ block.overline }}</div>
+                    <div class="theme-headline">{{ block.headline }}</div>
+                    <div class="theme-copy">{{ block.copy }}</div>
                 </div>
             </div>
             <div class="teaser-wrapper">
-                <img src="{{ asset("/build/theme/images/headerbild copy.png")}}" class="swiper-media-gradient">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="swiper-media-gradient">
             </div>
         </div>
-    </div>
-    <div class="navi">
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
+        <div class="navi">
+            <button class="btt-nav"></button>
+            <button class="btt-nav"></button>
+            <button class="btt-nav"></button>
+            <button class="btt-nav"></button>
+            <button class="btt-nav"></button>
+        </div>
     </div>
 </div>
 

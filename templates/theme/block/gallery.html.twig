@@ -1,31 +1,30 @@
-{% if block.layout == "gallery" %}
 <div class="block-gallery">
-    <div class="container">
-        <div class="gallery-content">
-            {% for block in block.items %}
-                <div class=" {% if loop.index == 2 or loop.index == 4 or loop.index == 5 %} item_2 {% endif %}">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery_img">
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-{% endif %}
-{% if block.layout == "gallery-black" %}
-    <div class="black-gallery">
-        <div class="container">
-            <div class="gallery-black-content-grid">
-                <button class="left">&#60;</button>
-                <div class="gallery-black-text-container">
-                    <div class="gallery-black-button">
-                        <button class="xbutton">&times;</button>
+    <div class="theme-container">
+        {% if block.layout == "gallery" %}
+            <div class="gallery-grid">
+                {% for block in block.items %}
+                    <div class=" item_2">
+                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery_img">
                     </div>
-                    <span class="gallery-black-headline">{{ block.headline }}</span>
-                    <span class="galley-black-text">{{ block.text }}</span>
-                    <div class="gallery-black-copy">{{ block.copy }}</div>
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if block.layout == "gallery-black" %}
+            <div class="gallery-black-wrapper">
+                <div class="gallery-black-grid">
+                        <div class="gallery-black-text-container">
+                            <span class="theme-headline gallery-headline">{{ block.headline }}</span>
+                            <div class="theme-copy gallery-copy">{{ block.copy }}</div>
+                        </div>
+                        <img src="{{ asset('/build/theme/images/x-button.png') }}" alt="x-butyon" class="x-button">
+                    <div class="gallery-image-wrapper">
+                        <div class="gallery-black-button">
+                            <img src="{{ asset('/build/theme/images/prev-btn.png') }}" alt="prev-btn">
+                        </div>
+                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
+                    </div>
                 </div>
             </div>
-         </div>
+        {% endif %}
     </div>
-{% endif %}
+</div>

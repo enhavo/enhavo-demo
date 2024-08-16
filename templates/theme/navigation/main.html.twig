@@ -1,5 +1,3 @@
 {% if navigation is defined and navigation.main %}
-    {% for node in navigation.main.nodes %}
-        {{ navigation_node_render(node, "main") }}
-    {% endfor %}
+    {% include "/theme/navigation/main/page.html.twig" %}
 {% endif %}

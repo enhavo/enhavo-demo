@@ -1,13 +1,13 @@
 <div class="block-team">
-    <div class="container">
-        <div class="text_container">
+    <div class="theme-container">
+        <div class="team-grid">
             {% for block in block.items %}
-                <div class="team-img {% if loop.index == 4 %} team-img-4{% endif %}">
+                <div class="team-img">
                     <img src="{{ media_url(block.teamMember.picture) }}" alt="{{ media_parameter(block.teamMember.picture, 'alt') }}">
-                    <div class="team-4">
-                        <div class="position">{{ block.position }}</div>
-                        <span class="headline">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
-                        <div class="team-contact">
+                    <div class="team-text-container">
+                        <div class="theme-overline">{{ block.position }}</div>
+                        <span class="theme-headline">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
+                        <div class="theme-copy">
                             <div>{{ block.teamMember.phone }}</div>
                             <div>{{ block.teamMember.email }}</div>
                         </div>

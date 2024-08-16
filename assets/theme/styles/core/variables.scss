@@ -1,11 +1,30 @@
 // Colors
 $primaryColor: #d50032;
+$textColor1:#fff;
+$textColor2:#000;
+$textColor3:#171717;
 
-// Fonts
-$fontSize: 10px;
-$fontFamily: Verdana, sans-serif;
+// root Fonts
+$fontSize: 16px;
+
+//fonts
+$fontSizeOverline:1.06rem;
+$fontSizeHeadline1:1.5rem;//==>24px
+$fontSizeCopy:1.125rem;//==>18px
+
+
+//font family
+$fontFamily1: "Open Sans";
+$fontFamily2: "Source Sans Pro";
+
+//line heights
 $lineHeight: 1.2em;
-$lineHeightHeadline: 1.2em;
+$lineHeightOverline: 1.26em;//===>19px/15
+$lineHeightHeadline1: 1.33em;//====>32px/24
+$lineHeightHeadline2: 1.2em;
+$lineHeightCopy: 1.44em;//====>26px/18
+$lineHeightButton: 1.055em;//===>19px/18
 $lineHeightReduced: 1.2em;
-
 // Spaces
+//font weight
+$fontWeight:400;

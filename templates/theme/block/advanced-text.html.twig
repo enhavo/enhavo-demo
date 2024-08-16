@@ -1,58 +1,20 @@
-{# Template for container block advanced_text_block #}
-{#{{ dump(block) }}#}
-<div class="advance-text-block">
-    <div class="container">
+<div class="block-advance-text">
+    <div class="theme-container">
         <div class="advanced-text-grid">
-            {% if block.layout == 'headline-breaker' %}
-                <div class="advanced-text-container">
-                    <div class="overline">{{ block.overline }}</div>
-                    <div class="advanced-text-big-headline">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
-                    <a class="card_button_1"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+            <div class="advanced-text-{{ block.layout }}">
+                <div class="theme-overline ">{{ block.overline }}</div>
+                <div class="theme-headline bold-headline">{{ block.headline }}</div>
+                <div class="theme-copies">
+                    {% if block.copy is iterable %}
+                        {% for text in block.copy %}
+                            <div class="theme-copy">{{ text }}</div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="theme-copy bold-copy">{{ block.copy }}</div>
+                    {% endif %}
                 </div>
-            {% endif %}
-
-            {% if block.layout == 'text-big' %}
-                <div class="advanced-text-text-big">
-                    <div class="overline">{{ block.overline }}</div>
-                    <div class="headline">{{ block.headline }}</div>
-                    <div class="advanced-text-big-copy">{{ block.copy }}</div>
-                    <a class="card_button_1"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
-            {% endif %}
-
-            {% if block.layout == 'one-column' %}
-                <div class="advanced-text-one-column">
-                    <div class="overline">{{ block.overline }}</div>
-                    <div class="headline">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
-                    <a class="card_button_1"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
-            {% endif %}
-
-            {% if block.layout == 'two-column-wide' %}
-                <div class="advanced-text-two-column-wide">
-                    <div class="overline">{{ block.overline }}</div>
-                    <div class="headline">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
-                    <a class="card_button_1"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
-            {% endif %}
-
-            {% if block.layout == 'two-column' %}
-                <div class="advanced-text-two-column">
-                    <div class="overline">{{ block.overline }}</div>
-                    <div class="headline">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
-                </div>
-                <div class="column">
-                        <div class="copy">{{ block.copy }}</div>
-                    <div class="two-button">
-                        <a class="card_button_1" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                    </div>
-                </div>
-            {% endif %}
+                <a class="theme-button advanced-text-button two-column-btn"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+            </div>
         </div>
     </div>
 </div>
-

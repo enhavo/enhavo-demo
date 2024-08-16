@@ -1,72 +1,67 @@
-.block_swipe-teaser{
-  margin: 90px 0 50px;
+.block_swipe-teaser {
+  padding-top: 150px;
+  .swiper-theme-container {
+    padding: 0 135px;
+    .grid-gradient-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 51px;
+      .teaser-wrapper {
+        grid-column: span 1;
+        max-width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .teaser-swiper-media-gradient {
+        border: 1px solid green;
+        width: 100%;
+        grid-column: 2;
+        grid-row: 1;
+        z-index: -1;
+        background-size: cover;
+      }
+      .teaser-swiper-media {
+        width: 100%;
+        grid-column: span 3;
+        grid-row: 1;
+        z-index: -1;
+        background-size: cover;
+        border: 1px solid gray;
+      }
+      .swiper-text-container {
+        grid-column: 4;
+      }
+      .swiper-overline {
+        margin-top: 32px;
+      }
+      .swiper-media-gradient {
+        width: 100%;
+        grid-column: span 5;
+        grid-row: 1;
+        z-index: -1;
+        background-size: cover;
+        border: 1px solid green;
+      }
+    }
+    .navi {
+      margin-top: 73px;
+      display: flex;
+      justify-content: center;
+    }
+    .btt-nav {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      border-radius: 50%;
+      border: 1px solid;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btt-nav:hover,
+    .btt-nav.active {
+      background-color: #333;
+    }
+  }
 }
-.swipe-teaser-container{
-  width: 100%;
-}
-.grid-gradient-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 51px;
-  margin-inline: auto;
-
-  .teaser-wrapper {
-    grid-column: span 2;
-  }
-
-  .teaser-swiper-media-gradient {
-    border: 1px solid green;
-    width: 100%;
-    grid-column: 2;
-    grid-row: 1;
-    z-index: -1;
-    background-size: cover;
-  }
-
-  .teaser-swiper-media {
-    width: 100%;
-    grid-column: span 3;
-    grid-row: 1;
-    z-index: -1;
-    background-size: cover;
-    border: 1px solid gray;
-  }
-
-  .swiper-text-container {
-    grid-column: 4;
-  }
-
-  .swiper-overline {
-    margin-top: 32px;
-  }
-
-  .swiper-media-gradient {
-    width: 100%;
-    grid-column: span 5;
-    grid-row: 1;
-    z-index: -1;
-    background-size: cover;
-    border: 1px solid green;
-  }
-}
-  .navi {
-    margin-top: 73px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .btt-nav {
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    border-radius: 50%;
-    border: 1px solid;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .btt-nav:hover,
-  .btt-nav.active {
-    background-color: #333;
-  }
 
