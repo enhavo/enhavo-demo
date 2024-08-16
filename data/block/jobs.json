@@ -9,42 +9,43 @@
     "data": {
         "block": {
             "overline": "Alle anzeigen",
-            "form": {
-                "select": {
-                    "type": "select",
-                    "headline": "Dies ist eine Headline"
+            "jobs": [
+                {
+                    "type": "Vollzeit",
+                    "title": "Hier steht eine headline",
+                    "ctaTitle": "Dies ist ein CTA",
+                    "ctaLink": "",
+                    "ctaTarget":""
                 },
-                "text": {
-                    "type": "text",
-                    "label": "Vollzeit",
-                    "placeholder": "Hier steht eine headline",
-                    "text": "Dies ist ein CTA"
+                {
+                    "type": "Teilzeit",
+                    "title": "Hier steht eine headline",
+                    "ctaTitle": "Dies ist ein CTA",
+                    "ctaLink": "",
+                    "ctaTarget":""
                 },
-                "email": {
-                    "type": "email",
-                    "label": "Vollzeit",
-                    "placeholder": "Hier steht eine headline",
-                    "text": "Dies ist ein CTA"
+                {
+                    "type": "Praktikum",
+                    "title": "Dier steht eine headline",
+                    "ctaTitle": "Dies ist ein CTA",
+                    "ctaLink": "",
+                    "ctaTarget":""
                 },
-                "text": {
-                    "type": "text",
-                    "label": "Vollzeit",
-                    "placeholder": "Hier steht eine headline",
-                    "text": "Dies ist ein CTA"
+                {
+                    "type": "Vollzeit",
+                    "title": "Hier steht eine headline",
+                    "ctaTitle": "Dies ist ein CTA",
+                    "ctaLink": "",
+                    "ctaTarget":""
                 },
-                "text": {
-                    "type": "text",
-                    "label": "Vollzeit",
-                    "placeholder": "Hier steht eine headline",
-                    "text": "Dies ist ein CTA"
-                },
-                "text": {
-                    "type": "text",
-                    "label": "Vollzeit",
-                    "placeholder": "Hier steht eine headline",
-                    "text": "Dies ist ein CTA"
+                {
+                    "type": "Vollzeit",
+                    "title": "Hier steht eine headline",
+                    "ctaTitle": "Dies ist ein CTA",
+                    "ctaLink": "",
+                    "ctaTarget":""
                 }
-            }
+            ]
         }
     }
 }
