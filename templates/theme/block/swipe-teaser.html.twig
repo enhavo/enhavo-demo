@@ -1,21 +1,21 @@
 <div class="block_swipe-teaser space-top">
     <div class="swiper-theme-container">
-        <div class="grid-gradient-container">
-            <div class="teaser-wrapper">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="teaser-swiper-media-gradient">
+        <div class="grid">
+            <div class="wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
             </div>
-            <div class="teaser-wrapper">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="teaser-swiper-media">
+            <div class="wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media">
             </div>
-            <div class="teaser-wrapper">
-                <div class="swiper-text-container">
-                    <div class="swiper-overline theme-overline">{{ block.overline }}</div>
+            <div class="wrapper">
+                <div class="text-container">
+                    <div class="overline theme-overline">{{ block.overline }}</div>
                     <div class="theme-headline">{{ block.headline }}</div>
                     <div class="theme-copy">{{ block.copy }}</div>
                 </div>
             </div>
-            <div class="teaser-wrapper">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="swiper-media-gradient">
+            <div class="wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
             </div>
         </div>
         <div class="navi">
