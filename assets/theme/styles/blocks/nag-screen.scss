@@ -1,47 +1,12 @@
 .block-nag-screen {
- padding-top: 150px;
-  .nag-screen-wrapper {
-    height: 545px;
-    background: rgba(54, 247, 234, 1);
-    display: flex;
-    .nag-screen-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 51px;
-      .times {
-        grid-column: 6 / span 1;
-        font-size: 30px;
-        place-self: center;
-      }
-      .nag-screen-container {
-        grid-column: 2 / span 4;
-        display: flex; flex-direction: column;align-items: center;
-        .nag-screen-overline {
-          text-align: center;
-          font-size: 0.93rem;
-        }
-        .nag-screen-headline {
-          width: 30%;
-          margin-top: 10px;
-          color: $textColor3;
-          text-align: center;
-          font-family: $fontFamily1;
-          font-size: 3.125rem;
-          font-weight: 700;
-          line-height: 1.28em;
-          text-transform: uppercase;
-        }
-        .nag-screen-copy {
-          margin-top: 25px !important;
-          text-align: center;
-        }
-        .nag-screen-btt {
-          margin-top: 35px;
-          grid-column: 3 / span 2;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+  .wrapper { display: flex;flex-direction:column;align-items: center; justify-content: center; height: 545px;background: rgba(54, 247, 234, 1);
+    .flex {display: flex;flex-direction: column;padding: 0 20.8px;
+      .times-icon {;font-size: 30px;place-self: self-end;}
+      .text-container {display: flex; flex-direction: column;align-items: center;
+        .overline {text-align: center;font-size: 0.93rem;}
+        .headline {width: 30%;margin-top: 10px;color: $textColor3;text-align: center;@include boldHeadline();}
+        .copy {margin-top: 25px;text-align: center;}
+        .cta{@include cta();}
       }
     }
   }

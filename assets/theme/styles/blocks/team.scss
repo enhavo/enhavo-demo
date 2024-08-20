@@ -1,24 +1,9 @@
 .block-team {
-  padding-top: 150px;
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 51px;
-    .team-img {
-      grid-column: span 1;
-      text-align: center;
-      img{
-        max-width: 100%;
-      }
-      &:nth-of-type(4) {
-       place-self: flex-end;
-      } &:nth-of-type(5) {
-        place-self: flex-end;
-      }
-      .team-text-container {
-        grid-column: 2 / span 2;
-        margin-top: 20px;
-      }
+  .team-grid {display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 51px;
+    .team-img {grid-column: span 1;text-align: center;
+      img{max-width: 100%;}
+      &:nth-of-type(4) {place-self: flex-end;} &:nth-of-type(5) {place-self: flex-end;}
+      .team-text-container {grid-column: 2 / span 2;margin-top: 20px;}
     }
   }
 }

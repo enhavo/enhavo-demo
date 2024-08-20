@@ -41,14 +41,11 @@
                     "label": "NACHRICHT",
                     "placeholder": "HALLO, ICH HABE EINE FRAGE.",
                     "is_required": false
-                },
-                {
-                    "type":"checkbox",
-                    "label":"Hiermit erkläre ich, dass ich die AGB aufmerksam gelesen habe und dass ich. Meine Einwilligung zur Verarbeitung meiner persönlichen Daten gemäß geltender Datenschutzverordung gebe.",
-                    "placeholder": null,
-                    "is_required": null
                 }
             ],
+            "type":"checkbox",
+            "label":"Hiermit erkläre ich, dass ich die AGB aufmerksam gelesen habe und dass ich. Meine Einwilligung zur Verarbeitung meiner persönlichen Daten gemäß geltender Datenschutzverordung gebe.",
+            "is_required": null,
             "ctaTitle": "KONTAKT AUFNEHMEN",
             "ctaLink": "http://google.com",
             "ctaTarget": "_blank"

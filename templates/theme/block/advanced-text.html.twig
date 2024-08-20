@@ -1,8 +1,8 @@
-<div class="block-advance-text">
+<div class="block-advance-text space-top">
     <div class="theme-container">
         <div class="advanced-text-grid">
-            <div class="advanced-text-{{ block.layout }}">
-                <div class="theme-overline ">{{ block.overline }}</div>
+            <div class="{{ block.layout }}">
+                <div class="theme-overline">{{ block.overline }}</div>
                 <div class="theme-headline bold-headline">{{ block.headline }}</div>
                 <div class="theme-copies">
                     {% if block.copy is iterable %}
@@ -13,7 +13,7 @@
                         <div class="theme-copy bold-copy">{{ block.copy }}</div>
                     {% endif %}
                 </div>
-                <a class="theme-button advanced-text-button two-column-btn"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                <a class="theme-cta cta two-column-btn"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
             </div>
         </div>
     </div>

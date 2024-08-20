@@ -1,44 +1,34 @@
-{% import _self as macro %}
-    {%  macro item(item) %}
-    {% if item.type == 'checkbox' %}
-        <div>
-            <input type="checkbox" name="{{ item.label }}" id="{{ item.label }}" value="checked">
-            <label for="{{ item.type }}" class="checkbox-label">{{ item.label }}</label>
-        </div>
-        {% else %}
-            <label for="{{ item.label }}" class="form-label">{{ item.label }}</label>
-            {% if item.type == 'select' %}
-                <select name="{{ item.label }}" id="{{ item.type }}">
-                    <option value=""> Auswählen </option>
-                    {% for option in item.options %}
-                        <option value="{{ option.value }}">{{ option.label }}</option>
-                    {% endfor %}
-                </select>
-                {% elseif item.type == 'textarea' %}
-                    <textarea name="{{ item.label }}" id="{{ item.type }}" placeholder="{{ item.placeholder }}"></textarea>
-                {% else %}
-                    <input type="{{ item.type }}" name="{{ item.type }}" id="{{ item.type }}" placeholder="{{ item.placeholder }}">
-            {% endif %}
-            {% endif %}
-
-            {% if item.is_required %}
-                <div class="required">Dieses Feld muss ausgefüllt sein.</div>
-            {% endif %}
-{% endmacro %}
-<div class="block-form">
+<div class="block-form space-top">
     <div class="theme-container">
         <div class="form-grid" data-controller="form">
-            <div class="form-text-container">
-                <div class="form-text-headline">{{ block.headline }}</div>
-                <div class="form_text-overline">{{ block.overline }}</div>
-                <div class="form-text-copy">{{ block.text }}</div>
+            <div class="text-container">
+                <div class="theme-headline headline">{{ block.headline }}</div>
+                <div class="theme-overline overline">{{ block.overline }}</div>
+                <div class="copy">{{ block.text }}</div>
             </div>
             <div class="form">
                 <div class="row">
                     {% for item in block.form %}
-                        {{ macro.item(item) }}
+                        <label for="{{ item.label }}" class="label">{{ item.label }}</label>
+                        {% if item.type == 'select' %}
+                            <select name="{{ item.label }}" id="{{ item.type }}">
+                                <option value=""> Auswählen </option>
+                                {% for option in item.options %}
+                                    <option value="{{ option.value }}">{{ option.label }}</option>
+                                {% endfor %}
+                            </select>
+                            {% elseif item.type == 'textarea' %}
+                                <textarea name="{{ item.label }}" id="{{ item.type }}" placeholder="{{ item.placeholder }}"></textarea>
+                            {% else %}
+                                <input type="{{ item.type }}" name="{{ item.type }}" id="{{ item.type }}" placeholder="{{ item.placeholder }}">
+                        {% endif %}
+                        {% if item.is_required %}
+                            <div class="required">Dieses Feld muss ausgefüllt sein.</div>
+                        {% endif %}
                     {% endfor %}
-                    <div class="theme-button form_button">{{ block.ctaTitle }}</div>
+                    <input type="checkbox" name="{{ block.label }}" id="{{ block.label }}" value="checked">
+                    <label for="{{ block.type }}" class="checkbox-label">{{ block.label }}</label>
+                    <div class="theme-cta cta">{{ block.ctaTitle }}</div>
                 </div>
             </div>
         </div>

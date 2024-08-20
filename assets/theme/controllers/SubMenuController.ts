@@ -3,6 +3,5 @@ import * as $ from 'jquery';
 export default class extends Controller{
 
     connect() {
-        console.log('subMenu working')
     }
 }

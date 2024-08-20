@@ -1,4 +1,4 @@
-<div class="block-gallery">
+<div class="block-gallery space-top">
     <div class="theme-container">
         {% if block.layout == "gallery" %}
             <div class="gallery-grid">
@@ -12,19 +12,20 @@
         {% if block.layout == "gallery-black" %}
             <div class="gallery-black-wrapper">
                 <div class="gallery-black-grid">
-                        <div class="gallery-black-text-container">
-                            <span class="theme-headline gallery-headline">{{ block.headline }}</span>
-                            <div class="theme-copy gallery-copy">{{ block.copy }}</div>
-                        </div>
-                        <img src="{{ asset('/build/theme/images/x-button.png') }}" alt="x-butyon" class="x-button">
-                    <div class="gallery-image-wrapper">
-                        <div class="gallery-black-button">
+                    <div class="gallery-black-text-container">
+                        <span class="theme-headline gallery-headline">{{ block.headline }}</span>
+                        <div class="theme-copy gallery-copy">{{ block.copy }}</div>
+                    </div>
+                    <img src="{{ asset('/build/theme/images/x-button.png') }}" alt="x-butyon" class="x-button">
+                    <div class="prev-button">
                             <img src="{{ asset('/build/theme/images/prev-btn.png') }}" alt="prev-btn">
                         </div>
+                    <div class="gallery-image-wrapper">
                         <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
                     </div>
-                </div>
+                {% endif %}
             </div>
-        {% endif %}
+        </div>
     </div>
 </div>
+

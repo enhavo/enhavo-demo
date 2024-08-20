@@ -1,109 +1,25 @@
 .block-form {
- padding-top: 150px;
-  .form-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 51px;
-    .form-text-container {
-      grid-column: 2 / span 4;
-      .form-text-headline {
-        color: $textColor3;
-        font-family: $fontFamily1;
-        font-size: 3.125rem;
-        line-height: 1.28em;
-        text-transform: uppercase;
-      }
-      .form_text-overline {
-        color: #171717;
-        font-family: $fontFamily1;
-        font-size: 0.93rem;
-        line-height: 1.26em;
-        letter-spacing: 0.375px;
-        text-transform: uppercase;
-      }
-      .form-text-copy {
-        margin-top: 30px;
-        color: $textColor3;
-        font-family: $fontFamily1;
-        font-size: 1rem;
-        line-height: 1.25em;
+  .form-grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
+    .text-container {grid-column: 2 / span 4;
+      .headline {color: $textColor3;@include boldHeadline();}
+      .overline {font-size: 0.93rem;}
+      .copy {margin-top: 30px;color: $textColor3;font-family: $fontFamily1;font-size: 1rem;line-height: 1.25em;
       }
     }
-    .form {
-      grid-column: 2 / span 4;
-
-      .row {
-        margin-bottom: 1rem;
-
-        .form-label {
-          font-family: $fontFamily1;
-          font-size: $fontSizeCopy;
-          line-height: $lineHeightButton;
-          letter-spacing: 0.45px;
-          text-transform: uppercase;
-        }
+    .form {grid-column: 2 / span 4;
+      .row {margin-bottom: 1rem;
+        .label {font-family: $fontFamily1;font-size: $fontSizeCopy;line-height: $lineHeightButton;letter-spacing: 0.45px;text-transform: uppercase;}
         input[type="text"],
-        select,textarea{
-          margin: 9px 0 20px 0;
-        }
-        input[type="email"]{
-          margin: 9px 0 0 0;
-        }
-        input[type="text"],
-        input[type="email"],
-        textarea,
-        select {
-          width: 100%;
-          background: #FFFFFF;
-          border: 1px solid #171717;
-          opacity: 1;
-          padding: 1rem;
-        }
-        input[type="email"] {
-          border: 1px solid #DB5245;
-          color: #CBCBCB;
-        }
-        #email::placeholder,
-        #text::placeholder,
-        textarea::placeholder,
-        select{
-          color: $textColor3;
-          font-family: $fontFamily1;
-          font-size: $fontSizeCopy;
-          line-height: $lineHeightButton;
-          letter-spacing: 0.45px;
-          text-transform: uppercase;
-        }
-        #email::placeholder {
-          color: #CBCBCB;
-        }
-        select {
-          color: #CBCBCB;
-        }
-        label[for='checkbox'],
-        .required{
-          font-size:0.625rem ;
-          line-height: 2.6em;
-          font-weight:$fontWeight ;
-          letter-spacing: 0.1px;
-        }
-        label[for='checkbox']{
-          text-transform: capitalize;
-        }
-        .required {
-          color: #DB5245;
-          padding-bottom: 20px;
-        }
-        .form_button {
-          padding: 1rem;
-          margin-top: 2%;
-          width: 100%;
-          border: 2px solid #171717;
-          border-radius: 100px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+        select,textarea{margin: 9px 0 20px 0;}
+        input[type="email"]{margin: 9px 0 0 0;} input[type="text"], input[type="email"], textarea, select {width: 100%;background: #FFFFFF;border: 1px solid #171717;opacity: 1;padding: 1rem;}
+        input[type="email"] {border: 1px solid #DB5245;color: #CBCBCB;}
+        #email::placeholder, #text::placeholder, textarea::placeholder, select{color: $textColor3;font-family: $fontFamily1;font-size: $fontSizeCopy;line-height: $lineHeightButton;letter-spacing: 0.45px;text-transform: uppercase;}
+        #email::placeholder {color: #CBCBCB;}
+        select {color: #CBCBCB;}
+        label[for='checkbox'], .required{font-size:0.625rem ;line-height: 2.6em;font-weight:$fontWeight ;letter-spacing: 0.1px;}
+        label[for='checkbox']{text-transform: capitalize;margin-left: 1%;}
+        .required {color: #DB5245;padding-bottom: 20px;}
+        .cta {@include cta();padding: 1rem;margin-top: 2%;width: 100%;height: auto;}
       }
     }
   }

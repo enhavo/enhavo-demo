@@ -1,60 +1,21 @@
 .block-gallery {
-  padding-top: 150px;
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 51px;
-    .item_2 {
-      &:nth-child(2) {
-        grid-row: span 2;
-      }
-      &:nth-child(4) {
-        grid-row: span 2;
-      }
-      &:nth-child(5) {
-        grid-row: span 2;
-      }
+  .gallery-grid {display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 51px;
+    .item_2 { &:nth-child(2) {grid-row: span 2;}
+      &:nth-child(4) {grid-row: span 2;}
+      &:nth-child(5) {grid-row: span 2;}
     }
-    .gallery_img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      vertical-align: top;
-    }
+    .gallery_img {width: 100%;height: auto;object-fit: cover;}
   }
-  .gallery-black-wrapper {
-    background-color: #171717;
-    opacity: 0.9;
-    height: 1009px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .gallery-black-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 51px;
-      margin: 0 auto;
-      max-width: 1390px;
-      .x-button {
-        grid-column: 3 / span 1;
-        color: #FFFFFF;
-        font-size: 30px;
+  .gallery-black-wrapper {background-color: #171717;opacity: 0.9;height: 1009px;display: flex;flex-direction: column;justify-content: center;
+    .gallery-black-grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;padding: 0 35px;
+      .gallery-black-text-container {grid-column: 2 / span 4;
+        .gallery-headline {color: $textColor1;}
+        .gallery-copy {color: $textColor1;}
       }
-      .gallery-black-text-container {
-        grid-column: 1 / span 2;
-        .gallery-headline {
-          color: #FFFFFF;
-        }
-        .gallery-copy {
-          color: #FFFFFF;
-        }
-      }
-      .gallery-image-wrapper{
-        grid-column: span 2;
-        display: flex;justify-content:space-evenly;align-items: center;
-        img{
-          max-width: 100%;
-        }
+      .x-button {grid-column: 6 / span 1;color: $textColor1;}
+      .prev-button{display: flex;justify-content: center;align-items: center;}
+      .gallery-image-wrapper{grid-column: 2/span 4;display: flex;justify-content:space-evenly;align-items: center;
+        img{max-width: 100%;}
       }
     }
   }

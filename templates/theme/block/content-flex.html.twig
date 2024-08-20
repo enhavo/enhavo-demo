@@ -1,14 +1,14 @@
-<div class="block-content-flex">
+<div class="block-content-flex space-top">
     <div class="theme-container">
         <div class="block-{{ block.layout }}-grid">
             {% for item in block.items %}
-                <div class="block-image {% if block.layout == 'list' %}content-list-img-wrapper{% else %}content-{{ block.layout }}-img-wrapper{% endif %}">
+                <div class="block-image {% if block.layout == 'list' %}{{ block.layout }}-img-wrapper{% endif %}">
                     <img src="{{ media_url(item.media) }}" alt="{{ media_parameter(item.media, 'alt') }}">
-                    <div class="texts_container">
+                    <div class="texts-container">
                         <div class="theme-overline content-flex-overline ">{{ item.overline }}</div>
                         <div class="theme-headline">{{ item.headline }}</div>
                         <div class="theme-copy">{{ item.copy }}</div>
-                        <a class="theme-button content-flex-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
+                        <a class="theme-cta cta" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
                     </div>
                 </div>
             {% endfor %}

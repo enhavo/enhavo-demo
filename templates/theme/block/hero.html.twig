@@ -1,21 +1,23 @@
-<div class="block_hero">
+<div class="block_hero space-top">
     <div class="theme-container">
-        <div class="{% if block.layout == 'hero-black' %}hero-container{% endif %}">
-            <div class="{{ block.layout }}-grid">
-                <div class="hero-image-wrapper">
+        <div class="{% if block.layout == 'hero-black' %}black-container{% endif %}">
+            <div class="{{ block.layout }}-flex">
+                <div class="image-wrapper">
                     <img src="{% if block.layout == 'hero' %}{{ media_url(block.media) }}{% endif %}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
                 </div>
-                <div class="hero-text-container {% if block.layout == 'hero-black' %} hero-black-text-container {% endif %}">
-                    <div class="theme-overline hero-black-overline">{{ block.overline }}</div>
-                    <div class="hero-headline theme-headline hero-black-headline">{{ block.headline }}</div>
-                    <div class="theme-copy hero-black-copy">{{ block.copy }}</div>
+                <div class="text-container {% if block.layout == 'hero-black' %} black-text-container {% endif %}">
+                    <div class="theme-overline overline">{{ block.overline }}</div>
+                    <div class="hero-headline theme-headline black-headline">{{ block.headline }}</div>
+                    <div class="theme-copy copy">{{ block.copy }}</div>
                     {% if block.ctaTitle and block.ctaLink is not null %}
-                    <a class="theme-button hero-black-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{% if block.layout == 'hero-black' %}{{ block.ctaTitle }}{% endif %}</a>
+                    <a class="theme-cta cta" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{% if block.layout == 'hero-black' %}{{ block.ctaTitle }}{% endif %}</a>
                     {% endif %}
                 </div>
-                <div class="{% if block.layout == 'hero-black' %} hero-block-img {% endif %}">
-                    <img src="{% if block.layout == 'hero-black' %}{{ media_url(block.media) }} {% endif %}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-block-media">
-                </div>
+                {% if block.layout == 'hero-black' %}
+                    <div class=" black-img ">
+                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="black-media">
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

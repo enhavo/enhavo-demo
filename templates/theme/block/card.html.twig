@@ -1,36 +1,15 @@
-<div class="block-card">
+<div class="block-card space-top">
     <div class="theme-container">
-        <div class="grid-container">
-            {% if block.layout == "media-text" %}
-            <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="card-media-img">
-                <div class="texts-container">
-                    <div class="theme-overline overline">{{ block.overline }}</div>
-                    <div class="theme-headline headline">{{ block.headline }}</div>
-                    <div class="theme-copy">{{ block.copy }}</div>
-                    <a class="theme-button card-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
-            {% endif%}
-            {% if block.layout == "media-text-gradient" %}
+        <div class="{{ block.layout }}-grid">
+            <div class="media-container">
                 <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="card-media-img">
-                <img src="{{ asset("/build/theme/images/Pfad 25512 copy.svg")}}" class="card-media-gradient-img" alt="media-gradient-img">
-                <div class="gradient-texts-container">
-                    <div class="theme-overline">{{ block.overline }}</div>
-                    <div class="theme-headline">{{ block.headline }}</div>
-                    <div class="theme-copy">{{ block.copy }}</div>
-                    <a class="theme-button card-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
-            {% endif%}
-        </div>
-        <div class="media-stacked-grid">
-            {% if block.layout == "media-text-stacked" %}
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-text-stacked-img">
-                <div class="media-text-stacked-text-container">
-                    <div class="theme-overline ">{{ block.overline }}</div>
-                    <div class="theme-headline ">{{ block.headline }}</div>
-                    <div class="theme-copy ">{{ block.copy }}</div>
-                    <a class="theme-button card-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                </div>
-             {% endif%}
+            </div>
+            <div class="card-{{ block.layout }}">
+                <div class="theme-overline overline">{{ block.overline }}</div>
+                <div class="theme-headline headline">{{ block.headline }}</div>
+                <div class="theme-copy">{{ block.copy }}</div>
+                <a class="theme-cta cta"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+            </div>
         </div>
     </div>
 </div>

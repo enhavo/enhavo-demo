@@ -1,16 +1,8 @@
 .block-logo {
-  padding-top: 150px;
-  .logo-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 51px;
-  }
-  .logo-overline {
-    grid-column: span 6;
-    color: $textColor3;
-    text-align: center;
-  }
-  .logo-container {
-    grid-column: span 1;
+  .logo-grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;}
+  .logo-overline {grid-column: span 6;color: $textColor3;text-align: center;}
+  .logo-container {grid-column: span 1;max-width: 100%;
+    img{width: 100%;}
   }
 }
+
