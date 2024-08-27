@@ -1,4 +1,4 @@
-@mixin cta(){
-  margin-top: 30px;display: flex;justify-content: center;align-items: center;border-radius: 40px;border: 2px solid #000;width: 280px;height: 51px;grid-column: span 3;cursor: pointer;text-decoration: none
-}
-@mixin boldHeadline{font-size: 3.125rem;line-height: 1.28em;}
+@mixin boldHeadline{font-size: 5rem;line-height: 1.28em;font-weight: $fontWeight;}
+@mixin typoHeadline{font-size:$fontSizeHeadline1;color: $textColor3;font-family: $fontFamily1; line-height: $lineHeightHeadline1;font-weight: $fontWeight; letter-spacing: 0.45px; text-transform: uppercase;}
+@mixin typoOverline{font-size:$fontSizeOverline;color: $textColor3;font-family: $fontFamily1; line-height: $lineHeightOverline;font-weight: $fontWeight; letter-spacing: 0.375px; text-transform: uppercase;}
+@mixin cta{border-radius: 40px;border: 2px solid #000;cursor: pointer;padding:15px 30px;text-decoration: none;}

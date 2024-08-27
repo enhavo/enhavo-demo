@@ -1,107 +1,107 @@
-.nav {
-  height: 123px;
-  position: relative;
-  background-color: transparent;
-
-  .navbar-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 51px;
-    align-items: center;
-    padding: 2.71rem;
-
-    .header-img {
-      grid-column: 1 / span 2;
-      display: flex;
-      align-items: center;
-
-      img {
-        height: auto;
-        max-width: 100%;
-      }
-    }
-
-    .navigation {
-      grid-column: 3 / span 2; /* Spanning 3 columns */
-      display: flex;
-      justify-content: space-evenly;
-
-      .nav-item {
-        position: relative;
-        a {
-          font: normal normal normal 18px/19px Open Sans;
-          letter-spacing: 0.45px;
-          color: #FFFFFF;
-          text-transform: uppercase;
-          opacity: 1;
-          text-decoration: none;
-          &:hover {
-            color: #ffcc00;
-          }
-        }
-        &:hover .sub-menu-ul {
-          opacity: 1;
-          overflow: unset;
-          transform: translateY(0);
-        }
-      }
-      .sub-menu-ul {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: calc(100% + .25rem);
-        opacity: 0;
-        transform: translateY(-10px);
-        overflow: hidden;
-        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-      }
-
-      .sub-menu-list {
-        padding: 10px;
-        margin-left: 20px;
-      }
-
-      .list-font {
-        text-align: left;
-        text-transform: capitalize !important;
-        font: italic normal normal 18px/19px Open Sans !important;
-        letter-spacing: 0.45px;
-        color: #FFFFFF;
-        opacity: 1;
-      }
-
-      //then i use 100% so when clicked it will take the 100% in width the "open" i use in stimulus
-      .sub-menu-ul.open {
-        display: block;
-        max-height: 100%;
-      }
-    }
-    .header-info {
-      grid-column: 5 / span 2;
-      display: flex;
-      justify-content: end;
-      align-items: center;
-
-      .number {
-        margin-right: 0.5rem;
-        text-align: right;
-        font: normal normal normal 20px/32px Open Sans;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        opacity: 1;
-      }
-    }
-    .hamburger {
-      display: none;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      color: #fff;
-      font-size: 24px;
-    }
-  }
-}
+//.nav {
+//  height: 123px;
+//  position: relative;
+//  background-color: transparent;
+//
+//  .navbar-grid {
+//    display: grid;
+//    grid-template-columns: repeat(6, 1fr);
+//    grid-gap: 51px;
+//    align-items: center;
+//    padding: 2.71rem;
+//
+//    .header-img {
+//      grid-column: 1 / span 2;
+//      display: flex;
+//      align-items: center;
+//
+//      img {
+//        height: auto;
+//        max-width: 100%;
+//      }
+//    }
+//
+//    .navigation {
+//      grid-column: 3 / span 2; /* Spanning 3 columns */
+//      display: flex;
+//      justify-content: space-evenly;
+//
+//      .nav-item {
+//        position: relative;
+//        a {
+//          font: normal normal normal 18px/19px Open Sans;
+//          letter-spacing: 0.45px;
+//          color: #FFFFFF;
+//          text-transform: uppercase;
+//          opacity: 1;
+//          text-decoration: none;
+//          &:hover {
+//            color: #ffcc00;
+//          }
+//        }
+//        &:hover .sub-menu-ul {
+//          opacity: 1;
+//          overflow: unset;
+//          transform: translateY(0);
+//        }
+//      }
+//      .sub-menu-ul {
+//        position: absolute;
+//        width: 100%;
+//        left: 0;
+//        top: calc(100% + .25rem);
+//        opacity: 0;
+//        transform: translateY(-10px);
+//        overflow: hidden;
+//        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+//      }
+//
+//      .sub-menu-list {
+//        padding: 10px;
+//        margin-left: 20px;
+//      }
+//
+//      .list-font {
+//        text-align: left;
+//        text-transform: capitalize !important;
+//        font: italic normal normal 18px/19px Open Sans !important;
+//        letter-spacing: 0.45px;
+//        color: #FFFFFF;
+//        opacity: 1;
+//      }
+//
+//      //then i use 100% so when clicked it will take the 100% in width the "open" i use in stimulus
+//      .sub-menu-ul.open {
+//        display: block;
+//        max-height: 100%;
+//      }
+//    }
+//    .header-info {
+//      grid-column: 5 / span 2;
+//      display: flex;
+//      justify-content: end;
+//      align-items: center;
+//
+//      .number {
+//        margin-right: 0.5rem;
+//        text-align: right;
+//        font: normal normal normal 20px/32px Open Sans;
+//        letter-spacing: 0px;
+//        color: #FFFFFF;
+//        text-transform: uppercase;
+//        opacity: 1;
+//      }
+//    }
+//    .hamburger {
+//      display: none;
+//      background-color: transparent;
+//      border: none;
+//      cursor: pointer;
+//      color: #fff;
+//      font-size: 24px;
+//    }
+//  }
+//}
 @media screen and (max-width: 1169px) {
   .header-info{
     display: none;

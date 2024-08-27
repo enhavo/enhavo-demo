@@ -1,0 +1,16 @@
+.block-content {
+  .flex-grid {display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 51px;
+    .image-container {grid-column: span 1;
+      img{width: 100%;}
+      .texts-container{padding-top: 20px}
+    }
+  }
+  .headline{padding: 5px 0 15px 0;@include typoHeadline;}
+  .overline{@include typoOverline;}
+  .list-grid {display: grid;grid-gap: 51px;
+    .list-img-wrapper {grid-column: span 1;display: flex;gap: 50px;justify-content: center;align-items: center;
+      img {width: 100%}
+    }
+  }
+  .theme-cta{@include cta();}
+}

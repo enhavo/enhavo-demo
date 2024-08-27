@@ -1,15 +1,18 @@
 <div class="block-nag-screen space-top">
-    <div class="wrapper">
-        <div class="theme-container">
+    <div class="theme-container">
+        <div class="wrapper">
+            <button class="icon">&#215;</button>
             <div class="flex">
-                <button class="times-icon">&#215;</button>
                 <div class="text-container">
-                    <div class="theme-overline overline ">{{ block.overline }}</div>
-                    <div class="theme-headline headline ">{{ block.headline }}</div>
-                    <div class="theme-copy copy">{{ block.copy }}</div>
-                    <a class="cta theme-cta"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                    <div class="overline ">{{ block.overline }}</div>
+                    <div class="headline ">{{ block.headline }}</div>
+                    <div class="copy">{{ block.copy }}</div>
+                    <div class="theme-button">
+                        <a class="theme-cta"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>

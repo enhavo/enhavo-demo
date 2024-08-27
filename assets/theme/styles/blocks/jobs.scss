@@ -3,20 +3,18 @@
     .left {flex: 1;
       .label {border: 1px solid #171717;}
       .span {display: flex;justify-content: space-between;padding: 1rem;}
-      .overline {color: $textColor3;font-size: 0.93rem;}
+      .overline {color: $textColor3;font-size: 1.5rem;@include typoOverline;}
       .icons-chevron-down:before {content: "\2228";}
-      .toggle-indicator {transform:scaleY(-1);transform-origin:50% 70%;}
+      .toggle-indicator {transform:scaleY(-1);}
         .caret-button {cursor: pointer;}
         .caret-up.open-job {margin-right: 10px;font-size: 24px;cursor: pointer;max-height: 100%;}
       }
     }
     .right {flex: 2;
       .items {border-bottom: 2px solid black;
-        .item-row {margin-bottom: 0.5rem;
-          .item-type {padding: 1rem 0;}
-          .item-wrapper {display: flex;justify-content: space-between;align-items: flex-end;
-            .item-text {pointer-events: none;color: #000;}
-          }
+        .type {padding: 1.5rem 0;@include typoOverline;}
+        .text-container {display: flex;justify-content: space-between;align-items: flex-end;
+          .copy {pointer-events: none;color: #000;}
         }
       }
     }

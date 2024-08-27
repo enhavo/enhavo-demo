@@ -8,7 +8,7 @@
     ],
     "data": {
         "block": {
-            "layout": "gallery-black",
+            "layout": "black",
                 "media": {
                     "id": 2,
                     "mimeType": "image/png",

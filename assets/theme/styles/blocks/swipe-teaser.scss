@@ -1,19 +1,18 @@
-.block_swipe-teaser {
-  .swiper-theme-container {padding: 0 135px;
+.block-swipe-teaser {
+  .theme-container{padding: 0;
     .grid {display: grid;grid-template-columns: repeat(4, 1fr);grid-gap: 51px;
-      .wrapper {grid-column: span 1;max-width: $maxWidth;
-        img {width: $width;}
+      img {width: $width;display: block}
+      .text-container {
+        .overline {@include typoOverline}
+        .headline {margin: 5px 0 15px ;@include typoHeadline}
       }
-      .media-gradient {border: 1px solid green;width: $width ;grid-column: 2;grid-row: 1;z-index: -1;background-size: cover;}
-      .media {width: $width;grid-column: span 3;grid-row: 1;z-index: -1;background-size: cover;border: 1px solid gray;}
-      .text-container {grid-column: 4;}
-      .overline {margin-top: 32px;}
-      .media-gradient {width: $width;grid-column: span 5;grid-row: 1;z-index: -1;background-size: cover;border: 1px solid green;}
     }
-    .navi {margin-top: 73px;display: flex;justify-content: center;}
-    .btt-nav {width: 12px;height: 12px;margin: 0 5px;border-radius: 50%;border: 1px solid;cursor: pointer;transition: background-color 0.3s ease;
-      .btt-nav:hover{.active {background-color: #333;} }
+    .navigation {margin-top: 73px;display: flex;justify-content: center;}
+    .nav-btn {width: 12px;height: 12px;margin: 0 5px;border-radius: 50%;border: 1px solid;cursor: pointer;transition: background-color 0.3s ease;
+      &:hover {background-color: #333;}
+      &.active {background-color: #333;}
     }
   }
 }
+
 

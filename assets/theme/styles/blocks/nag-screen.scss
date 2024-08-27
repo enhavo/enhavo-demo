@@ -1,12 +1,12 @@
 .block-nag-screen {
-  .wrapper { display: flex;flex-direction:column;align-items: center; justify-content: center; height: 545px;background: rgba(54, 247, 234, 1);
-    .flex {display: flex;flex-direction: column;padding: 0 20.8px;
-      .times-icon {;font-size: 30px;place-self: self-end;}
+  .wrapper { display: flex;flex-direction:column;align-items: center;background: rgba(54, 247, 234, 1);padding: 0 1% 5%;
+    .icon {;font-size: 30px;place-self: self-end;padding: 19.5px 0 0 0;}
+    .flex {display: flex;flex-direction: column;padding: 60px 0 0 0;
       .text-container {display: flex; flex-direction: column;align-items: center;
-        .overline {text-align: center;font-size: 0.93rem;}
-        .headline {width: 30%;margin-top: 10px;color: $textColor3;text-align: center;@include boldHeadline();}
-        .copy {margin-top: 25px;text-align: center;}
-        .cta{@include cta();}
+        .overline {text-align: center;@include typoOverline;}
+        .headline {width: 30%;margin-top: 10px;color: $textColor3;text-align: center;@include boldHeadline();text-transform: uppercase}
+        .copy {margin-top: 25px;text-align: center;width: 62%;}
+        .theme-cta{@include cta();}
       }
     }
   }

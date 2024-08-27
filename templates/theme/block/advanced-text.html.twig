@@ -1,19 +1,21 @@
 <div class="block-advance-text space-top">
     <div class="theme-container">
-        <div class="advanced-text-grid">
+        <div class="grid">
             <div class="{{ block.layout }}">
-                <div class="theme-overline">{{ block.overline }}</div>
-                <div class="theme-headline bold-headline">{{ block.headline }}</div>
-                <div class="theme-copies">
+                <div class="overline">{{ block.overline }}</div>
+                <div class="headline">{{ block.headline }}</div>
+                <div class="text-container">
                     {% if block.copy is iterable %}
                         {% for text in block.copy %}
-                            <div class="theme-copy">{{ text }}</div>
+                            <div class="text">{{ text }}</div>
                         {% endfor %}
                     {% else %}
-                        <div class="theme-copy bold-copy">{{ block.copy }}</div>
+                        <div class="copy">{{ block.copy }}</div>
                     {% endif %}
                 </div>
-                <a class="theme-cta cta two-column-btn"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                <div class="theme-button two-column-btn">
+                    <a class="theme-cta "  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                </div>
             </div>
         </div>
     </div>

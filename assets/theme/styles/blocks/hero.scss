@@ -1,23 +1,22 @@
-.block_hero {
+.block-hero {
   .hero-flex {display: flex;gap: 55px;
-    .image-wrapper{max-width: 100%;}
     .hero-media {flex: 1;width: 100%;}
     .text-container {flex: 1;display: flex;flex-direction: column;justify-content: center;
-      .hero-headline {width: 110%;@include boldHeadline();}
     }
   }
+  .overline{@include typoOverline;}
+  .headline{@include typoHeadline;text-transform: uppercase}
   .black-container {background-color: #171717;
-    .hero-black-flex {display: flex;justify-content: center;flex-wrap: wrap;grid-gap: 51px;
+    .hero-black-flex {display: flex;justify-content: center;flex-wrap: wrap;grid-gap: 51px;height: 565px;
       .black-text-container {width: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;
-        .hero-headline {color: $textColor1;@include boldHeadline();}
+        .hero-headline {color: $textColor1;}
         .overline{color: $textColor1;}
-        .headline{padding: 10px 0 15px 0;color: $textColor1;font-size: 3.125rem;line-height: 1.28em;}
-        .copy {width: 732px;color: $textColor1;text-align: center;}
-        .cta {@include cta();color:$textColor1;border: 1px solid $textColor1; }
+        .copy {width: 45%;color: $textColor1;text-align: center;}
+        .theme-cta {@include cta();color:$textColor1;border: 1px solid $textColor1;}
       }
-      .black-img {max-width: $maxWidth;display: flex;justify-content: center;align-items: center;
-         img{width: $width;}
-       }
+      .black-img {max-width: $maxWidth;display: flex;justify-content: center;align-items: center;}
     }
   }
+  .hero-headline {padding: 10px 0 15px 0;@include boldHeadline();}
+  img{width: $width;display: block}
 }
