@@ -1,12 +1,25 @@
 .block-quote {
-  .wrapper {background: $textColor3;
-    .grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
-      .text-container {grid-column:2/span 4;grid-row: 2;
-        .headline{@include typoHeadline;color: $textColor1;text-transform: capitalize;font-style: italic;text-align: center;}
-        .caption {@include typoHeadline;margin-top: 30px;color: #FFF;text-transform: capitalize;text-align: center;}
+  .wrapper {
+    background: $textColor3;
+    height: 298px;
+    .container{
+      height: 100%;
+      .flex {
+        display: flex;
+        width: 100%; height: 100%;
+        .text-container {
+          display: flex;flex-direction: column;justify-content: center;align-items: center;
+          .headline{
+            color: $textColor1;text-transform: capitalize;font-style: italic;text-align: center;
+            max-width: 76%}
+          .caption {
+            margin-top: 30px;
+            color: #FFF;text-transform: capitalize;text-align: center;}
+        }
+        .svg-right {margin-left:auto;margin-top: auto}
+        img{max-width: 86px;display: block}
       }
-      .svg-right {grid-column: 6 / span 1;grid-row: 2/span 2;place-self: end;}
-      img{max-width: 100%;display: block}
     }
+
   }
 }

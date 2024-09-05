@@ -2,21 +2,23 @@
     <div class="theme-container">
         <div class="{% if block.layout == 'hero-black' %}black-container{% endif %}">
             <div class="{{ block.layout }}-flex">
+                {% if block.layout == 'hero' %}
                 <div class="image-wrapper">
-                    <img src="{% if block.layout == 'hero' %}{{ media_url(block.media) }}{% endif %}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
                 </div>
+                {% endif %}
                 <div class="text-container {% if block.layout == 'hero-black' %}black-text-container {% endif %}">
                     <div class="overline">{{ block.overline }}</div>
-                    <div class="hero-headline headline black-headline">{{ block.headline }}</div>
+                    <div class="hero-headline theme-headline black-headline">{{ block.headline }}</div>
                     <div class="copy">{{ block.copy }}</div>
                     {% if block.ctaTitle and block.ctaLink is not null %}
-                        <div class="theme-button">
-                            <a class="theme-cta " href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{% if block.layout == 'hero-black' %}{{ block.ctaTitle }}{% endif %}</a>
+                        <div class="button-container">
+                            <a class="theme-cta theme-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{% if block.layout == 'hero-black' %}{{ block.ctaTitle }}{% endif %}</a>
                         </div>
                     {% endif %}
                 </div>
-                {% if block.layout == 'hero-black' %}
-                    <div class=" black-img ">
+                {% if block.layout == "hero-black" %}
+                    <div class="black-img ">
                         <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="black-media">
                     </div>
                 {% endif %}

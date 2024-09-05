@@ -19,14 +19,13 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-
     <script id="routes" type="application/json">{{ routes|json_encode|raw }}</script>
 </head>
 <body>
 {% block body %}
     {% block header %}
-        <header>
-            <div class="nav" >
+        <header data-controller="sub-menu" data-sub-menu-target="header">
+            <div class="nav">
                 <div class="theme-container">
                     <div class="navbar-grid">
                         <div class="header-img">
@@ -46,10 +45,22 @@
     </main>
     {% block footer %}
         <footer>
+            <div class="theme-container">
+                <a href="#" class="contact-row">
+                    <div class="left">
+                        <div class="label theme-headline">logo</div>
+                        <div>copyright</div>
+                    </div>
+                    <div class="right">
+                        <div class="label">DATENSCHUTZ</div>
+                        <div class="middle-space">IMPRESSUM</div>
+                        <div>AGB</div>
+                    </div>
+
+                </a>
             {% include 'theme/navigation/footer.html.twig' %}
         </footer>
     {% endblock %}
 {% endblock %}
-
 </body>
 </html>

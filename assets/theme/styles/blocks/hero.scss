@@ -1,22 +1,29 @@
 .block-hero {
-  .hero-flex {display: flex;gap: 55px;
+  .hero-flex {
+    display: flex;
+    .image-wrapper{
+      position: relative;
+      padding-bottom: 26.5%;
+      flex:1;}
     .hero-media {flex: 1;width: 100%;}
-    .text-container {flex: 1;display: flex;flex-direction: column;justify-content: center;
-    }
+    .text-container {flex: 1;display: flex;flex-direction: column;justify-content: center;}
   }
   .overline{@include typoOverline;}
-  .headline{@include typoHeadline;text-transform: uppercase}
-  .black-container {background-color: #171717;
-    .hero-black-flex {display: flex;justify-content: center;flex-wrap: wrap;grid-gap: 51px;height: 565px;
-      .black-text-container {width: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;
+  .black-container {
+    background-color: #171717;
+    max-height: 565px;
+    .hero-black-flex {
+      display: flex;justify-content: center;flex-wrap: wrap;gap: 51px;
+      .black-text-container {
+        display: flex;flex-direction: column;align-items: center;padding: 49px 0 0;
         .hero-headline {color: $textColor1;}
         .overline{color: $textColor1;}
         .copy {width: 45%;color: $textColor1;text-align: center;}
-        .theme-cta {@include cta();color:$textColor1;border: 1px solid $textColor1;}
+        .theme-cta {;color:$textColor1;border: 1px solid $textColor1;}
       }
-      .black-img {max-width: $maxWidth;display: flex;justify-content: center;align-items: center;}
+      .black-img {position: relative;padding-bottom: 26.5%;width: 50%;}
     }
   }
   .hero-headline {padding: 10px 0 15px 0;@include boldHeadline();}
-  img{width: $width;display: block}
+  img{display: block;@include imgCover;}
 }

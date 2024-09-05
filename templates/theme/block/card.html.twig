@@ -3,14 +3,14 @@
         <div class="{{ block.layout }}-grid">
             <div class="media-container">
                 <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="headerbild-img">
-                <img src="{% if block.layout == 'gradient' %}{{ asset('build/theme/images/1.svg') }}{% endif %}" alt="" class="gradient-img">
+                <div class="gradient"></div>
             </div>
             <div class="card-{{ block.layout }}">
-                <div class="overline">{{ block.overline }}</div>
-                <div class="headline">{{ block.headline }}</div>
-                <div class="theme-copy">{{ block.copy }}</div>
-                <div class="theme-button">
-                    <a class="theme-cta"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                <div class="theme-overline">{{ block.overline }}</div>
+                <div class="theme-headline padding">{{ block.headline }}</div>
+                <div class="copy">{{ block.copy }}</div>
+                <div class="button-container">
+                    <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                 </div>
             </div>
 

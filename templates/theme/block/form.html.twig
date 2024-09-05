@@ -2,9 +2,9 @@
     <div class="theme-container">
         <div class="form-grid" data-controller="form">
             <div class="text-container">
-                <div class="headline">{{ block.headline }}</div>
-                <div class="overline">{{ block.overline }}</div>
-                <div class="copy">{{ block.text }}</div>
+                <div class="theme-headline headline">{{ block.headline }}</div>
+                <div class="theme-overline">{{ block.overline }}</div>
+                <div class="text theme-headline">{{ block.text }}</div>
             </div>
             <div class="form">
                 {% for item in block.form %}
@@ -27,7 +27,7 @@
                 {% endfor %}
                 <input type="checkbox" name="{{ block.label }}" id="{{ block.label }}" value="checked">
                 <label for="{{ block.type }}" class="checkbox-label">{{ block.label }}</label>
-                <div class="theme-cta cta">{{ block.ctaTitle }}</div>
+                <div class="theme-cta cta theme-button">{{ block.ctaTitle }}</div>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<div class="theme-main-navigation" data-controller="sub-menu">
+<div class="theme-main-navigation">
     {% if navigation is defined and navigation.main %}
         <ul class="menu">
             {% for node in navigation.main.nodes %}
@@ -6,27 +6,22 @@
                     {% if node.name == "page"%}
                         <a href="{{ node.subject.url }}" class="">{{ node.label }}</a>
                     {% elseif node.name == "submenu" and node.children|length > 0 %}
-                        <div class="headline" data-submenu-target="trigger">
-                            {{ node.label ?? node.subject.title }}
+                        <div class="headline" data-sub-menu-target="trigger">
+                            <a href="{{ node.subject.url }}" class="headline">{{ node.label ?? node.subject.title }}</a>
+                            <ul class="sub-menu" data-sub-menu-target="submenu">
+                                {% for node in node.children %}
+                                    <li class="sub-menu-list">
+                                        <a href="/show" class="list-font">{{ node.label ?? node.subject.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
                         </div>
-                        {% if node.children is not empty %}
-                            {% if node.children is defined %}
-                                <ul class="sub-menu" data-submenu-target="menu">
-                                    {% for node in node.children %}
-                                        <li class="sub-menu-list">
-                                            <a href="/show" class="list-font">{{ node.label ?? node.subject.title }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                        {% endif%}
                     {% endif %}
                 </li>
             {% endfor %}
         </ul>
     {% endif %}
 </div>
-
 <div class="header-info">
     <span class="number">+49 (0) 89 1234 5678 90</span>
 </div>

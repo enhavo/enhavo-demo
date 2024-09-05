@@ -1,13 +1,36 @@
 .block-nag-screen {
-  .wrapper { display: flex;flex-direction:column;align-items: center;background: rgba(54, 247, 234, 1);padding: 0 1% 5%;
-    .icon {;font-size: 30px;place-self: self-end;padding: 19.5px 0 0 0;}
-    .flex {display: flex;flex-direction: column;padding: 60px 0 0 0;
-      .text-container {display: flex; flex-direction: column;align-items: center;
-        .overline {text-align: center;@include typoOverline;}
-        .headline {width: 30%;margin-top: 10px;color: $textColor3;text-align: center;@include boldHeadline();text-transform: uppercase}
-        .copy {margin-top: 25px;text-align: center;width: 62%;}
-        .theme-cta{@include cta();}
-      }
+  .wrapper {
+    background: rgba(54, 247, 234, 1);
+    position: relative;
+    height: 545px;
+  }
+  .ex-toggle {
+    position:absolute;right:10%;
+    width:35px;height:35px;
+    cursor:pointer;
+    .lines {
+      position: absolute;top: 50%;
+      width: calc(100% - 10px);height: calc(100% - 10px);
+      &:after {
+        content: "";position: absolute;top: 50%;left: 0;
+        width: 100%;height: 2px;
+        background: $textColor2;
+        transform: translateY(-50%) rotate(-45deg);}
+      &:before {
+        content: "";position: absolute;top: 50%;left: 0;
+        width: 100%;height: 2px;
+        background: $textColor2;
+        transform: translateY(-50%) rotate(45deg);}
     }
+  }
+  .flex {display: flex;justify-content: center;align-items: center;height: 100%;}
+  .text-container {display: flex; flex-direction: column;align-items: center;
+    .overline {text-align: center;}
+    .headline {
+      width: 30%;
+      margin-top: 10px;
+      text-align: center;text-transform: uppercase;
+      @include boldHeadline();}
+    .copy {margin-top: 25px;text-align: center;width: 62%;}
   }
 }

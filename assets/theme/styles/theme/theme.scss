@@ -1,117 +1,127 @@
 body{padding-top: 123px;background: white;margin: 0;color: #000;font-family: "Open Sans";font-size: 1.8rem;letter-spacing: 0.18px;line-height: 1.44em;
 }
 .space-top{padding-top: 150px;}
-.theme-container{margin: 0 auto;max-width: 1920px;width: 100%;padding-inline:135px;}
-header {position: fixed;top: 0;width: 100%;background-color: #171717;z-index: 20;
-  .nav {height: 123px;position: relative;
-    .navbar-grid {display: flex;align-items: center;justify-content: space-between;padding: 3.90rem;
-      .header-img {display: flex;align-items: center;
+
+    .theme-main-navigation {display: flex;
+      .menu {display: flex;
+        a {@include typoHeadline;color: $textColor1;text-decoration: none;font-weight: 400;font-size: 18px;cursor: pointer;}
+        li {
+          position: relative;
+          margin-left: 60px;
+          list-style-type: none;
+          .headline {
+            @include typoHeadline;
+            color: $textColor1;
+            font-weight: 400;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+            &:hover a{
+              font-weight: 700;
+            }
+            &:hover .sub-menu{
+              display: block;opacity: 1;
+              position: relative;
+
+            }
+          }
+          .sub-menu {
+            //background: black;
+            //position: absolute;
+            display: none;
+            top: calc(100% + 0.25rem);
+            left: 0;
+            opacity: 0;
+            transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+            text-decoration: none;
+            flex-direction: column;
+            padding: 0;margin: 0;
+            .sub-menu-list {
+              padding: 10px;
+              margin-left: 20px;
+              .list-font {
+                @include typoHeadline;
+                text-transform: capitalize;
+                font-style: italic;
+                color: #ffffff;
+                font-weight: 400;
+                text-decoration: none;
+                display: block;width: 100%;
+              }
+            }
+          }
+          .submenu-container {
+            position: relative;
+          }
+        }
+      }
+    }
+.header-info {
+  .number {@include typoHeadline;margin-right: 0.5rem;text-align: right;color: #FFFFFF;font-weight: 400;font-size: 18px;}
+}
+.hamburger {display: none;cursor: pointer;color: #fff;font-size: $fontSizeHeadline1;}
+header {position: fixed;top: 0;width: 100%;background-color: #171717;z-index: 20;max-height: 120px;
+  transition: max-height 0.3s ease;
+  .nav {position: relative;
+    .navbar-grid {display: flex;justify-content: space-between;padding: 3.90rem;
+      .header-img {display: flex;
         img {height: auto;max-width: 100%;
         }
       }
     }
   }
-}
-.theme-main-navigation {
-  display: flex;
-
-  ul {
-    display: flex;
-
-    .nav-item {
-      position: relative;
-      margin-left: 60px;
-      list-style-type: none;
-
-      a {
-        @include typoHeadline;
-        color: $textColor1;
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 18px;
-        cursor: pointer;
-      }
-
-      .headline {
-        @include typoHeadline;
-        color: $textColor1;
-        font-weight: 400;
-        font-size: 18px;
-        cursor: pointer;
-
-        &:hover {
-          font-weight: 700;
-        }
-      }
-
-      ul {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: calc(100% + 0.25rem);
-        opacity: 0;
-        display: none;
-        transform: translateY(-10px);
-        overflow: hidden;
-        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-        text-decoration: none;
-
-        .sub-menu-list {
-          padding: 10px;
-          margin-left: 20px;
-
-          .list-font {
-            text-transform: capitalize;
-            font-style: italic;
-            color: #ffffff;
-            @include typoHeadline;
-            font-weight: 400;
-            text-decoration: none;
-          }
-        }
-      }
-      &.active ul {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  }
+&:hover{max-height: 300px;}
 }
 
-
-
-
-.header-info {
-  .number {@include typoHeadline;margin-right: 0.5rem;text-align: right;color: #FFFFFF;font-weight: 400;font-size: 18px;}
+.theme-container{margin: 0 auto;max-width: 1920px;width: 100%;padding-inline:135px;}
+.theme-overline{@include typoOverline;
 }
-.hamburger {display: none;cursor: pointer;color: #fff;font-size: $fontSizeHeadline1;}
-
-.theme-overline{
-  color: $textColor2;
-  font-family: $fontFamily1;
-  font-weight: $fontWeight;
-  font-size: $fontSizeOverline;
-  line-height: $lineHeightOverline;
-  letter-spacing: 0.375px;
-  text-transform: uppercase;
+.theme-headline{@include typoHeadline;
+  *{line-height: inherit;}
 }
-.theme-headline{
-  color: $textColor3;
-  font-family: $fontFamily1;
-  font-size: $fontSizeHeadline1;
-  line-height: $lineHeightHeadline1;
-  text-transform: uppercase;
-  font-weight: $fontWeight;
+.button-container{
+  padding-top: 30px;
 }
 .theme-button{
-  padding-top: 30px;
+  border-radius: 40px;border: 2px solid #000;cursor: pointer;padding:15px 30px;text-decoration: none;
 }
 .theme-cta{
   color: $textColor3;
   font-family: $fontFamily1;
-font-weight: $fontWeight;
+  font-weight: $fontWeight;
   line-height: $lineHeightButton;
   letter-spacing: 0.45px;
   text-transform: uppercase;
+  @include screenMaxWidth(1024px){
+    color: red;
+  }
+}
+footer{
+  background: black;
+  width: 100%;
+  padding: 1em;
+  margin-top: 10%;
+  a{
+    text-decoration: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .contact-row{
+    display:flex;justify-content: space-between;
+  }
+  .left{
+    display: flex;flex-direction: column;gap:17px ;
+    .label{color: $textColor1;}
+  }
+  .right{display: flex;place-items: end;justify-content: space-between;gap: 50px;
+  }
+}
+@include screenMaxWidth(1800px){
+  .theme-container{padding:80px }
+}
+@include screenMaxWidth(1280px){
+  .theme-container{padding:40px }
+}
+@include screenMaxWidth(768px){
+  .theme-container{padding:20px }
 }

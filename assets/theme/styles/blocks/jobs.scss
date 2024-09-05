@@ -1,23 +1,42 @@
 .block-jobs {
-  .jobs-grid {display: flex;gap: 51px;
-    .left {flex: 1;
-      .label {border: 1px solid #171717;}
-      .span {display: flex;justify-content: space-between;padding: 1rem;}
-      .overline {color: $textColor3;font-size: 1.5rem;@include typoOverline;}
-      .icons-chevron-down:before {content: "\2228";}
-      .toggle-indicator {transform:scaleY(-1);}
-        .caret-button {cursor: pointer;}
-        .caret-up.open-job {margin-right: 10px;font-size: 24px;cursor: pointer;max-height: 100%;}
+  .jobs-grid {
+    display: flex;gap: 51px;
+    .left {
+      flex: 1;
+      .label {
+        border: 1px solid #171717;
+        .span {
+          display: flex;justify-content: space-between;
+          padding: 1rem;
+          .overline {
+            color: $textColor3;font-size: 1.5rem;@include typoOverline;cursor: pointer}
+          .icons-chevron-down:before {content: "\2228";}
+          .toggle-indicator {display: block;
+            &.visible{transform:scaleY(-1);}
+          }
+          .caret-button {cursor: pointer;}
+          .caret-up.open-job {margin-right: 10px;font-size: 24px;cursor: pointer;max-height: 100%;}
+        }
+      }
+      .types-container{
+        display: none;
+        opacity: 0;
+        .items{padding: 1em;cursor: pointer}
+        &.visible{display: block;opacity: 1;
+        }
       }
     }
     .right {flex: 2;
-      .items {border-bottom: 2px solid black;
+      .items {
+        border-bottom: 2px solid black;
         .type {padding: 1.5rem 0;@include typoOverline;}
-        .text-container {display: flex;justify-content: space-between;align-items: flex-end;
+        .text-container {
+          display: flex;justify-content: space-between;align-items: flex-end;
           .copy {pointer-events: none;color: #000;}
         }
       }
     }
   }
+}
 
 

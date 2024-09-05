@@ -2,8 +2,8 @@
     <div class="theme-container">
         <div class="grid">
             <div class="{{ block.layout }}">
-                <div class="overline">{{ block.overline }}</div>
-                <div class="headline">{{ block.headline }}</div>
+                <div class="theme-overline">{{ block.overline }}</div>
+                <div class="theme-headline padding headline">{{ block.headline }}</div>
                 <div class="text-container">
                     {% if block.copy is iterable %}
                         {% for text in block.copy %}
@@ -13,8 +13,8 @@
                         <div class="copy">{{ block.copy }}</div>
                     {% endif %}
                 </div>
-                <div class="theme-button two-column-btn">
-                    <a class="theme-cta "  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                <div class="button-container two-column-btn">
+                    <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                 </div>
             </div>
         </div>

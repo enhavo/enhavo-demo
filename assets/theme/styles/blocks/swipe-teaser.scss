@@ -1,16 +1,29 @@
 .block-swipe-teaser {
-  .theme-container{padding: 0;
-    .grid {display: grid;grid-template-columns: repeat(4, 1fr);grid-gap: 51px;
-      img {width: $width;display: block}
-      .text-container {
-        .overline {@include typoOverline}
-        .headline {margin: 5px 0 15px ;@include typoHeadline}
+  .theme-container{
+    padding: 0;
+    .grid {
+      .slick-slide{
+        margin: 0 20px;
+        display: block;float: left;
+        img {@include imgCover;}
       }
+      .slick-arrow{display: none!important;}
+      .slick-list{overflow: hidden;margin: 0;padding: 0}
     }
-    .navigation {margin-top: 73px;display: flex;justify-content: center;}
-    .nav-btn {width: 12px;height: 12px;margin: 0 5px;border-radius: 50%;border: 1px solid;cursor: pointer;transition: background-color 0.3s ease;
+    .navigation {
+      margin-top: 73px;
+      display: flex;justify-content: center;}
+    .nav-btn {
+      width: 12px;height: 12px;
+      margin: 0 5px;
+      border-radius: 50%;border: 1px solid;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
       &:hover {background-color: #333;}
       &.active {background-color: #333;}
+    }
+    .media-wrapper{
+      position: relative;padding-bottom: 55.5%;
     }
   }
 }

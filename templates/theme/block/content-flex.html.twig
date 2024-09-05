@@ -2,14 +2,16 @@
     <div class="theme-container">
         <div class="{{ block.layout }}-grid">
             {% for item in block.items %}
-                <div class="image-container {% if block.layout == 'list' %}{{ block.layout }}-img-wrapper{% endif %}">
-                    <img src="{{ media_url(item.media) }}" alt="{{ media_parameter(item.media, 'alt') }}">
+                <div class="content-container {% if block.layout == 'list' %}{{ block.layout }}-img-wrapper{% endif %}">
+                    <div class="image-container ">
+                        <img src="{{ media_url(item.media) }}" alt="{{ media_parameter(item.media, 'alt') }}">
+                    </div>
                     <div class="texts-container">
-                        <div class="overline ">{{ item.overline }}</div>
-                        <div class="headline">{{ item.headline }}</div>
+                        <div class="theme-overline ">{{ item.overline }}</div>
+                        <div class="theme-headline padding">{{ item.headline }}</div>
                         <div class="copy">{{ item.copy }}</div>
-                        <div class="theme-button">
-                            <a class="theme-cta" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
+                        <div class="button-container">
+                            <a class="theme-cta theme-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
                         </div>
                     </div>
                 </div>

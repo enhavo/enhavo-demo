@@ -13,10 +13,10 @@
               "children": [],
               "subject": {
                 "id": 11,
-                "title": "Blogartikel 04",
-                "url": "\/Blogartikel 04"
+                "title": "Blogartikel 01",
+                "url": "\/Blogartikel 01"
               },
-              "label": "Blogartikel 04",
+              "label": "Blogartikel 01",
               "active": false,
               "template": "/theme/navigation/page.html.twig",
               "component": null
@@ -41,10 +41,10 @@
               "children": [],
               "subject": {
                 "id": 11,
-                "title": "Blogartikel 04",
-                "url": "\/Blogartikel 04"
+                "title": "Blogartikel 03",
+                "url": "\/Blogartikel 03"
               },
-              "label": "Blogartikel 04",
+              "label": "Blogartikel 03",
               "active": false,
               "template": "/theme/navigation/page.html.twig",
               "component": null
@@ -65,7 +65,9 @@
             }
           ],
           "subject": {
-            "id": 2
+            "id": 2,
+            "title": "Imprint",
+            "url": "expr:ref('page/imprint.json', 'resource.url')"
           },
           "label": "Blog",
           "active": false,

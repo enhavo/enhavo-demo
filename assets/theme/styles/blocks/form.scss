@@ -1,9 +1,8 @@
 .block-form {
   .form-grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
     .text-container {grid-column: 2 / span 4;
-      .headline {color: $textColor3;@include boldHeadline();text-transform: uppercase;}
-      .overline{@include typoOverline;}
-      .copy {margin-top: 30px;@include typoHeadline;text-transform: capitalize;font-size: 1.6rem;line-height: 1.25em}
+      .headline {color: $textColor3;@include boldHeadline()}
+      .text {margin-top: 30px;text-transform: capitalize;font-size: 1.6rem;line-height: 1.25em}
     }
     .form {grid-column: 2 / span 4;
       .label {font-weight: 700;letter-spacing: 0.45px;line-height: 1.055em;}
@@ -16,7 +15,7 @@
       select {color: #CBCBCB;}
       label[for='checkbox']{line-height: 2.6em;letter-spacing: 0.1px;font-size: 1rem;text-transform: capitalize;margin-left: 1%;}
       .required {color: #DB5245;padding-bottom: 20px;line-height: 2.6em;letter-spacing: 0.1px;font-size: 1rem}
-      .cta {@include cta();padding: 1rem;margin-top: 2%;width: 100%;height: auto;display: flex;justify-content: center;align-items: center;}
+      .cta {;padding: 1rem;margin-top: 2%;width: 100%;height: auto;display: flex;justify-content: center;align-items: center;}
     }
   }
 }

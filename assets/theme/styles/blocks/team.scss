@@ -1,11 +1,24 @@
 .block-team {
-  .grid {display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 51px;
-    .img-container {text-align: center;
-      img{max-width: 100%;}
-      &:nth-of-type(4) {place-self: flex-end;} &:nth-of-type(5) {place-self: flex-end;}
-      .text-container {margin-top: 20px;}
-      .overline{@include typoOverline;}
-      .headline{@include typoHeadline;}
+  .grid {
+    display: grid;grid-template-columns: repeat(3, 1fr);gap: 51px;
+    .content-container {
+      text-align: center;
+      display: flex;flex-direction: column;justify-content: center;align-items: center;
+      .img-container
+      {position: relative;
+        padding-bottom: 41%;
+        max-width: 210px;width: 100%;
+        img{display: block;@include imgCover;}
+      }
+      &:nth-of-type(4){
+        .img-container{padding-bottom: 76%;}
+        place-self: flex-end;
+      }
+      &:nth-of-type(5){
+        .img-container{padding-bottom: 76%;}
+        place-self: flex-end;
+      }
     }
+    .overline{padding:5px 0}
   }
 }

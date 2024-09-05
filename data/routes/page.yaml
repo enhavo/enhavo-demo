@@ -9,6 +9,15 @@ page:
                 - page/homepage.json
             template: 'theme/resource/page/show.html.twig'
             variants:
+                block=navigation:
+                    recursive: true
+                    depth: 3
+                    data:
+                        resource:
+                            content:
+                                children:
+                                    - "expr:load('navigation.json')"
+
                 block=card:
                     recursive: true
                     depth: 3

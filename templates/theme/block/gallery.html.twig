@@ -10,13 +10,18 @@
                     {% endfor %}
                 {% endif %}
                 <div class="text-container">
-                    <span class="headline">{% if block.layout == "black" %}{{ block.headline }}{% endif %}</span>
+                    <span class="theme-headline headline">{% if block.layout == "black" %}{{ block.headline }}{% endif %}</span>
                     <div class="copy">{% if block.layout == "black" %}{{ block.copy }}{% endif %} </div>
                 </div>
-                <img src="{{ asset('/build/theme/images/x-button.png') }}" alt="x-btn" class="x-button">
-                <div class="prev-button">
-                    <img src="{{ asset('/build/theme/images/prev-btn.png') }}" alt="prev-btn">
+                <div class="ex-toggle">
+                    <div class="lines"></div>
                 </div>
+                <button class="prev-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 18 31" fill="none">
+                        <path d="M15.6953 1.5L2 15.1953L15.6953 28.8906" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
                 <div class="image-container">
                     <img src="{% if block.layout == "black" %}{{ media_url(block.media) }}{% endif %}" alt="{% if block.layout == "black" %}{{ media_parameter(block.media, 'alt') }}{% endif %}" class="">
                 </div>

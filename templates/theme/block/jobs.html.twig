@@ -2,27 +2,31 @@
     <div class="theme-container">
         <div class="jobs-grid" data-jobs-target="grid" >
             <div class="left">
-                <div class="label">
+                <div class="label" data-jobs-target="borderContainer">
                     <div class="span">
-                        <button class=" overline" data-action="click->jobs#filterByJobType" data-job-type="" >Alle anzeigen</button>
-                        <div class="toggle-indicator">
+                        <button class="overline" data-action="click->jobs#filterByJobType" data-job-type="" >Alle anzeigen</button>
+                        <div class="toggle-indicator" data-action="click->jobs#filterByJobType" data-jobs-target="toggleIcon" >
                             <span class="icon icons icons-chevron-down"></span>
                         </div>
+                    </div>
+                    <div class="types-container" data-jobs-target="typeContainer">
+                        {% for blocks in block.jobs %}
+                            <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems">{{ blocks.type }}</div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
             <div class="right">
                 {% for blocks in block.jobs %}
-                    <div class="items" data-jobs-target="item">
-                        <div class="type" data-job-type>{{ blocks.type }}</div>
+                    <div class="items" data-jobs-target="item" data-type="{{ blocks.type }}">
+                        <div class="type" >{{ blocks.type }}</div>
                         <div class="text-container">
-                            <span class="theme-headline">{{ blocks.title }}</span>
-                            <span class="copy theme-copy">{{ blocks.copy }}</span>
+                            <span class="theme-headline" >{{ blocks.title }}</span>
+                            <span class="copy theme-copy" >{{ blocks.copy }}</span>
                         </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-</div>
 </div>
