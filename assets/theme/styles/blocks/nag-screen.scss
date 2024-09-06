@@ -29,8 +29,8 @@
     .headline {
       width: 30%;
       margin-top: 10px;
-      text-align: center;text-transform: uppercase;
-      @include boldHeadline();}
+      text-align: center;
+    }
     .copy {margin-top: 25px;text-align: center;width: 62%;}
   }
 }

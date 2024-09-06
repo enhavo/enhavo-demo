@@ -3,7 +3,7 @@
         <div class="grid">
             <div class="{{ block.layout }}">
                 <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
-                <div class="theme-headline padding headline">{{ block.headline|html_sanitize }}</div>
+                <div class="theme-headline boldHeadline padding">{{ block.headline|html_sanitize }}</div>
                 <div class="text-container">
                     {% if block.copy is iterable %}
                         {% for text in block.copy %}

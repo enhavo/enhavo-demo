@@ -6,8 +6,8 @@
       .copy{font-weight: 700;font-size: 2.4rem;line-height: 1.33em}
     }
     .headline-breaker{grid-column: 2 / span 4;
-       .headline{@include boldHeadline;text-transform: uppercase}
-     }
+    .boldHeadline{@include typoHeadline;}
+    }
     .one-column {grid-column: 1 /span 3;
     }
     .one-column-wide {display: flex;flex-direction: column;
@@ -18,5 +18,9 @@
       .text-container {display: flex;gap: 51px;}
       .two-column-btn {margin-left: auto}
     }
+  }
+  .theme-headline{
+   font-size: 2.4rem;
+    line-height: 1.33em;
   }
 }

@@ -23,7 +23,7 @@
     .hero-black-text-container {
       display: flex;flex-direction: column;align-items: center;
       padding: 49px 0 0;
-      .headline {color: $textColor1;}
+      .theme-headline {color: $textColor1;}
       .overline {color: $textColor1;}
       .copy {
         width: 45%;
@@ -41,8 +41,5 @@
       width: 50%;
     }
   }
-  .headline {
-    padding: 10px 0 15px 0;
-    @include boldHeadline();
-  }
+  .padding {padding: 10px 0 15px 0;}
 }

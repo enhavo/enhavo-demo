@@ -6,7 +6,7 @@
             </div>
             <div class="text-container {{ block.layout }}-text-container">
                 <div class="overline">{{ block.overline|html_sanitize }}</div>
-                <div class="headline theme-headline ">{{ block.headline|html_sanitize }}</div>
+                <div class=" theme-headline padding boldHeadline">{{ block.headline|html_sanitize }}</div>
                 <div class="copy">{{ block.copy|html_sanitize }}</div>
                 {% if block.ctaTitle and block.ctaLink is not null %}
                     <div class="button-container">
