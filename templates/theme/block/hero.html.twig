@@ -1,25 +1,16 @@
 <div class="block-hero space-top">
     <div class="theme-container">
-        <div class="{% if block.layout == 'hero-black' %}black-container{% endif %}">
-            <div class="{{ block.layout }}-flex">
-                {% if block.layout == 'hero' %}
-                <div class="image-wrapper">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
-                </div>
-                {% endif %}
-                <div class="text-container {% if block.layout == 'hero-black' %}black-text-container {% endif %}">
-                    <div class="overline">{{ block.overline }}</div>
-                    <div class="hero-headline theme-headline black-headline">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
-                    {% if block.ctaTitle and block.ctaLink is not null %}
-                        <div class="button-container">
-                            <a class="theme-cta theme-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{% if block.layout == 'hero-black' %}{{ block.ctaTitle }}{% endif %}</a>
-                        </div>
-                    {% endif %}
-                </div>
-                {% if block.layout == "hero-black" %}
-                    <div class="black-img ">
-                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="black-media">
+        <div class="{{ block.layout }}-flex">
+            <div class="image-wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
+            </div>
+            <div class="text-container {{ block.layout }}-text-container">
+                <div class="overline">{{ block.overline|html_sanitize }}</div>
+                <div class="headline theme-headline ">{{ block.headline|html_sanitize }}</div>
+                <div class="copy">{{ block.copy|html_sanitize }}</div>
+                {% if block.ctaTitle and block.ctaLink is not null %}
+                    <div class="button-container">
+                        <a class="theme-cta theme-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                     </div>
                 {% endif %}
             </div>

@@ -6,8 +6,8 @@
                     <img src="{{ asset("/build/theme/images/qoutes.svg")}}" alt="quote-svg">
                 </div>
                 <div class="text-container">
-                    <div class="theme-headline headline">{{ block.headline }}</div>
-                    <div class="theme-headline caption">{{ block.caption  }}</div>
+                    <div class="theme-headline headline">{{ block.headline|html_sanitize }}</div>
+                    <div class="theme-headline caption">{{ block.caption|html_sanitize  }}</div>
                 </div>
                 <div class="svg-right">
                     <img src="{{ asset("/build/theme/images/qoutes.svg")}}" alt="quote-svg">

@@ -6,8 +6,8 @@
                 <div class="gradient"></div>
             </div>
             <div class="card-{{ block.layout }}">
-                <div class="theme-overline">{{ block.overline }}</div>
-                <div class="theme-headline padding">{{ block.headline }}</div>
+                <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
+                <div class="theme-headline padding">{{ block.headline|html_sanitize }}</div>
                 <div class="copy">{{ block.copy }}</div>
                 <div class="button-container">
                     <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>

@@ -11,7 +11,7 @@
                     </div>
                     <div class="types-container" data-jobs-target="typeContainer">
                         {% for blocks in block.jobs %}
-                            <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems">{{ blocks.type }}</div>
+                            <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems">{{ blocks.type|html_sanitize }}</div>
                         {% endfor %}
                     </div>
                 </div>
@@ -19,10 +19,10 @@
             <div class="right">
                 {% for blocks in block.jobs %}
                     <div class="items" data-jobs-target="item" data-type="{{ blocks.type }}">
-                        <div class="type" >{{ blocks.type }}</div>
+                        <div class="type" >{{ blocks.type|html_sanitize }}</div>
                         <div class="text-container">
-                            <span class="theme-headline" >{{ blocks.title }}</span>
-                            <span class="copy theme-copy" >{{ blocks.copy }}</span>
+                            <span class="theme-headline" >{{ blocks.title|html_sanitize }}</span>
+                            <span class="copy theme-copy" >{{ blocks.copy|html_sanitize }}</span>
                         </div>
                     </div>
                 {% endfor %}

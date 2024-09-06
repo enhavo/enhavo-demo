@@ -6,9 +6,9 @@
             </div>
             <div class="flex">
                 <div class="text-container">
-                    <div class="overline theme-overline">{{ block.overline }}</div>
-                    <div class="headline ">{{ block.headline }}</div>
-                    <div class="copy">{{ block.copy }}</div>
+                    <div class="overline theme-overline">{{ block.overline|html_sanitize }}</div>
+                    <div class="headline ">{{ block.headline|html_sanitize }}</div>
+                    <div class="copy">{{ block.copy|html_sanitize }}</div>
                     <div class="button-container">
                         <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                     </div>

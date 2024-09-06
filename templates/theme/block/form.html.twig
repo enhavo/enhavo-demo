@@ -2,22 +2,22 @@
     <div class="theme-container">
         <div class="form-grid" data-controller="form">
             <div class="text-container">
-                <div class="theme-headline headline">{{ block.headline }}</div>
-                <div class="theme-overline">{{ block.overline }}</div>
-                <div class="text theme-headline">{{ block.text }}</div>
+                <div class="theme-headline headline">{{ block.headline|html_sanitize }}</div>
+                <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
+                <div class="text theme-headline">{{ block.text|html_sanitize }}</div>
             </div>
             <div class="form">
                 {% for item in block.form %}
-                    <label for="{{ item.label }}" class="label">{{ item.label }}</label>
+                    <label for="{{ item.label }}" class="label">{{ item.label|html_sanitize }}</label>
                     {% if item.type == 'select' %}
-                        <select name="{{ item.label }}" id="{{ item.type }}">
+                        <select name="{{ item.label }}" id="{{ item.type|html_sanitize }}">
                             <option value=""> Auswählen </option>
                             {% for option in item.options %}
                                 <option value="{{ option.value }}">{{ option.label }}</option>
                             {% endfor %}
                         </select>
                         {% elseif item.type == 'textarea' %}
-                            <textarea name="{{ item.label }}" id="{{ item.type }}" placeholder="{{ item.placeholder }}"></textarea>
+                            <textarea name="{{ item.label }}" id="{{ item.type }}" placeholder="{{ item.placeholder|html_sanitize }}"></textarea>
                         {% else %}
                             <input type="{{ item.type }}" name="{{ item.type }}" id="{{ item.type }}" placeholder="{{ item.placeholder }}">
                     {% endif %}
@@ -26,7 +26,7 @@
                     {% endif %}
                 {% endfor %}
                 <input type="checkbox" name="{{ block.label }}" id="{{ block.label }}" value="checked">
-                <label for="{{ block.type }}" class="checkbox-label">{{ block.label }}</label>
+                <label for="{{ block.type }}" class="checkbox-label">{{ block.label|html_sanitize }}</label>
                 <div class="theme-cta cta theme-button">{{ block.ctaTitle }}</div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <div class="block-logo space-top">
     <div class="theme-container">
         <div class="grid">
-            <div class="overline theme-overline">{{ block.overline }}</div>
+            <div class="overline theme-overline">{{ block.overline|html_sanitize }}</div>
             {% for block in block.items %}
                     <img src="{{ media_url(block.media)}}" alt="{{ media_parameter(block.media, 'alt')}}">
             {% endfor %}
