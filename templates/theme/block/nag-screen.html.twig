@@ -1,4 +1,4 @@
-<div class="block-nag-screen space-top">
+<div class="block-nag-screen">
     <div class="theme-container">
         <div class="wrapper">
             <div class="ex-toggle">
@@ -10,7 +10,9 @@
                     <div class="headline theme-headline boldHeadline">{{ block.headline|html_sanitize }}</div>
                     <div class="copy">{{ block.copy|html_sanitize }}</div>
                     <div class="button-container">
-                        <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                        <div class="btn-wrapper">
+                            <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                        </div>
                     </div>
                 </div>
             </div>

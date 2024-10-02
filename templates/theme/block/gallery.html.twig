@@ -1,36 +1,30 @@
-<div class="block-gallery space-top">
+<div class="block-gallery layout-{{ block.layout }}">
     <div class="theme-container">
-        <div class="{{ block.layout }}-wrapper">
-            <div class="{{ block.layout }}-grid">
-                {% if block.items is defined %}
-                    {% for block in block.items %}
-                        <div class=" item_2">
-                            <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery-img">
-                        </div>
-                    {% endfor %}
-                {% endif %}
-                <div class="text-container">
-                    {% if block.headline is defined%}
-                    <span class="theme-headline headline">{{ block.headline|html_sanitize }}</span>
-                    {% endif %}
-                    {% if block.copy is defined %}
-                    <div class="copy">{{ block.copy|html_sanitize }} </div>
-                    {% endif %}
-                </div>
-                <div class="ex-toggle">
-                    <div class="lines"></div>
-                </div>
-                <button class="prev-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 18 31" fill="none">
-                        <path d="M15.6953 1.5L2 15.1953L15.6953 28.8906" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                {% if block.media is defined %}
-                <div class="image-container">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
-                </div>
-                {% endif %}
+        <div class="grid">
+            {% if block.items is defined %}
+                {% for block in block.items %}
+                    <div class=" item_2">
+                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery-img">
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="text-container">
+                {% if block.headline is defined%}<span class="theme-headline headline">{{ block.headline|html_sanitize }}</span>{% endif %}
+                {% if block.copy is defined %}<div class="copy">{{ block.copy|html_sanitize }} </div>{% endif %}
             </div>
+            <div class="ex-toggle">
+                <div class="lines"></div>
+            </div>
+            <button class="prev-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 18 31" fill="none">
+                    <path d="M15.6953 1.5L2 15.1953L15.6953 28.8906" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            {% if block.media is defined %}
+            <div class="image-container">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>

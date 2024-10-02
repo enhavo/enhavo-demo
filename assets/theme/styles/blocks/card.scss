@@ -1,47 +1,62 @@
 .block-card {
-  .text-grid {
-    display: flex;
+  .text-flex {
+    display: flex;align-items: center;
     gap: 50px;
-    .card-text {
-      flex: 1
+    position: relative;
+    .media-container {
+      flex: 0 0 calc(50% - 25px);
+      max-width: calc(50% - 25px);
+      position: relative;
+      .img-wrapper {
+        padding-bottom: 56.2%;
+        position: relative;
+      }
+      img {display: block;@include imgCover;}
+    }
+    .text-container {
+      flex: 0 0 calc(50% - 25px);max-width: calc(50% - 25px);
+      .headline {
+        padding: 5px 0 15px 0;
+      }
     }
   }
-  .gradient-grid {
-    display: flex;
+
+  .gradient-flex {
+    display: flex;align-items: center;
+    position: relative;
     .media-container {
-      .headerbild-img {
-        z-index: -2;
-      }
+      flex: 0 0 calc(65.56%);max-width: calc(65.56%);
+      position: relative;
+      img {display: block;}
       .gradient {
-        @include imgCover;left: 50%;
+        @include imgCover;left: 26.35%;width: 73.5%;
         background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
         z-index: 1;
       }
     }
-    .card-gradient {
-      flex: 1;display: flex;flex-direction: column;justify-content: center;
+    .text-container {
+      position: absolute;width: 100%;left: auto;right: 0;
+      flex: 0 0 calc(48.3%);max-width: calc(48.3%);
       z-index: 1;
     }
   }
-  .stacked-grid {
-    display: flex;flex-direction: column;gap: 50px;
-    margin: 0 auto;
-    max-width: 960px;
+
+  .stacked-flex {
+    display: flex;flex-direction: column;gap: 20px;
+    margin: 0 auto;max-width: 960px;
     .media-container {
-      padding-bottom: 55%;
+      flex: 0 0 calc(76.5%);max-width: calc(76.5%);
+      position: relative;
+      .img-wrapper {
+        padding-bottom: 56.3%;
+        position: relative;
+      }
+      img {display: block;@include imgCover;}
     }
-  }
-  .media-container {
-    flex: 1;
-    padding-bottom: 26.5%;
-    position: relative;
-  }
-  .headerbild-img {
-    @include imgCover;
-  }
-  img {
-    width: 100%;
-    display: block;
+    .text-container{
+      max-width: 733px;
+      .headline{padding: 5px 0 15px 0}
+    }
   }
 }
 @include screenMaxWidth(1024px){

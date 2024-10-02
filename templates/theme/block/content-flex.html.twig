@@ -1,9 +1,9 @@
-<div class="block-content space-top">
+<div class="block-content">
     <div class="theme-container">
         <div class="{{ block.layout }}-grid">
             {% for item in block.items %}
                 <div class="{{ block.layout }}-img-wrapper">
-                    <div class="image-container ">
+                    <div class="media-container">
                         <img src="{{ media_url(item.media) }}" alt="{{ media_parameter(item.media, 'alt') }}">
                     </div>
                     <div class="texts-container">
@@ -11,7 +11,9 @@
                         <div class="theme-headline padding">{{ item.headline|html_sanitize }}</div>
                         <div class="copy">{{ item.copy|html_sanitize }}</div>
                         <div class="button-container">
-                            <a class="theme-cta theme-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
+                            <div class="btn-wrapper">
+                                <a class="theme-cta theme-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
+                            </div>
                         </div>
                     </div>
                 </div>

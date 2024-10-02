@@ -1,8 +1,3 @@
-{#{% if navigation is defined and navigation.footer %}#}
-{#    {% for node in navigation.footer.nodes %}#}
-{#        {{ navigation_node_render(node, "footer") }}#}
-{#    {% endfor %}#}
-{#{% endif %}#}
 {% if navigation.footer is defined and navigation.footer.nodes|length > 0 %}
     <ul class="menu">
         {% for node in navigation.footer.nodes %}

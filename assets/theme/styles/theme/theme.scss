@@ -1,59 +1,57 @@
 body{padding-top: 123px;background: white;margin: 0;color: #000;font-family: "Open Sans";font-size: 1.8rem;letter-spacing: 0.18px;line-height: 1.44em;
 }
-.space-top{padding-top: 150px;}
-
-    .theme-main-navigation {display: flex;
-      .menu {display: flex;
-        a {@include typoHeadline;color: $textColor1;text-decoration: none;font-weight: 400;font-size: 18px;cursor: pointer;}
-        li {
+.theme-main-navigation {display: flex;
+  .menu {display: flex;
+    a {@include typoHeadline;color: $textColor1;text-decoration: none;font-weight: 400;font-size: 18px;cursor: pointer;}
+    li {
+      position: relative;
+      margin-left: 60px;
+      list-style-type: none;
+      .headline {
+        @include typoHeadline;
+        color: $textColor1;
+        font-weight: 400;
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+        &:hover a{
+          font-weight: 700;
+        }
+        &:hover .sub-menu{
+          display: block;opacity: 1;
           position: relative;
-          margin-left: 60px;
-          list-style-type: none;
-          .headline {
-            @include typoHeadline;
-            color: $textColor1;
-            font-weight: 400;
-            font-size: 18px;
-            cursor: pointer;
-            position: relative;
-            &:hover a{
-              font-weight: 700;
-            }
-            &:hover .sub-menu{
-              display: block;opacity: 1;
-              position: relative;
 
-            }
-          }
-          .sub-menu {
-            display: none;
-            top: calc(100% + 0.25rem);
-            left: 0;
-            opacity: 0;
-            transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+        }
+      }
+      .sub-menu {
+        display: none;
+        top: calc(100% + 0.25rem);
+        left: 0;
+        opacity: 0;
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+        text-decoration: none;
+        flex-direction: column;
+        padding: 0;margin: 0;
+        .sub-menu-list {
+          padding: 10px;
+          margin-left: 20px;
+          .list-font {
+            @include typoHeadline;
+            text-transform: capitalize;
+            font-style: italic;
+            color: #ffffff;
+            font-weight: 400;
             text-decoration: none;
-            flex-direction: column;
-            padding: 0;margin: 0;
-            .sub-menu-list {
-              padding: 10px;
-              margin-left: 20px;
-              .list-font {
-                @include typoHeadline;
-                text-transform: capitalize;
-                font-style: italic;
-                color: #ffffff;
-                font-weight: 400;
-                text-decoration: none;
-                display: block;width: 100%;
-              }
-            }
-          }
-          .submenu-container {
-            position: relative;
+            display: block;width: 100%;
           }
         }
       }
+      .submenu-container {
+        position: relative;
+      }
     }
+  }
+}
 .header-info {
   .number {@include typoHeadline;margin-right: 0.5rem;text-align: right;color: #FFFFFF;font-weight: 400;font-size: 18px;}
 }
@@ -71,7 +69,7 @@ header {position: fixed;top: 0;width: 100%;background-color: #171717;z-index: 20
 &:hover{max-height: 300px;}
 }
 
-.theme-container{margin: 0 auto;max-width: 1920px;width: 100%;padding-inline:135px;}
+.theme-container{margin: 0 auto;max-width: 1920px;width: 100%;padding-inline:201px;}
 .theme-overline{@include typoOverline;
 }
 .theme-headline{@include typoHeadline;
@@ -80,8 +78,11 @@ header {position: fixed;top: 0;width: 100%;background-color: #171717;z-index: 20
 .button-container{
   padding-top: 30px;
 }
+.btn-wrapper{
+  display:inline-flex;border-radius: 40px;border: 2px solid #000;
+}
 .theme-button{
-  border-radius: 40px;border: 2px solid #000;cursor: pointer;padding:15px 30px;text-decoration: none;
+  cursor: pointer;padding:15px 30px;text-decoration: none;
 }
 .theme-cta{
   color: $textColor3;

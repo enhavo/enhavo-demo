@@ -1,44 +1,73 @@
 .block-hero {
-  .hero-flex {
-    display: flex;
-    .image-wrapper {
-      position: relative;
-      padding-bottom: 26.5%;
-      flex: 1;
+  &.hero-flex {
+    .flex {
+      display: flex;gap: 55px;
+      .media-container {
+        flex: 0 0 48.18%;max-width: 48.18%;
+        .img-wrapper {
+          position: relative;
+          padding-bottom: 56.28%;
+          flex: 1;
+        }
+        img {
+          display: block;
+          @include imgCover;
+        }
+      }
+      .text-container {
+        flex: 0 0 48.18%;max-width: 48.18%;
+        display: flex;flex-direction: column;justify-content: center;
+      }
     }
-    img {display: block;@include imgCover;}
-    .text-container {flex: 1;display: flex;flex-direction: column;justify-content: center;}
   }
-  .overline {@include typoOverline;}
-  .hero-black-flex {
+  &.hero-black-flex {
     background-color: #171717;
     display: flex;justify-content: center;
     position: relative;
-    padding-bottom: 10%;
-    .image-wrapper {
-      position: absolute;top: 74%;
-      width: 49%;height: 100%;
-      img {display: block;width: 100%}
-    }
-    .hero-black-text-container {
-      display: flex;flex-direction: column;align-items: center;
-      padding: 49px 0 0;
-      .theme-headline {color: $textColor1;}
-      .overline {color: $textColor1;}
-      .copy {
-        width: 45%;
-        color: $textColor1;
-        text-align: center;
+    height: 565px;
+    .flex {
+      display: flex;
+      flex-direction: column;
+      .media-container {
+        padding-top: 32px;
+        order: 2;display: flex;justify-content: center;
+        .img-wrapper {
+          position: relative;
+         aspect-ratio: 16/9;
+          flex: 0 0 48.18%;max-width: 48.18%;
+        }
+        img {
+          display: block;
+          @include imgCover;
+        }
       }
-      .theme-cta {;
-        color: $textColor1;
-        border: 1px solid $textColor1;
+      .hero-black-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 49px 0 0;
+        .headline {
+          padding: 10px 0 15px 0;
+          color: $textColor1;
+        }
+        .overline {
+          color: $textColor1;
+        }
+        .copy {
+          width: 45%;
+          color: $textColor1;
+          text-align: center;
+        }
+        .btn-wrapper {;
+          border-color: #fff;
+          a{color: #FFFFFF}
+        }
       }
-    }
-    .black-img {
-      position: relative;
-      padding-bottom: 26.5%;
-      width: 50%;
+      .black-img {
+        position: relative;
+        padding-bottom: 26.5%;
+        width: 50%;
+      }
     }
   }
   .padding {padding: 10px 0 15px 0;}

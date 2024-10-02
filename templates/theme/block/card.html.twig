@@ -1,13 +1,15 @@
-<div class="block-card space-top">
+<div class="block-card">
     <div class="theme-container">
-        <div class="{{ block.layout }}-grid">
+        <div class="{{ block.layout }}-flex">
             <div class="media-container">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="headerbild-img">
-                <div class="gradient"></div>
+                <div class="img-wrapper">
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="headerbild-img">
+                    <div class="gradient"></div>
+                </div>
             </div>
-            <div class="card-{{ block.layout }}">
+            <div class="text-container">
                 <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
-                <div class="theme-headline padding">{{ block.headline|html_sanitize }}</div>
+                <div class="theme-headline headline">{{ block.headline|html_sanitize }}</div>
                 <div class="copy">{{ block.copy }}</div>
                 <div class="button-container">
                     <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>

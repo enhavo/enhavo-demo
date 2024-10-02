@@ -1,6 +1,5 @@
 @mixin typoHeadline{font-size:$fontSizeHeadline1;color: $textColor3;font-family: $fontFamily1; line-height: $lineHeightHeadline1;font-weight: $fontWeight; letter-spacing: 0.45px; text-transform: uppercase;
   &.boldHeadline{font-size: 5rem;line-height: 1.28em;font-weight: $fontWeight;text-transform: uppercase;}
-  &.padding{padding: 5px 0 15px;}
 }
 @mixin typoOverline{font-size:$fontSizeOverline;color: $textColor3;font-family: $fontFamily1; line-height: $lineHeightOverline;font-weight: $fontWeight; letter-spacing: 0.375px; text-transform: uppercase;}
 @mixin imgPosition{position:absolute; top:0; left:0; width:100%; height:100%;}

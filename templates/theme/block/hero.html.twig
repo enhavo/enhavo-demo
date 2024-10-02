@@ -1,16 +1,20 @@
-<div class="block-hero space-top">
+<div class="block-hero {{ block.layout }}-flex">
     <div class="theme-container">
-        <div class="{{ block.layout }}-flex">
-            <div class="image-wrapper">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
+        <div class="flex">
+            <div class="media-container">
+                <div class="img-wrapper">
+                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
+                </div>
             </div>
             <div class="text-container {{ block.layout }}-text-container">
-                <div class="overline">{{ block.overline|html_sanitize }}</div>
-                <div class=" theme-headline padding boldHeadline">{{ block.headline|html_sanitize }}</div>
+                <div class="overline theme-overline">{{ block.overline|html_sanitize }}</div>
+                <div class=" theme-headline headline boldHeadline">{{ block.headline|html_sanitize }}</div>
                 <div class="copy">{{ block.copy|html_sanitize }}</div>
                 {% if block.ctaTitle and block.ctaLink is not null %}
                     <div class="button-container">
-                        <a class="theme-cta theme-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                        <div class="btn-wrapper">
+                            <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                        </div>
                     </div>
                 {% endif %}
             </div>

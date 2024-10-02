@@ -2,13 +2,13 @@
     <div class="theme-container">
         <div class="grid">
             {% for block in block.items %}
-                <div class="content-container">
-                    <div class="img-container">
+                <div class="item">
+                    <div class="media-container">
                         <img src="{{ media_url(block.teamMember.picture) }}" alt="{{ media_parameter(block.teamMember.picture, 'alt') }}">
                     </div>
                     <div class="text-container">
                         <div class="theme-overline overline">{{ block.position }}</div>
-                        <span class="theme-headline padding">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
+                        <span class="theme-headline headline">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
                         <div class="copy">
                             <div>{{ block.teamMember.phone }}</div>
                             <div>{{ block.teamMember.email }}</div>
