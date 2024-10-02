@@ -2,10 +2,7 @@
   .theme-container{
     .grid {
       .slick-slide{
-        .slick-active{
-          margin-right: 55px;
-          margin-left: 0;
-        }
+        margin: 0 27.5px;
         .media-wrapper{
           position: relative;padding-bottom: 55.5%;
         }
@@ -13,7 +10,7 @@
         display: block;
         img {display: block;@include imgCover;}
       }
-      .slick-list{overflow: visible;margin: 0;padding: 0;
+      .slick-list{overflow: hidden;margin: 0;padding: 0;
         &.draggable{
         padding:0!important;
         }

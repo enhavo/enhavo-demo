@@ -19,18 +19,11 @@ export default class extends Controller {
                 {
                     breakpoint: 780,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                         centerMode:true,
                         slidesToScroll: 1,
                     }
                 },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                }
             ]
         });
     }
