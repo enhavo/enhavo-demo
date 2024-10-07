@@ -77,22 +77,19 @@ header {position: fixed;top: 0;width: 100%;background-color: #171717;z-index: 20
 }
 .button-container{
   padding-top: 30px;
-}
-.btn-wrapper{
-  display:inline-flex;border-radius: 40px;border: 2px solid #000;
-}
-.theme-button{
-  cursor: pointer;padding:15px 30px;text-decoration: none;
-}
-.theme-cta{
-  color: $textColor3;
-  font-family: $fontFamily1;
-  font-weight: $fontWeight;
-  line-height: $lineHeightButton;
-  letter-spacing: 0.45px;
-  text-transform: uppercase;
-  @include screenMaxWidth(1024px){
-    color: red;
+  .btn-wrapper{
+    display:inline-flex;border-radius: 40px;border: 2px solid #000;
+  }
+  .theme-button{
+    cursor: pointer;padding:15px 30px;text-decoration: none;
+  }
+  a{
+    color: $textColor3;
+    font-family: $fontFamily1;
+    font-weight: $fontWeight;
+    line-height: $lineHeightButton;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
   }
 }
 footer{

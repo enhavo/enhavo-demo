@@ -12,7 +12,9 @@
                 <div class="theme-headline headline">{{ block.headline|html_sanitize }}</div>
                 <div class="copy">{{ block.copy }}</div>
                 <div class="button-container">
-                    <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                    <div class="btn-wrapper">
+                        <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                    </div>
                 </div>
             </div>
 
