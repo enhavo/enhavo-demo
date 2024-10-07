@@ -1,39 +1,32 @@
-<div class="jobs-block" data-controller="jobs">
-    <div class="container">
-        <div class="jobs-grid" data-jobs-target="grid" >
-            <div class="table">
-                <div class="table-label">
-                    <div class="table-span">
-                        <button class="job-headline jobs-overline" data-action="click->jobs#filterByJobType" data-job-type="" >Alle anzeigen</button>
-                        <div class="button-caret">
-                            <button class="caret-down" data-action="click->jobs#down" data-jobs-target="caretDown" >&or;</button>
-                            <button class="caret" data-action="click->jobs#caret" data-jobs-target="caret">&#94;</button>
+<div class="block-jobs" data-controller="jobs">
+    <div class="theme-container">
+        <div class="flex" data-jobs-target="grid" >
+            <div class="left">
+                <div class="label" data-jobs-target="borderContainer">
+                    <div class="span">
+                        <button class="overline" data-action="click->jobs#filterByJobType" data-job-type="" >Alle anzeigen</button>
+                        <div class="toggle-indicator" data-action="click->jobs#filterByJobType" data-jobs-target="toggleIcon" >
+                            <span class="icon icons icons-chevron-down"></span>
                         </div>
                     </div>
-                    <div class="hr-container">
-                        <hr>
-                    </div>
-                    <div class="job-button">
-                        <button class="job-headline" data-action="click->jobs#filterByJobType" data-job-type="Vollzeit">vollzeit</button>
-                        <button class="job-headline" data-action="click->jobs#filterByJobType" data-job-type="Teilzeit">teilzeit</button>
-                        <button class="job-headline" data-action="click->jobs#filterByJobType" data-job-type="Praktikum">praktikum</button>
+                    <div class="types-container" data-jobs-target="typeContainer">
+                        {% for blocks in block.jobs %}
+                            <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems">{{ blocks.type|html_sanitize }}</div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-            <div class="job-items">
+            <div class="right">
                 {% for blocks in block.jobs %}
-                    <div class="job-item" data-job-item>
-                        <div class="job-row">
-                            <div class="job-type" data-job-type>{{ blocks.type }}</div>
-                            <div class="job-wrapper">
-                                <span class="job-title">{{ blocks.title }}</span>
-                                <span class="job-text">{{ blocks.ctaTitle }}</span>
-                            </div>
+                    <div class="items" data-jobs-target="item" data-type="{{ blocks.type }}">
+                        <div class="type" >{{ blocks.type|html_sanitize }}</div>
+                        <div class="text-container">
+                            <span class="theme-headline" >{{ blocks.title|html_sanitize }}</span>
+                            <span class="copy theme-copy" >{{ blocks.copy|html_sanitize }}</span>
                         </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-</div>
 </div>

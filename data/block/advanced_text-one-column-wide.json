@@ -8,7 +8,7 @@
     ],
     "data": {
         "block": {
-            "layout": "two-column",
+            "layout": "one-column-wide",
             "id": 1,
             "text": "big",
             "columns": null,

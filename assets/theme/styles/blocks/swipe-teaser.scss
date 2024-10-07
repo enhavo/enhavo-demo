@@ -1,72 +1,46 @@
-.block_swipe-teaser{
-  margin: 90px 0 50px;
-}
-.swipe-teaser-container{
-  width: 100%;
-}
-.grid-gradient-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 51px;
-  margin-inline: auto;
-
-  .teaser-wrapper {
-    grid-column: span 2;
-  }
-
-  .teaser-swiper-media-gradient {
-    border: 1px solid green;
-    width: 100%;
-    grid-column: 2;
-    grid-row: 1;
-    z-index: -1;
-    background-size: cover;
-  }
-
-  .teaser-swiper-media {
-    width: 100%;
-    grid-column: span 3;
-    grid-row: 1;
-    z-index: -1;
-    background-size: cover;
-    border: 1px solid gray;
-  }
-
-  .swiper-text-container {
-    grid-column: 4;
-  }
-
-  .swiper-overline {
-    margin-top: 32px;
-  }
-
-  .swiper-media-gradient {
-    width: 100%;
-    grid-column: span 5;
-    grid-row: 1;
-    z-index: -1;
-    background-size: cover;
-    border: 1px solid green;
+.block-swipe-teaser {
+  .theme-container{
+    .grid {
+      .slick-slide{
+        margin: 0 27.5px;
+        .media-wrapper{
+          position: relative;padding-bottom: 55.5%;
+        }
+        max-width: 472px;
+        display: block;
+        img {display: block;@include imgCover;}
+      }
+      .slick-list{overflow: hidden;margin: 0;padding: 0;
+        &.draggable{
+        padding:0!important;
+        }
+      }
+      .slick-track{
+        display: flex;
+      }
+      .text-wrapper{padding-top: 9%;}
+      .slick-dots{
+        margin-top: 73px;
+        display: flex;justify-content: center;align-items: center;cursor: pointer;
+        li {
+          width: 10px;height: 10px;border-radius: 50%;border: 1px solid black;
+          margin: 0 2px;
+          button {
+            &:before {color: unset;}
+            font{display: none;}
+            display: none;
+          }
+          &.slick-active {
+            background: black;
+            button {
+              &:before {color: unset}
+              font{display: none;}
+            }
+          }
+        }
+      }
+    }
   }
 }
-  .navi {
-    margin-top: 73px;
-    display: flex;
-    justify-content: center;
-  }
 
-  .btt-nav {
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    border-radius: 50%;
-    border: 1px solid;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .btt-nav:hover,
-  .btt-nav.active {
-    background-color: #333;
-  }
 

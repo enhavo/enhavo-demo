@@ -3,9 +3,7 @@
     "type": "block",
     "template": "theme/block/content-flex.html.twig",
     "component": null,
-    "children": [
-
-    ],
+    "children": [],
     "data": {
         "block": {
             "layout": "cards",

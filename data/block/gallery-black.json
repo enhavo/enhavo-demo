@@ -8,7 +8,7 @@
     ],
     "data": {
         "block": {
-            "layout": "gallery-black",
+            "layout": "black",
                 "media": {
                     "id": 2,
                     "mimeType": "image/png",
@@ -21,7 +21,6 @@
                     "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
                 },
             "headline": "Dies ist eine Bildüber",
-            "text": "schrift",
             "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.."
         }
     }

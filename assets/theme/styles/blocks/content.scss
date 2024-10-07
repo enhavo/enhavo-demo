@@ -1,0 +1,22 @@
+.block-content {
+  .flex-grid {
+    display: grid;grid-template-columns: repeat(3, 1fr);gap: 50px;
+    .media-container {
+      padding-bottom: 55.5%;
+      position: relative;
+      img {display: block;@include imgCover;}
+    }
+    .texts-container {padding-top: 20px;}
+  }
+  .list-grid {display: flex;flex-direction: column; gap: 60px;
+    .list-img-wrapper {display: flex;gap: 50px;
+      .media-container {
+        flex: 0 0 calc(32.8% - 25px);
+        max-width: calc(32.8% - 25px);
+        position: relative;
+        img {display: block;@include imgCover;height: auto}
+      }
+      .texts-container {flex: 0 0 65.65%;max-width: calc(65.65% - 25px);}
+    }
+  }
+}

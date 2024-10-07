@@ -2,7 +2,6 @@ import {Controller} from "@hotwired/stimulus";
 import AppComponent from "../components/App.vue";
 import {VueFactory} from "@enhavo/app/vue/VueFactory";
 import {VueRouterFactory} from "../vue/VueRouterFactory";
-
 export default class extends Controller
 {
     connect()

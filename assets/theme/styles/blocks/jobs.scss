@@ -1,145 +1,41 @@
-.jobs-block {
-  margin: 90px 0 50px;
-
-  .jobs-grid {
-    max-width: 1390px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Change the columns to fractions */
-    grid-gap: 0px;
-    margin: 0 auto;
-
-  }
-  .table {
-    width: 471px;
-    flex-shrink: 0;
-  }
-  .table-label {
-    border: 1px solid #171717;
-  }
-  .table-span {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    padding: 1rem;
-  }
-  .button-caret{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-  }
-  .jobs-overline {
-    color: #171717;
-    font-family: "Open Sans";
-    font-size: 15px!important;
-    font-style: normal;
-    font-weight: 700!important;
-    line-height: 19px; /* 126.667% */
-    letter-spacing: 0.375px;
-    text-transform: uppercase;
-  }
-  .caret-down {
-    margin-right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .caret {
-    margin-right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .caret.open-job {
-    margin-right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    max-height: 100%;
-  }
-  .hr-container {
-    padding-left: 10px;
-    padding-right: 20px;
-    max-height: 0;
-   overflow: hidden;
-  }
-  .hr-container.open-job{
-    max-height: 100%;
-    display: block;
-  }
-  .job-button{
-    display: flex;flex-direction: column;justify-content: left;align-items: flex-start;
-    max-height: 0;
-    overflow: hidden;
-  }
-  .job-button.open-job{
-    display: flex;flex-direction: column;justify-content: left;align-items: flex-start;
-    max-height: 100%;
-  }
-  .job-headline {
-    margin-top: 15px;
-    color: #171717;
-    font-family: "Open Sans";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19px; /* 126.667% */
-    letter-spacing: 0.375px;
-    text-transform: uppercase;
-    padding: 1rem;
-    cursor: pointer;
-  }
-  .job-headline:hover{
-    color: blue;
-  }
-  .job-headline:focus {
-    font-weight: bold;
-    color: blue;
-  }
-  .job-item,.job-items {
-    grid-column: 2/ span 5;
-  }
-  .job-item{
-    border-bottom: 2px solid black;
-    margin-left: 5%;
-  }
-  .job-row {
-    margin-bottom: 1rem;
-  }
-  .job-type {
-    color: #000;
-    font-family: "Open Sans";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 19px; /* 126.667% */
-    letter-spacing: 0.375px;
-    text-transform: uppercase;
-    padding: 1rem;
-  }
-
-  .job-wrapper {
-    position: relative;
-  }
-  .job-title{
-    color: #171717;
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px; /* 133.333% */
-    text-transform: uppercase;
-  }
-  .job-text {
-    position: absolute;
-    right: 10px; /* Adjust as needed */
-    top: 80%;
-    transform: translateY(-65%);
-    pointer-events: none;
-    color: #000;
-    text-align: right;
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 144.444% */
-    letter-spacing: 0.18px;
+.block-jobs {
+  .flex {
+    display: flex;gap: 51px;
+    .left {
+      flex: 10;
+      .label {
+        border: 1px solid #171717;
+        .span {
+          display: flex;justify-content: space-between;
+          padding: 1rem;
+          .overline {
+            color: $textColor3;font-size: 1.5rem;@include typoOverline;cursor: pointer}
+          .icons-chevron-down:before {content: "\2228";}
+          .toggle-indicator {display: block;
+            &.visible{transform:scaleY(-1);}
+          }
+          .caret-button {cursor: pointer;}
+          .caret-up.open-job {margin-right: 10px;font-size: 24px;cursor: pointer;max-height: 100%;}
+        }
+      }
+      .types-container{
+        display: none;
+        opacity: 0;
+        .items{padding: 1em;cursor: pointer}
+        &.visible{display: block;opacity: 1;
+        }
+      }
+    }
+    .right {flex: 21;
+      .items {
+        border-bottom: 2px solid black;
+        .type {padding: 1.5rem 0;@include typoOverline;}
+        .text-container {
+          display: flex;justify-content: space-between;align-items: flex-end;
+          .copy {pointer-events: none;color: #000;}
+        }
+      }
+    }
   }
 }
 

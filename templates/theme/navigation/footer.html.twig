@@ -1,5 +1,11 @@
-{% if navigation is defined and navigation.footer %}
-    {% for node in navigation.footer.nodes %}
-        {{ navigation_node_render(node, "footer") }}
-    {% endfor %}
+{% if navigation.footer is defined and navigation.footer.nodes|length > 0 %}
+    <ul class="menu">
+        {% for node in navigation.footer.nodes %}
+            <li{% if node.active %} class="active"{% endif %}>
+                {% if node.name == "page" %}
+                    <a href="{{ node.subject.url }}">{{ node.subject.title }}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
 {% endif %}

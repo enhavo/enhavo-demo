@@ -1,72 +1,23 @@
 .block-team {
-  margin: 90px 0 50px;
-
-  .text_container{
-  max-width: 1390px;
-  display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
-  margin: 0 auto;
-  }
-  .team-img{
-  grid-column:span 2;
-  text-align: center;
-  }
-  .team-img-4{
-  grid-column: 2 / span 2;
-  }
-  .team-4{
-    grid-column: 2 / span 2;
-    margin-top: 20px;
-  }
-  .team-contact{
-  margin-top: 15px;
-  color: #000;
-  text-align: center;
-  font-family: "Open Sans";font-size: 18px;font-weight: 400;
-  line-height: 26px; /* 144.444% */letter-spacing: 0.18px;
-  }
-.team-img{
-  grid-column:span 2;
-  text-align: center;
-}
-.team-4{
-  grid-column: 2 / span 2;
-  margin-top: 20px;
-}
-.team-img-4{
-  grid-column: 2 / span 2;
-}
-.position{
-  margin-top: 20px;
-  color: #000;
-  text-align: center;
-  font-family: "Open Sans";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 19px; /* 126.667% */
-  letter-spacing: 0.375px;
-  text-transform: uppercase;
-}
-.team-name{
-  margin-top: 5px;
-  color: #171717;
-  text-align: center;
-  font-family: "Open Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 32px; /* 133.333% */
-  text-transform: uppercase;
-}
-.team-contact{
-  margin-top: 15px;
-  color: #000;
-  text-align: center;
-  font-family: "Open Sans";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px; /* 144.444% */
-  letter-spacing: 0.18px;
-  display: flex;justify-content: center;align-items: center;flex-direction: column;
+  .grid {
+    display: grid;grid-template-columns: repeat(3, 1fr);gap: 51px;
+    .item {
+      text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;gap:20px;
+      &:nth-of-type(4){
+        align-items: end;
+      }
+      &:nth-of-type(5){
+        align-items: end;
+      }
+      .media-container{
+        position: relative;
+        padding-bottom: 44.48%;
+        max-width: 210px;width: 100%;
+        img{display: block;@include imgCover;}
+      }
+      .text-container{
+        .copy{padding-top: 15px;}
+      }
+    }
   }
 }
