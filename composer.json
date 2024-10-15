@@ -31,6 +31,7 @@
         "rollerworks/password-strength-bundle": "^2.2",
         "symfony/console": "^6.3",
         "symfony/dotenv": "^6.3",
+        "symfony/flex": "*",
         "symfony/framework-bundle": "^6.3",
         "symfony/http-client": "^6.3",
         "symfony/twig-bundle": "^6.3",
@@ -52,7 +53,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
-            "ocramius/package-versions": true
+            "ocramius/package-versions": true,
+            "symfony/flex": true
         }
     },
     "autoload": {

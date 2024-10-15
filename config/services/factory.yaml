@@ -1,0 +1,33 @@
+services:
+    App\Factory\Block\AdvancedTextBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\AdvancedTextBlock'
+    App\Factory\Block\CardBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\CardBlock'
+    App\Factory\Block\ContentFlexBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\ContentFlexBlock'
+    App\Factory\Block\GalleryBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\GalleryBlock'
+    App\Factory\Block\HeroBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\HeroBlock'
+    App\Factory\Block\QuoteBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\QuoteBlock'
+    App\Factory\Block\SwipeTeaserBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\SwipeTeaserBlock'
+    App\Factory\Block\TeamBlockFactory:
+        public: true
+        arguments:
+            - 'App\Entity\Block\TeamBlock'

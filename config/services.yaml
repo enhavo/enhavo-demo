@@ -17,10 +17,6 @@ services:
     #            $locales: '%app_locales%'
     #            $defaultLocale: '%locale%'
 
-    App\:
-        resource: '../src/*'
-        exclude: '../src/{DependencyInjection,Entity,Migration,Tests,Kernel.php}'
-
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
