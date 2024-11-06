@@ -1,17 +1,22 @@
-<div class="nag-screen-block">
-    <div class="container">
-        <div class="nag-screen-wrapper">
-            <div class="nag-screen-grid">
-                <button class="times">&#215;</button>
-                <div class="nag-screen-container">
-                    <div class="nag-screen-overline overline">{{ block.overline }}</div>
-                    <div class="nag-screen-headline">{{ block.headline }}</div>
-                    <div class=" nag-screen-copy copy">{{ block.copy }}</div>
-                    <div class="nag-screen-btt">
-                        <a class="card_button_1"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+<div class="block-nag-screen">
+    <div class="theme-container">
+        <div class="wrapper">
+            <div class="ex-toggle">
+                <div class="lines"></div>
+            </div>
+            <div class="flex">
+                <div class="text-container">
+                    <div class="overline theme-overline">{{ block.overline|html_sanitize }}</div>
+                    <div class="headline theme-headline boldHeadline">{{ block.headline|html_sanitize }}</div>
+                    <div class="copy">{{ block.copy|html_sanitize }}</div>
+                    <div class="button-container">
+                        <div class="btn-wrapper">
+                            <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>

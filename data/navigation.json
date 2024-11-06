@@ -4,6 +4,77 @@
       "id": 1,
       "nodes": [
         {
+          "id": 7,
+          "name": "submenu",
+          "children": [
+            {
+              "id": 8,
+              "name": "page",
+              "children": [],
+              "subject": {
+                "id": 11,
+                "title": "Blogartikel 01",
+                "url": "\/Blogartikel 01"
+              },
+              "label": "Blogartikel 01",
+              "active": false,
+              "template": "/theme/navigation/page.html.twig",
+              "component": null
+            },
+            {
+              "id": 8,
+              "name": "page",
+              "children": [],
+              "subject": {
+                "id": 11,
+                "title": "Blogartikel 02",
+                "url": "\/Blogartikel 02"
+              },
+              "label": "Blogartikel 02",
+              "active": false,
+              "template": "/theme/navigation/page.html.twig",
+              "component": null
+            },
+            {
+              "id": 8,
+              "name": "page",
+              "children": [],
+              "subject": {
+                "id": 11,
+                "title": "Blogartikel 03",
+                "url": "\/Blogartikel 03"
+              },
+              "label": "Blogartikel 03",
+              "active": false,
+              "template": "/theme/navigation/page.html.twig",
+              "component": null
+            },
+            {
+              "id": 9,
+              "name": "page",
+              "children": [],
+              "subject": {
+                "id": 12,
+                "title": "Blogartikel 04",
+                "url": "\/blog\/Blogartikel 04"
+              },
+              "label": "Blogartikel 04",
+              "active": false,
+              "template": "/theme/navigation/page.html.twig",
+              "component": null
+            }
+          ],
+          "subject": {
+            "id": 2,
+            "title": "Imprint",
+            "url": "expr:ref('page/imprint.json', 'resource.url')"
+          },
+          "label": "Blog",
+          "active": false,
+          "template": "/theme/navigation/submenu.html.twig",
+          "component": null
+        },
+        {
           "id": 1,
           "name": "page",
           "children": [],
@@ -12,7 +83,33 @@
             "title": "Home",
             "url": "expr:ref('page/homepage.json', 'resource.url')"
           },
-          "label": "Home",
+          "label": "Team",
+          "active": false,
+          "template": "/theme/navigation/page.html.twig"
+        },
+        {
+          "id": 1,
+          "name": "page",
+          "children": [],
+          "subject": {
+            "id": 4,
+            "title": "Home",
+            "url": "expr:ref('page/homepage.json', 'resource.url')"
+          },
+          "label": "Jobs",
+          "active": false,
+          "template": "/theme/navigation/page.html.twig"
+        },
+        {
+          "id": 1,
+          "name": "page",
+          "children": [],
+          "subject": {
+            "id": 4,
+            "title": "Home",
+            "url": "expr:ref('page/homepage.json', 'resource.url')"
+          },
+          "label": "Contact",
           "active": false,
           "template": "/theme/navigation/page.html.twig"
         }

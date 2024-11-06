@@ -1,31 +1,30 @@
-{% if block.layout == "gallery" %}
-<div class="block-gallery">
-    <div class="container">
-        <div class="gallery-content">
-            {% for block in block.items %}
-                <div class=" {% if loop.index == 2 or loop.index == 4 or loop.index == 5 %} item_2 {% endif %}">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery_img">
-                </div>
-            {% endfor %}
+<div class="block-gallery layout-{{ block.layout }}">
+    <div class="theme-container">
+        <div class="grid">
+            {% if block.items is defined %}
+                {% for block in block.items %}
+                    <div class=" item_2">
+                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery-img">
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="text-container">
+                {% if block.headline is defined%}<span class="theme-headline headline">{{ block.headline|html_sanitize }}</span>{% endif %}
+                {% if block.copy is defined %}<div class="copy">{{ block.copy|html_sanitize }} </div>{% endif %}
+            </div>
+            <div class="ex-toggle">
+                <div class="lines"></div>
+            </div>
+            <button class="prev-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 18 31" fill="none">
+                    <path d="M15.6953 1.5L2 15.1953L15.6953 28.8906" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            {% if block.media is defined %}
+            <div class="image-container">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
-{% endif %}
-{% if block.layout == "gallery-black" %}
-    <div class="black-gallery">
-        <div class="container">
-            <div class="gallery-black-content-grid">
-                <button class="left">&#60;</button>
-                <div class="gallery-black-text-container">
-                    <div class="gallery-black-button">
-                        <button class="xbutton">&times;</button>
-                    </div>
-                    <span class="gallery-black-headline">{{ block.headline }}</span>
-                    <span class="galley-black-text">{{ block.text }}</span>
-                    <div class="gallery-black-copy">{{ block.copy }}</div>
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
-                </div>
-            </div>
-         </div>
-    </div>
-{% endif %}

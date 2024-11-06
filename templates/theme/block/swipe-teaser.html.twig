@@ -1,30 +1,33 @@
-<div class="block_swipe-teaser">
-    <div class="swipe-teaser-container">
-        <div class="grid-gradient-container">
-            <div class="teaser-wrapper">
-                <img src="{{ asset("/build/theme/images/headerbild copy.png")}}" class="teaser-swiper-media-gradient">
+<div  class="block-swipe-teaser" data-controller="swiper-teaser">
+    <div class="theme-container" >
+        <div class="grid" data-swiper-teaser-target="slide" >
+            <div class="media-wrapper" >
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
             </div>
-            <div class="teaser-wrapper">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="teaser-swiper-media">
+            <div class="media-wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media">
             </div>
-            <div class="teaser-wrapper">
-                <div class="swiper-text-container">
-                    <div class="swiper-overline overline">{{ block.overline }}</div>
-                    <div class="headline">{{ block.headline }}</div>
+            <div class="text-wrapper">
+                <div class="text-container">
+                    <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
+                    <div class="theme-headline padding">{{ block.headline|html_sanitize }}</div>
                     <div class="copy">{{ block.copy }}</div>
                 </div>
             </div>
-            <div class="teaser-wrapper">
-                <img src="{{ asset("/build/theme/images/headerbild copy.png")}}" class="swiper-media-gradient">
+            <div class="media-wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
+            </div>
+            <div class="media-wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
             </div>
         </div>
-    </div>
-    <div class="navi">
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
-        <button class="btt-nav"></button>
+        <div class="navigation">
+            <button class="nav-btn slick-prev" data-index="0" data-swiper-teaser-target="navButton"></button>
+            <button class="nav-btn slick-next" data-index="1" data-swiper-teaser-target="navButton"></button>
+            <button class="nav-btn slick-next" data-index="2" data-swiper-teaser-target="navButton"></button>
+            <button class="nav-btn slick-next" data-index="3" data-swiper-teaser-target="navButton"></button>
+            <button class="nav-btn slick-next" data-index="4" data-swiper-teaser-target="navButton"></button>
+        </div>
     </div>
 </div>
 

@@ -3,13 +3,11 @@
     "type": "block",
     "template": "theme/block/card.html.twig",
     "component": null,
-    "children": [
-
-    ],
+    "children": [],
     "data": {
         "block": {
             "gradient": "yes",
-            "layout": "media-text",
+            "layout": "text",
             "media": {
                 "id": 2,
                 "mimeType": "image/png",

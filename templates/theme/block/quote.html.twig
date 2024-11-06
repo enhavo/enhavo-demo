@@ -1,17 +1,16 @@
 <div class="block-quote">
-    <div class="quote-container">
-        <div class="block-quote-grid">
-            <div class="quote-svg">
-                <img src="{{ asset("/build/theme/images/qoutes.svg")}}" >
-            </div>
-            <div class="quote">
-                <div class="quote-headline">{{ block.headline }}</div>
-                <div class="quote-overline">{{ block.overline  }}</div>
-            </div>
-            <div class="quote-svg2">
-                <img src="{{ asset("/build/theme/images/qoutes.svg")}}" >
+    <div class="theme-container">
+        <div class="svg-left">
+            <img src="{{ asset("/build/theme/images/qoutes.svg")}}" alt="quote-svg">
+        </div>
+        <div class="flex">
+            <div class="text-container">
+                <div class="theme-headline headline">{{ block.headline|html_sanitize }}</div>
+                <div class="theme-headline caption">{{ block.caption|html_sanitize  }}</div>
             </div>
         </div>
+        <div class="svg-right">
+            <img src="{{ asset("/build/theme/images/qoutes.svg")}}" alt="quote-svg">
+        </div>
     </div>
-
 </div>

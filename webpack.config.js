@@ -18,7 +18,6 @@ EnhavoEncore.add(
     Encore => {
         Encore
             .addEntry('base', './assets/theme/entrypoints/base')
-            .addEntry('home', './assets/theme/entrypoints/home.ts')
 
     },
     config => {}

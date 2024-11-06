@@ -13,38 +13,39 @@
             "id": 1,
             "text": "Sie möchten, dass Ihr Hund von einer erfahrenen Hand und einem liebevollen Herzen betreut wird? Kontaktieren Sie mich einfach über das unten stehende Formular, und lassen Sie uns gemeinsam dafür sorgen, dass Ihr Hund die besten Spaziergänge seines Lebens hat!",
             "overline": "Dies ist eine Headline",
-            "form": {
-                "name": {
+            "form": [
+                {
                     "type": "select",
                     "label": "ANREDE",
-                    "placeholder": "AUSWÄHLEN",
-                    "is_required": false
+                    "is_required": false,
+                    "options": [
+                        {"value": "herr", "label": "Herr"},
+                        {"value": "frau", "label": "Frau"},
+                        {"value": "divers", "label": "Divers"}
+                    ]
                 },
-                "email": {
+                {
                     "type": "email",
                     "label": "VORNAME",
                     "placeholder": "VORNAME",
                     "is_required": true
                 },
-                "subject": {
+                {
                     "type": "text",
                     "label": "NACHNAME",
                     "placeholder": "ILLENBERGER",
                     "is_required": false
                 },
-                "message": {
+                {
                     "type": "textarea",
                     "label": "NACHRICHT",
                     "placeholder": "HALLO, ICH HABE EINE FRAGE.",
                     "is_required": false
-                },
-                "checkbox": {
-                    "type":"checkbox",
-                    "label":"Hiermit erkläre ich, dass ich die AGB aufmerksam gelesen habe und dass ich. Meine Einwilligung zur Verarbeitung meiner persönlichen Daten gemäß geltender Datenschutzverordung gebe.",
-                    "placeholder": null,
-                    "is_required": null
                 }
-            },
+            ],
+            "type":"checkbox",
+            "label":"Hiermit erkläre ich, dass ich die AGB aufmerksam gelesen habe und dass ich. Meine Einwilligung zur Verarbeitung meiner persönlichen Daten gemäß geltender Datenschutzverordung gebe.",
+            "is_required": null,
             "ctaTitle": "KONTAKT AUFNEHMEN",
             "ctaLink": "http://google.com",
             "ctaTarget": "_blank"

@@ -9,7 +9,7 @@
     "data": {
         "block": {
             "gradient": "yes",
-            "layout": "media-text-stacked",
+            "layout": "stacked",
             "media": {
                 "id": 2,
                 "mimeType": "image/png",

@@ -1,5 +1,0 @@
-{% if node.subject %}
-    <li class="{% if node.active %} active{% endif %}">
-        <a href="{{ node.subject.url }}">{{ node.label??node.subject.title }}</a>
-    </li>
-{% endif %}
