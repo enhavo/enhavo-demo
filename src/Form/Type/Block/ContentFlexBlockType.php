@@ -18,7 +18,7 @@ class ContentFlexBlockType extends AbstractType
             ->add('layout', ChoiceType::class, [
                 'expanded' => 1,
                 'choices' => [
-                    'Cards' => 'cards',
+                    'Cards' => 'card',
                     'List' => 'list',
                 ],
             ])

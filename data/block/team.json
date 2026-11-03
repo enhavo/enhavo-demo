@@ -3,123 +3,71 @@
     "type": "block",
     "template": "theme/block/team.html.twig",
     "component": null,
-    "children": [
-
-    ],
+    "children": [],
     "data": {
         "block": {
             "layout": "team",
-            "overline": "Test",
-            "headline": "Test",
+            "overline": "Im Team für das Wohlbefinden Ihrer Vierbeiner:",
+            "headline": "Neben mir stehen Ihnen auch meine ebenso hundebegeisterten Partner zur Verfügung, um sicherzustellen, dass Ihr pelziger Freund die bestmögliche Betreuung und Liebe erhält.",
             "items": [
                 {
                     "id": 7,
-                    "position": "position",
+                    "position": 1,
                     "teamMember": {
                         "picture": {
-                            "id": 1,
-                            "mimeType": "image/jpeg",
-                            "extension": "jpg",
-                            "filename": "1.jpg",
+                            "token": "",
+                            "shortChecksum": "person1",
+                            "basename": "person1.png",
                             "parameters": {
                                 "alt": null,
                                 "title": null
-                            },
-                            "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                            }
                         },
                         "position": null,
-                        "firstName": "Vorname ",
-                        "lastName": "Nachname",
+                        "firstName": "Anna",
+                        "lastName": "Schmidt",
                         "phone": "+49 (0) 89 1234 5678 90",
-                        "email": "hello@enhavo.com"
+                        "email": "anna@enhavo.com"
                     }
                 },
                 {
-                    "id": 7,
-                    "position": "position",
+                    "id": 8,
+                    "position": 2,
                     "teamMember": {
                         "picture": {
-                            "id": 1,
-                            "mimeType": "image/jpeg",
-                            "extension": "jpg",
-                            "filename": "1.jpg",
+                            "token": "",
+                            "shortChecksum": "person2",
+                            "basename": "person2.png",
                             "parameters": {
                                 "alt": null,
                                 "title": null
-                            },
-                            "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                            }
                         },
                         "position": null,
-                        "firstName": "Vorname ",
-                        "lastName": "Nachname",
-                        "phone": "+49 (0) 89 1234 5678 90",
-                        "email": "hello@enhavo.com"
+                        "firstName": "Max",
+                        "lastName": "Müller",
+                        "phone": "+49 (0) 89 1234 5678 91",
+                        "email": "max@enhavo.com"
                     }
                 },
                 {
-                    "id": 7,
-                    "position": "position",
+                    "id": 9,
+                    "position": 3,
                     "teamMember": {
                         "picture": {
-                            "id": 1,
-                            "mimeType": "image/jpeg",
-                            "extension": "jpg",
-                            "filename": "1.jpg",
+                            "token": "",
+                            "shortChecksum": "person3",
+                            "basename": "person3.png",
                             "parameters": {
                                 "alt": null,
                                 "title": null
-                            },
-                            "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                            }
                         },
                         "position": null,
-                        "firstName": "Vorname ",
-                        "lastName": "Nachname",
-                        "phone": "+49 (0) 89 1234 5678 90",
-                        "email": "hello@enhavo.com"
-                    }
-                },
-                {
-                    "id": 7,
-                    "position": "position",
-                    "teamMember": {
-                        "picture": {
-                            "id": 1,
-                            "mimeType": "image/jpeg",
-                            "extension": "jpg",
-                            "filename": "1.jpg",
-                            "parameters": {
-                                "alt": null,
-                                "title": null
-                            },
-                            "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
-                        },
-                        "position": null,
-                        "firstName": "Vorname ",
-                        "lastName": "Nachname",
-                        "phone": "+49 (0) 89 1234 5678 90",
-                        "email": "hello@enhavo.com"
-                    }
-                },
-                {
-                    "id": 7,
-                    "position": "position",
-                    "teamMember": {
-                        "picture": {
-                            "id": 1,
-                            "mimeType": "image/jpeg",
-                            "extension": "jpg",
-                            "filename": "1.jpg",
-                            "parameters": {
-                                "alt": null,
-                                "title": null
-                            },
-                            "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
-                        },
-                        "position": null,
-                        "firstName": "Vorname ",
-                        "lastName": "Nachname",
-                        "phone": "+49 (0) 89 1234 5678 90",
-                        "email": "hello@enhavo.com"
+                        "firstName": "Lena",
+                        "lastName": "Weber",
+                        "phone": "+49 (0) 89 1234 5678 92",
+                        "email": "lena@enhavo.com"
                     }
                 }
             ],

@@ -1,28 +1,37 @@
-<div class="block-jobs" data-controller="jobs">
+<div class="block-jobs block-jobs--{{ block.color|default('no_background') }}" data-controller="jobs" id="jobs">
     <div class="theme-container">
-        <div class="flex" data-jobs-target="grid" >
-            <div class="left">
-                <div class="label" data-jobs-target="borderContainer">
-                    <div class="span">
-                        <button class="overline" data-action="click->jobs#filterByJobType" data-job-type="" >Alle anzeigen</button>
-                        <div class="toggle-indicator" data-action="click->jobs#filterByJobType" data-jobs-target="toggleIcon" >
-                            <span class="icon icons icons-chevron-down"></span>
+        {% if block.title %}
+            <h2 class="block-jobs__title theme-headline align-{{ block.titleAlignment|default('left') }}">{{ block.title|html_sanitize }}</h2>
+        {% endif %}
+        <div class="flex" data-jobs-target="grid">
+            {% if block.showFilters %}
+                <div class="left">
+                    <div class="label">
+                        <div class="span" data-action="click->jobs#toggleJobTypes">
+                            <button class="overline" type="button" data-jobs-target="label">Alle anzeigen</button>
+                            <div class="toggle-indicator" data-jobs-target="toggleIcon">
+                                <span class="icon icons icons-chevron-down"></span>
+                            </div>
+                        </div>
+                        <div class="types-container" data-jobs-target="typeContainer">
+                            <div class="items" data-jobs-target="reset" data-action="click->jobs#showAll" style="display: none;">Alle anzeigen</div>
+                            {% for type in jobTypes|default([]) %}
+                                <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems">{{ type|html_sanitize }}</div>
+                            {% endfor %}
                         </div>
                     </div>
-                    <div class="types-container" data-jobs-target="typeContainer">
-                        {% for blocks in block.jobs %}
-                            <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems">{{ blocks.type|html_sanitize }}</div>
-                        {% endfor %}
-                    </div>
                 </div>
-            </div>
+            {% endif %}
             <div class="right">
-                {% for blocks in block.jobs %}
-                    <div class="items" data-jobs-target="item" data-type="{{ blocks.type }}">
-                        <div class="type" >{{ blocks.type|html_sanitize }}</div>
+                {% for job in jobs|default([]) %}
+                    {% set jobTag = job.abteilungen|length ? (job.abteilungen|first).name : '' %}
+                    <div class="items" data-jobs-target="item" data-type="{{ job.title }}">
+                        <div class="type">{{ job.title|html_sanitize }}</div>
                         <div class="text-container">
-                            <span class="theme-headline" >{{ blocks.title|html_sanitize }}</span>
-                            <span class="copy theme-copy" >{{ blocks.copy|html_sanitize }}</span>
+                            <span class="theme-headline">{{ jobTag|html_sanitize }}</span>
+                            {% if job.ctaTitle %}
+                                <a class="copy theme-copy" href="{{ job.url|default('#') }}" target="{{ job.target|default('_self') }}">{{ job.ctaTitle|html_sanitize }}</a>
+                            {% endif %}
                         </div>
                     </div>
                 {% endfor %}

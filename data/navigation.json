@@ -14,7 +14,7 @@
               "subject": {
                 "id": 11,
                 "title": "Blogartikel 01",
-                "url": "\/Blogartikel 01"
+                "url": "/Blogartikel 01"
               },
               "label": "Blogartikel 01",
               "active": false,
@@ -28,7 +28,7 @@
               "subject": {
                 "id": 11,
                 "title": "Blogartikel 02",
-                "url": "\/Blogartikel 02"
+                "url": "/Blogartikel 02"
               },
               "label": "Blogartikel 02",
               "active": false,
@@ -42,7 +42,7 @@
               "subject": {
                 "id": 11,
                 "title": "Blogartikel 03",
-                "url": "\/Blogartikel 03"
+                "url": "/Blogartikel 03"
               },
               "label": "Blogartikel 03",
               "active": false,
@@ -56,7 +56,7 @@
               "subject": {
                 "id": 12,
                 "title": "Blogartikel 04",
-                "url": "\/blog\/Blogartikel 04"
+                "url": "/blog/Blogartikel 04"
               },
               "label": "Blogartikel 04",
               "active": false,
@@ -81,7 +81,7 @@
           "subject": {
             "id": 4,
             "title": "Home",
-            "url": "expr:ref('page/homepage.json', 'resource.url')"
+            "url": "#team"
           },
           "label": "Team",
           "active": false,
@@ -107,7 +107,7 @@
           "subject": {
             "id": 4,
             "title": "Home",
-            "url": "expr:ref('page/homepage.json', 'resource.url')"
+            "url": "#contact"
           },
           "label": "Contact",
           "active": false,

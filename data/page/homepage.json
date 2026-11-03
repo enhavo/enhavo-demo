@@ -14,7 +14,29 @@
       "name": null,
       "type": "root",
       "template": null,
-      "children": [],
+      "children": [
+        "expr:load('block/card-media-text.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/content-flex-cards.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/content-flex-list.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/form.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/gallery.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/hero.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/jobs.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/logo-wall.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/quote.json')",
+        "expr:load('block/spacer.json')",
+        "expr:load('block/team.json')",
+        "expr:load('block/spacer.json')"
+
+      ],
       "data": []
     },
     "url": "expr:url('/')"

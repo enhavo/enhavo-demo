@@ -2,6 +2,27 @@ enhavo_media_admin:
     resource: "@EnhavoMediaBundle/Resources/config/routes/admin/*"
     prefix: /admin
 
+enhavo_media_api_admin:
+    resource: "@EnhavoMediaBundle/Resources/config/routes/admin_api/*"
+    prefix: /admin/api/media
+
+# Override: media-bundle's media_format endpoint defaults to reading the token from
+# the query string, but the route + AdminUrlGenerator put it in the path. Re-declare
+# the route (defined after the glob import so it wins) to read the token from the path.
+enhavo_media_admin_api_file_format:
+    path: /admin/api/media/format/{token}/{format}
+    methods: [GET]
+    defaults:
+        _expose: admin_api
+        _endpoint:
+            type: media_format
+            repository_arguments:
+                - token: expr:request.attributes.get("token")
+
+#enhavo_media_admin_api:
+#    resource: "@EnhavoMediaBundle/Resources/config/routes/admin_api/*"
+#    prefix: /admin/api
+
 enhavo_media_theme:
     resource: "@EnhavoMediaBundle/Resources/config/routes/theme/*"
     prefix: /

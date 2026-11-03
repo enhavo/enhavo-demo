@@ -1,0 +1,35 @@
+enhavo_resource:
+    resources:
+        app.logo_wall:
+            classes:
+                model: App\Entity\LogoWall
+                repository: App\Repository\LogoWallRepository
+
+    grids:
+        app.logo_wall:
+            extends: enhavo_resource.grid
+            resource: app.logo_wall
+            filters:
+                title:
+                    type: text
+                    property: title
+                    label: title
+            columns:
+                title: { type: text, label: title, property: title, width: 12, sortable: true }
+            batches:
+                delete: { type: delete }
+
+    inputs:
+        app.logo_wall:
+            extends: enhavo_resource.input
+            resource: app.logo_wall
+            form: App\Form\Type\LogoWallType
+            tabs:
+                main:
+                    type: form
+                    label: logo_wall
+                    arrangement: |
+                        title
+                        picture
+                        ctaLink
+                        target

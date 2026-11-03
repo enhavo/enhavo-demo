@@ -1,0 +1,4 @@
+Block/NagScreenBlock:
+    label: 'NagScreen'
+    groups: [ layout ]
+    block_type: true

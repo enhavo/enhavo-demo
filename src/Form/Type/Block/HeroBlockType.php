@@ -3,6 +3,7 @@
 namespace App\Form\Type\Block;
 
 use App\Entity\Block\HeroBlock;
+use App\Form\Type\Block\Core\CtaType;
 use Enhavo\Bundle\FormBundle\Form\Type\HeadLineType;
 use Enhavo\Bundle\FormBundle\Form\Type\ListType;
 use Enhavo\Bundle\FormBundle\Form\Type\WysiwygType;
@@ -66,6 +67,8 @@ class HeroBlockType extends AbstractType
             ])
 
             ->add('text', WysiwygType::class, [
+            ])
+            ->add('cta', CtaType::class, [
             ])
 
             ->add('items', ListType::class, [

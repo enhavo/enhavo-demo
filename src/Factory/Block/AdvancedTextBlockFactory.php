@@ -2,8 +2,13 @@
 
 namespace App\Factory\Block;
 
-use Enhavo\Bundle\BlockBundle\Factory\AbstractBlockFactory;
+use App\Entity\Block\AdvancedTextBlock;
+use Enhavo\Bundle\BlockBundle\Factory\BlockFactory;
 
-class AdvancedTextBlockFactory extends AbstractBlockFactory
+class AdvancedTextBlockFactory extends BlockFactory
 {
+    public function __construct()
+    {
+        parent::__construct(AdvancedTextBlock::class);
+    }
 }

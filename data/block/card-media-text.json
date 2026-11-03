@@ -6,18 +6,18 @@
     "children": [],
     "data": {
         "block": {
-            "gradient": "yes",
-            "layout": "text",
+            "gradient": "no",
+            "layouts": "media-text",
             "media": {
-                "id": 2,
+                "token": "",
+                "shortChecksum": "2",
                 "mimeType": "image/png",
                 "extension": "png",
-                "filename": "2.png",
+                "basename": "2.png",
                 "parameters": {
                     "alt": null,
                     "title": null
-                },
-                "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                }
             },
             "overline": "Dies ist eine Overline",
             "headline": "Dies ist eine Headline",

@@ -3,80 +3,66 @@
     "type": "block",
     "template": "theme/block/content-flex.html.twig",
     "component": null,
-    "children": [
-
-    ],
+    "children": [],
     "data": {
         "block": {
-            "layout": "list",
-            "alignment": "center",
-            "headline": "Test",
+            "layout": "card",
+            "alignment": "left",
+            "headline": "",
             "items": [
                 {
-                    "id": 4,
-                    "position": 1,
                     "media": {
-                        "id": 3,
-                        "mimeType": "image/png",
-                        "extension": "png",
-                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
+                        "token": "",
+                        "shortChecksum": "dog1",
+                        "basename": "dog1.jpg",
                         "parameters": {
                             "alt": null,
                             "title": null
-                        },
-                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                        }
                     },
-                    "overline": "Dies ist eine Overline",
-                    "headline": "Dies ist eine Headline",
-                    "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                    "ctaTitle": "Hier steht ein CTA",
-                    "ctaLink": "",
-                    "ctaTarget":""
+                    "overline": "",
+                    "headline": "DIE SPRACHE DER RUTENWEDLER: WAS UNS DER SCHWANZ UNSERES HUNDES VERRÄT",
+                    "copy": "Ein Blick auf die feine Kunst der Kommunikation zwischen Hunden und Menschen - insbesondere durch die subtile Sprache der Schwänze. In meinem neuesten Blogartikel erkunden wir, was die verschiedenen Schwanzbewegungen bedeuten können und wie wir dadurch das emotionale Wohlbefinden unserer pelzigen Begleiter besser verstehen können. Von fröhlichem Wedeln bis zur aufrechten Haltung - lassen Sie uns gemeinsam die faszinierende Welt der hündischen Ausdrucksweise erkunden!",
+                    "ctaTitle": "mehr lesen",
+                    "ctaLink": "#",
+                    "ctaTarget": "_self"
                 },
                 {
-                    "id": 5,
-                    "position": 1,
                     "media": {
-                        "id": 3,
-                        "mimeType": "image/png",
-                        "extension": "png",
-                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
+                        "token": "",
+                        "shortChecksum": "dog2",
+                        "basename": "dog2.png",
                         "parameters": {
                             "alt": null,
                             "title": null
-                        },
-                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                        }
                     },
-                    "overline": "Dies ist eine Overline",
-                    "headline": "Dies ist eine Headline",
-                    "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                     "ctaTitle": "Hier steht ein CTA",
-                    "ctaLink": "",
-                    "ctaTarget":""
+                    "overline": "",
+                    "headline": "SPIEGELNEURONEN IM SPIEL: WARUM WIR UNS IN UNSEREN HUNDEN WIEDERERKENNEN",
+                    "copy": "In diesem Artikel werfen wir einen Blick auf die erstaunliche Verbindung zwischen Mensch und Hund, die durch Spiegelneuronen geprägt ist. Entdecken Sie, wie die Emotionen und Verhaltensweisen Ihres Hundes oft ein Spiegelbild Ihrer eigenen sein können. Von Freude und Enthusiasmus bis hin zu Empathie - tauchen Sie ein in die wunderbare Welt der spiegelnden Bindung zwischen Ihnen und Ihrem besten Freund auf vier Pfoten.",
+                    "ctaTitle": "mehr lesen",
+                    "ctaLink": "#",
+                    "ctaTarget": "_self"
                 },
                 {
-                    "id": 6,
-                    "position": 1,
                     "media": {
-                        "id": 3,
-                        "mimeType": "image/png",
-                        "extension": "png",
-                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
+                        "token": "",
+                        "shortChecksum": "dog3",
+                        "basename": "dog3.png",
                         "parameters": {
                             "alt": null,
                             "title": null
-                        },
-                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                        }
                     },
-                    "overline": "Dies ist eine Overline",
-                    "headline": "Dies ist eine Headline",
-                    "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                     "ctaTitle": "Hier steht ein CTA",
-                    "ctaLink": "",
-                    "ctaTarget":""
+                    "overline": "",
+                    "headline": "DIE KUNST DER GELASSENHEIT: WAS WIR VON HUNDEN ÜBER ENTSCHLEUNIGUNG LERNEN KÖNNEN",
+                    "copy": "Unsere hektische Welt könnte eine Seite aus dem Buch der Hunde über Gelassenheit nehmen. In diesem Blogartikel erkunden wir, wie Hunde uns mit ihrer natürlichen Fähigkeit zur Entschleunigung inspirieren können. Von entspannten Spaziergängen bis hin zu ruhigen Augenblicken des Innehaltens - lassen Sie uns gemeinsam die Lehren der Gelassenheit von unseren treuen Gefährten lernen und in unseren eigenen Alltag integrieren.",
+                    "ctaTitle": "mehr lesen",
+                    "ctaLink": "#",
+                    "ctaTarget": "_self"
                 }
             ],
-            "id": 3
+            "id": 7
         }
     }
 }

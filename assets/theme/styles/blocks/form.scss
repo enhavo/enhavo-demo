@@ -1,20 +1,282 @@
+// standalone /contact-form endpoint page: offset the fixed header (max-height 132px)
+// scoped to the page wrapper so the contact block stays flush when embedded
+// mid-page via the CMS. (/success has its own page styles in theme/success.scss)
+.contact-form-page {
+  padding-top: 132px;
+
+  @include screenMaxWidth(768px) {
+    padding-top: 90px;
+  }
+}
+
 .block-form {
-  .form-grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;
-    .text-container {grid-column: 2 / span 4;
-      .text {margin-top: 30px;text-transform: capitalize;font-size: 1.6rem;line-height: 1.25em}
+  .form-grid {
+    max-width: 992px;   // cap the form block
+    width: 100%;        // but shrink with the viewport (responsive)
+    margin-inline: auto; // centered
+
+    .text-container {
+      .theme-overline { margin-top: 10px; }
+      .text {
+        margin-top: 30px;
+        font-size: var(--font-size-copy);
+        line-height: 1.33em;
+        font-weight: 700;
+        text-transform: none;
+      }
     }
-    .form {grid-column: 2 / span 4;
-      .label {font-weight: 700;letter-spacing: 0.45px;line-height: 1.055em;}
-      input[type="text"], select,textarea{margin: 9px 0 20px 0;}
-      input[type="email"]{margin: 9px 0 0 0;}
-      input[type="text"], input[type="email"], textarea, select {width: 100%;background: #FFFFFF;border: 1px solid #171717;opacity: 1;padding: 1rem;}
-      input[type="email"] {border: 1px solid #DB5245;color: #CBCBCB;}
-      #email::placeholder, #text::placeholder, textarea::placeholder, select{color: $textColor3;font-weight: 700;letter-spacing: 0.45px;line-height: 1.055em;text-transform: uppercase}
-      #email::placeholder {color: #CBCBCB;}
-      select {color: #CBCBCB;}
-      label[for='checkbox']{line-height: 2.6em;letter-spacing: 0.1px;font-size: 1rem;text-transform: capitalize;margin-left: 1%;}
-      .required {color: #DB5245;padding-bottom: 20px;line-height: 2.6em;letter-spacing: 0.1px;font-size: 1rem}
-      .cta {;padding: 1rem;margin-top: 2%;width: 100%;height: auto;display: flex;justify-content: center;align-items: center;}
+
+    > .contact-form { margin-top: 40px; }
+  }
+
+  // success confirmation shown after a valid submission
+  .contact-form__success {
+    margin-top: 40px;
+    padding: 30px;
+    border: 2px solid #171717;
+    border-radius: 4px;
+
+    .theme-text {
+      margin-top: 12px;
+    }
+  }
+
+  // ---- Vue contact form ---------------------------------------------------
+  .contact-form {
+    // field rows (your component uses both class names)
+    .contact-form__row,
+    .form-row {
+      margin-bottom: 20px;
+
+      // <form-row> renders label → errors → widget; make it a column and push
+      // the error list last so the message sits BELOW the input
+      > div {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-error-list {
+        order: 1;
+      }
+
+      label {
+        display: block;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.45px;
+        line-height: 1.055em;
+        font-size: var(--font-size-copy);
+        color: var(--color-dark);
+        margin-bottom: 9px;
+      }
+
+      input,
+      select,
+      textarea {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px 20px;
+        background: #fff;
+        border: 1px solid #171717;
+        border-radius: 0;
+        @include typoFormField;
+        outline: none;
+
+        &::placeholder {
+          color: #CBCBCB;
+          font-weight: 700;
+          letter-spacing: 0.45px;
+          text-transform: uppercase;
+        }
+      }
+
+      // styled to mirror the jobs dropdown: bordered box (inherited) + down-caret, uppercase
+      select {
+        color: #CBCBCB;                 // placeholder-grey until a choice is picked
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        padding-right: 48px;            // room for the caret
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23171717' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+
+        &:focus {
+          border-color: var(--color-dark);
+        }
+
+        // real selections render in normal dark text
+        option { color: var(--color-dark); text-transform: none; font-weight: 400; }
+      }
+
+      textarea {
+        min-height: 170px;
+        resize: vertical;
+      }
+    }
+
+    // invalid field highlight: red border on the offending control
+    &.has-error,
+    .has-error {
+      input,
+      select,
+      textarea {
+        border-color: var(--color-error);
+      }
+      .contact-select {
+        border-color: var(--color-error);
+      }
+    }
+
+    // custom dropdown for the title/anrede field — mirrors the jobs dropdown
+    .contact-select {
+      position: relative;
+      border: 1px solid var(--color-dark);
+      background: #fff;
+
+      &__trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        cursor: pointer;
+        @include typoFormField;
+        color: #CBCBCB; // placeholder grey until a choice is picked
+      }
+
+      &.is-selected &__trigger {
+        color: var(--color-dark);
+      }
+
+      &__caret {
+        flex: 0 0 auto;
+        margin-left: 12px;
+        line-height: 1;
+        color: var(--color-dark);
+        transition: transform 0.2s ease;
+
+        &::before {
+          content: "\2228"; // same chevron glyph as the jobs dropdown
+        }
+      }
+
+      &.is-open &__caret {
+        transform: scaleY(-1);
+      }
+
+      &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        // in normal flow so opening pushes the fields below down (no overlay)
+        background: #fff;
+        border-top: 1px solid var(--color-dark);
+      }
+
+      &__item {
+        padding: 10px 20px;
+        cursor: pointer;
+        @include typoFormField;
+        color: var(--color-dark);
+
+        &:hover {
+          background: #f4f5f7;
+        }
+      }
+    }
+
+    // error messages — form-level (.form-field__errors) and per-field
+    // (.form-error-list, rendered by <form-errors>)
+    .form-field__errors,
+    .form-error-list {
+      list-style: none;
+      margin: 8px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      li {
+        @include typoFormError;
+      }
+    }
+
+    &__consent {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 24px 0 0;
+      cursor: pointer;
+
+      // custom checkbox so the error state is a single border (not a ring around the native box)
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        margin: 0;
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+        border: 1px solid var(--color-dark);
+        background: #fff;
+        cursor: pointer;
+        position: relative;
+
+        &:checked::after {
+          content: "";
+          position: absolute;
+          left: 5px;
+          top: 1px;
+          width: 5px;
+          height: 10px;
+          border: solid var(--color-dark);
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      span {
+        font-size: 1rem;
+        line-height: 1.4em;
+        color: var(--color-dark);
+      }
+
+      // required-consent error: single red border on the checkbox + red label
+      &.has-error {
+        input[type="checkbox"] {
+          border-color: var(--color-error);
+        }
+
+        span {
+          color: var(--color-error);
+        }
+      }
+    }
+
+    &__submit {
+      width: 100%;
+      margin-top: 50px;
+      padding: 15px 30px;
+      background: transparent;
+      border: 2px solid #000;
+      border-radius: 35px;
+      color: var(--color-black);
+      font-weight: 700;
+      letter-spacing: 0.45px;
+      text-transform: uppercase;
+      font-size: var(--font-size-copy);
+      line-height: 1.055em;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background: var(--color-black);
+        color: var(--color-white);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
 }

@@ -8,21 +8,20 @@
     ],
     "data": {
         "block": {
-            "layout": "hero",
-            "media": {
-                "id": 11,
-                "mimeType": "image/png",
-                "extension": "png",
-                "filename": "11.png",
+            "layout": "media-text",
+            "size": "big",
+            "layer1": {
+                "token": "",
+                "shortChecksum": "2",
+                "basename": "2.png",
                 "parameters": {
-                    "alt": null,
+                    "alt": "Hero image",
                     "title": null
-                },
-                "md5Checksum": "0ae20a86307cb5e55d2284825a6c0847"
+                }
             },
             "overline": "Dies ist eine Overline",
             "headline": "Dies ist eine Headline",
-            "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             "ctaTitle": null,
             "ctaTarget": null,
             "ctaLink": null

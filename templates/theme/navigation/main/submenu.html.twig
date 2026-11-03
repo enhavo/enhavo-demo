@@ -1,9 +1,10 @@
-{#{% if node.subject is not null and node.subject.page %}#}
-{#    <a href="{{ router(node.subject.page) }}">{{ node.label??node.subject.page.title }}</a>#}
-{#{% else %}#}
-{#    {{ node.label }}#}
-{#{% endif %}#}
-
-{#{% for child in node.children %}#}
-{#    {{ navigation_node_render(child, "main_submenu") }}#}
-{#{% endfor %}#}
+<li class="main-nav__item main-nav__item--dropdown" data-nav-target="navItem" data-action="click->nav#activate">
+    <span class="main-nav__link">{{ node.label }}</span>
+    {% if node.children %}
+        <ul class="main-nav__dropdown">
+            {% for child in node.children %}
+                {{ navigation_node_render(child, 'main_submenu') }}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

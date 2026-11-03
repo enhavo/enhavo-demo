@@ -1,6 +1,6 @@
 .block-logo {
   .grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;}
-  .overline {grid-column: span 6;color: $textColor3;text-align: center;}
+  .overline {grid-column: span 6;color: var(--color-dark);text-align: center;}
   img{max-width: 210px;}
 }
 

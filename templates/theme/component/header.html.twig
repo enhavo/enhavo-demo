@@ -1,0 +1,29 @@
+<header class="site-header">
+    <div class="theme-container">
+        <div class="site-header__inner">
+            <a class="site-header__brand" href="/">
+                {% set paw = setting('header_paw') %}
+                {% if paw %}
+                    <img class="site-header__paw" alt=""
+                         src="{{ path('enhavo_media_theme_file', {token: paw.token, shortChecksum: paw.shortChecksum, basename: paw.basename}) }}">
+                {% endif %}
+                {% set logo = setting('header_logo') %}
+                {% if logo %}
+                    <img class="site-header__wordmark" alt="Von Hunden und Menschen"
+                         src="{{ path('enhavo_media_theme_file', {token: logo.token, shortChecksum: logo.shortChecksum, basename: logo.basename}) }}">
+                {% endif %}
+            </a>
+            {% if navigation is defined and navigation.main %}
+                <nav class="main-nav" aria-label="Main" data-controller="nav">
+                    <ul class="main-nav__list">
+                        {% for node in navigation.main.nodes %}
+                            {{ navigation_node_render(node, 'main') }}
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
+            {% set phone = setting('contact_phone')|default('+49 (0) 89 1234 5678 90') %}
+            <a class="site-header__phone" href="tel:{{ phone|replace({' ': '', '(': '', ')': ''}) }}">{{ phone }}</a>
+        </div>
+    </div>
+</header>

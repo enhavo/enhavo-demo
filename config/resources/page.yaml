@@ -1,0 +1,5 @@
+enhavo_resource:
+    resources:
+        enhavo_page.page:
+            classes:
+                model: App\Entity\Page

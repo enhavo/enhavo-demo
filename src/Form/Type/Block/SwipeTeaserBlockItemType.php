@@ -3,6 +3,7 @@
 namespace App\Form\Type\Block;
 
 use App\Entity\Block\SwipeTeaserBlockItem;
+use App\Form\Type\Block\Core\CtaType;
 use Enhavo\Bundle\FormBundle\Form\Type\HeadLineType;
 use Enhavo\Bundle\FormBundle\Form\Type\PositionType;
 use Enhavo\Bundle\FormBundle\Form\Type\WysiwygType;
@@ -25,7 +26,7 @@ class SwipeTeaserBlockItemType extends AbstractType
                 'label' => 'Picture',
                 'help' => 'Supported formats are jpeg, gif, png, webp',
                 'multiple' => false,
-                'upload' => false,
+                'upload' => true,
             ])
 
             ->add('overline', TextType::class, [
@@ -38,26 +39,12 @@ class SwipeTeaserBlockItemType extends AbstractType
             ->add('text', WysiwygType::class, [
             ])
 
-            ->add('label', TextType::class, [
-            ])
-
-            ->add('target', ChoiceType::class, [
-                'expanded' => 1,
-                'choices' => [
-                    'self' => '_self',
-                    'blank' => '_blank',
-                ],
-            ])
-
             ->add('look', ChoiceType::class, [
                 'expanded' => 1,
                 'choices' => [
                     'Full' => 'full',
                     'Outline' => 'outline',
                 ],
-            ])
-
-            ->add('link', TextType::class, [
             ])
 
             ->add('size', ChoiceType::class, [
@@ -73,6 +60,8 @@ class SwipeTeaserBlockItemType extends AbstractType
                 'choices' => [
                     'Black' => 'black',
                 ],
+            ])
+            ->add('cta', CtaType::class, [
             ])
 
         ;

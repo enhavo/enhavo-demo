@@ -1,19 +1,24 @@
-<div class="block-hero {{ block.layout }}-flex">
+<div class="block-hero {{ block.layout }}-flex {% if block.color is defined %}background-{{ block.color }}{% endif %}">
     <div class="theme-container">
         <div class="flex">
-            <div class="media-container">
-                <div class="img-wrapper">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="hero-media">
+            {% if block.layer1 %}
+                <div class="media-container">
+                    <div class="img-wrapper">
+                        <img src="{{ media_url(block.layer1) }}" alt="{{ media_parameter(block.layer1,'alt')}}" class="hero-media">
+                    </div>
                 </div>
-            </div>
+            {% endif %}
             <div class="text-container {{ block.layout }}-text-container">
-                <div class="overline theme-overline">{{ block.overline|html_sanitize }}</div>
-                <div class=" theme-headline headline boldHeadline">{{ block.headline|html_sanitize }}</div>
-                <div class="copy">{{ block.copy|html_sanitize }}</div>
-                {% if block.ctaTitle and block.ctaLink is not null %}
-                    <div class="button-container">
+                <div class="overline theme-overline">overline{{ block.overline|html_sanitize }}</div>
+                <div class=" theme-headline headline {% if block.size == 'big' %}boldHeadline{% endif %}">{{ block.headline|html_sanitize }}</div>
+                <div class="copy">{{ block.text|html_sanitize }}</div>
+                {% if block.ctaTitle|default(null)
+                    and block.ctaLink|default(null)
+                    and block.ctaTarget|default(null)
+                %}
+                    <div class="theme-button-container">
                         <div class="btn-wrapper">
-                            <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
+                            <a class="theme-cta theme-button" href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle|html_sanitize }}</a>
                         </div>
                     </div>
                 {% endif %}

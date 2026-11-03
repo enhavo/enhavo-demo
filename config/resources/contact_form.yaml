@@ -1,0 +1,40 @@
+enhavo_resource:
+    resources:
+        app.contact_form:
+            classes:
+                model: App\Entity\ContactForm
+                repository: App\Repository\ContactFormRepository
+
+    grids:
+        app.contact_form:
+            extends: enhavo_resource.grid
+            resource: app.contact_form
+            filters:
+                title:
+                    type: text
+                    property: title
+                    label: title
+                firstName:
+                    type: text
+                    property: firstName
+                    label: firstName
+            columns:
+                public: { type: boolean, label: public, property: public, width: 2, sortable: true }
+                title: { type: text, label: title, property: title, width: 10, sortable: true }
+            batches:
+                delete: { type: delete }
+
+    inputs:
+        app.contact_form:
+            extends: enhavo_resource.input
+            resource: app.contact_form
+            form: App\Form\Type\Admin\ContactFormBlockType
+            tabs:
+                main:
+                    type: form
+                    label: contact_form
+                    arrangement: |
+                        title
+                        firstName
+                        lastName
+                        message

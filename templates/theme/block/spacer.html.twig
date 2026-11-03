@@ -1,0 +1,19 @@
+{% set randomId = random() %}
+<div class="block-spacer">
+    <style type="text/css">
+        {% if block.desktop %}
+        .spacer-{{ randomId }} { {% if block.desktop starts with "-" %}margin-top{% else %}height{% endif %}:{{ block.desktop|default_spacer_unit }};}
+        {% endif %}
+        {% if block.tablet %}
+        @media screen and (max-width:1023px) {
+            .spacer-{{ randomId }} { {% if block.tablet starts with "-" %}margin-top{% else %}height{% endif %}:{{ block.tablet|default_spacer_unit }};}
+        }
+        {% endif %}
+        {% if block.mobile %}
+        @media screen and (max-width:767px) {
+            .spacer-{{ randomId }} { {% if block.mobile starts with "-" %}margin-top{% else %}height{% endif %}:{{ block.mobile|default_spacer_unit }};}
+        }
+        {% endif %}
+    </style>
+    <div class="spacer-{{ randomId }}"></div>
+</div>

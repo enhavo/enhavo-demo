@@ -6,78 +6,62 @@
     "children": [],
     "data": {
         "block": {
-            "layout": "flex",
+            "layout": "card",
             "alignment": "center",
-            "headline": "Test",
+            "headline": "Warum ein gassigeher?",
             "items": [
                 {
-                    "id": 4,
-                    "position": 1,
                     "media": {
-                        "id": 3,
-                        "mimeType": "image/png",
-                        "extension": "png",
-                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
-                        "classFilename": "content_flex-img",
+                        "token": "",
+                        "shortChecksum": "kartondog1",
+                        "basename": "kartondog1.png",
                         "parameters": {
                             "alt": null,
                             "title": null
-                        },
-
-                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                        }
                     },
-                    "overline": "Dies ist eine Overline",
-                    "headline": "Dies ist eine Headline",
-                    "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                    "ctaTitle": "Hier steht ein CTA",
-                    "ctaLink": "",
-                    "ctaTarget":""
+                    "overline": "",
+                    "headline": "Zeitersparnis und Glück für Ihren Hund:",
+                    "copy": "Das moderne Leben kann hektisch sein, und manchmal bleibt nicht genug Zeit, um Ihrem Hund die Aufmerksamkeit und Bewegung zu bieten, die er verdient. Durch meine Dienstleistungen als erfahrener Gassigeher können Sie sicher sein, dass Ihr Hund regelmäßige Spaziergänge und eine Extraportion Zuneigung erhält. Ein glücklicher Hund bedeutet auch ein glücklicher Besitzer!",
+                    "ctaTitle": null,
+                    "ctaLink": null,
+                    "ctaTarget": null
                 },
                 {
-                    "id": 5,
-                    "position": 1,
                     "media": {
-                        "id": 3,
-                        "mimeType": "image/png",
-                        "extension": "png",
-                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
-                        "classFilename": "content_flex-img",
+                        "token": "",
+                        "shortChecksum": "kartondog2",
+                        "basename": "kartondog2.png",
                         "parameters": {
                             "alt": null,
                             "title": null
-                        },
-                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                        }
                     },
-                    "overline": "Dies ist eine Overline",
-                    "headline": "Dies ist eine Headline",
-                    "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                     "ctaTitle": "Hier steht ein CTA",
-                    "ctaLink": "",
-                    "ctaTarget":""
+                    "overline": "",
+                    "headline": "Flexible Betreuung nach Ihren Bedürfnissen:",
+                    "copy": "Ob Sie lange Arbeitstage haben oder einfach mal eine Auszeit benötigen - ich biete flexible Betreuungszeiten an. Von kurzen Gassirunden bis hin zu halbtägiger Betreuung ist alles möglich. Sie entscheiden, was am besten zu Ihrem Zeitplan und den Bedürfnissen Ihres Hundes passt.",
+                    "ctaTitle": null,
+                    "ctaLink": null,
+                    "ctaTarget": null
                 },
                 {
-                    "id": 6,
-                    "position": 1,
                     "media": {
-                        "id": 3,
-                        "mimeType": "image/png",
-                        "extension": "png",
-                        "filename": "Bildschirmfoto 2024-04-25 um 13.58.22.png",
+                        "token": "",
+                        "shortChecksum": "kartondog3",
+                        "basename": "kartondog3.png",
                         "parameters": {
                             "alt": null,
                             "title": null
-                        },
-                        "md5Checksum": "7531788764972e1259c2fbd5c8bcb9f1"
+                        }
                     },
-                    "overline": "Dies ist eine Overline",
-                    "headline": "Dies ist eine Headline",
-                    "copy": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                     "ctaTitle": "Hier steht ein CTA",
-                    "ctaLink": "",
-                    "ctaTarget":""
+                    "overline": "",
+                    "headline": "Vertrauenswürdige Sorge durch erfahrene Hände:",
+                    "copy": "Ihre Hunde sind Familienmitglieder, und ich behandele sie auch so. Mit meiner Erfahrung im Umgang mit verschiedenen Hunderassen und -temperamenten können Sie sich darauf verlassen, dass Ihr Liebling in sicheren Händen ist. Ich sorge nicht nur für Bewegung, sondern auch für liebevolle Aufmerksamkeit und sorgfältige Pflege.",
+                    "ctaTitle": null,
+                    "ctaLink": null,
+                    "ctaTarget": null
                 }
-            ],
-            "id": 3
+            ]
         }
     }
 }

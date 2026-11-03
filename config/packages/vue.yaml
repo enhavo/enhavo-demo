@@ -3,4 +3,3 @@ enhavo_app:
     route_providers:
       admin:
         type: routing
-        groups: ['admin']

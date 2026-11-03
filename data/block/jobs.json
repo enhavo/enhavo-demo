@@ -3,39 +3,64 @@
     "type": "block",
     "template": "theme/block/jobs.html.twig",
     "component": null,
-    "children": [
-
-    ],
+    "children": [],
     "data": {
         "block": {
-            "overline": "Alle anzeigen",
-            "jobs": [
-                {
-                    "type": "Vollzeit",
-                    "title": "Hier steht eine headline",
-                    "copy": "Dies ist ein CTA"
-                },
-                {
-                    "type": "Teilzeit",
-                    "title": "Hier steht eine headline",
-                    "copy": "Dies ist ein CTA"
-                },
-                {
-                    "type": "Praktikum",
-                    "title": "Dier steht eine headline",
-                    "copy": "Dies ist ein CTA"
-                },
-                {
-                    "type": "Vollzeit",
-                    "title": "Hier steht eine headline",
-                    "copy": "Dies ist ein CTA"
-                },
-                {
-                    "type": "Vollzeit",
-                    "title": "Hier steht eine headline",
-                    "copy": "Dies ist ein CTA"
-                }
-            ]
-        }
+            "title": "Offene Stellen",
+            "titleAlignment": "left",
+            "color": "no_background",
+            "showFilters": true
+        },
+        "jobTypes": [
+            "Vollzeit",
+            "Teilzeit",
+            "Praktikum"
+        ],
+        "jobs": [
+            {
+                "title": "Vollzeit",
+                "abteilungen": [
+                    {
+                        "name": "Hundebetreuer/in (m/w/d)"
+                    }
+                ],
+                "ctaTitle": "Jetzt bewerben",
+                "url": "#",
+                "target": "_self"
+            },
+            {
+                "title": "Teilzeit",
+                "abteilungen": [
+                    {
+                        "name": "Gassigeher/in (m/w/d)"
+                    }
+                ],
+                "ctaTitle": "Jetzt bewerben",
+                "url": "#",
+                "target": "_self"
+            },
+            {
+                "title": "Praktikum",
+                "abteilungen": [
+                    {
+                        "name": "Praktikant/in Hundepflege (m/w/d)"
+                    }
+                ],
+                "ctaTitle": "Jetzt bewerben",
+                "url": "#",
+                "target": "_self"
+            },
+            {
+                "title": "Vollzeit",
+                "abteilungen": [
+                    {
+                        "name": "Teamleitung Betreuung (m/w/d)"
+                    }
+                ],
+                "ctaTitle": "Jetzt bewerben",
+                "url": "#",
+                "target": "_self"
+            }
+        ]
     }
 }

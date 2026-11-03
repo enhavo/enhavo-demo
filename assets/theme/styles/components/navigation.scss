@@ -1,1 +1,99 @@
-@import 'navigation';
+.main-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+
+  &__list {
+    display: flex;
+    align-items: stretch;
+    gap: 56px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &.is-active > .main-nav__link::after,
+    &:hover > .main-nav__link::after { transform: scaleX(1); }
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: var(--font-size-copy);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    cursor: pointer;
+    padding-bottom: 4px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: #fff;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    margin: 0;
+    padding: 24px 0;
+    list-style: none;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100vw;
+      right: -100vw;
+      background: #171717;
+      border-top: 1px solid white;
+    }
+  }
+  &__item--dropdown:hover > &__dropdown { display: block; }
+
+  &__subitem { list-style: none; position: relative; z-index: 1; }
+  &__sublink {
+    display: block;
+    padding: 12px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:hover { opacity: 0.75; }
+  }
+
+  &__dropdown &__dropdown {
+    display: none;
+    position: static;
+    min-width: 0;
+
+    &::before { display: none; }
+    .main-nav__sublink { padding-left: 40px; }
+  }
+  &__subitem:hover > &__dropdown { display: block; }
+
+  @include screenMaxWidth(767px) {
+    display: none;
+  }
+}

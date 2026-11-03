@@ -2,6 +2,7 @@
 
 namespace App\Entity\Block;
 
+use App\Entity\Block\Traits\CtaTrait;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Enhavo\Bundle\MediaBundle\Model\FileInterface;
@@ -11,6 +12,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[ORM\Table(name: 'app_swipe_teaser_block_item')]
 class SwipeTeaserBlockItem
 {
+    use CtaTrait;
     #[ORM\Id]
     #[ORM\GeneratedValue(strategy: 'AUTO')]
     #[ORM\Column(

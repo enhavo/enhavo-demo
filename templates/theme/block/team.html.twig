@@ -1,20 +1,29 @@
-<div class="block-team space-top">
+<div class="block-team space-top" id="team">
     <div class="theme-container">
-        <div class="grid">
-            {% for block in block.items %}
-                <div class="item">
-                    <div class="media-container">
-                        <img src="{{ media_url(block.teamMember.picture) }}" alt="{{ media_parameter(block.teamMember.picture, 'alt') }}">
-                    </div>
-                    <div class="text-container">
-                        <div class="theme-overline overline">{{ block.position }}</div>
-                        <span class="theme-headline headline">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
-                        <div class="copy">
-                            <div>{{ block.teamMember.phone }}</div>
-                            <div>{{ block.teamMember.email }}</div>
+        {% if block.overline %}
+            <div class="theme-headline">{{ block.overline }}</div>
+        {% endif %}
+        {% if block.headline %}
+            <div class="theme-text">{{ block.headline }}</div>
+        {% endif %}
+        <div class="members">
+            {% for item in block.items %}
+                {% if item.teamMember %}
+                    <div class="item">
+                        <div class="media-container">
+                            {% if item.teamMember.picture %}
+                                <img src="{{ media_url(item.teamMember.picture) }}" alt="{{ media_parameter(item.teamMember.picture, 'alt') }}">
+                            {% endif %}
+                        </div>
+                        <div class="text-container">
+                            <span class="theme-headline headline">{{ item.teamMember.firstName }} {{ item.teamMember.lastName }}</span>
+                            <div class="copy">
+                                <div>{{ item.teamMember.phone }}</div>
+                                <div>{{ item.teamMember.email }}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

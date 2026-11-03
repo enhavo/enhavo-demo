@@ -1,0 +1,20 @@
+app_jobs_index:
+    path: /jobs/index
+    defaults:
+        _expose: admin
+        _vue: { component: resource-index, groups: admin, meta: { api: app_jobs_api_index } }
+        _endpoint: { type: admin }
+
+app_jobs_create:
+    path: /jobs/create
+    defaults:
+        _expose: admin
+        _vue: { component: resource-input, groups: admin, meta: { api: app_jobs_api_create } }
+        _endpoint: { type: admin }
+
+app_jobs_update:
+    path: /jobs/update/{id}
+    defaults:
+        _expose: admin
+        _vue: { component: resource-input, groups: admin, meta: { api: app_jobs_api_update } }
+        _endpoint: { type: admin }

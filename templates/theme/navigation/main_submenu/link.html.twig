@@ -1,3 +1,7 @@
-<li class="{% if navigation_node_is_active(node) %} active{% endif %}">
-    <a href="{{ node.link }}" class="footer-link">{{ node.label }}</a>
+<li class="main-nav__subitem">
+    {% if node.subject.link %}
+        <a class="main-nav__sublink" href="{{ node.subject.link }}" target="{{ node.subject.target|default('_self') }}">{{ node.label }}</a>
+    {% else %}
+        <span class="main-nav__sublink">{{ node.label }}</span>
+    {% endif %}
 </li>

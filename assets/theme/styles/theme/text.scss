@@ -1,0 +1,59 @@
+// Inline text enhancement — styles rich-text inline elements (links, emphasis,
+// lists, super/subscript) without touching block-level layout.
+@mixin wysiwygStyles {
+  a {text-decoration: underline;color: inherit;text-underline-offset: 3px;
+    &:hover {text-decoration: none;}
+  }
+  i, em {font-style: italic;}
+  strong, b {font-weight: var(--font-weight-semibold);}
+  p, ol, ul {
+    &:not(:last-child) {margin-bottom: 0.8em;}
+  }
+  small, sub, sup {font-size: .83em;}
+  sub {vertical-align: sub;}
+  sup {vertical-align: super;}
+  ul, ol {padding-left: 30px;}
+  ul li {list-style-type: disc;padding-bottom: 15px;}
+  ol li {list-style-type: decimal;}
+}
+
+.strong{
+  font-weight: var(--font-weight-semibold);
+}
+.theme-overline{@include typoOverline;
+}
+.theme-form-field{@include typoFormField;}
+.theme-error{@include typoFormError;}
+.theme-headline{@include typoHeadline;
+  *{line-height: inherit;}
+}
+.theme-text, .theme-copy{
+  font: var(--font-copy);
+  color: var(--color-text-primary);
+  @include wysiwygStyles;
+}
+.theme-label{
+  color: var(--color-dark);
+  font-family: var(--font);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-button);
+  letter-spacing: var(--letter-spacing-headline);
+  text-transform: uppercase;
+}
+.theme-button{
+  @extend .theme-label;
+  cursor: pointer;padding:15px 30px;text-decoration: none;
+}
+.theme-button-container{
+  padding-top: 30px;
+  .btn-wrapper{
+    display: inline-flex;
+    border-radius: 40px;border: 2px solid #000;
+  }
+  .theme-button{
+    cursor: pointer;text-decoration: none;
+  }
+  a{
+    @extend .theme-label;
+  }
+}

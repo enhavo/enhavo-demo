@@ -1,0 +1,4 @@
+Block/FormBlock:
+    label: 'Form'
+    groups: [ layout ]
+    block_type: true

@@ -1,6 +1,75 @@
 enhavo_setting:
     settings:
-#        company.address:
-#            label: Anschrift
-#            type: text
-#            default: ''
+        # --- Header (theme/component/header.html.twig) ---
+        header_logo:
+            label: "Header wordmark logo"
+            type: media
+            default: 'fixtures/images/header/logo-wordmark.svg'
+        header_paw:
+            label: "Header paw logo"
+            type: media
+            default: 'fixtures/images/header/logo-paw.svg'
+
+        # --- Footer (theme/navigation/footer.html.twig) ---
+        footer_description:
+            label: "Footer description"
+            type: text
+            default: |
+                Enhavo is an open source content-management-system based on symfony and sylius.
+                Created and launched by xq-web.de.
+        footer_email:
+            label: "Footer email"
+            type: string
+            default: "info@enhavo.com"
+        footer_button_label:
+            label: "Footer button label"
+            type: string
+            default: "Try Enhavo"
+        footer_button_link:
+            label: "Footer button link"
+            type: string
+            default: "/admin"
+        footer_github_label:
+            label: "Footer GitHub label"
+            type: string
+            default: "Enhavo on GitHub"
+        footer_github_link:
+            label: "Footer GitHub link"
+            type: string
+            default: "https://github.com/enhavo/enhavo"
+        footer_indeed_link:
+            label: "Footer INDEED link"
+            type: string
+            default: "https://weareindeed.com"
+
+        # --- Contact widget (theme/navigation/contact.html.twig) ---
+        contact_label:
+            label: "Contact widget label"
+            type: string
+            default: "Contact us"
+        contact_phone:
+            label: "Contact widget phone"
+            type: string
+            default: "+49 (0) 89 1234 5678 90"
+        contact_email:
+            label: "Contact widget email"
+            type: string
+            default: "info@enhavo.com"
+
+        # --- Contact form (used by the contact form handler) ---
+        contact_disclaimer:
+            label: "Contact Form disclaimer label"
+            type: string
+            default: "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zu."
+        email_notification:
+            label: "Email"
+            type: string
+            default: "no-reply@email.com"
+        contact_email_subject:
+            label: "Contact Email subject"
+            type: string
+            default: "Neue Kontaktanfrage"
+        contact_success_message:
+            label: "Contact success message"
+            type: string
+            default: "Ihre Nachricht wurde erfolgreich versendet."

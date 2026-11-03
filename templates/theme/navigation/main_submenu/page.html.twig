@@ -1,5 +1,7 @@
-{% if node.subject.content %}
-    <li class="{% if navigation_node_is_active(node) %} active{% endif %}">
-        <a href="{{ router(node.subject.content) }}">{{ node.label??node.subject.content.title }}</a>
-    </li>
-{% endif %}
+<li class="main-nav__subitem">
+    {% if node.subject.url|default %}
+        <a class="main-nav__sublink" href="{{ node.subject.url }}">{{ node.label }}</a>
+    {% else %}
+        <span class="main-nav__sublink">{{ node.label }}</span>
+    {% endif %}
+</li>

@@ -1,36 +1,10 @@
 imports:
     - { resource: services/*.yaml }
+    - { resource: resources/*.yaml }
 
 parameters:
     env(META_BRAND_NAME): 'Acme'
     meta_brand_name: '%env(META_BRAND_NAME)%'
-    locale: 'de'
+    locale: 'en'
     app_locales:
-        - de
-
-services:
-    _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-        bind:
-            $brandName: '%meta_brand_name%'
-    #            $locales: '%app_locales%'
-    #            $defaultLocale: '%locale%'
-
-    App\Controller\:
-        resource: '../src/Controller'
-        tags: ['controller.service_arguments']
-
-    App\Twig\:
-        resource: '../src/Twig'
-        tags: ['twig.extension']
-
-    App\Component\:
-        resource: '../src/Component'
-        tags:
-            - { name: twig.component, key: '' }
-
-    App\Block\:
-        resource: '../src/Block'
-        tags: [ 'enhavo_block.block' ]
-
+        - en

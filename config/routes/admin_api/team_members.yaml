@@ -1,0 +1,29 @@
+app_team_member_api_index:
+    path: /team_member/index
+    methods: [GET]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_index, grid: app.team_member } }
+
+app_team_member_api_list:
+    path: /team_member/list
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_list, grid: app.team_member } }
+
+app_team_member_api_create:
+    path: /team_member/create
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_create, input: app.team_member } }
+
+app_team_member_api_update:
+    path: /team_member/update/{id}
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_update, input: app.team_member } }
+
+app_team_member_api_delete:
+    path: /team_member/delete/{id}
+    methods: [DELETE, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_delete, input: app.team_member } }
+
+app_team_member_api_batch:
+    path: /team_member/batch
+    methods: [POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_batch, grid: app.team_member } }

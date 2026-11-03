@@ -1,30 +1,44 @@
 {
+    "type": "module",
     "dependencies": {
-        "@enhavo/api": "^0.14",
-        "@enhavo/app": "^0.14",
-        "@enhavo/core": "^0.14",
-        "@enhavo/dashboard": "^0.14",
-        "@enhavo/dependency-injection": "^0.14",
-        "@enhavo/form": "^0.14",
-        "@enhavo/media": "^0.14",
-        "@enhavo/media-library": "^0.14",
-        "@enhavo/user": "^0.14",
-        "@enhavo/vue-form": "^0.14",
-        "jquery": "^3.6.0",
-        "slick-carousel": "^1.8.1",
-        "vue-router": "^4.1.5"
+        "@enhavo/api": "^0.15.14",
+        "@enhavo/app": "^0.15.14",
+        "@enhavo/block": "^0.15.14",
+        "@enhavo/core": "^0.15.14",
+        "@enhavo/dashboard": "^0.15.14",
+        "@enhavo/dependency-injection": "^0.15.14",
+        "@enhavo/form": "^0.15.14",
+        "@enhavo/media": "^0.15.14",
+        "@enhavo/media-library": "0.15.14",
+        "@enhavo/user": "^0.15.14",
+        "@enhavo/vue-form": "^0.15.14",
+        "@fontsource/ibm-plex-sans": "^5.3.0",
+        "@fontsource/open-sans": "^5.3.0",
+        "@fontsource/roboto-condensed": "^5.2.8",
+        "jquery": "^3.7.1",
+        "slick-carousel": "^2.0.0",
+        "vue-property-decorator": "^9.1.2"
     },
     "devDependencies": {
-        "ts-loader": "^9.0.0"
+        "@types/jquery": "^4.0.1",
+        "@vitejs/plugin-vue": "^6.0.8",
+        "@vue/compiler-sfc": "^3.5.41",
+        "dotenv": "^17.4.2",
+        "ts-loader": "^9.6.2",
+        "vite": "^8.2.1",
+        "vite-plugin-live-reload": "^3.1.0"
     },
     "license": "proprietary",
     "private": true,
     "scripts": {
-        "dev": "encore dev --progress",
-        "watch": "encore dev --watch",
-        "build": "encore production --progress",
-        "routes:dump": "bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json",
-        "di": "di \"./assets/services/enhavo/*\""
+        "admin:dev": "vite --config assets/admin/vite.config.js",
+        "admin:build": "vite build --config assets/admin/vite.config.js",
+        "admin:di": "node ./node_modules/@enhavo/dependency-injection/bin/dependency-injection.js --file assets/admin/container.di.yaml",
+        "theme:dev": "vite --config assets/theme/vite.config.js",
+        "theme:build": "vite build --config assets/theme/vite.config.js",
+        "theme:di": "node ./node_modules/@enhavo/dependency-injection/bin/dependency-injection.js --file assets/theme/container.di.yaml",
+        "build": "vite build --config assets/admin/vite.config.js && vite build --config assets/theme/vite.config.js",
+        "clean": "rm -rf ./node_modules/.vite && rm -rf ./public/build/admin && rm -rf ./public/build/theme"
     },
     "browserslist": [
         "last 2 versions"

@@ -1,0 +1,29 @@
+app_contact_form_api_index:
+    path: /contact_form/index
+    methods: [GET]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_index, grid: app.contact_form } }
+
+app_contact_form_api_list:
+    path: /contact_form/list
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_list, grid: app.contact_form } }
+
+app_contact_form_api_create:
+    path: /contact_form/create
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_create, input: app.contact_form } }
+
+app_contact_form_api_update:
+    path: /contact_form/update/{id}
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_update, input: app.contact_form } }
+
+app_contact_form_api_delete:
+    path: /contact_form/delete/{id}
+    methods: [DELETE, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_delete, input: app.contact_form } }
+
+app_contact_form_api_batch:
+    path: /contact_form/batch
+    methods: [POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_batch, grid: app.contact_form } }

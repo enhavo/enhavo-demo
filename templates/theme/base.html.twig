@@ -1,66 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="de" data-controller="app cookie-consent">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="utf-8" />
+    <title>{% block page_title %}Enhavo-Demo{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}" />
+    <meta property="og:url" content="{% block og_url %}{{ app.request.schemeAndHttpHost }}{{ app.request.uri }}{% endblock %}" />
+    <meta property="og:title" content="{% block og_title %}{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{% endblock %}" />
+    <meta name="robots" content="{% block robots %}INDEX,FOLLOW{% endblock %}">
+    <link rel="canonical" href="{{ app.request.uri|split("?")[0] }}"/>
 
-    {% block meta %}{% endblock %}
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/theme/images/favicon/favicon-16x16.svg', 'vite') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/theme/images/favicon/favicon-32x32.svg', 'vite') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('build/theme/images/favicon/favicon-96x96.png', 'vite') }}">
+{##}
+    <!-- Apple Touch Icon (iPhone & iPad Homescreen) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/theme/images/favicon/apple-touch-icon.png', 'vite') }}">
+{##}
+    <!-- Android/Chrome App Icon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('build/theme/images/favicon/android-icon-192x192.png', 'vite') }}">
+{##}
+    {{ vite_css_tags('entrypoints/main.js', 'theme') }}
 
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('base', null, 'theme') }}
-    {% endblock %}
+    {% block structuredData %}{% endblock %}
 
-    {% block javascripts %}
-        {{ encore_entry_script_tags('base', null, 'theme') }}
-    {% endblock %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <script id="routes" type="application/json">{{ routes|json_encode|raw }}</script>
 </head>
-<body>
-{% block body %}
-    {% block header %}
-        <header data-controller="sub-menu" data-sub-menu-target="header">
-            <div class="nav">
-                <div class="theme-container">
-                    <div class="navbar-grid">
-                        <div class="header-img">
-                            <a href="#" class="logo-paw-link"><img src="{{ asset('build/theme/images/pfote.svg')}}" alt="nav_img" class="paw-logo" /></a>
-                            <a href="#" class="logo-link"><img src="{{ asset('build/theme/images/logo.svg') }}" alt="nav_img" class="text-logo" /></a>
-                        </div>
-                        {% include 'theme/navigation/main.html.twig' %}
-                    </div>
-                </div>
-            </div>
-        </header>
-    {% endblock %}
-    <main>
-        <div class="block-main">
-            {% block main %}{% endblock %}
-        </div>
-    </main>
-    {% block footer %}
-    <footer>
-        <div class="theme-container">
-            <a href="#" class="contact-row">
-                <div class="left">
-                    <div class="label theme-headline">logo</div>
-                    <div>copyright</div>
-                </div>
-                <div class="right">
-                    <div class="label">DATENSCHUTZ</div>
-                    <div class="middle-space">IMPRESSUM</div>
-                    <div>AGB</div>
-                </div>
+<body id="top">
 
-            </a>
-        {% include 'theme/navigation/footer.html.twig' %}
-    </footer>
-    {% endblock %}
+{% block header %}
+    {% include 'theme/component/header.html.twig' %}
+
 {% endblock %}
+
+<main>
+    {% block main %}{% endblock %}
+</main>
+
+{{ vite_js_tags('entrypoints/main.js', 'theme') }}
+
+{% if routes is defined %}
+    <script id="routes" type="application/json">{{ routes|json_encode|e }}</script>
+{% endif %}
+{% block footer %}
+    {% include 'theme/component/footer.html.twig' %}
+{% endblock %}
+
 </body>
 </html>

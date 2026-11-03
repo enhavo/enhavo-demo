@@ -13,13 +13,38 @@ enhavo_app:
             type: page
         navigation:
             type: navigation
+        library:
+            type: media_library
         team_member:
-            type: base
+            type: link
             label: Team
             icon: people
             route: app_team_member_index
-        media_library:
-            type: media_library
+        jobs:
+            type: link
+            label: Jobs Offers
+            icon: work
+            route: app_jobs_index
+        logo_wall:
+            type: link
+            label: Logo Wall
+            icon: image
+            route: app_logo_wall_index
+        nag_screen:
+            type: link
+            label: Nag Screen
+            icon: flag
+            route: app_nag_screen_index
+        contact_form:
+            type: link
+            label: Contact Form
+            icon: mail
+            route: app_contact_form_index
+
+        setting:
+            type: setting
+            label: Setting
+            icon: settings
 
 #        backup:
 #            type: backup

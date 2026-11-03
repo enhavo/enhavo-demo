@@ -1,0 +1,24 @@
+{#{{ dump() }}#}
+<div class="block-form space-top" id="contact">
+    <div class="theme-container">
+        <div class="form-grid">
+            <div class="text-container">
+                {% if block is defined and block.headline %}
+                    <div class="theme-headline boldHeadline">{{ block.headline|html_sanitize }}</div>
+                {% endif %}
+                {% if block is defined and block.overline %}
+                    <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
+                {% endif %}
+                {% if block is defined and block.text %}
+                    <div class="text theme-headline">{{ block.text|html_sanitize }}</div>
+                {% endif %}
+            </div>
+            <div class="contact-form">
+                <div data-controller="form"
+                     data-form-form-value="{{ form|json_encode|e('html') }}"
+                     data-form-component-value="form-contact">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

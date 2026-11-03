@@ -36,5 +36,15 @@ enhavo_block:
       type: swipe_teaser
     gallery_block:
       type: gallery_block
+    spacer:
+      type: spacer
+    jobs_offer:
+      type: jobs_offer
+    logo_wall:
+      type: logo_wall
+    nag_screen:
+      type: nag_screen
+    form:
+      type: contact
 
 

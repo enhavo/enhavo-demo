@@ -1,0 +1,8 @@
+{#{{ dump() }}#}
+{% extends template('theme/base.html.twig') %}
+
+{% block main %}
+    <div class="contact-form-page">
+        {% include 'theme/block/contact-form.html.twig' with {form: form} %}
+    </div>
+{% endblock %}

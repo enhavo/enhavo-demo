@@ -1,6 +1,5 @@
 enhavo_doctrine_extension:
-# in case u want to overwrite Enhavo-Entities (also take a look at enhavo_page.yaml
-#    metadata:
-#        App\Entity\Page:
-#            extends: Enhavo\Bundle\PageBundle\Entity\Page
-#            discrName: 'app'
+    metadata:
+        App\Entity\Page:
+            extends: Enhavo\Bundle\PageBundle\Entity\Page
+            discrName: 'app'

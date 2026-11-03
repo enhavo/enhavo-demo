@@ -38,6 +38,7 @@ class CardBlockType extends AbstractType
             ->add('media', MediaType::class, [
                 'translation_domain' => 'EnhavoMediaBundle',
                 'multiple' => false,
+                'upload' => true,
             ])
 
             ->add('overline', TextType::class, [

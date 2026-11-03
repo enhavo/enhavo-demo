@@ -1,0 +1,14 @@
+{
+    "name": "spacer",
+    "type": "block",
+    "template": "theme/block/spacer.html.twig",
+    "component": null,
+    "children": [],
+    "data": {
+        "block": {
+            "desktop": "200",
+            "tablet": "60",
+            "mobile": "40"
+        }
+    }
+}

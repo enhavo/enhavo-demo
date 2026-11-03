@@ -2,6 +2,7 @@
 
 namespace App\Entity\Block;
 
+use App\Entity\Block\Traits\CtaTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -14,6 +15,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[ORM\Table(name: 'app_hero_block')]
 class HeroBlock extends AbstractBlock
 {
+    use CtaTrait;
     #[ORM\Column(
         type: Types::STRING,
         nullable: true,

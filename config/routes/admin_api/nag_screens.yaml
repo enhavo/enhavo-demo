@@ -1,0 +1,29 @@
+app_nag_screen_api_index:
+    path: /nag_screen/index
+    methods: [GET]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_index, grid: app.nag_screen } }
+
+app_nag_screen_api_list:
+    path: /nag_screen/list
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_list, grid: app.nag_screen } }
+
+app_nag_screen_api_create:
+    path: /nag_screen/create
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_create, input: app.nag_screen } }
+
+app_nag_screen_api_update:
+    path: /nag_screen/update/{id}
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_update, input: app.nag_screen } }
+
+app_nag_screen_api_delete:
+    path: /nag_screen/delete/{id}
+    methods: [DELETE, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_delete, input: app.nag_screen } }
+
+app_nag_screen_api_batch:
+    path: /nag_screen/batch
+    methods: [POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_batch, grid: app.nag_screen } }

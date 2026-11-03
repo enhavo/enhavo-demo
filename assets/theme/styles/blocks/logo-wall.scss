@@ -1,0 +1,58 @@
+.block-logo-wall {
+  .logo-wall__headline {
+    @include typoOverline;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &.align-left { text-align: left; }
+    &.align-center { text-align: center; }
+    &.align-right { text-align: right; }
+  }
+
+  .logo-wall__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+
+    &--4 { grid-template-columns: repeat(4, 1fr); }
+    &--6 { grid-template-columns: repeat(6, 1fr); }
+  }
+
+  .logo-wall__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 3 / 2;
+    padding: 1.5rem;
+
+    &.align-left { justify-content: flex-start; }
+    &.align-center { justify-content: center; }
+    &.align-right { justify-content: flex-end; }
+  }
+
+  .logo-wall__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-wall__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 1024px) {
+    .logo-wall__grid,
+    .logo-wall__grid--4,
+    .logo-wall__grid--6 { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 767px) {
+    .logo-wall__grid,
+    .logo-wall__grid--4,
+    .logo-wall__grid--6 { grid-template-columns: repeat(2, 1fr); }
+  }
+}

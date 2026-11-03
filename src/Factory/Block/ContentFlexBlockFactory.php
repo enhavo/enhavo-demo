@@ -2,8 +2,13 @@
 
 namespace App\Factory\Block;
 
-use Enhavo\Bundle\BlockBundle\Factory\AbstractBlockFactory;
+use App\Entity\Block\ContentFlexBlock;
+use Enhavo\Bundle\BlockBundle\Factory\BlockFactory;
 
-class ContentFlexBlockFactory extends AbstractBlockFactory
+class ContentFlexBlockFactory extends BlockFactory
 {
+    public function __construct()
+    {
+        parent::__construct(ContentFlexBlock::class);
+    }
 }

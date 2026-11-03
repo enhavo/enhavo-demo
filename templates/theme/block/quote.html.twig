@@ -1,16 +1,21 @@
 <div class="block-quote">
     <div class="theme-container">
         <div class="svg-left">
-            <img src="{{ asset("/build/theme/images/qoutes.svg")}}" alt="quote-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="71" viewBox="0 0 87 71" fill="none">
+                <path d="M0 59.9167L12.7398 70.2678C31.0532 50.3619 40.0108 33.4419 40.0108 18.3134C40.0108 6.36988 33.4419 0 23.4889 0C13.536 0 6.17082 6.96706 6.17082 17.7162C6.17082 27.072 11.9435 30.456 11.9435 36.0296C11.9435 43.992 0 59.9167 0 59.9167ZM46.3807 59.9167L58.9214 70.2678C77.4339 50.3619 86.3915 33.4419 86.3915 18.3134C86.3915 6.36988 79.6235 0 69.6706 0C59.9167 0 52.5515 6.96706 52.5515 17.7162C52.5515 27.072 58.3242 30.456 58.3242 36.0296C58.3242 43.992 46.3807 59.9167 46.3807 59.9167Z" fill="white"/>
+            </svg>
         </div>
         <div class="flex">
             <div class="text-container">
-                <div class="theme-headline headline">{{ block.headline|html_sanitize }}</div>
-                <div class="theme-headline caption">{{ block.caption|html_sanitize  }}</div>
+                <div class="theme-headline headline">{{ block.text|html_sanitize }}</div>
+                <div class="theme-headline caption">{{ block.author|html_sanitize  }}</div>
+
             </div>
         </div>
         <div class="svg-right">
-            <img src="{{ asset("/build/theme/images/qoutes.svg")}}" alt="quote-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="71" viewBox="0 0 87 71" fill="none">
+                <path d="M0 59.9167L12.7398 70.2678C31.0532 50.3619 40.0108 33.4419 40.0108 18.3134C40.0108 6.36988 33.4419 0 23.4889 0C13.536 0 6.17082 6.96706 6.17082 17.7162C6.17082 27.072 11.9435 30.456 11.9435 36.0296C11.9435 43.992 0 59.9167 0 59.9167ZM46.3807 59.9167L58.9214 70.2678C77.4339 50.3619 86.3915 33.4419 86.3915 18.3134C86.3915 6.36988 79.6235 0 69.6706 0C59.9167 0 52.5515 6.96706 52.5515 17.7162C52.5515 27.072 58.3242 30.456 58.3242 36.0296C58.3242 43.992 46.3807 59.9167 46.3807 59.9167Z" fill="white"/>
+            </svg>
         </div>
     </div>
 </div>

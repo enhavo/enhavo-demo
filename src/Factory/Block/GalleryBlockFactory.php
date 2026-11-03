@@ -2,8 +2,13 @@
 
 namespace App\Factory\Block;
 
-use Enhavo\Bundle\BlockBundle\Factory\AbstractBlockFactory;
+use App\Entity\Block\GalleryBlock;
+use Enhavo\Bundle\BlockBundle\Factory\BlockFactory;
 
-class GalleryBlockFactory extends AbstractBlockFactory
+class GalleryBlockFactory extends BlockFactory
 {
+    public function __construct()
+    {
+        parent::__construct(GalleryBlock::class);
+    }
 }

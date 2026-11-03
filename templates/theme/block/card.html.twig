@@ -1,6 +1,6 @@
 <div class="block-card">
     <div class="theme-container">
-        <div class="{{ block.layout }}-flex">
+        <div class="{{ block.layouts }}-flex gradient-{{ block.gradient }}">
             <div class="media-container">
                 <div class="img-wrapper">
                     <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="headerbild-img">
@@ -10,8 +10,8 @@
             <div class="text-container">
                 <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
                 <div class="theme-headline headline">{{ block.headline|html_sanitize }}</div>
-                <div class="copy">{{ block.copy }}</div>
-                <div class="button-container">
+                <div class="copy">{{ block.copy|html_sanitize }}</div>
+                <div class="theme-button-container">
                     <div class="btn-wrapper">
                         <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                     </div>

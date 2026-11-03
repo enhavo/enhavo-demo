@@ -1,0 +1,29 @@
+{% extends template('theme/base.html.twig') %}
+
+{% block page_title %}Vielen Dank{% endblock %}
+{% block robots %}NOINDEX,NOFOLLOW{% endblock %}
+
+{% block main %}
+    <section class="success-page">
+        <div class="theme-container">
+            <div class="success-page__inner">
+                <span class="success-page__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+
+                <span class="success-page__overline theme-overline">Nachricht gesendet</span>
+                <h1 class="success-page__title theme-headline boldHeadline">Vielen Dank!</h1>
+                <p class="success-page__text">{{ setting('contact_success_message') }}</p>
+
+                <div class="theme-button-container success-page__action">
+                    <span class="btn-wrapper">
+                        <a class="theme-button" href="/">Zurück zur Startseite</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

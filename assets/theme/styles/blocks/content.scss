@@ -1,22 +1,89 @@
 .block-content {
-  .flex-grid {
-    display: grid;grid-template-columns: repeat(3, 1fr);gap: 50px;
-    .media-container {
-      padding-bottom: 55.5%;
-      position: relative;
-      img {display: block;@include imgCover;}
+  .headline{
+    font-size: 50px;
+    margin-bottom: 80px;
+  }
+  .theme-headline {
+    &.align-center { text-align: center; }
+    &.align-left { text-align: left; }
+  }
+  .theme-button-container{
+    .btn-wrapper{
+      text-align: center;
+      width: 100%;
+      display: block;
+      padding: 15px 30px ;
     }
-    .texts-container {padding-top: 20px;}
+  }
+  .texts-container {
+    &.text-align-center { text-align: center; }
+    &.text-align-left { text-align: left; }
+  }
+  .card-grid {
+    display: grid;grid-template-columns: repeat(3, minmax(0, 1fr));gap: 50px;
+    .card-img-wrapper {display: flex;flex-direction: column;height: 100%;}
+    .media-container {
+      aspect-ratio: 16 / 9;
+      position: relative;
+      img {@include imgPosition;object-fit: contain;display: block;}
+    }
+    .texts-container {padding-top: 20px;
+      overflow-wrap: break-word; hyphens: auto;
+      display: flex;flex-direction: column;flex: 1;
+      .theme-button-container {margin-top: auto;}
+    }
   }
   .list-grid {display: flex;flex-direction: column; gap: 60px;
-    .list-img-wrapper {display: flex;gap: 50px;
+    .list-img-wrapper {display: flex;gap: 50px;align-items: flex-start;
       .media-container {
         flex: 0 0 calc(32.8% - 25px);
         max-width: calc(32.8% - 25px);
+        aspect-ratio: 16 / 9;
         position: relative;
-        img {display: block;@include imgCover;height: auto}
+
+        img {@include imgPosition;object-fit: contain;display: block;}
       }
-      .texts-container {flex: 0 0 65.65%;max-width: calc(65.65% - 25px);}
+    }
+  }
+  @include screenMaxWidth(1440px){
+    .card-grid{
+      gap: 20px;
+    }
+    .list-grid{
+      .list-img-wrapper{
+        gap: 20px;
+      }
+    }
+  }
+  @include screenMaxWidth(1024px){
+    .card-grid{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .list-grid{
+      .list-img-wrapper{
+        .media-container{
+          flex: 0 0 calc(34.1% - 20px);
+          max-width: 34.1%
+        }
+      }
+    }
+  }
+  @include screenMaxWidth(767px){
+    .card-grid{
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .list-grid{
+
+      .list-img-wrapper{
+        display: block;
+        .media-container{
+          max-width: 100%;
+          margin-bottom: 20px;
+          img{
+            position: relative;
+          }
+        }
+      }
     }
   }
 }

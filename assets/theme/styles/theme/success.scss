@@ -1,0 +1,68 @@
+.success-page {
+  // clear the fixed header (max-height 132px) and center the message vertically
+  min-height: calc(100vh - 132px);
+  display: flex;
+  align-items: center;
+  padding: 160px 0 100px;
+
+  @include screenMaxWidth(768px) {
+    min-height: calc(100vh - 90px);
+    padding: 120px 0 72px;
+  }
+
+  &__inner {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: var(--color-dark);
+    color: var(--color-white);
+    margin-bottom: 32px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+
+    @include screenMaxWidth(768px) {
+      width: 68px;
+      height: 68px;
+      margin-bottom: 24px;
+
+      svg { width: 32px; height: 32px; }
+    }
+  }
+
+  &__overline {
+    display: block;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font: var(--font-copy);
+    color: var(--color-text-primary);
+    max-width: 46ch;
+    margin: 0 auto;
+  }
+
+  &__action {
+    margin-top: 40px;
+  }
+}

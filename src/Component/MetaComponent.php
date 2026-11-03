@@ -2,14 +2,9 @@
 
 namespace App\Component;
 
-use App\Entity\Page;
-use Enhavo\Bundle\ContentBundle\Entity\Content;
 use Enhavo\Bundle\MediaBundle\Model\FileInterface;
-use Enhavo\Bundle\RoutingBundle\Model\Routeable;
-use Enhavo\Bundle\RoutingBundle\Router\Router;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 use Symfony\UX\TwigComponent\Attribute\PreMount;
 
@@ -36,7 +31,6 @@ class MetaComponent
     public ?string $canonical;
 
     public function __construct(
-        private readonly Router $enhavoRouter,
         private RequestStack $requestStack,
         private string $brandName,
     ) {
@@ -75,25 +69,12 @@ class MetaComponent
         $ogUrl = null;
         $canonical = $this->getOption('set_canonical', $options);
 
-        if ($resource instanceof Content) {
-            $metaRobots = $this->createRobotsString($resource);
-            $ogImage = $resource->getOpenGraphImage();
-            $canonical = $resource->getCanonicalUrl();
-        }
-        if ($resource instanceof Routeable) {
-            $canonical = $this->enhavoRouter->generate($resource, [], UrlGeneratorInterface::ABSOLUTE_URL);
-            $ogUrl = $this->enhavoRouter->generate($resource);
-        }
-
-        if ($resource instanceof Page) {
-            $pageTitle = $this->createPageTitle($resource->getPageTitle() ?? $resource->getTitle(), $brandName, $connector);
-            $ogTitle = $this->createPageTitle($resource->getOpenGraphTitle(), $brandName, $connector) ?? $pageTitle;
-            $metaDescription = $resource->getMetaDescription();
-            $ogDescription = $resource->getOpenGraphDescription() ?? $metaDescription;
-
-        } else {
-            $pageTitle = $this->createPageTitle($this->getOption('page_title', $options), $brandName, $connector);
-        }
+        // NOTE: The Content / Routeable / Page-specific branches were removed during the
+        // Enhavo 0.14 -> 0.15.14 migration. RoutingBundle, ContentBundle and PageBundle are
+        // no longer installed and there is no replacement Page/Content entity or object-router
+        // yet. Only the generic, scalar-option-based metadata behavior is kept here until the
+        // 0.15.14 content model is designed.
+        $pageTitle = $this->createPageTitle($this->getOption('page_title', $options), $brandName, $connector);
 
         if ($canonical !== false) {
             $canonicalUrl = parse_url($canonical);
@@ -112,15 +93,6 @@ class MetaComponent
         $this->og_image = $ogImage;
         $this->og_url = $ogUrl;
         $this->canonical = $canonical;
-    }
-
-    /**
-     * @param Content $resource
-     * @return string
-     */
-    private function createRobotsString(Content $resource): string
-    {
-        return sprintf('%s, %s', $resource->isNoFollow() ? 'nofollow' : 'follow', $resource->isNoIndex() ? 'noindex' : 'index');
     }
 
     /**

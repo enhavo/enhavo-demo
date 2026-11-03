@@ -4,14 +4,14 @@ page:
         _endpoint:
             type: template
             load:
-                - navigation.json
+#                - navigation.json
                 - routes.json
                 - page/homepage.json
             template: 'theme/resource/page/show.html.twig'
             variants:
                 block=navigation:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -20,7 +20,7 @@ page:
 
                 block=card:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -30,16 +30,16 @@ page:
                                     - "expr:load('block/card-media-text-stacked.json')"
                 block=content:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
                                 children:
-                                    - "expr:load('block/content-flex-cards.json')"
+                                    - "expr:load('block/content-flex-card.json')"
                                     - "expr:load('block/content-flex-list.json')"
                 block=team:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -47,7 +47,7 @@ page:
                                     - "expr:load('block/team.json')"
                 block=gallery:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -56,19 +56,19 @@ page:
                                     - "expr:load('block/gallery-black.json')"
                 block=advanced text:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
                                 children:
-                                    - "expr:load('block/advanced_text-headline-breaker.json')"
-                                    - "expr:load('block/advanced_text-big.json')"
-                                    - "expr:load('block/advanced_text-one-column.json')"
-                                    - "expr:load('block/advanced_text-one-column-wide.json')"
-                                    - "expr:load('block/advanced_text-two-column.json')"
+                                    - "expr:load('block/advanced-text-headline-breaker.json')"
+                                    - "expr:load('block/advanced-text-big.json')"
+                                    - "expr:load('block/advanced-text-one-column.json')"
+                                    - "expr:load('block/advanced-text-one-column-wide.json')"
+                                    - "expr:load('block/advanced-text-two-column.json')"
                 block=quote:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -77,7 +77,7 @@ page:
 
                 block=form:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -85,7 +85,7 @@ page:
                                     - "expr:load('block/form.json')"
                 block=nag-screen:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -93,7 +93,7 @@ page:
                                     - "expr:load('block/nag-screen.json')"
                 block=hero:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -102,7 +102,7 @@ page:
                                     - "expr:load('block/hero-black.json')"
                 block=swipe-teaser:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -110,7 +110,7 @@ page:
                                     - "expr:load('block/swipe-teaser.json')"
                 block=jobs:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
@@ -118,9 +118,9 @@ page:
                                     - "expr:load('block/jobs.json')"
                 block=logo-wall:
                     recursive: true
-                    depth: 3
+                    depth: 2
                     data:
                         resource:
                             content:
                                 children:
-                                    - "expr:load('block/logo.json')"
+                                    - "expr:load('block/logo-wall.json')"

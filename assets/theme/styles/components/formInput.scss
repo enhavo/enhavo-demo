@@ -1,0 +1,58 @@
+.form-input{
+  margin: 250px 0;
+  text-align: center;
+  .container{
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  .form-wrapper{
+    max-width: 400px;
+    margin-inline:  auto;
+    width: 100%;
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    .theme-cta{
+      &__button{
+        background: #D9D9D9;
+        &.is-active{
+          background: var(--color-blue);
+        }
+      }
+    }
+  }
+  input,
+  textarea{
+    margin-top: 13px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px 13px;
+    border: 1px solid var(--color-dark);
+    border-radius: 2px;
+    color: var(--color-black);
+    font: 400 18px/100% "Roboto Condensed", sans-serif;
+    outline: none;
+    &::placeholder {
+      text-align: center;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+      display: inline-block;
+      color: #D9D9D9
+    }
+    &:focus::placeholder,
+    &:focus::placeholder { opacity: 0;}
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px var(--color-white) inset;
+      -webkit-text-fill-color: var(--color-black);
+    }
+  }
+  .text{
+    margin-top: 30px;
+    max-width: 840px;
+    margin-inline: auto;
+  }
+}

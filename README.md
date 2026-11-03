@@ -35,8 +35,7 @@ $ bin/console doctrine:database:create
 Then execute this commands to get ready
 
 ```
-$ yarn routes:dump
-$ yarn encore dev
+$ yarn build
 $ bin/console doctrine:migrations:migrate
 $ bin/console doctrine:fixtures:load
 $ bin/console enhavo:init

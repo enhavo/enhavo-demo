@@ -1,0 +1,208 @@
+{
+    "name": "logo",
+    "type": "block",
+    "template": "theme/block/logo-wall.html.twig",
+    "component": null,
+    "children": [
+
+    ],
+    "data": {
+        "block": {
+            "title": "Unsere Kunden",
+            "items": [
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "12",
+                            "basename": "12.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "13",
+                            "basename": "13.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "14",
+                            "basename": "14.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "15",
+                            "basename": "15.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "16",
+                            "basename": "16.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "17",
+                            "basename": "17.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "18",
+                            "basename": "18.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "19",
+                            "basename": "19.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "20",
+                            "basename": "20.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "21",
+                            "basename": "21.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "22",
+                            "basename": "22.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                },
+                {
+                    "logoWall": {
+                        "picture": {
+                            "token": "",
+                            "shortChecksum": "23",
+                            "basename": "23.png",
+                            "parameters": {
+                                "alt": null,
+                                "title": null
+                            }
+                        },
+                        "ctaLink": null,
+                        "target": null,
+                        "title": null
+                    }
+                }
+            ]
+        }
+    }
+}

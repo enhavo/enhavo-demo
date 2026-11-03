@@ -1,53 +1,38 @@
 <?php
-/**
- * UserFixture.php
- *
- * @since 05/05/17
- * @author gseidel
- */
 
 namespace App\DataFixtures\ORM;
 
-use App\DataFixtures\AbstractFixture;
-use Enhavo\Bundle\UserBundle\Model\User;
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+use Enhavo\Bundle\UserBundle\Factory\UserFactory;
+use Enhavo\Bundle\UserBundle\Model\UserInterface;
+use Enhavo\Bundle\UserBundle\User\UserManager;
 
-class UserFixture extends AbstractFixture
+class UserFixture extends Fixture
 {
-    /**
-     * @inheritdoc
-     */
-    function create($args)
+    public const REFERENCE_ADMIN = 'user-admin';
+
+    public function __construct(
+        private readonly UserFactory $userFactory,
+        private readonly UserManager $userManager,
+    ) {
+    }
+
+    public function load(ObjectManager $manager): void
     {
-        $user = new User(); // todo use factory
+        /** @var UserInterface $user */
+        $user = $this->userFactory->createNew();
         $user->setEnabled(true);
-        $user->setEmail($args['email']);
-        $user->setUsername($args['email']);
-        $user->setPlainPassword($args['password']);
+        $user->setEmail('admin@enhavo.com');
+        $user->setUsername('admin@enhavo.com');
+        $user->setPlainPassword('admin');
+        $user->addRole('ROLE_SUPER_ADMIN');
 
-        if(isset($args['roles']) && is_array($args['roles'])) {
-            foreach($args['roles'] as $role) {
-                $user->addRole($role);
-            }
-        }
+        // UserManager::update() hashes the plain password and flushes, but does
+        // not persist new entities — do that first.
+        $manager->persist($user);
+        $this->userManager->update($user, true);
 
-        $this->container->get('Enhavo\Bundle\UserBundle\User\UserManager')->update($user, true, false);
-
-        return $user;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    function getName()
-    {
-        return 'User';
-    }
-
-    /**
-     * @inheritdoc
-     */
-    function getOrder()
-    {
-        return 1;
+        $this->addReference(self::REFERENCE_ADMIN, $user);
     }
 }

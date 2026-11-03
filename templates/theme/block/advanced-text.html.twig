@@ -1,22 +1,14 @@
-<div class="block-advance-text">
+<div class="block-advance-text layout-{{ block.columns }}">
     <div class="theme-container">
-        <div class="grid">
-            <div class="{{ block.layout }}">
-                <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
-                <div class="theme-headline headline boldHeadline ">{{ block.headline|html_sanitize }}</div>
-                <div class="text-container">
-                    {% if block.copy is iterable %}
-                        {% for text in block.copy %}
-                            <div class="text">{{ text|html_sanitize }}</div>
-                        {% endfor %}
-                    {% else %}
-                        <div class="copy">{{ block.copy|html_sanitize }}</div>
-                    {% endif %}
-                </div>
-                <div class="button-container two-column-btn">
-                    <div class="btn-wrapper">
-                        <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                    </div>
+        <div class="grid text-{{ block.text }}">
+            <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
+            <div class="theme-headline">{{ block.headline|html_sanitize }}</div>
+            <div class="text-container ">
+                <div class="copy">{{ block.copy|html_sanitize }}</div>
+            </div>
+            <div class="theme-button-container two-column-btn">
+                <div class="btn-wrapper">
+                    <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,29 @@
+enhavo_user:
+  config:
+    theme:
+      login:
+        template: user/login/login.html.twig           # ← add this
+
+#    theme:
+#      reset_password_request:
+#        template: user/security/reset-password/request.html.twig
+#        translation_domain: EnhavoUserBundle
+#        redirect_route: enhavo_user_theme_reset_password_check
+#        confirmation_route: enhavo_user_theme_reset_password_confirm
+#        form:
+#          class: Enhavo\Bundle\UserBundle\Form\Type\ResetPasswordRequestType
+#          options: [ ]
+#
+#      reset_password_check:
+#        template: user/security/reset-password/check.html.twig
+#
+#      reset_password_confirm:
+#        auto_login: true
+#        template: user/security/reset-password/confirm.html.twig
+#        redirect_route: enhavo_user_theme_reset_password_finish
+#        form:
+#          class: Enhavo\Bundle\UserBundle\Form\Type\ResetPasswordType
+#          options: [ ]
+#
+#      reset_password_finish:
+#        template: 'user/security/reset-password/finish.html.twig'

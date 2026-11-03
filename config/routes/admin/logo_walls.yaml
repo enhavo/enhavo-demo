@@ -1,0 +1,20 @@
+app_logo_wall_index:
+    path: /logo_wall/index
+    defaults:
+        _expose: admin
+        _vue: { component: resource-index, groups: admin, meta: { api: app_logo_wall_api_index } }
+        _endpoint: { type: admin }
+
+app_logo_wall_create:
+    path: /logo_wall/create
+    defaults:
+        _expose: admin
+        _vue: { component: resource-input, groups: admin, meta: { api: app_logo_wall_api_create } }
+        _endpoint: { type: admin }
+
+app_logo_wall_update:
+    path: /logo_wall/update/{id}
+    defaults:
+        _expose: admin
+        _vue: { component: resource-input, groups: admin, meta: { api: app_logo_wall_api_update } }
+        _endpoint: { type: admin }

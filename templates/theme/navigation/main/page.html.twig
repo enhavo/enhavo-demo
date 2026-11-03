@@ -1,0 +1,3 @@
+<li class="main-nav__item{% if node.active %} is-active{% endif %}" data-nav-target="navItem" data-action="click->nav#activate">
+    <a class="main-nav__link" href="{{ node.subject.url|default('#') }}">{{ node.label }}</a>
+</li>

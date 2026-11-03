@@ -1,0 +1,10 @@
+<li class="main-nav__subitem">
+    <span class="main-nav__sublink">{{ node.label }}</span>
+    {% if node.children %}
+        <ul class="main-nav__dropdown">
+            {% for child in node.children %}
+                {{ navigation_node_render(child, 'main_submenu') }}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

@@ -1,7 +1,9 @@
-@mixin typoHeadline{font-size:$fontSizeHeadline1;color: $textColor3;font-family: $fontFamily1; line-height: $lineHeightHeadline1;font-weight: $fontWeight; letter-spacing: 0.45px; text-transform: uppercase;
-  &.boldHeadline{font-size: 5rem;line-height: 1.28em;font-weight: $fontWeight;text-transform: uppercase;}
+@mixin typoHeadline{font: var(--font-headline);color: var(--color-dark); letter-spacing: var(--letter-spacing-headline); text-transform: uppercase;
+  &.boldHeadline{font: var(--font-headline-bold);text-transform: uppercase;}
 }
-@mixin typoOverline{font-size:$fontSizeOverline;color: $textColor3;font-family: $fontFamily1; line-height: $lineHeightOverline;font-weight: $fontWeight; letter-spacing: 0.375px; text-transform: uppercase;}
+@mixin typoOverline{font: var(--font-overline);color: var(--color-dark); letter-spacing: var(--letter-spacing-overline); text-transform: uppercase;}
+@mixin typoFormField{color: var(--color-dark); font-size: var(--font-size-copy); font-weight: var(--font-weight-bold); line-height: 19px; letter-spacing: var(--letter-spacing-headline); text-transform: uppercase;}
+@mixin typoFormError{color: var(--color-error); font-family: var(--font-serif); font-size: 10px; font-weight: var(--font-weight-regular); line-height: 26px; letter-spacing: var(--letter-spacing-error);}
 @mixin imgPosition{position:absolute; top:0; left:0; width:100%; height:100%;}
 @mixin imgCover{@include imgPosition; object-fit: cover}
 @mixin screenMaxWidth($width){
@@ -10,7 +12,7 @@
   }
 }
 @mixin screenMinWidth($width){
-  @media screen and (max-width: $width){
+  @media screen and (min-width: $width){
     @content;
   }
 }

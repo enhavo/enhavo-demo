@@ -1,0 +1,33 @@
+# Navigation(s) seeded by App\DataFixtures\ORM\NavigationFixture.
+# `code` is what the theme loads (navigation.main). Each node has a `type`
+# (submenu | link | page). submenu nodes nest children under `content:`.
+- name: 'Home'
+  code: main
+  content:
+#    - type: submenu
+#      label: 'Blog'
+#      content:
+#        - type: link
+#          label: 'Blogartikel 01'
+#          link: '#blog'
+#          target: '_self'
+#        - type: link
+#          label: 'Blogartikel 02'
+#          link: '#blog'
+#          target: '_self'
+#        - type: link
+#          label: 'Blogartikel 03'
+#          link: '#blog'
+#          target: '_self'
+#    - type: link
+#      label: 'Team'
+#      link: '#team'
+#      target: '_self'
+#    - type: link
+#      label: 'Jobs'
+#      link: '#jobs'
+#      target: '_self'
+#    - type: link
+#      label: 'Kontakt'
+#      link: '#contact'
+#      target: '_self'

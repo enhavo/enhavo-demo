@@ -9,7 +9,7 @@ DB_PORT=$(php -r 'echo parse_url(getenv("DATABASE_URL"), PHP_URL_PORT);')
 
 wait-for-it $DB_HOST:$DB_PORT
 
-bin/console doctrine:migrations:migrate -n
+bin/console doctrine:migrations:migrate -n --all-or-nothing
 bin/console doctrine:fixtures:load -n
 bin/console enhavo:init
 chown www-data:www-data -R var

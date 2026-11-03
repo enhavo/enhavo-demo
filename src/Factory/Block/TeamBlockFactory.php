@@ -2,8 +2,13 @@
 
 namespace App\Factory\Block;
 
-use Enhavo\Bundle\BlockBundle\Factory\AbstractBlockFactory;
+use App\Entity\Block\TeamBlock;
+use Enhavo\Bundle\BlockBundle\Factory\BlockFactory;
 
-class TeamBlockFactory extends AbstractBlockFactory
+class TeamBlockFactory extends BlockFactory
 {
+    public function __construct()
+    {
+        parent::__construct(TeamBlock::class);
+    }
 }

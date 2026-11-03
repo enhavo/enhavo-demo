@@ -3,6 +3,9 @@ services:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
         bind:
+            $brandName: '%meta_brand_name%'
+            string $mailerFrom: '%env(resolve:MAILER_FROM)%'
+            string $mailerTo: '%env(resolve:MAILER_TO)%'
 
     App\:
         resource: '../../src/*'

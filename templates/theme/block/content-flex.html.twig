@@ -1,20 +1,25 @@
 <div class="block-content">
     <div class="theme-container">
+        {% if block.headline %}
+            <div class="theme-headline headline align-{{ block.alignment|default('left') }}">{{ block.headline|html_sanitize }}</div>
+        {% endif %}
         <div class="{{ block.layout }}-grid">
             {% for item in block.items %}
                 <div class="{{ block.layout }}-img-wrapper">
                     <div class="media-container">
                         <img src="{{ media_url(item.media) }}" alt="{{ media_parameter(item.media, 'alt') }}">
                     </div>
-                    <div class="texts-container">
+                    <div class="texts-container text-align-{{ block.alignment }}">
                         <div class="theme-overline ">{{ item.overline|html_sanitize }}</div>
                         <div class="theme-headline padding">{{ item.headline|html_sanitize }}</div>
                         <div class="copy">{{ item.copy|html_sanitize }}</div>
-                        <div class="button-container">
-                            <div class="btn-wrapper">
-                                <a class="theme-cta theme-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
+                        {% if item.ctaTitle %}
+                            <div class="theme-button-container">
+                                <div class="btn-wrapper">
+                                    <a class="theme-cta theme-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
+                                </div>
                             </div>
-                        </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}

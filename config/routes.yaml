@@ -2,10 +2,14 @@ app_admin:
     resource: "routes/admin/*.yaml"
     prefix: /admin
 
-app:
-    resource: ../src/Controller
-    type: annotation
+app_admin_api:
+    prefix: /admin/api
+    resource: "routes/admin_api/*.yaml"
 
 endpoint:
     resource: ../src/Endpoint
     type: endpoint
+
+app_controllers:
+    resource: ../src/Controller/
+    type: attribute

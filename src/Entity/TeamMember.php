@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use Sylius\Component\Resource\Model\ResourceInterface;
 use Enhavo\Bundle\MediaBundle\Model\FileInterface;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -10,9 +9,9 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity()]
 #[ORM\Table(name: 'app_team_member')]
-class TeamMember implements ResourceInterface
+class TeamMember
 {
-    #[Orm\Id]
+    #[ORM\Id]
     #[ORM\GeneratedValue(strategy: 'AUTO')]
     #[ORM\Column(
         type: Types::INTEGER,
@@ -20,13 +19,8 @@ class TeamMember implements ResourceInterface
     )]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(
-        targetEntity: FileInterface::class,
-        inversedBy: '',
-    )]
+    #[ORM\ManyToOne(targetEntity: FileInterface::class)]
     #[ORM\JoinColumn(onDelete: 'SET NULL')]
-    #[ORM\OrderBy([
-    ])]
     #[Groups(['endpoint.block'])]
     private ?FileInterface $picture = null;
 

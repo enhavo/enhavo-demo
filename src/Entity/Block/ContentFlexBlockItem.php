@@ -41,7 +41,6 @@ class ContentFlexBlockItem
 
     #[ORM\ManyToOne(
         targetEntity: FileInterface::class,
-        inversedBy: 'null',
     )]
     #[ORM\JoinColumn(onDelete: 'SET NULL')]
     #[ORM\OrderBy([

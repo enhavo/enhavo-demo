@@ -1,5 +1,7 @@
 imports:
     - path: '@enhavo/app/services/theme/*'
+    - path: '@enhavo/media/services/form.yaml'
+    - path: '@enhavo/app/services/translation.yaml'
 
 compiler_pass:
     stimulus_controller:
@@ -8,12 +10,16 @@ compiler_pass:
         priority: 110
     vue_factory:
         path: '@enhavo/app/compiler-pass/vue-factory.js'
-        priority: 150
+        priority: 50
     vue_components:
         path: '@enhavo/app/compiler-pass/vue-components.js'
         dir: './components'
-        chunkName: 'vue'
-        priority: 140
+        priority: 40
 
 services:
-
+    manager/FormManager:
+        from: './manager/FormManager'
+        arguments:
+            - '@enhavo/vue-form/form/FormFactory'
+        tags:
+            - { name: vue.service, service: 'formManager', reactive: true }

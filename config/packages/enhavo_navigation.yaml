@@ -4,8 +4,12 @@ enhavo_navigation:
             main:
                 submenu: 'theme/navigation/main/submenu.html.twig'
                 page: 'theme/navigation/main/page.html.twig'
+                link:    'theme/navigation/main/link.html.twig'
             main_submenu:
                 page: 'theme/navigation/main_submenu/page.html.twig'
+                submenu: 'theme/navigation/main_submenu/submenu.html.twig'
+                link:    'theme/navigation/main_submenu/link.html.twig'
             footer:
                 submenu: 'theme/navigation/footer/submenu.html.twig'
                 page: 'theme/navigation/footer/page.html.twig'
+                link:    'theme/navigation/footer/link.html.twig'

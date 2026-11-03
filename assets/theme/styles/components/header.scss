@@ -1,0 +1,34 @@
+.site-header {
+  background: #171717;
+  color: #fff;
+  position: relative;
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 84px;
+    gap: 20px;
+  }
+
+  .site-header__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+  .site-header__paw { height: 26px; width: auto; display: block; }
+  .site-header__wordmark { height: 16px; width: auto; display: block; }
+
+  .site-header__phone {
+    color: #fff;
+    text-decoration: none;
+    font-size: var(--font-size-copy);
+    white-space: nowrap;
+  }
+
+  @include screenMaxWidth(767px) {
+    .site-header__inner { min-height: 64px; }
+    .site-header__phone { font-size: 13px; }
+  }
+}

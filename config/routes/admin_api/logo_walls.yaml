@@ -1,0 +1,29 @@
+app_logo_wall_api_index:
+    path: /logo_wall/index
+    methods: [GET]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_index, grid: app.logo_wall } }
+
+app_logo_wall_api_list:
+    path: /logo_wall/list
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_list, grid: app.logo_wall } }
+
+app_logo_wall_api_create:
+    path: /logo_wall/create
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_create, input: app.logo_wall } }
+
+app_logo_wall_api_update:
+    path: /logo_wall/update/{id}
+    methods: [GET, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_update, input: app.logo_wall } }
+
+app_logo_wall_api_delete:
+    path: /logo_wall/delete/{id}
+    methods: [DELETE, POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_delete, input: app.logo_wall } }
+
+app_logo_wall_api_batch:
+    path: /logo_wall/batch
+    methods: [POST]
+    defaults: { _expose: admin_api, _endpoint: { type: resource_batch, grid: app.logo_wall } }

@@ -1,0 +1,112 @@
+.login-page {
+  &__form-container {
+    max-width: 400px;
+    margin-inline:  auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    .form-wrapper {
+      display: flex;
+      gap: 13px;
+      flex-direction: column;
+    }
+    .dashboard-option{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      button{
+        margin-top: 13px;
+        color: var(--color-blue);
+        background: none;
+        border: 1px solid var(--color-blue);
+        border-radius: 2px;
+      }
+      &__forgot-password{
+        margin-top: 16px;
+        color: var(--color-blue);
+      }
+      &__keine-account{
+        font: var(--font-headline-h3);
+        margin-top: 27px;
+      }
+    }
+    input,
+    textarea{
+      margin-top: 13px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 13px 13px;
+      border: 1px solid var(--color-blue);
+      border-radius: 2px;
+      color: var(--color-black);
+      font: 400 18px/100% "Roboto Condensed", sans-serif;
+      outline: none;
+      &::placeholder {
+        text-align: center;
+        text-transform: uppercase;
+        transition: opacity 0.3s ease;
+        display: inline-block;
+        color: #D9D9D9
+      }
+      &:focus::placeholder,
+      &:focus::placeholder { opacity: 0;}
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 1000px var(--color-white) inset;
+        -webkit-text-fill-color: var(--color-black);
+      }
+      //&[type='checkbox']{
+      //  margin-top: 0;
+      //  cursor: pointer;
+      //  width: 10px;
+      //  position: relative;
+        //&:checked{
+        //  &::after {
+        //    content: '✓';
+        //    position: absolute;
+        //    top: 50%;
+        //    left: 50%;
+        //    transform: translate(-50%, -50%);
+        //    color: var(--color-blue);
+        //    font-size: 24px;
+        //    line-height: 1;
+        //  }
+        //}
+      //}
+    }
+  }
+  &__no-account{
+    margin-top: 30px;
+    .text{
+      color: #000;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 29px;
+    }
+    .cta-register{
+      width: 100%;
+      margin-top: 13px;
+      padding: 13px 60px;
+      border-radius: 3px;
+      border: 1px solid var(--color-blue);
+      color: var(--color-blue);
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  &__links{
+    padding-top: 15px;
+    color: var(--color-blue);
+  }
+}

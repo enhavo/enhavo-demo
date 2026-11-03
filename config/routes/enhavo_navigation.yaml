@@ -1,3 +1,7 @@
 enhavo_navigation_admin:
     resource: "@EnhavoNavigationBundle/Resources/config/routes/admin/*"
     prefix: /admin
+
+enhavo_navigation_admin_api:
+    resource: "@EnhavoNavigationBundle/Resources/config/routes/admin_api/*"
+    prefix: /admin/api

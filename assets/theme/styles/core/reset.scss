@@ -23,10 +23,11 @@ footer, header, hgroup, menu, nav, section {display: block; }
 input, select, textarea {margin: 0;padding: 0;border: 0;font: inherit;}
 
 body {
-  line-height: 1;
+  color: var(--color-text-primary);
+  font: var(--font-copy);
+  letter-spacing: var(--letter-spacing-copy);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
 }
 
 ol, ul {list-style: none;}

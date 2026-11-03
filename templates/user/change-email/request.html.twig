@@ -1,0 +1,11 @@
+{% extends template('theme/base.html.twig') %}
+{% trans_default_domain 'EnhavoUserBundle' %}
+
+{% block main %}
+    <div data-controller="form" data-form-form-value="{{ form|json_encode|e }}">
+        <form-form :form="form">
+            <form-row :form="form.get('_token')"></form-row>
+            <button type="submit">{{ 'change_email.form.submit'|trans }}</button>
+        </form-form>
+    </div>
+{% endblock main %}

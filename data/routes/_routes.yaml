@@ -9,3 +9,30 @@ enhavo_media_file_format:
     defaults:
         _endpoint:
             type: template_file
+
+# DB-backed theme media routes, used by path('enhavo_media_theme_file') in the
+# header (header logos come from DB settings). Mirrors config/routes/enhavo_media.yaml.
+enhavo_media_theme:
+    resource: "@EnhavoMediaBundle/Resources/config/routes/theme/*"
+    prefix: /
+
+# File-backed preview media served from data/media/file, matched by filename as
+# shortChecksum (token is unused). media_url() in blocks resolves to these via
+# data/routes.json, so blocks can use the numbered demo images (1.png, 2.png, ...).
+enhavo_media_theme_file_preview:
+    path: /media/preview/{shortChecksum}/{basename}
+    methods: [GET]
+    requirements:
+        basename: .+
+    defaults:
+        _endpoint:
+            type: template_file
+
+enhavo_media_theme_format_preview:
+    path: /media/preview-format/{format}/{shortChecksum}/{basename}
+    methods: [GET]
+    requirements:
+        basename: .+
+    defaults:
+        _endpoint:
+            type: template_file

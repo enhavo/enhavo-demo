@@ -1,35 +1,59 @@
-// Colors
-$primaryColor: #d50032;
-$textColor1:#fff;
-$textColor2:#000;
-$textColor3:#171717;
+// Breakpoints
+$breakpointDesktopWide: 1800px;
+$breakpointDesktop: 1280px;
+$breakpointHeader: 1169px;
+$breakpointTablet: 768px;
+$breakpointPhone: 391px;
 
-// root Fonts
-$fontSize: 16px;
+// Root font-size (1rem = 10px)
+$rootFontSize: 10px;
 
-//fonts
-$fontSizeOverline:1.5rem;
-$fontSizeHeadline1:2.4rem;//==>24px
-$fontSizeCopy:1.8rem;//==>18px
+:root {
+
+  //// COLORS
+  --color-primary: #d50032;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark: #171717;
+  --color-error: #db5245;
+  --color-blue: #00B1DB;
+  --color-nav-dark: #232838;
+
+  --color-text-primary: var(--color-black);
 
 
-//font family
-$fontFamily1: "Open Sans";
-$fontFamily2: "Source Sans Pro";
+  // FONT FAMILIES
+  --font: "Open Sans";
+  --font-secondary: "Source Sans Pro";
+  --font-serif: "Source Serif Pro";
+  --font-sans: "IBM Plex Sans", sans-serif;
 
-//line heights
-$lineHeight: 1.2em;
-$lineHeightOverline: 1.26em;//===>19px/15
-$lineHeightHeadline1: 1.33em;//====>32px/24
-$lineHeightHeadline2: 1.2em;
-$lineHeightCopy: 1.44em;//====>26px/18
-$lineHeightCopy2: 1.055em;//===>19px/18
-$lineHeightButton: 1.055em;//===>19px/18
-$lineHeightReduced: 1.2em;
-// Spaces
-//font weight
-$fontWeight:700;
+  // FONT WEIGHTS
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-//images
-$maxWidth:100%;
-$width:100%
+  // FONT SIZES
+  --font-size-copy: 1.8rem;      // 18px
+  --font-size-overline: 1.5rem;  // 15px
+  --font-size-headline: 2.4rem;  // 24px
+
+  // LINE HEIGHTS
+  --line-height-copy: 1.44em;
+  --line-height-overline: 1.26em;
+  --line-height-headline: 1.33em;
+  --line-height-button: 1.055em;
+
+  // LETTER SPACING
+  --letter-spacing-copy: 0.18px;
+  --letter-spacing-overline: 0.375px;
+  --letter-spacing-headline: 0.45px;
+  --letter-spacing-error: 0.1px;
+
+  // TYPE TOKENS (font shorthand: weight size/line-height family)
+  --font-headline: var(--font-weight-bold) var(--font-size-headline)/var(--line-height-headline) var(--font);
+  --font-headline-bold: var(--font-weight-bold) 5rem/1.28em var(--font);
+  --font-overline: var(--font-weight-bold) var(--font-size-overline)/var(--line-height-overline) var(--font);
+  --font-copy: var(--font-weight-regular) var(--font-size-copy)/var(--line-height-copy) var(--font);
+}

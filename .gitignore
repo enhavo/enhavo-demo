@@ -10,7 +10,7 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-###> symfony/webpack-encore-bundle ###
+# node dependencies & vite build output
 /node_modules/
 /public/build/*
 !public/build/.gitkeep
@@ -21,7 +21,6 @@
 
 npm-debug.log
 yarn-error.log
-###< symfony/webpack-encore-bundle ###
 
 ###> enhavo/app-bundle ###
 public/build/enhavo/*

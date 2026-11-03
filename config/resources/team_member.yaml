@@ -1,0 +1,30 @@
+enhavo_resource:
+    resources:
+        app.team_member:
+            classes:
+                model: App\Entity\TeamMember
+                repository: App\Repository\TeamMemberRepository
+
+    grids:
+        app.team_member:
+            extends: enhavo_resource.grid
+            resource: app.team_member
+            columns:
+                firstName: { type: text, label: first name, property: firstName, width: 6, sortable: true }
+                lastName: { type: text, label: last name, property: lastName, width: 6, sortable: true }
+            batches:
+                delete: { type: delete }
+
+    inputs:
+        app.team_member:
+            extends: enhavo_resource.input
+            resource: app.team_member
+            form: App\Form\Type\TeamMemberType
+            tabs:
+                main:
+                    type: form
+                    label: team member
+                    arrangement: |
+                        picture
+                        firstName | lastName
+                        email | phone

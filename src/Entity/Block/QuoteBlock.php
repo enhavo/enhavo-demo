@@ -25,6 +25,23 @@ class QuoteBlock extends AbstractBlock
     #[Groups(['endpoint.block'])]
     private ?string $text = null;
 
+    #[ORM\Column(
+        type: Types::TEXT,
+        nullable: true,
+    )]
+    #[Groups(['endpoint.block'])]
+    private ?string $author = null;
+
+    public function getAuthor(): ?string
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?string $author): void
+    {
+        $this->author = $author;
+    }
+
     public function getAlignment(): ?string
     {
         return $this->alignment;

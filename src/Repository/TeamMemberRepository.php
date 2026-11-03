@@ -3,7 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\TeamMember;
-use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
+use Enhavo\Bundle\ResourceBundle\Repository\EntityRepository;
 
 /**
  * @method TeamMember|null find($id, $lockMode = null, $lockVersion = null)

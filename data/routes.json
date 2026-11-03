@@ -5,6 +5,12 @@
     },
     "enhavo_media_file_format": {
       "path": "expr:url('/file/format/{id}/{format}')"
+    },
+    "enhavo_media_theme_file": {
+      "path": "expr:url('/media/preview/{shortChecksum}/{basename}')"
+    },
+    "enhavo_media_theme_format": {
+      "path": "expr:url('/media/preview-format/{format}/{shortChecksum}/{basename}')"
     }
   }
 }

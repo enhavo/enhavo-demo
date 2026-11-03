@@ -1,0 +1,24 @@
+enhavo_media:
+    form:
+        default:
+            upload: false
+            route: enhavo_media_admin_api_file_upload
+            actions_file:
+                download:
+                    type: media_download
+                format:
+                    type: media_format
+            actions:
+                media_library_upload:
+                    type: media_library_open_select
+    formats:
+        block_picture_text:
+            type: image
+            width: 620
+            height: 465
+        block_cards:
+            type: image
+            width: 30
+            height: 30
+
+

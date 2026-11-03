@@ -1,0 +1,10 @@
+Block/LogoWallBlock:
+    label: 'LogoWall'
+    groups: [ layout ]
+    block_type: true
+
+    properties:
+        alignment:
+            template: expanded-choice
+        text:
+            template: wysiwyg

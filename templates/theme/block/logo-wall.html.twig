@@ -1,0 +1,27 @@
+{# Template for container block logo_wall_block #}
+<div class="block-logo-wall logo-wall--{{ block.color|default('no_background_color') }}">
+    <div class="theme-container">
+        {% if block.title %}
+            <h2 class="logo-wall__headline align-{{ block.titleAlignment|default('center') }}">{{ block.title|html_sanitize }}</h2>
+        {% endif %}
+
+        <div class="logo-wall__grid logo-wall__grid--{{ block.grid|default('6') }}">
+            {% for item in block.items %}
+                {% set logo = item.logoWall %}
+                {% if logo %}
+                    <div class="logo-wall__item align-{{ block.itemAlignment|default('center') }}">
+                        {% if logo.ctaLink %}
+                            <a class="logo-wall__link" href="{{ logo.ctaLink }}" target="{{ logo.target == 'blank' ? '_blank' : '_self' }}">
+                        {% endif %}
+                        {% if logo.picture %}
+                            <img class="logo-wall__img" src="{{ media_url(logo.picture) }}" alt="{{ media_parameter(logo.picture, 'alt')|default(logo.title) }}">
+                        {% endif %}
+                        {% if logo.ctaLink %}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

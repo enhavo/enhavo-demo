@@ -3,14 +3,18 @@
 namespace App\Entity\Block\Traits;
 
 use Doctrine\ORM\Mapping\Column;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 trait CtaTrait
 {
     #[Column(nullable: true)]
+      #[Groups(['endpoint.block'])]
     private ?string $ctaTitle = null;
     #[Column(nullable: true)]
+      #[Groups(['endpoint.block'])]
     private ?string $ctaLink = null;
     #[Column(nullable: true)]
+      #[Groups(['endpoint.block'])]
     private ?string $ctaTarget = null;
 
     public function getCtaTitle(): ?string

@@ -1,0 +1,38 @@
+enhavo_resource:
+    resources:
+        app.jobs:
+            classes:
+                model: App\Entity\Jobs
+                repository: App\Repository\JobsRepository
+
+    grids:
+        app.jobs:
+            extends: enhavo_resource.grid
+            resource: app.jobs
+            filters:
+                title:
+                    type: text
+                    property: title
+                    label: title
+            columns:
+                public: { type: boolean, label: public, property: public, width: 2, sortable: true }
+                title: { type: text, label: title, property: title, width: 10, sortable: true }
+            batches:
+                delete: { type: delete }
+
+    inputs:
+        app.jobs:
+            extends: enhavo_resource.input
+            resource: app.jobs
+            form: App\Form\Type\JobsType
+            tabs:
+                main:
+                    type: form
+                    label: jobs
+                    arrangement: |
+                        title
+                        abteilungen
+                        ctaTitle
+                        url
+                        target
+                        public

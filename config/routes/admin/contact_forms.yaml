@@ -1,0 +1,20 @@
+app_contact_form_index:
+    path: /contact_form/index
+    defaults:
+        _expose: admin
+        _vue: { component: resource-index, groups: admin, meta: { api: app_contact_form_api_index } }
+        _endpoint: { type: admin }
+
+app_contact_form_create:
+    path: /contact_form/create
+    defaults:
+        _expose: admin
+        _vue: { component: resource-input, groups: admin, meta: { api: app_contact_form_api_create } }
+        _endpoint: { type: admin }
+
+app_contact_form_update:
+    path: /contact_form/update/{id}
+    defaults:
+        _expose: admin
+        _vue: { component: resource-input, groups: admin, meta: { api: app_contact_form_api_update } }
+        _endpoint: { type: admin }

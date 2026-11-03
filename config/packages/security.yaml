@@ -6,7 +6,7 @@ security:
         entity_user_provider:
             entity:
                 class: Enhavo\Bundle\UserBundle\Model\User
-                property: username
+                property: userIdentifier
 
     firewalls:
         dev:
@@ -15,7 +15,7 @@ security:
 
         admin:
             pattern:  ^/admin/?.*
-            context: user
+            context: admin
             user_checker: Enhavo\Bundle\UserBundle\Security\UserChecker
             entry_point: Enhavo\Bundle\UserBundle\Security\EntryPoint\FormAuthenticationEntryPoint
             custom_authenticators:
@@ -32,20 +32,20 @@ security:
             custom_authenticators:
                 - Enhavo\Bundle\UserBundle\Security\Authentication\FormLoginAuthenticator
             logout:
-                path: enhavo_user_theme_security_logout
-                target: enhavo_user_theme_security_login
+                path: enhavo_user_theme_logout
+                target: enhavo_user_theme_login
 
     access_control:
         - { path: ^/admin/login$, role: PUBLIC_ACCESS }
-        - { path: ^/admin/api/login$, role: PUBLIC_ACCESS }
+        - { path: ^/admin/logout$, role: PUBLIC_ACCESS }
         - { path: ^/admin/reset-password/.+, role: PUBLIC_ACCESS }
+        - { path: ^/admin/api/login/.+, role: PUBLIC_ACCESS }
         - { path: ^/admin/api/reset-password/.+, role: PUBLIC_ACCESS }
-        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/admin, role: ROLE_ADMIN }
 
-
-        - { path: ^/user/login$, role: PUBLIC_ACCESS }
-        - { path: ^/user/login/check$, role: PUBLIC_ACCESS }
-        - { path: ^/user/registration/.+, role: PUBLIC_ACCESS }
-        - { path: ^/user/reset-password/.+, role: PUBLIC_ACCESS }
-        - { path: ^/user/delete/finish$, role: PUBLIC_ACCESS }
-        - { path: ^/user/, role: ROLE_USER }
+        - { path: ^/login$, role: PUBLIC_ACCESS }
+        - { path: ^/login/check$, role: PUBLIC_ACCESS }
+        - { path: ^/registration/.+, role: PUBLIC_ACCESS }
+        - { path: ^/reset-password/.+, role: PUBLIC_ACCESS }
+        - { path: ^/delete/finish$, role: PUBLIC_ACCESS }
+        - { path: ^/.*, role: PUBLIC_ACCESS }

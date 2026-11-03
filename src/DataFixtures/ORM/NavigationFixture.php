@@ -2,149 +2,98 @@
 
 namespace App\DataFixtures\ORM;
 
-use App\DataFixtures\AbstractFixture;
-use Enhavo\Bundle\CommentBundle\Exception\NotFoundException;
-use Enhavo\Bundle\NavigationBundle\Entity\Navigation;
-use Enhavo\Bundle\NavigationBundle\Model\NodeInterface;
-use Enhavo\Bundle\NavigationBundle\Model\SubjectInterface;
-use Enhavo\Bundle\NavigationBundle\NavItem\NavItemManager;
-use Symfony\Component\PropertyAccess\PropertyAccess;
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+use Enhavo\Bundle\NavigationBundle\Entity\Content;
+use Enhavo\Bundle\NavigationBundle\Entity\Link;
+use Enhavo\Bundle\NavigationBundle\Entity\Submenu;
+use Enhavo\Bundle\ResourceBundle\Factory\Factory;
+use Symfony\Component\DependencyInjection\Attribute\Autowire;
+use Symfony\Component\Yaml\Yaml;
 
-class NavigationFixture extends AbstractFixture
+/**
+ * Seeds navigations from fixtures/navigation.yaml.
+ *
+ * Each entry is a Navigation (name + code). `content` is a tree of nodes; each
+ * node has a `type` (submenu | link | page) and an optional nested `content`
+ * list (submenu children). The theme loads a navigation by its `code`
+ * (e.g. navigation.main) — see config/packages/area.yaml.
+ */
+class NavigationFixture extends Fixture
 {
-    private $propertyAccessor;
+    private ObjectManager $manager;
 
-    function __construct()
-    {
-        $this->propertyAccessor = PropertyAccess::createPropertyAccessor();
+    public function __construct(
+        #[Autowire(service: 'enhavo_navigation.navigation.factory')]
+        private readonly Factory $navigationFactory,
+        #[Autowire(service: 'enhavo_navigation.node.factory')]
+        private readonly Factory $nodeFactory,
+        #[Autowire('%kernel.project_dir%')]
+        private readonly string $projectDir,
+    ) {
     }
 
-    /**
-     * @inheritdoc
-     */
-    function create($args)
+    public function load(ObjectManager $manager): void
     {
-        $navigation = $this->container->get('enhavo_navigation.factory.navigation')->createNew();
-        $navigation->setName($args['name']);
-        $navigation->setCode($args['code']);
+        $this->manager = $manager;
 
-        $this->addNodes($navigation, $args['content']);
+        $navigations = Yaml::parseFile($this->projectDir . '/fixtures/navigation.yaml');
 
-        $this->translate($navigation);
-        return $navigation;
-    }
+        foreach ($navigations as $navData) {
+            $navigation = $this->navigationFactory->createNew();
+            $navigation->setName($navData['name']);
+            $navigation->setCode($navData['code']);
 
-    /**
-     * @param Navigation|NodeInterface $resource
-     * @param $content
-     */
-    function addNodes($resource, $content)
-    {
-        foreach ($content as $item) {
-
-            $node = null;
-            if (isset($item['content'])) {
-                $node = $this->createNode(['type' => $item['type']]);
-                $this->addNodes($node, $item['content']);
-
-            } else {
-                $node = $this->createNode($item);
+            $position = 0;
+            foreach ($navData['content'] ?? [] as $item) {
+                $node = $this->buildNode($item, $navigation);
+                $node->setPosition($position++);
+                $navigation->addNode($node);
             }
 
-            if ($node) {
-                if (method_exists($resource, 'addNode')) {
-                    $resource->addNode($node);
-
-                } else if (method_exists($resource, 'addChild')) {
-                    $resource->addChild($node);
-                }
-            }
+            $manager->persist($navigation);
         }
+
+        $manager->flush();
     }
 
     /**
-     * @param array $item
-     * @return NodeInterface|null
+     * @param array<string, mixed> $item
      */
-    function createNode(array $item)
+    private function buildNode(array $item, object $navigation): object
     {
         $type = $item['type'];
-        unset($item['type']);
 
-        /** @var NavItemManager */
-        $itemManager = $this->container->get('Enhavo\Bundle\NavigationBundle\NavItem\NavItemManager');
-        /** @var SubjectInterface $subject */
-        $subject = null;
-        $node = null;
-
-        try {
-            $factory = $itemManager->getFactory($type);
-            $subject = $factory->createNew();
-        } catch (\Exception $ex) {
-            print_r($ex->getMessage());echo PHP_EOL;die;
+        // The node's "subject" (the NavItem) is a plain entity per type.
+        $subject = match ($type) {
+            'link' => new Link(),
+            'submenu' => new Submenu(),
+            'page' => new Content(),
+            default => throw new \InvalidArgumentException(sprintf('Unsupported navigation type "%s"', $type)),
+        };
+        if ($type === 'link') {
+            $subject->setLink($item['link'] ?? '#');
+            $subject->setTarget($item['target'] ?? '_self');
         }
 
-        if ($subject) {
-            if ($type == 'page' && isset($item['link'])) {
-                $page = $this->getPage($item['link']);
-                if (!$page) {
-                    throw new NotFoundException('Page with name"' . $item['link'] . '" was not found"');
-                }
-                $subject->setContent($page);
-            }
+        $node = $this->nodeFactory->createNew();
+        $node->setName($type);
+        $node->setLabel($item['label'] ?? null);
+        $node->setNavigation($navigation);
+        $node->setSubject($subject);
+        $subject->setNode($node);
 
-            $accessor = $this->propertyAccessor;
-            foreach ($item as $k => $v) {
-                if ($accessor->isWritable($subject, $k)) {
-                    $accessor->setValue($subject, $k, $v);
-                }
-
-                if(method_exists($subject, 'getContent')) {
-                    $content = $subject->getContent();
-                    if ($accessor->isWritable($content, $k)) {
-                        $accessor->setValue($content, $k, $v);
-                    }
-                }
-            }
-
-            /** @var NodeInterface $node */
-            $node = $this->container->get('enhavo_navigation.factory.node')->createNew();
-            $node->setLabel($item['label']);
-            $node->setName($type);
-            $node->setSubject($subject);
+        $position = 0;
+        foreach ($item['content'] ?? [] as $childItem) {
+            $child = $this->buildNode($childItem, $navigation);
+            $child->setPosition($position++);
+            $child->setParent($node);
+            $node->addChild($child);
         }
 
-
+        $this->manager->persist($subject);
+        $this->manager->persist($node);
 
         return $node;
-    }
-
-    /**
-     * @param $slug
-     * @return \Enhavo\Bundle\PageBundle\Entity\Page|object|null
-     */
-    function getPage($slug)
-    {
-        $page = $this->manager->getRepository('EnhavoPageBundle:Page')->findOneBy([
-            'slug' => $slug
-        ]);
-
-        return $page;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    function getName()
-    {
-        return 'Navigation';
-    }
-
-    /**
-     * @inheritdoc
-     */
-    function getOrder()
-    {
-        return 30;
     }
 }

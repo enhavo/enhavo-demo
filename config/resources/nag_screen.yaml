@@ -1,0 +1,45 @@
+enhavo_resource:
+    resources:
+        app.nag_screen:
+            classes:
+                model: App\Entity\NagScreen
+                repository: App\Repository\NagScreenRepository
+
+    grids:
+        app.nag_screen:
+            extends: enhavo_resource.grid
+            resource: app.nag_screen
+            filters:
+                overline:
+                    type: text
+                    property: overline
+                    label: overline
+                title:
+                    type: text
+                    property: title
+                    label: title
+            columns:
+                public: { type: boolean, label: public, property: public, width: 2, sortable: true }
+                title: { type: text, label: title, property: title, width: 10, sortable: true }
+            batches:
+                delete: { type: delete }
+
+    inputs:
+        app.nag_screen:
+            extends: enhavo_resource.input
+            resource: app.nag_screen
+            form: App\Form\Type\NagScreenType
+            tabs:
+                main:
+                    type: form
+                    label: nag_screen
+                    arrangement: |
+                        overline
+                        title
+                        text
+                        action
+                        buttonTitle 
+                        buttonLink
+                        public
+                        runFrom 
+                        runTo
